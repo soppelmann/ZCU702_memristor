@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr  8 14:40:42 2024
+# Process ID: 34717
+# Current directory: /home/getz/project_11/project_11.runs/memristor_ADC_4_0_synth_1
+# Command line: vivado -log memristor_ADC_4_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_ADC_4_0.tcl
+# Log file: /home/getz/project_11/project_11.runs/memristor_ADC_4_0_synth_1/memristor_ADC_4_0.vds
+# Journal file: /home/getz/project_11/project_11.runs/memristor_ADC_4_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source memristor_ADC_4_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP memristor_ADC_4_0, cache-ID = 374ce5987d259951.
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  8 14:41:09 2024...

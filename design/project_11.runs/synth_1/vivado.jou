@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr  8 15:43:32 2024
+# Process ID: 55541
+# Current directory: /home/getz/project_11/project_11.runs/synth_1
+# Command line: vivado -log memristor_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_wrapper.tcl
+# Log file: /home/getz/project_11/project_11.runs/synth_1/memristor_wrapper.vds
+# Journal file: /home/getz/project_11/project_11.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source memristor_wrapper.tcl -notrace
