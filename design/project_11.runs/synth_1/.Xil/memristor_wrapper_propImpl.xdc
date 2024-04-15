@@ -1,10 +1,10 @@
-set_property SRC_FILE_INFO {cfile:/home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc rfile:../../../project_11.srcs/constrs_1/new/zc702.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc rfile:../../../project_11.srcs/constrs_1/new/zc702.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:258 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V7  [get_ports {da4_sync}];  # "JA1"
+set_property PACKAGE_PIN V7  [get_ports {ex_DA4_sync}];  # "JA1"
 set_property src_info {type:XDC file:1 line:260 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W10 [get_ports {mosi}];  # "JA2"
+set_property PACKAGE_PIN W10 [get_ports {ex_DA4_io}];  # "JA2"
 set_property src_info {type:XDC file:1 line:263 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN P17  [get_ports {sclk}];  # "JA4"
+set_property PACKAGE_PIN P17  [get_ports {ex_DA4_sclk}];  # "JA4"
 set_property src_info {type:XDC file:1 line:282 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B20 [get_ports {ex_ADC_clk}];  # "FMC-LA17_CC_N"
 set_property src_info {type:XDC file:1 line:286 export:INPUT save:INPUT read:READ} [current_design]
@@ -116,7 +116,7 @@ set_property PACKAGE_PIN K19 [get_ports {ex_PGA_sclk}];  # "FMC-LA00_CC_P" sclk
 set_property src_info {type:XDC file:1 line:358 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N18 [get_ports {ex_PGA_io}];  # "FMC-LA05_N" io/mosi
 set_property src_info {type:XDC file:1 line:359 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN N17 [get_ports {pga_sync[0]}];  # "FMC-LA05_P" csbar, sync
+set_property PACKAGE_PIN N17 [get_ports {ex_PGA_sync}];  # "FMC-LA05_P" csbar, sync
 set_property src_info {type:XDC file:1 line:425 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 33]];
 set_property src_info {type:XDC file:1 line:430 export:INPUT save:INPUT read:READ} [current_design]

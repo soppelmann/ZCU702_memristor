@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Mon Apr  8 15:46:12 2024
-| Host         : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Apr 15 13:00:02 2024
+| Host         : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file memristor_wrapper_methodology_drc_routed.rpt -pb memristor_wrapper_methodology_drc_routed.pb -rpx memristor_wrapper_methodology_drc_routed.rpx
 | Design       : memristor_wrapper
 | Device       : xc7z020clg484-1
@@ -36,12 +36,12 @@ Table of Contents
 -----------------
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell memristor_i/DA4_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X46Y89 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memristor_i/DA4_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
+The FDRE cell memristor_i/DA4_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X49Y106 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memristor_i/DA4_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell memristor_i/PGA_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X43Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memristor_i/PGA_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
+The FDRE cell memristor_i/PGA_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X44Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell memristor_i/PGA_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -286,78 +286,78 @@ Related violations: <none>
 
 TIMING-18#49 Warning
 Missing input or output delay  
-An output delay is missing on da4_sync[0] relative to clock(s) clk_fpga_0
+An output delay is missing on ex_ADC_clk relative to clock(s) clk_fpga_2
 Related violations: <none>
 
 TIMING-18#50 Warning
 Missing input or output delay  
-An output delay is missing on ex_ADC_clk relative to clock(s) clk_fpga_2
+An output delay is missing on ex_CTRL_WEST[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#51 Warning
 Missing input or output delay  
-An output delay is missing on ex_CTRL_WEST[0] relative to clock(s) clk_fpga_0
+An output delay is missing on ex_CTRL_WEST[1] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#52 Warning
 Missing input or output delay  
-An output delay is missing on ex_CTRL_WEST[1] relative to clock(s) clk_fpga_0
+An output delay is missing on ex_CTRL_WEST[2] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#53 Warning
 Missing input or output delay  
-An output delay is missing on ex_CTRL_WEST[2] relative to clock(s) clk_fpga_0
+An output delay is missing on ex_CTRL_WEST[3] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#54 Warning
 Missing input or output delay  
-An output delay is missing on ex_CTRL_WEST[3] relative to clock(s) clk_fpga_0
+An output delay is missing on ex_DA4_io relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#55 Warning
 Missing input or output delay  
-An output delay is missing on ex_PGA_io relative to clock(s) clk_fpga_3
+An output delay is missing on ex_DA4_sclk relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#56 Warning
 Missing input or output delay  
-An output delay is missing on ex_PGA_sclk relative to clock(s) clk_fpga_3
+An output delay is missing on ex_DA4_sync[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#57 Warning
 Missing input or output delay  
-An output delay is missing on mosi relative to clock(s) clk_fpga_1
+An output delay is missing on ex_PGA_io relative to clock(s) clk_fpga_3
 Related violations: <none>
 
 TIMING-18#58 Warning
 Missing input or output delay  
-An output delay is missing on pga_sync[0] relative to clock(s) clk_fpga_0
+An output delay is missing on ex_PGA_sclk relative to clock(s) clk_fpga_3
 Related violations: <none>
 
 TIMING-18#59 Warning
 Missing input or output delay  
-An output delay is missing on sclk relative to clock(s) clk_fpga_1
+An output delay is missing on ex_PGA_sync[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 XDCC-5#1 Warning
 User Non-Timing constraint/property overwritten  
-A new XDC property IOSTANDARD on da4_sync[0] overrides a previous user property.
-New Source: /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc (Line: 438)
-Previous Source: /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc (Line: 259)
+A new XDC property IOSTANDARD on ex_DA4_io overrides a previous user property.
+New Source: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc (Line: 438)
+Previous Source: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc (Line: 261)
 Related violations: <none>
 
 XDCC-5#2 Warning
 User Non-Timing constraint/property overwritten  
-A new XDC property IOSTANDARD on mosi overrides a previous user property.
-New Source: /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc (Line: 438)
-Previous Source: /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc (Line: 261)
+A new XDC property IOSTANDARD on ex_DA4_sclk overrides a previous user property.
+New Source: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc (Line: 430)
+Previous Source: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc (Line: 264)
 Related violations: <none>
 
 XDCC-5#3 Warning
 User Non-Timing constraint/property overwritten  
-A new XDC property IOSTANDARD on sclk overrides a previous user property.
-New Source: /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc (Line: 430)
-Previous Source: /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc (Line: 264)
+A new XDC property IOSTANDARD on ex_DA4_sync[0] overrides a previous user property.
+New Source: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc (Line: 438)
+Previous Source: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc (Line: 259)
 Related violations: <none>
 
 

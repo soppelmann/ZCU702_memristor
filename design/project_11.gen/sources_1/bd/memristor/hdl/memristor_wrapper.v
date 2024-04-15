@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Mon Apr  8 15:42:24 2024
-//Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+//Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+//Date        : Mon Apr 15 12:44:56 2024
+//Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 //Command     : generate_target memristor_wrapper.bd
 //Design      : memristor_wrapper
 //Purpose     : IP block netlist
@@ -31,18 +31,18 @@ module memristor_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    da4_sync,
     ex_ADC_1,
     ex_ADC_2,
     ex_ADC_3,
     ex_ADC_4,
     ex_ADC_clk,
     ex_CTRL_WEST,
+    ex_DA4_io,
+    ex_DA4_sclk,
+    ex_DA4_sync,
     ex_PGA_io,
     ex_PGA_sclk,
-    mosi,
-    pga_sync,
-    sclk);
+    ex_PGA_sync);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -64,18 +64,18 @@ module memristor_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [0:0]da4_sync;
   input [11:0]ex_ADC_1;
   input [11:0]ex_ADC_2;
   input [11:0]ex_ADC_3;
   input [11:0]ex_ADC_4;
   output ex_ADC_clk;
   output [3:0]ex_CTRL_WEST;
+  output ex_DA4_io;
+  output ex_DA4_sclk;
+  output [0:0]ex_DA4_sync;
   output ex_PGA_io;
   output ex_PGA_sclk;
-  output mosi;
-  output [0:0]pga_sync;
-  output sclk;
+  output [0:0]ex_PGA_sync;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -98,18 +98,18 @@ module memristor_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]da4_sync;
   wire [11:0]ex_ADC_1;
   wire [11:0]ex_ADC_2;
   wire [11:0]ex_ADC_3;
   wire [11:0]ex_ADC_4;
   wire ex_ADC_clk;
   wire [3:0]ex_CTRL_WEST;
+  wire ex_DA4_io;
+  wire ex_DA4_sclk;
+  wire [0:0]ex_DA4_sync;
   wire ex_PGA_io;
   wire ex_PGA_sclk;
-  wire mosi;
-  wire [0:0]pga_sync;
-  wire sclk;
+  wire [0:0]ex_PGA_sync;
 
   memristor memristor_i
        (.DDR_addr(DDR_addr),
@@ -133,16 +133,16 @@ module memristor_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .da4_sync(da4_sync),
         .ex_ADC_1(ex_ADC_1),
         .ex_ADC_2(ex_ADC_2),
         .ex_ADC_3(ex_ADC_3),
         .ex_ADC_4(ex_ADC_4),
         .ex_ADC_clk(ex_ADC_clk),
         .ex_CTRL_WEST(ex_CTRL_WEST),
+        .ex_DA4_io(ex_DA4_io),
+        .ex_DA4_sclk(ex_DA4_sclk),
+        .ex_DA4_sync(ex_DA4_sync),
         .ex_PGA_io(ex_PGA_io),
         .ex_PGA_sclk(ex_PGA_sclk),
-        .mosi(mosi),
-        .pga_sync(pga_sync),
-        .sclk(sclk));
+        .ex_PGA_sync(ex_PGA_sync));
 endmodule

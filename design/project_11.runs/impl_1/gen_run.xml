@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712583750">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="memristor_wrapper.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="memristor_wrapper.ltx"/>
-  <File Type="BG-BGN" Name="memristor_wrapper.bgn"/>
-  <File Type="NPI_FILE" Name="memristor_wrapper.npi"/>
-  <File Type="BG-DRC" Name="memristor_wrapper.drc"/>
-  <File Type="RNPI_FILE" Name="memristor_wrapper.rnpi"/>
-  <File Type="CFI_FILE" Name="memristor_wrapper.cfi"/>
-  <File Type="RCFI_FILE" Name="memristor_wrapper.rcfi"/>
-  <File Type="PDI-FILE" Name="memristor_wrapper.pdi"/>
-  <File Type="BITSTR-MMI" Name="memristor_wrapper.mmi"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1713178650">
   <File Type="BITSTR-BMM" Name="memristor_wrapper_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="memristor_wrapper.nky"/>
-  <File Type="BITSTR-RBT" Name="memristor_wrapper.rbt"/>
-  <File Type="BITSTR-MSK" Name="memristor_wrapper.msk"/>
-  <File Type="RBD_FILE" Name="memristor_wrapper.rbd"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="memristor_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="memristor_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="memristor_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="memristor_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="memristor_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="memristor_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="memristor_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="memristor_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="memristor_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="memristor_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="memristor_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="memristor_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="memristor_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="memristor_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="memristor_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="memristor_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="memristor_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="memristor_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="memristor_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="memristor_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="memristor_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="memristor_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="memristor_wrapper_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="memristor_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="memristor_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="memristor_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="memristor_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="memristor_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="memristor_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="memristor_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="memristor_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="memristor_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="memristor_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="memristor_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="memristor_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="memristor_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="memristor_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="memristor_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="memristor_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="memristor_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="memristor_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="memristor_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="memristor_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="memristor_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="memristor_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="memristor_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="memristor_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="memristor_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="memristor_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="memristor_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="memristor_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="memristor_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="memristor_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="memristor_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="memristor_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="memristor_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="memristor_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="memristor_wrapper.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="memristor_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="memristor_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="memristor_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="memristor_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="memristor_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="memristor_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="memristor_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="memristor_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="memristor_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="memristor_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="memristor_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="memristor_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="memristor_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="memristor_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="memristor_wrapper.drc"/>
   <File Type="RDI-RDI" Name="memristor_wrapper.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="memristor_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="memristor_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="memristor_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="memristor_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="memristor_wrapper_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="memristor_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="memristor_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="memristor_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="memristor_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="memristor_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="memristor_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="memristor_wrapper_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="memristor_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="memristor_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="memristor_wrapper_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="memristor_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="memristor_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="memristor_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="memristor_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="memristor_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="memristor_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="memristor_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="memristor_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="memristor_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="memristor_wrapper_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="memristor_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="memristor_wrapper_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="memristor_wrapper_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="memristor_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="memristor_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="memristor_wrapper_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="memristor_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="memristor_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="memristor_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="memristor_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="memristor_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="memristor_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="memristor_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="memristor_wrapper_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="memristor_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="memristor_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="memristor_wrapper_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="memristor_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="memristor_wrapper.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="memristor_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="memristor_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="memristor_wrapper_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="memristor_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="memristor_wrapper_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="memristor_wrapper_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="memristor_wrapper_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="memristor_wrapper.tcl"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/memristor/memristor.bd">
@@ -116,9 +116,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -129,17 +127,17 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_SPI_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_oddr_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_GPIO_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_GPIO_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_CTRL_WEST_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_SPI_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_CTRL_WEST_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_SPI_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_GPIO_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_GPIO_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_oddr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_SPI_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_processing_system7_0_0"/>
 </GenRun>

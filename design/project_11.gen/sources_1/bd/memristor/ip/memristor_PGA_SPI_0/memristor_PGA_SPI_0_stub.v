@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Mon Apr  8 14:46:18 2024
-// Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Mon Apr 15 12:46:16 2024
+// Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_stub.v
+//               c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_stub.v
 // Design      : memristor_PGA_SPI_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

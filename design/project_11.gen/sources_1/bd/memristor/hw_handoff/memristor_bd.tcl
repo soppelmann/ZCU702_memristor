@@ -162,18 +162,18 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set da4_sync [ create_bd_port -dir O -from 0 -to 0 da4_sync ]
   set ex_ADC_1 [ create_bd_port -dir I -from 11 -to 0 -type data ex_ADC_1 ]
   set ex_ADC_2 [ create_bd_port -dir I -from 11 -to 0 -type data ex_ADC_2 ]
   set ex_ADC_3 [ create_bd_port -dir I -from 11 -to 0 -type data ex_ADC_3 ]
   set ex_ADC_4 [ create_bd_port -dir I -from 11 -to 0 -type data ex_ADC_4 ]
   set ex_ADC_clk [ create_bd_port -dir O ex_ADC_clk ]
   set ex_CTRL_WEST [ create_bd_port -dir O -from 3 -to 0 -type data ex_CTRL_WEST ]
+  set ex_DA4_io [ create_bd_port -dir O -type data ex_DA4_io ]
+  set ex_DA4_sclk [ create_bd_port -dir O -type data ex_DA4_sclk ]
+  set ex_DA4_sync [ create_bd_port -dir O -from 0 -to 0 ex_DA4_sync ]
   set ex_PGA_io [ create_bd_port -dir O ex_PGA_io ]
   set ex_PGA_sclk [ create_bd_port -dir O -type clk ex_PGA_sclk ]
-  set mosi [ create_bd_port -dir O -type data mosi ]
-  set pga_sync [ create_bd_port -dir O -from 0 -to 0 pga_sync ]
-  set sclk [ create_bd_port -dir O -type data sclk ]
+  set ex_PGA_sync [ create_bd_port -dir O -from 0 -to 0 ex_PGA_sync ]
 
   # Create instance: ADC_1, and set properties
   set ADC_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 ADC_1 ]
@@ -238,7 +238,7 @@ proc create_root_design { parentCell } {
   # Create instance: PGA_SPI, and set properties
   set PGA_SPI [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 PGA_SPI ]
   set_property -dict [ list \
-   CONFIG.C_NUM_TRANSFER_BITS {32} \
+   CONFIG.C_NUM_TRANSFER_BITS {16} \
    CONFIG.C_USE_STARTUP {0} \
  ] $PGA_SPI
 
@@ -432,10 +432,10 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net CTRL_WEST_gpio_io_o [get_bd_ports ex_CTRL_WEST] [get_bd_pins CTRL_WEST/gpio_io_o]
-  connect_bd_net -net PGA_GPIO_gpio_io_o [get_bd_ports pga_sync] [get_bd_pins PGA_GPIO/gpio_io_o]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_ports da4_sync] [get_bd_pins DA4_GPIO/gpio_io_o]
-  connect_bd_net -net axi_quad_spi_0_io0_o [get_bd_ports mosi] [get_bd_pins DA4_SPI/io0_o]
-  connect_bd_net -net axi_quad_spi_0_sck_o [get_bd_ports sclk] [get_bd_pins DA4_SPI/sck_o]
+  connect_bd_net -net PGA_GPIO_gpio_io_o [get_bd_ports ex_PGA_sync] [get_bd_pins PGA_GPIO/gpio_io_o]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_ports ex_DA4_sync] [get_bd_pins DA4_GPIO/gpio_io_o]
+  connect_bd_net -net axi_quad_spi_0_io0_o [get_bd_ports ex_DA4_io] [get_bd_pins DA4_SPI/io0_o]
+  connect_bd_net -net axi_quad_spi_0_sck_o [get_bd_ports ex_DA4_sclk] [get_bd_pins DA4_SPI/sck_o]
   connect_bd_net -net axi_quad_spi_1_io0_o [get_bd_ports ex_PGA_io] [get_bd_pins PGA_SPI/io0_o]
   connect_bd_net -net axi_quad_spi_1_sck_o [get_bd_ports ex_PGA_sclk] [get_bd_pins PGA_SPI/sck_o]
   connect_bd_net -net ex_ADC_1_1 [get_bd_ports ex_ADC_1] [get_bd_pins ADC_1/gpio_io_i]

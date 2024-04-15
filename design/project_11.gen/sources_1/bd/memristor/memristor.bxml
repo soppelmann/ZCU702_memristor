@@ -2,18 +2,18 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="memristor" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1712583745"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1712583745"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1712583745"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1712583745"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1713177897"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1713177897"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1713177897"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1713177897"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/memristor.v" Type="Verilog">
+      <File Name="synth\memristor.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
-      <File Name="sim/memristor.v" Type="Verilog">
+      <File Name="sim\memristor.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -25,7 +25,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
       </File>
-      <File Name="hw_handoff/memristor.hwh" Type="HwHandoff">
+      <File Name="hw_handoff\memristor.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -35,17 +35,17 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="hw_handoff/memristor_bd.tcl">
+      <File Name="hw_handoff\memristor_bd.tcl">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="synth/memristor.hwdef">
+      <File Name="synth\memristor.hwdef">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="sim/memristor.protoinst">
+      <File Name="sim\memristor.protoinst">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/getz/project_11/project_11.runs/impl_1/memristor_wrapper.tcl"
+  variable script "C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/impl_1/memristor_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -131,20 +131,20 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/getz/project_11/project_11.cache/wt [current_project]
-  set_property parent.project_path /home/getz/project_11/project_11.xpr [current_project]
-  set_property ip_output_repo /home/getz/project_11/project_11.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/ZCU702_Projects/ZCU702_memristor/design/project_11.cache/wt [current_project]
+  set_property parent.project_path C:/ZCU702_Projects/ZCU702_memristor/design/project_11.xpr [current_project]
+  set_property ip_output_repo C:/ZCU702_Projects/ZCU702_memristor/design/project_11.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/getz/project_11/project_11.runs/synth_1/memristor_wrapper.dcp
+  add_files -quiet C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/synth_1/memristor_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/getz/project_11/project_11.srcs/sources_1/bd/memristor/memristor.bd
+  add_files C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/sources_1/bd/memristor/memristor.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc
+  read_xdc C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
