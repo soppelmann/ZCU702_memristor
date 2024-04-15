@@ -295,7 +295,7 @@ BEGIN
       C_SCK_RATIO => 16,
       C_DUAL_QUAD_MODE => 0,
       C_NUM_SS_BITS => 1,
-      C_NUM_TRANSFER_BITS => 32,
+      C_NUM_TRANSFER_BITS => 16,
       C_NEW_SEQ_EN => 1,
       C_SPI_MODE => 0,
       C_USE_STARTUP => 0,

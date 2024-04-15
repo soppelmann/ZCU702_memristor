@@ -2498,7 +2498,7 @@ When set to:   0 - Default.   1 - When the core is configured in dual/quad SPI m
             <spirit:description>SPI Transmit Data.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">32</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">16</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -2532,7 +2532,7 @@ When set to:   0 - Default.   1 - When the core is configured in dual/quad SPI m
             <spirit:description>SPI Receive Data
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">32</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">16</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>read-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -3988,7 +3988,7 @@ When set to:   0 - Disabled.   1 - Enabled.
             <spirit:description>SPI Transmit Data.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">32</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">16</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -4022,7 +4022,7 @@ When set to:   0 - Disabled.   1 - Enabled.
             <spirit:description>SPI Receive Data
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">32</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">16</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>read-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -4615,11 +4615,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 08 12:37:53 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 15 08:56:19 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bfb79380</spirit:value>
+            <spirit:value>9:a4c8eb3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4630,7 +4630,7 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bfb79380</spirit:value>
+            <spirit:value>9:a4c8eb3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4646,11 +4646,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 08 12:37:54 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 15 10:40:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bfb79380</spirit:value>
+            <spirit:value>9:a4c8eb3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4689,11 +4689,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 08 12:37:53 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 15 08:56:19 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f6ba6cb0</spirit:value>
+            <spirit:value>9:60f7580f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4709,11 +4709,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 08 12:37:54 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 15 10:40:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f6ba6cb0</spirit:value>
+            <spirit:value>9:60f7580f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4727,11 +4727,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 08 12:37:54 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 15 10:40:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bfb79380</spirit:value>
+            <spirit:value>9:a4c8eb3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4745,11 +4745,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 08 12:46:18 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 15 10:46:17 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bfb79380</spirit:value>
+            <spirit:value>9:a4c8eb3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7194,7 +7194,7 @@ This bit has no significance in dual or quad mode.
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_TRANSFER_BITS</spirit:name>
         <spirit:displayName>Num Transfer Bits</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_TRANSFER_BITS">32</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_TRANSFER_BITS">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NEW_SEQ_EN</spirit:name>
@@ -7970,7 +7970,7 @@ This bit has no significance in dual or quad mode.
       <spirit:name>C_NUM_TRANSFER_BITS</spirit:name>
       <spirit:displayName>Num Transfer Bits</spirit:displayName>
       <spirit:description>This parameter should be set while choosing the no. of bits in single SPI transaction. Please refer PG for more reference. Allowed values are 8 or 16 or 32. The Standard SPI mode supports all the three values while Dual and Quad SPI mode supports only the 8-bit transfer mode.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_TRANSFER_BITS" spirit:choiceRef="choice_list_8112d406" spirit:order="60">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_TRANSFER_BITS" spirit:choiceRef="choice_list_8112d406" spirit:order="60">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

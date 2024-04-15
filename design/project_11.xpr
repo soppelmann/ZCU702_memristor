@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="/home/getz/project_11/project_11.xpr">
+<Project Version="7" Minor="54" Path="C:/ZCU702_Projects/ZCU702_memristor/design/project_11.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="067b1f7e8b1046598520375f5039e988"/>
@@ -82,44 +82,44 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_ADC_3_0/memristor_ADC_3_0.xci">
+          <Proxy FileSetName="memristor_ADC_3_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="memristor_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xci">
+          <Proxy FileSetName="memristor_CTRL_WEST_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_ADC_4_0/memristor_ADC_4_0.xci">
+          <Proxy FileSetName="memristor_ADC_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0.xci">
+          <Proxy FileSetName="memristor_DA4_SPI_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0.xci">
+          <Proxy FileSetName="memristor_DA4_GPIO_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0.xci">
+          <Proxy FileSetName="memristor_PGA_GPIO_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xci">
+          <Proxy FileSetName="memristor_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_oddr_0_0/memristor_oddr_0_0.xci">
+          <Proxy FileSetName="memristor_oddr_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_xbar_0/memristor_xbar_0.xci">
+          <Proxy FileSetName="memristor_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xci">
+          <Proxy FileSetName="memristor_PGA_SPI_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_ADC_1_0/memristor_ADC_1_0.xci">
           <Proxy FileSetName="memristor_ADC_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_ADC_2_0/memristor_ADC_2_0.xci">
           <Proxy FileSetName="memristor_ADC_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_ADC_3_0/memristor_ADC_3_0.xci">
-          <Proxy FileSetName="memristor_ADC_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_ADC_4_0/memristor_ADC_4_0.xci">
-          <Proxy FileSetName="memristor_ADC_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xci">
-          <Proxy FileSetName="memristor_CTRL_WEST_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0.xci">
-          <Proxy FileSetName="memristor_DA4_GPIO_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0.xci">
-          <Proxy FileSetName="memristor_DA4_SPI_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_xbar_0/memristor_xbar_0.xci">
-          <Proxy FileSetName="memristor_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0.xci">
-          <Proxy FileSetName="memristor_PGA_GPIO_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_oddr_0_0/memristor_oddr_0_0.xci">
-          <Proxy FileSetName="memristor_oddr_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xci">
-          <Proxy FileSetName="memristor_PGA_SPI_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="memristor.bd" FileRelPathName="ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xci">
-          <Proxy FileSetName="memristor_processing_system7_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/memristor/hdl/memristor_wrapper.v">
@@ -148,6 +148,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="memristor_wrapper"/>
@@ -259,25 +260,17 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
-    <Simulator Name="IES">
-      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
-    </Simulator>
-    <Simulator Name="Xcelium">
-      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
-    </Simulator>
-    <Simulator Name="VCS">
-      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
-    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
     </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -285,11 +278,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_rst_ps7_0_100M_0" Part="xc7z020clg484-1" ConstrsSet="memristor_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_rst_ps7_0_100M_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_rst_ps7_0_100M_0_synth_1">
+    <Run Id="memristor_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_rst_ps7_0_100M_0" Part="xc7z020clg484-1" ConstrsSet="memristor_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_rst_ps7_0_100M_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_rst_ps7_0_100M_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -297,11 +288,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_1_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_1_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_1_0_synth_1">
+    <Run Id="memristor_ADC_1_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_1_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_1_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -309,11 +298,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_2_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_2_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_2_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_2_0_synth_1">
+    <Run Id="memristor_ADC_2_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_2_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_2_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_2_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -321,11 +308,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_3_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_3_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_3_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_3_0_synth_1">
+    <Run Id="memristor_ADC_3_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_3_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_3_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_3_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -333,11 +318,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_4_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_4_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_4_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_4_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_4_0_synth_1">
+    <Run Id="memristor_ADC_4_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_ADC_4_0" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_4_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_ADC_4_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_4_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -345,11 +328,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_CTRL_WEST_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_CTRL_WEST_0" Part="xc7z020clg484-1" ConstrsSet="memristor_CTRL_WEST_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_CTRL_WEST_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_CTRL_WEST_0_synth_1">
+    <Run Id="memristor_CTRL_WEST_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_CTRL_WEST_0" Part="xc7z020clg484-1" ConstrsSet="memristor_CTRL_WEST_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_CTRL_WEST_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_CTRL_WEST_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -357,11 +338,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_DA4_GPIO_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_DA4_GPIO_0" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_GPIO_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_DA4_GPIO_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_DA4_GPIO_0_synth_1">
+    <Run Id="memristor_DA4_GPIO_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_DA4_GPIO_0" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_GPIO_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_DA4_GPIO_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_DA4_GPIO_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -369,11 +348,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_DA4_SPI_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_DA4_SPI_0" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_SPI_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_DA4_SPI_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_DA4_SPI_0_synth_1">
+    <Run Id="memristor_DA4_SPI_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_DA4_SPI_0" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_SPI_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_DA4_SPI_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_DA4_SPI_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -381,11 +358,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_xbar_0" Part="xc7z020clg484-1" ConstrsSet="memristor_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_xbar_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_xbar_0_synth_1">
+    <Run Id="memristor_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_xbar_0" Part="xc7z020clg484-1" ConstrsSet="memristor_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_xbar_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_xbar_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -393,11 +368,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_PGA_GPIO_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_PGA_GPIO_0" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_GPIO_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_PGA_GPIO_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_PGA_GPIO_0_synth_1">
+    <Run Id="memristor_PGA_GPIO_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_PGA_GPIO_0" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_GPIO_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_PGA_GPIO_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_PGA_GPIO_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -405,11 +378,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_oddr_0_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_oddr_0_0" Part="xc7z020clg484-1" ConstrsSet="memristor_oddr_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_oddr_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_oddr_0_0_synth_1">
+    <Run Id="memristor_oddr_0_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_oddr_0_0" Part="xc7z020clg484-1" ConstrsSet="memristor_oddr_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_oddr_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_oddr_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -417,11 +388,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_PGA_SPI_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_PGA_SPI_0" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_SPI_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_PGA_SPI_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_PGA_SPI_0_synth_1">
+    <Run Id="memristor_PGA_SPI_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_PGA_SPI_0" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_SPI_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_PGA_SPI_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_PGA_SPI_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -429,11 +398,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_processing_system7_0_0" Part="xc7z020clg484-1" ConstrsSet="memristor_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_processing_system7_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_processing_system7_0_0_synth_1">
+    <Run Id="memristor_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="memristor_processing_system7_0_0" Part="xc7z020clg484-1" ConstrsSet="memristor_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memristor_processing_system7_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_processing_system7_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -441,11 +408,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -461,11 +426,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_rst_ps7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_rst_ps7_0_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_rst_ps7_0_100M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_rst_ps7_0_100M_0_impl_1">
+    <Run Id="memristor_rst_ps7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_rst_ps7_0_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_rst_ps7_0_100M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_rst_ps7_0_100M_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -480,11 +443,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_1_0_impl_1">
+    <Run Id="memristor_ADC_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_1_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -499,11 +460,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_2_0_impl_1">
+    <Run Id="memristor_ADC_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_2_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -518,11 +477,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_3_0_impl_1">
+    <Run Id="memristor_ADC_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_3_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -537,11 +494,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_ADC_4_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_4_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_4_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_ADC_4_0_impl_1">
+    <Run Id="memristor_ADC_4_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_ADC_4_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_ADC_4_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_ADC_4_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -556,11 +511,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_CTRL_WEST_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_CTRL_WEST_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_CTRL_WEST_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_CTRL_WEST_0_impl_1">
+    <Run Id="memristor_CTRL_WEST_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_CTRL_WEST_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_CTRL_WEST_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_CTRL_WEST_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -575,11 +528,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_DA4_GPIO_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_GPIO_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_DA4_GPIO_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_DA4_GPIO_0_impl_1">
+    <Run Id="memristor_DA4_GPIO_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_GPIO_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_DA4_GPIO_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_DA4_GPIO_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -594,11 +545,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_DA4_SPI_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_SPI_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_DA4_SPI_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_DA4_SPI_0_impl_1">
+    <Run Id="memristor_DA4_SPI_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_DA4_SPI_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_DA4_SPI_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_DA4_SPI_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -613,11 +562,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_xbar_0_impl_1">
+    <Run Id="memristor_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_xbar_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -632,11 +579,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_PGA_GPIO_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_GPIO_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_PGA_GPIO_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_PGA_GPIO_0_impl_1">
+    <Run Id="memristor_PGA_GPIO_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_GPIO_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_PGA_GPIO_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_PGA_GPIO_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -651,11 +596,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_oddr_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_oddr_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_oddr_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_oddr_0_0_impl_1">
+    <Run Id="memristor_oddr_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_oddr_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_oddr_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_oddr_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -670,11 +613,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_PGA_SPI_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_SPI_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_PGA_SPI_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_PGA_SPI_0_impl_1">
+    <Run Id="memristor_PGA_SPI_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_PGA_SPI_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_PGA_SPI_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_PGA_SPI_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -689,11 +630,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="memristor_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/memristor_processing_system7_0_0_impl_1">
+    <Run Id="memristor_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="memristor_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="memristor_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../home/getz/project_11/project_11.srcs/utils_1/imports/memristor_processing_system7_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

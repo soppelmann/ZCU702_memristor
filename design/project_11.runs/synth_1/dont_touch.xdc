@@ -51,4 +51,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==memristor_r
 # IP: bd/memristor/ip/memristor_auto_pc_0/memristor_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==memristor_auto_pc_0 || ORIG_REF_NAME==memristor_auto_pc_0} -quiet] -quiet
 
-# XDC: /home/getz/project_11/project_11.gen/sources_1/bd/memristor/memristor_ooc.xdc
+# XDC: c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/memristor_ooc.xdc

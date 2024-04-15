@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5CEBF9941AC7A831",
+      "boundary_crc": "0xAB5F2CA555A7CE92",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../project_11.gen/sources_1/bd/memristor",
       "name": "memristor",
@@ -106,7 +106,7 @@
       }
     },
     "ports": {
-      "da4_sync": {
+      "ex_DA4_sync": {
         "direction": "O",
         "left": "0",
         "right": "0"
@@ -213,7 +213,7 @@
           }
         }
       },
-      "mosi": {
+      "ex_DA4_io": {
         "type": "data",
         "direction": "O",
         "parameters": {
@@ -223,12 +223,12 @@
           }
         }
       },
-      "pga_sync": {
+      "ex_PGA_sync": {
         "direction": "O",
         "left": "0",
         "right": "0"
       },
-      "sclk": {
+      "ex_DA4_sclk": {
         "type": "data",
         "direction": "O",
         "parameters": {
@@ -243,7 +243,7 @@
       "ADC_1": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_ADC_1_0",
-        "xci_path": "ip/memristor_ADC_1_0/memristor_ADC_1_0.xci",
+        "xci_path": "ip\\memristor_ADC_1_0\\memristor_ADC_1_0.xci",
         "inst_hier_path": "ADC_1",
         "parameters": {
           "C_ALL_INPUTS": {
@@ -260,7 +260,7 @@
       "ADC_2": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_ADC_2_0",
-        "xci_path": "ip/memristor_ADC_2_0/memristor_ADC_2_0.xci",
+        "xci_path": "ip\\memristor_ADC_2_0\\memristor_ADC_2_0.xci",
         "inst_hier_path": "ADC_2",
         "parameters": {
           "C_ALL_INPUTS": {
@@ -274,7 +274,7 @@
       "ADC_3": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_ADC_3_0",
-        "xci_path": "ip/memristor_ADC_3_0/memristor_ADC_3_0.xci",
+        "xci_path": "ip\\memristor_ADC_3_0\\memristor_ADC_3_0.xci",
         "inst_hier_path": "ADC_3",
         "parameters": {
           "C_ALL_INPUTS": {
@@ -288,7 +288,7 @@
       "ADC_4": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_ADC_4_0",
-        "xci_path": "ip/memristor_ADC_4_0/memristor_ADC_4_0.xci",
+        "xci_path": "ip\\memristor_ADC_4_0\\memristor_ADC_4_0.xci",
         "inst_hier_path": "ADC_4",
         "parameters": {
           "C_ALL_INPUTS": {
@@ -302,7 +302,7 @@
       "CTRL_WEST": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_CTRL_WEST_0",
-        "xci_path": "ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xci",
+        "xci_path": "ip\\memristor_CTRL_WEST_0\\memristor_CTRL_WEST_0.xci",
         "inst_hier_path": "CTRL_WEST",
         "parameters": {
           "C_ALL_OUTPUTS": {
@@ -325,7 +325,7 @@
       "DA4_GPIO": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_DA4_GPIO_0",
-        "xci_path": "ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0.xci",
+        "xci_path": "ip\\memristor_DA4_GPIO_0\\memristor_DA4_GPIO_0.xci",
         "inst_hier_path": "DA4_GPIO",
         "parameters": {
           "C_ALL_OUTPUTS": {
@@ -339,7 +339,7 @@
       "DA4_SPI": {
         "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
         "xci_name": "memristor_DA4_SPI_0",
-        "xci_path": "ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0.xci",
+        "xci_path": "ip\\memristor_DA4_SPI_0\\memristor_DA4_SPI_0.xci",
         "inst_hier_path": "DA4_SPI",
         "parameters": {
           "C_NUM_TRANSFER_BITS": {
@@ -353,7 +353,7 @@
       "PGA_GPIO": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "memristor_PGA_GPIO_0",
-        "xci_path": "ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0.xci",
+        "xci_path": "ip\\memristor_PGA_GPIO_0\\memristor_PGA_GPIO_0.xci",
         "inst_hier_path": "PGA_GPIO",
         "parameters": {
           "C_ALL_OUTPUTS": {
@@ -367,11 +367,11 @@
       "PGA_SPI": {
         "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
         "xci_name": "memristor_PGA_SPI_0",
-        "xci_path": "ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xci",
+        "xci_path": "ip\\memristor_PGA_SPI_0\\memristor_PGA_SPI_0.xci",
         "inst_hier_path": "PGA_SPI",
         "parameters": {
           "C_NUM_TRANSFER_BITS": {
-            "value": "32"
+            "value": "16"
           },
           "C_USE_STARTUP": {
             "value": "0"
@@ -381,13 +381,13 @@
       "oddr_0": {
         "vlnv": "xilinx.com:ip:oddr:1.0",
         "xci_name": "memristor_oddr_0_0",
-        "xci_path": "ip/memristor_oddr_0_0/memristor_oddr_0_0.xci",
+        "xci_path": "ip\\memristor_oddr_0_0\\memristor_oddr_0_0.xci",
         "inst_hier_path": "oddr_0"
       },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "memristor_processing_system7_0_0",
-        "xci_path": "ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xci",
+        "xci_path": "ip\\memristor_processing_system7_0_0\\memristor_processing_system7_0_0.xci",
         "inst_hier_path": "processing_system7_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
@@ -766,7 +766,7 @@
       },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip/memristor_ps7_0_axi_periph_0/memristor_ps7_0_axi_periph_0.xci",
+        "xci_path": "ip\\memristor_ps7_0_axi_periph_0\\memristor_ps7_0_axi_periph_0.xci",
         "inst_hier_path": "ps7_0_axi_periph",
         "xci_name": "memristor_ps7_0_axi_periph_0",
         "parameters": {
@@ -995,7 +995,7 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "xci_name": "memristor_xbar_0",
-            "xci_path": "ip/memristor_xbar_0/memristor_xbar_0.xci",
+            "xci_path": "ip\\memristor_xbar_0\\memristor_xbar_0.xci",
             "inst_hier_path": "ps7_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
@@ -1074,7 +1074,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "memristor_auto_pc_0",
-                "xci_path": "ip/memristor_auto_pc_0/memristor_auto_pc_0.xci",
+                "xci_path": "ip\\memristor_auto_pc_0\\memristor_auto_pc_0.xci",
                 "inst_hier_path": "ps7_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1611,10 +1611,28 @@
           }
         },
         "interface_nets": {
-          "m05_couplers_to_ps7_0_axi_periph": {
+          "m08_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "M05_AXI",
-              "m05_couplers/M_AXI"
+              "M08_AXI",
+              "m08_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m08_couplers": {
+            "interface_ports": [
+              "xbar/M08_AXI",
+              "m08_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1623,10 +1641,28 @@
               "m00_couplers/S_AXI"
             ]
           },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
             ]
           },
           "xbar_to_m02_couplers": {
@@ -1641,22 +1677,16 @@
               "m03_couplers/M_AXI"
             ]
           },
-          "xbar_to_m03_couplers": {
-            "interface_ports": [
-              "xbar/M03_AXI",
-              "m03_couplers/S_AXI"
-            ]
-          },
           "m04_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M04_AXI",
               "m04_couplers/M_AXI"
             ]
           },
-          "m00_couplers_to_ps7_0_axi_periph": {
+          "xbar_to_m03_couplers": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "xbar/M03_AXI",
+              "m03_couplers/S_AXI"
             ]
           },
           "xbar_to_m04_couplers": {
@@ -1665,34 +1695,22 @@
               "m04_couplers/S_AXI"
             ]
           },
-          "ps7_0_axi_periph_to_s00_couplers": {
+          "m05_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
+              "M05_AXI",
+              "m05_couplers/M_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "m06_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "M06_AXI",
+              "m06_couplers/M_AXI"
             ]
           },
           "xbar_to_m05_couplers": {
             "interface_ports": [
               "xbar/M05_AXI",
               "m05_couplers/S_AXI"
-            ]
-          },
-          "m02_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
-            ]
-          },
-          "m01_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
             ]
           },
           "xbar_to_m06_couplers": {
@@ -1705,24 +1723,6 @@
             "interface_ports": [
               "M07_AXI",
               "m07_couplers/M_AXI"
-            ]
-          },
-          "m06_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M06_AXI",
-              "m06_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m08_couplers": {
-            "interface_ports": [
-              "xbar/M08_AXI",
-              "m08_couplers/S_AXI"
-            ]
-          },
-          "m08_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M08_AXI",
-              "m08_couplers/M_AXI"
             ]
           },
           "xbar_to_m07_couplers": {
@@ -1790,39 +1790,15 @@
       "rst_ps7_0_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "memristor_rst_ps7_0_100M_0",
-        "xci_path": "ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0.xci",
+        "xci_path": "ip\\memristor_rst_ps7_0_100M_0\\memristor_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M02_AXI": {
+      "ps7_0_axi_periph_M07_AXI": {
         "interface_ports": [
-          "PGA_GPIO/S_AXI",
-          "ps7_0_axi_periph/M02_AXI"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "DA4_SPI/AXI_LITE",
-          "ps7_0_axi_periph/M00_AXI"
+          "DA4_GPIO/S_AXI",
+          "ps7_0_axi_periph/M07_AXI"
         ]
       },
       "ps7_0_axi_periph_M01_AXI": {
@@ -1831,10 +1807,22 @@
           "ps7_0_axi_periph/M01_AXI"
         ]
       },
-      "ps7_0_axi_periph_M03_AXI": {
+      "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
-          "ADC_1/S_AXI",
-          "ps7_0_axi_periph/M03_AXI"
+          "DA4_SPI/AXI_LITE",
+          "ps7_0_axi_periph/M00_AXI"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
+      },
+      "ps7_0_axi_periph_M08_AXI": {
+        "interface_ports": [
+          "PGA_SPI/AXI_LITE",
+          "ps7_0_axi_periph/M08_AXI"
         ]
       },
       "ps7_0_axi_periph_M04_AXI": {
@@ -1843,10 +1831,16 @@
           "ps7_0_axi_periph/M04_AXI"
         ]
       },
-      "ps7_0_axi_periph_M05_AXI": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "ADC_3/S_AXI",
-          "ps7_0_axi_periph/M05_AXI"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "ps7_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "PGA_GPIO/S_AXI",
+          "ps7_0_axi_periph/M02_AXI"
         ]
       },
       "ps7_0_axi_periph_M06_AXI": {
@@ -1855,16 +1849,22 @@
           "ps7_0_axi_periph/M06_AXI"
         ]
       },
-      "ps7_0_axi_periph_M07_AXI": {
+      "ps7_0_axi_periph_M03_AXI": {
         "interface_ports": [
-          "DA4_GPIO/S_AXI",
-          "ps7_0_axi_periph/M07_AXI"
+          "ADC_1/S_AXI",
+          "ps7_0_axi_periph/M03_AXI"
         ]
       },
-      "ps7_0_axi_periph_M08_AXI": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "PGA_SPI/AXI_LITE",
-          "ps7_0_axi_periph/M08_AXI"
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "ps7_0_axi_periph_M05_AXI": {
+        "interface_ports": [
+          "ADC_3/S_AXI",
+          "ps7_0_axi_periph/M05_AXI"
         ]
       }
     },
@@ -1878,25 +1878,25 @@
       "PGA_GPIO_gpio_io_o": {
         "ports": [
           "PGA_GPIO/gpio_io_o",
-          "pga_sync"
+          "ex_PGA_sync"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "DA4_GPIO/gpio_io_o",
-          "da4_sync"
+          "ex_DA4_sync"
         ]
       },
       "axi_quad_spi_0_io0_o": {
         "ports": [
           "DA4_SPI/io0_o",
-          "mosi"
+          "ex_DA4_io"
         ]
       },
       "axi_quad_spi_0_sck_o": {
         "ports": [
           "DA4_SPI/sck_o",
-          "sclk"
+          "ex_DA4_sclk"
         ]
       },
       "axi_quad_spi_1_io0_o": {

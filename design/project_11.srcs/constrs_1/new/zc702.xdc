@@ -255,13 +255,13 @@
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13
 # ----------------------------------------------------------------------------
-set_property PACKAGE_PIN V7  [get_ports {da4_sync}];  # "JA1"
-set_property IOSTANDARD LVCMOS33 [get_ports {da4_sync}];
-set_property PACKAGE_PIN W10 [get_ports {mosi}];  # "JA2"
-set_property IOSTANDARD LVCMOS33 [get_ports {mosi}];
+set_property PACKAGE_PIN V7  [get_ports {ex_DA4_sync}];  # "JA1"
+set_property IOSTANDARD LVCMOS33 [get_ports {ex_DA4_sync}];
+set_property PACKAGE_PIN W10 [get_ports {ex_DA4_io}];  # "JA2"
+set_property IOSTANDARD LVCMOS33 [get_ports {ex_DA4_io}];
 #set_property PACKAGE_PIN Y10  [get_ports {JA3}];  # "JA3"
-set_property PACKAGE_PIN P17  [get_ports {sclk}];  # "JA4"
-set_property IOSTANDARD LVCMOS33 [get_ports {sclk}];
+set_property PACKAGE_PIN P17  [get_ports {ex_DA4_sclk}];  # "JA4"
+set_property IOSTANDARD LVCMOS33 [get_ports {ex_DA4_sclk}];
 #set_property PACKAGE_PIN AB11 [get_ports {JA7}];  # "JA7"
 #set_property PACKAGE_PIN AB10 [get_ports {JA8}];  # "JA8"
 #set_property PACKAGE_PIN AB9  [get_ports {JA9}];  # "JA9"
@@ -356,7 +356,7 @@ set_property PACKAGE_PIN L17 [get_ports {ex_CTRL_WEST[3]}];  # "FMC-LA10_P"
 
 set_property PACKAGE_PIN K19 [get_ports {ex_PGA_sclk}];  # "FMC-LA00_CC_P" sclk
 set_property PACKAGE_PIN N18 [get_ports {ex_PGA_io}];  # "FMC-LA05_N" io/mosi
-set_property PACKAGE_PIN N17 [get_ports {pga_sync[0]}];  # "FMC-LA05_P" csbar, sync
+set_property PACKAGE_PIN N17 [get_ports {ex_PGA_sync}];  # "FMC-LA05_P" csbar, sync
 # set_property PACKAGE_PIN J20 [get_ports {ex_ADC_1[3]}];  # "FMC-LA03_P" vcal
 
 

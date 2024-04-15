@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Mon Apr  8 14:46:18 2024
-// Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Mon Apr 15 12:46:16 2024
+// Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_sim_netlist.v
+//               c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_sim_netlist.v
 // Design      : memristor_PGA_SPI_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -102,7 +102,7 @@ module memristor_PGA_SPI_0
   wire s_axi_bready;
   wire [1:1]\^s_axi_bresp ;
   wire s_axi_bvalid;
-  wire [31:0]s_axi_rdata;
+  wire [31:0]\^s_axi_rdata ;
   wire s_axi_rready;
   wire [1:1]\^s_axi_rresp ;
   wire s_axi_rvalid;
@@ -144,10 +144,28 @@ module memristor_PGA_SPI_0
   wire [0:0]NLW_U0_s_axi4_rid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi4_rresp_UNCONNECTED;
   wire [0:0]NLW_U0_s_axi_bresp_UNCONNECTED;
+  wire [30:16]NLW_U0_s_axi_rdata_UNCONNECTED;
   wire [0:0]NLW_U0_s_axi_rresp_UNCONNECTED;
 
   assign s_axi_bresp[1] = \^s_axi_bresp [1];
   assign s_axi_bresp[0] = \<const0> ;
+  assign s_axi_rdata[31] = \^s_axi_rdata [31];
+  assign s_axi_rdata[30] = \<const0> ;
+  assign s_axi_rdata[29] = \<const0> ;
+  assign s_axi_rdata[28] = \<const0> ;
+  assign s_axi_rdata[27] = \<const0> ;
+  assign s_axi_rdata[26] = \<const0> ;
+  assign s_axi_rdata[25] = \<const0> ;
+  assign s_axi_rdata[24] = \<const0> ;
+  assign s_axi_rdata[23] = \<const0> ;
+  assign s_axi_rdata[22] = \<const0> ;
+  assign s_axi_rdata[21] = \<const0> ;
+  assign s_axi_rdata[20] = \<const0> ;
+  assign s_axi_rdata[19] = \<const0> ;
+  assign s_axi_rdata[18] = \<const0> ;
+  assign s_axi_rdata[17] = \<const0> ;
+  assign s_axi_rdata[16] = \<const0> ;
+  assign s_axi_rdata[15:0] = \^s_axi_rdata [15:0];
   assign s_axi_rresp[1] = \^s_axi_rresp [1];
   assign s_axi_rresp[0] = \<const0> ;
   GND GND
@@ -160,7 +178,7 @@ module memristor_PGA_SPI_0
   (* C_LSB_STUP = "0" *) 
   (* C_NEW_SEQ_EN = "1" *) 
   (* C_NUM_SS_BITS = "1" *) 
-  (* C_NUM_TRANSFER_BITS = "32" *) 
+  (* C_NUM_TRANSFER_BITS = "16" *) 
   (* C_SCK_RATIO = "16" *) 
   (* C_SELECT_XPM = "1" *) 
   (* C_SHARED_STARTUP = "0" *) 
@@ -266,11 +284,11 @@ module memristor_PGA_SPI_0
         .s_axi_bready(s_axi_bready),
         .s_axi_bresp({\^s_axi_bresp ,NLW_U0_s_axi_bresp_UNCONNECTED[0]}),
         .s_axi_bvalid(s_axi_bvalid),
-        .s_axi_rdata(s_axi_rdata),
+        .s_axi_rdata(\^s_axi_rdata ),
         .s_axi_rready(s_axi_rready),
         .s_axi_rresp({\^s_axi_rresp ,NLW_U0_s_axi_rresp_UNCONNECTED[0]}),
         .s_axi_rvalid(s_axi_rvalid),
-        .s_axi_wdata(s_axi_wdata),
+        .s_axi_wdata({s_axi_wdata[31],1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,s_axi_wdata[15:0]}),
         .s_axi_wready(s_axi_wready),
         .s_axi_wstrb({s_axi_wstrb[3],1'b0,1'b0,s_axi_wstrb[0]}),
         .s_axi_wvalid(s_axi_wvalid),
@@ -293,56 +311,59 @@ endmodule
 module memristor_PGA_SPI_0_address_decoder
    (p_1_in_0,
     p_2_in,
+    p_3_in,
     \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ,
     \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ,
-    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ,
     Bus_RNW_reg_reg_0,
-    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ,
-    Bus_RNW_reg_reg_1,
+    irpt_wrack_d1_reg,
+    irpt_wrack_d1_reg_0,
     E,
-    Bus_RNW_reg_reg_2,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ,
+    Bus_RNW_reg_reg_1,
+    \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ,
     \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ,
-    \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ,
-    \ip_irpt_enable_reg_reg[3] ,
-    \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ,
+    \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ,
     D,
-    wr_en,
+    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ,
     SPICR_data_int_reg0,
     bus2ip_wrce_int,
     IP2Bus_Error_1,
-    \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16]_0 ,
+    Bus_RNW_reg_reg_2,
     reset_trig0,
     sw_rst_cond,
-    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 ,
-    interrupt_wrce_strb,
-    intr2bus_rdack0,
     irpt_rdack,
+    intr2bus_rdack0,
+    irpt_wrack,
+    \ip_irpt_enable_reg_reg[0] ,
+    \ip_irpt_enable_reg_reg[1] ,
     ip2Bus_WrAck_intr_reg_hole0,
     ip2Bus_RdAck_intr_reg_hole0,
     intr_controller_rd_ce_or_reduce,
-    rd_ce_or_reduce_core_cmb,
-    ip2Bus_WrAck_core_reg0,
     wr_ce_or_reduce_core_cmb,
-    \gen_fwft.empty_fwft_i_reg ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
-    s_axi_wdata_0_sp_1,
+    ip2Bus_WrAck_core_reg0,
+    rd_ce_or_reduce_core_cmb,
+    \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29]_0 ,
     \s_axi_wdata[31] ,
+    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ,
     Q,
     s_axi_aclk,
     ipif_glbl_irpt_enable_reg_reg,
     s_axi_wstrb,
+    irpt_wrack_d1,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ,
     dout,
-    prmry_in,
     p_1_in34_in,
     p_1_in31_in,
+    p_1_in28_in,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ,
     p_1_in25_in,
     ip2Bus_RdAck_core_reg,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ,
+    prmry_in,
     p_1_in22_in,
     spicr_5_txfifo_rst_frm_axi_clk,
     scndry_out,
@@ -353,28 +374,28 @@ module memristor_PGA_SPI_0_address_decoder
     p_1_in13_in,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23]_0 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ,
-    p_0_in,
     empty,
     rx_fifo_empty_i,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ,
     ip2Bus_WrAck_core_reg_1,
-    almost_full,
     receive_ip2bus_error,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ,
     sw_rst_cond_d1,
-    irpt_wrack_d1,
-    intr2bus_wrack_reg,
+    p_0_in,
     irpt_rdack_d1,
     ip2Bus_WrAck_intr_reg_hole_d1,
     ip2Bus_RdAck_intr_reg_hole_d1,
+    almost_full,
     ip2Bus_WrAck_core_reg_d1,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_1 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_1 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ,
     spicr_2_mst_n_slv_frm_axi_clk,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_0 ,
     Tx_FIFO_Full_int,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_1 ,
     s_axi_wdata,
+    reset2ip_reset_int,
     s_axi_aresetn,
     ip2bus_rdack_int,
     s_axi_arready,
@@ -383,56 +404,59 @@ module memristor_PGA_SPI_0_address_decoder
     s_axi_wready_0);
   output p_1_in_0;
   output p_2_in;
+  output p_3_in;
   output \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ;
   output \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ;
-  output \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ;
   output Bus_RNW_reg_reg_0;
-  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
-  output Bus_RNW_reg_reg_1;
+  output irpt_wrack_d1_reg;
+  output irpt_wrack_d1_reg_0;
   output [0:0]E;
-  output Bus_RNW_reg_reg_2;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
+  output Bus_RNW_reg_reg_1;
+  output \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   output \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
-  output \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ;
-  output \ip_irpt_enable_reg_reg[3] ;
-  output \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ;
+  output \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   output [6:0]D;
-  output wr_en;
+  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
   output SPICR_data_int_reg0;
   output [0:0]bus2ip_wrce_int;
   output IP2Bus_Error_1;
-  output \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16]_0 ;
+  output Bus_RNW_reg_reg_2;
   output reset_trig0;
   output sw_rst_cond;
-  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 ;
-  output interrupt_wrce_strb;
-  output intr2bus_rdack0;
   output irpt_rdack;
+  output intr2bus_rdack0;
+  output irpt_wrack;
+  output \ip_irpt_enable_reg_reg[0] ;
+  output \ip_irpt_enable_reg_reg[1] ;
   output ip2Bus_WrAck_intr_reg_hole0;
   output ip2Bus_RdAck_intr_reg_hole0;
   output intr_controller_rd_ce_or_reduce;
-  output rd_ce_or_reduce_core_cmb;
-  output ip2Bus_WrAck_core_reg0;
   output wr_ce_or_reduce_core_cmb;
-  output \gen_fwft.empty_fwft_i_reg ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
-  output s_axi_wdata_0_sp_1;
+  output ip2Bus_WrAck_core_reg0;
+  output rd_ce_or_reduce_core_cmb;
+  output \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29]_0 ;
   output \s_axi_wdata[31] ;
+  output \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  output \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   input Q;
   input s_axi_aclk;
   input ipif_glbl_irpt_enable_reg_reg;
   input [0:0]s_axi_wstrb;
+  input irpt_wrack_d1;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] ;
   input [4:0]\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]_0 ;
-  input [10:0]dout;
-  input prmry_in;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
+  input [9:0]dout;
   input p_1_in34_in;
   input p_1_in31_in;
-  input [7:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
+  input p_1_in28_in;
+  input [6:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
   input p_1_in25_in;
   input ip2Bus_RdAck_core_reg;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ;
+  input prmry_in;
   input p_1_in22_in;
   input spicr_5_txfifo_rst_frm_axi_clk;
   input scndry_out;
@@ -443,28 +467,28 @@ module memristor_PGA_SPI_0_address_decoder
   input p_1_in13_in;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23]_0 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ;
-  input [0:0]p_0_in;
   input empty;
   input rx_fifo_empty_i;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ;
   input ip2Bus_WrAck_core_reg_1;
-  input almost_full;
   input receive_ip2bus_error;
   input \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ;
   input sw_rst_cond_d1;
-  input irpt_wrack_d1;
-  input intr2bus_wrack_reg;
+  input [0:0]p_0_in;
   input irpt_rdack_d1;
   input ip2Bus_WrAck_intr_reg_hole_d1;
   input ip2Bus_RdAck_intr_reg_hole_d1;
+  input almost_full;
   input ip2Bus_WrAck_core_reg_d1;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_1 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_1 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ;
   input spicr_2_mst_n_slv_frm_axi_clk;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_0 ;
   input Tx_FIFO_Full_int;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_0 ;
-  input [1:0]s_axi_wdata;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_1 ;
+  input [2:0]s_axi_wdata;
+  input reset2ip_reset_int;
   input s_axi_aresetn;
   input ip2bus_rdack_int;
   input s_axi_arready;
@@ -476,48 +500,47 @@ module memristor_PGA_SPI_0_address_decoder
   wire Bus_RNW_reg_reg_0;
   wire Bus_RNW_reg_reg_1;
   wire Bus_RNW_reg_reg_2;
+  wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire [6:0]D;
   wire [0:0]E;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
-  wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[15].ce_out_i[15]_i_1_n_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16]_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29]_0 ;
   wire [4:0]\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg_n_0_[31] ;
   wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 ;
+  wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
-  wire \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ;
+  wire \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   wire IP2Bus_Error_1;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_3_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_4_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_2_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_2_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_4_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_5_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[27]_i_2_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_6_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_6_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_7_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_1 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_1 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_5_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_1 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_5_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ;
-  wire [7:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
+  wire [6:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23]_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
@@ -561,14 +584,11 @@ module memristor_PGA_SPI_0_address_decoder
   wire ce_expnd_i_8;
   wire ce_expnd_i_9;
   wire cs_ce_clr;
-  wire [10:0]dout;
+  wire [9:0]dout;
   wire empty;
   wire eqOp__4;
-  wire \gen_fwft.empty_fwft_i_reg ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
-  wire interrupt_wrce_strb;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ;
   wire intr2bus_rdack0;
-  wire intr2bus_wrack_reg;
   wire intr_controller_rd_ce_or_reduce;
   wire ip2Bus_RdAck_core_reg;
   wire ip2Bus_RdAck_intr_reg_hole0;
@@ -583,11 +603,15 @@ module memristor_PGA_SPI_0_address_decoder
   wire ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0;
   wire ip2bus_rdack_int;
   wire ip2bus_wrack_int;
-  wire \ip_irpt_enable_reg_reg[3] ;
+  wire \ip_irpt_enable_reg_reg[0] ;
+  wire \ip_irpt_enable_reg_reg[1] ;
   wire ipif_glbl_irpt_enable_reg_reg;
   wire irpt_rdack;
   wire irpt_rdack_d1;
+  wire irpt_wrack;
   wire irpt_wrack_d1;
+  wire irpt_wrack_d1_reg;
+  wire irpt_wrack_d1_reg_0;
   wire [0:0]p_0_in;
   wire p_10_in;
   wire p_11_in;
@@ -604,6 +628,7 @@ module memristor_PGA_SPI_0_address_decoder
   wire p_1_in19_in;
   wire p_1_in22_in;
   wire p_1_in25_in;
+  wire p_1_in28_in;
   wire p_1_in31_in;
   wire p_1_in34_in;
   wire p_1_in_0;
@@ -622,19 +647,20 @@ module memristor_PGA_SPI_0_address_decoder
   wire p_31_in;
   wire p_3_in;
   wire p_6_in;
+  wire p_7_in;
   wire p_8_in;
   wire p_9_in;
   wire prmry_in;
   wire rd_ce_or_reduce_core_cmb;
   wire receive_ip2bus_error;
+  wire reset2ip_reset_int;
   wire reset_trig0;
   wire rx_fifo_empty_i;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire s_axi_arready;
-  wire [1:0]s_axi_wdata;
+  wire [2:0]s_axi_wdata;
   wire \s_axi_wdata[31] ;
-  wire s_axi_wdata_0_sn_1;
   wire s_axi_wready;
   wire [5:0]s_axi_wready_0;
   wire [0:0]s_axi_wstrb;
@@ -645,10 +671,7 @@ module memristor_PGA_SPI_0_address_decoder
   wire sw_rst_cond;
   wire sw_rst_cond_d1;
   wire wr_ce_or_reduce_core_cmb;
-  wire wr_en;
 
-  assign s_axi_wdata_0_sp_1 = s_axi_wdata_0_sn_1;
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     Bus_RNW_reg_i_1
@@ -662,13 +685,33 @@ module memristor_PGA_SPI_0_address_decoder
         .D(Bus_RNW_reg_i_1_n_0),
         .Q(Bus_RNW_reg_reg_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT6 #(
+    .INIT(64'h000000000000E200)) 
+    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int[3]_i_1 
+       (.I0(spicr_6_rxfifo_rst_frm_axi_clk),
+        .I1(ip2Bus_WrAck_core_reg_1),
+        .I2(s_axi_wdata[1]),
+        .I3(p_7_in),
+        .I4(Bus_RNW_reg_reg_0),
+        .I5(reset2ip_reset_int),
+        .O(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ));
+  LUT6 #(
+    .INIT(64'h000000000000E200)) 
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int[4]_i_1 
+       (.I0(spicr_5_txfifo_rst_frm_axi_clk),
+        .I1(ip2Bus_WrAck_core_reg_1),
+        .I2(s_axi_wdata[0]),
+        .I3(p_7_in),
+        .I4(Bus_RNW_reg_reg_0),
+        .I5(reset2ip_reset_int),
+        .O(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \CONTROL_REG_5_9_GENERATE[9].SPICR_data_int[9]_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
+       (.I0(ip2Bus_WrAck_core_reg_1),
         .I1(Bus_RNW_reg_reg_0),
-        .I2(ip2Bus_WrAck_core_reg_1),
+        .I2(p_7_in),
         .O(SPICR_data_int_reg0));
   FDRE \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] 
        (.C(s_axi_aclk),
@@ -706,7 +749,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_17),
         .Q(p_17_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h00800000)) 
     \GEN_BKEND_CE_REGISTERS[15].ce_out_i[15]_i_1 
@@ -737,7 +780,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_15),
         .Q(p_15_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h00100000)) 
     \GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1 
@@ -759,7 +802,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_13),
         .Q(p_13_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h04000000)) 
     \GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1 
@@ -781,7 +824,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_30),
         .Q(p_30_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h01000000)) 
     \GEN_BKEND_CE_REGISTERS[20].ce_out_i[20]_i_1 
@@ -797,7 +840,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_11),
         .Q(p_11_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h00200000)) 
     \GEN_BKEND_CE_REGISTERS[21].ce_out_i[21]_i_1 
@@ -819,7 +862,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_9),
         .Q(p_9_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
     \GEN_BKEND_CE_REGISTERS[23].ce_out_i[23]_i_1 
@@ -835,7 +878,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_8),
         .Q(p_8_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h00001000)) 
     \GEN_BKEND_CE_REGISTERS[24].ce_out_i[24]_i_1 
@@ -849,9 +892,9 @@ module memristor_PGA_SPI_0_address_decoder
        (.C(s_axi_aclk),
         .CE(Q),
         .D(ce_expnd_i_7),
-        .Q(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
+        .Q(p_7_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h10000000)) 
     \GEN_BKEND_CE_REGISTERS[25].ce_out_i[25]_i_1 
@@ -873,7 +916,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_5),
         .Q(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h08000000)) 
     \GEN_BKEND_CE_REGISTERS[27].ce_out_i[27]_i_1 
@@ -889,7 +932,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_4),
         .Q(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h10000000)) 
     \GEN_BKEND_CE_REGISTERS[28].ce_out_i[28]_i_1 
@@ -905,7 +948,7 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_3),
         .Q(p_3_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h20000000)) 
     \GEN_BKEND_CE_REGISTERS[29].ce_out_i[29]_i_1 
@@ -940,7 +983,7 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ),
         .I2(s_axi_aresetn),
         .O(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \GEN_BKEND_CE_REGISTERS[31].ce_out_i[31]_i_2 
@@ -998,48 +1041,26 @@ module memristor_PGA_SPI_0_address_decoder
         .D(ce_expnd_i_22),
         .Q(p_22_in),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'h000000A8)) 
+    .INIT(32'h00005400)) 
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_2 
-       (.I0(p_23_in),
-        .I1(ipif_glbl_irpt_enable_reg_reg),
-        .I2(s_axi_wstrb),
-        .I3(irpt_wrack_d1),
-        .I4(Bus_RNW_reg_reg_0),
-        .O(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 ));
-  LUT6 #(
-    .INIT(64'h44444F4444444444)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_1 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
-        .I1(dout[10]),
-        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_3_n_0 ),
-        .I3(p_0_in),
-        .I4(p_21_in),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_4_n_0 ),
-        .O(D[6]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2 
-       (.I0(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
-        .I1(Bus_RNW_reg_reg_0),
-        .I2(ip2Bus_RdAck_core_reg),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_3 
-       (.I0(p_23_in),
-        .I1(Bus_RNW_reg_reg_0),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hA8)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_4 
-       (.I0(p_24_in),
+       (.I0(irpt_wrack_d1),
         .I1(s_axi_wstrb),
         .I2(ipif_glbl_irpt_enable_reg_reg),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_4_n_0 ));
+        .I3(p_23_in),
+        .I4(Bus_RNW_reg_reg_0),
+        .O(irpt_wrack_d1_reg));
+  LUT6 #(
+    .INIT(64'h0000100000000000)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_1 
+       (.I0(p_23_in),
+        .I1(p_21_in),
+        .I2(Bus_RNW_reg_reg_0),
+        .I3(p_24_in),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] ),
+        .I5(p_0_in),
+        .O(D[6]));
   LUT6 #(
     .INIT(64'hFF00800080008000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[22]_i_1 
@@ -1047,39 +1068,39 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(ip2Bus_RdAck_core_reg),
         .I2(dout[9]),
         .I3(Bus_RNW_reg_reg_0),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
+        .I4(p_7_in),
         .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ),
         .O(D[5]));
   LUT5 #(
     .INIT(32'hF4F4FFF4)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [7]),
+       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [6]),
         .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3_n_0 ),
         .I3(p_1_in13_in),
-        .I4(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
         .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hFFFF57FF)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_2 
-       (.I0(p_21_in),
-        .I1(ipif_glbl_irpt_enable_reg_reg),
-        .I2(s_axi_wstrb),
-        .I3(Bus_RNW_reg_reg_0),
-        .I4(p_23_in),
-        .O(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ));
-  LUT6 #(
-    .INIT(64'hFF00800080008000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3 
-       (.I0(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(dout[8]),
-        .I3(Bus_RNW_reg_reg_0),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23]_0 ),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'hBBBFFFFF)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_2 
+       (.I0(p_23_in),
+        .I1(Bus_RNW_reg_reg_0),
+        .I2(s_axi_wstrb),
+        .I3(ipif_glbl_irpt_enable_reg_reg),
+        .I4(p_21_in),
+        .O(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ));
+  LUT6 #(
+    .INIT(64'hF080808080808080)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3 
+       (.I0(p_7_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23]_0 ),
+        .I2(Bus_RNW_reg_reg_0),
+        .I3(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
+        .I4(ip2Bus_RdAck_core_reg),
+        .I5(dout[8]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h57FF)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4 
@@ -1087,86 +1108,94 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .I2(s_axi_wstrb),
         .I3(Bus_RNW_reg_reg_0),
-        .O(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ));
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hF4F4FFF4)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
-        .I1(p_1_in16_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [5]),
         .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_2_n_0 ),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [6]),
-        .I4(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ),
+        .I3(p_1_in16_in),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
         .O(D[3]));
   LUT6 #(
-    .INIT(64'hFF00800080008000)) 
+    .INIT(64'hF080808080808080)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_2 
-       (.I0(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(dout[7]),
-        .I3(Bus_RNW_reg_reg_0),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
+       (.I0(p_7_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
+        .I2(Bus_RNW_reg_reg_0),
+        .I3(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
+        .I4(ip2Bus_RdAck_core_reg),
+        .I5(dout[7]),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hF4F4FFF4)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [5]),
+       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [4]),
         .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2_n_0 ),
         .I3(p_1_in19_in),
-        .I4(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
         .O(D[2]));
   LUT6 #(
-    .INIT(64'hFF00800080008000)) 
+    .INIT(64'hF080808080808080)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2 
-       (.I0(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(dout[6]),
-        .I3(Bus_RNW_reg_reg_0),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I5(spicr_6_rxfifo_rst_frm_axi_clk),
+       (.I0(p_7_in),
+        .I1(spicr_6_rxfifo_rst_frm_axi_clk),
+        .I2(Bus_RNW_reg_reg_0),
+        .I3(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
+        .I4(ip2Bus_RdAck_core_reg),
+        .I5(dout[6]),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hF4F4FFF4)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [4]),
+       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [3]),
         .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_2_n_0 ),
         .I3(p_1_in22_in),
-        .I4(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
         .O(D[1]));
   LUT6 #(
     .INIT(64'h44F444F4FFFF44F4)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_2 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ),
         .I1(dout[5]),
         .I2(spicr_5_txfifo_rst_frm_axi_clk),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ),
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_4_n_0 ),
         .I4(scndry_out),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_4_n_0 ),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_5_n_0 ),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3 
        (.I0(Bus_RNW_reg_reg_0),
-        .I1(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
+        .I1(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
+        .I2(ip2Bus_RdAck_core_reg),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_4 
        (.I0(Bus_RNW_reg_reg_0),
-        .I1(p_6_in),
+        .I1(p_7_in),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_5 
+       (.I0(Bus_RNW_reg_reg_0),
+        .I1(p_6_in),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'hF4F4FFF4)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[27]_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [3]),
+       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [2]),
         .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[27]_i_2_n_0 ),
         .I3(p_1_in25_in),
-        .I4(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
         .O(D[0]));
   LUT6 #(
     .INIT(64'hFF00800080008000)) 
@@ -1175,114 +1204,110 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(ip2Bus_RdAck_core_reg),
         .I2(dout[4]),
         .I3(Bus_RNW_reg_reg_0),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ),
+        .I4(p_7_in),
+        .I5(prmry_in),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[27]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hF4F4FFF4)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 
-       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [2]),
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
+        .I1(p_1_in28_in),
         .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_6_n_0 ),
         .I3(dout[3]),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
-        .O(\ip_irpt_enable_reg_reg[3] ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_5 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ),
-        .I1(p_2_in),
-        .I2(Bus_RNW_reg_reg_0),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ),
+        .O(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ));
   LUT5 #(
     .INIT(32'hF0808080)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_6 
-       (.I0(p_6_in),
-        .I1(Tx_FIFO_Full_int),
+       (.I0(p_7_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_0 ),
         .I2(Bus_RNW_reg_reg_0),
-        .I3(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_0 ),
+        .I3(p_6_in),
+        .I4(Tx_FIFO_Full_int),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'hBF)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_7 
-       (.I0(empty),
-        .I1(p_1_in_0),
-        .I2(Bus_RNW_reg_reg_0),
-        .O(\gen_fwft.empty_fwft_i_reg ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF4F44)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_3 
-       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
-        .I1(p_1_in31_in),
-        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
-        .I3(dout[2]),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_6_n_0 ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_7_n_0 ),
-        .O(\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'hAEFFAEAE)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_4 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_6_n_0 ),
+        .I1(dout[2]),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ),
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
+        .I4(p_1_in31_in),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ));
   LUT5 #(
     .INIT(32'hF0808080)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_6 
-       (.I0(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I1(spicr_2_mst_n_slv_frm_axi_clk),
+       (.I0(p_6_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ),
         .I2(Bus_RNW_reg_reg_0),
-        .I3(p_6_in),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ),
+        .I3(p_7_in),
+        .I4(spicr_2_mst_n_slv_frm_axi_clk),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h2020200000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'hDF)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_7 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [1]),
-        .I1(p_23_in),
+       (.I0(p_2_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ),
         .I2(Bus_RNW_reg_reg_0),
-        .I3(s_axi_wstrb),
-        .I4(ipif_glbl_irpt_enable_reg_reg),
-        .I5(p_21_in),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_7_n_0 ));
+        .O(\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29]_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF4F44)) 
+    .INIT(64'h0000000088800000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 
-       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [1]),
+        .I1(p_21_in),
+        .I2(ipif_glbl_irpt_enable_reg_reg),
+        .I3(s_axi_wstrb),
+        .I4(Bus_RNW_reg_reg_0),
+        .I5(p_23_in),
+        .O(\ip_irpt_enable_reg_reg[1] ));
+  LUT5 #(
+    .INIT(32'hF4F4FFF4)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
         .I1(p_1_in34_in),
-        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_5_n_0 ),
         .I3(dout[1]),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4_n_0 ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_5_n_0 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ),
         .O(\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hF0808080)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4 
-       (.I0(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(p_6_in),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_1 ),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h2020200000000000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_5 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [0]),
-        .I1(p_23_in),
+       (.I0(p_6_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ),
         .I2(Bus_RNW_reg_reg_0),
-        .I3(s_axi_wstrb),
-        .I4(ipif_glbl_irpt_enable_reg_reg),
-        .I5(p_21_in),
+        .I3(p_7_in),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_1 ),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF4F4F4F4F4F4F4)) 
+    .INIT(64'h0000000088800000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
-        .I1(dout[0]),
-        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_5_n_0 ),
-        .I3(Bus_RNW_reg_reg_0),
-        .I4(prmry_in),
-        .I5(p_3_in),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ));
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] [0]),
+        .I1(p_21_in),
+        .I2(ipif_glbl_irpt_enable_reg_reg),
+        .I3(s_axi_wstrb),
+        .I4(Bus_RNW_reg_reg_0),
+        .I5(p_23_in),
+        .O(\ip_irpt_enable_reg_reg[0] ));
+  LUT6 #(
+    .INIT(64'hFFF4FFF4FFFFFFF4)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4_n_0 ),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ),
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_5_n_0 ),
+        .I4(dout[0]),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3_n_0 ),
+        .O(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4 
+       (.I0(p_3_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_1 ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFF00A800A800A800)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_5 
@@ -1290,81 +1315,82 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(empty),
         .I2(rx_fifo_empty_i),
         .I3(Bus_RNW_reg_reg_0),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2_0 ),
+        .I4(p_7_in),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'hAABA)) 
+    .INIT(16'hAAEA)) 
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_1 
        (.I0(receive_ip2bus_error),
-        .I1(Bus_RNW_reg_reg_0),
+        .I1(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
         .I2(p_15_in),
-        .I3(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
+        .I3(Bus_RNW_reg_reg_0),
         .O(IP2Bus_Error_1));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
-    .INIT(8'h04)) 
+    .INIT(8'h40)) 
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_i_2 
-       (.I0(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
+       (.I0(Bus_RNW_reg_reg_0),
         .I1(p_15_in),
-        .I2(Bus_RNW_reg_reg_0),
-        .O(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16]_0 ));
+        .I2(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
+        .O(Bus_RNW_reg_reg_2));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h0075)) 
+  LUT5 #(
+    .INIT(32'h0000FF5D)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_1 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
-        .I1(almost_full),
-        .I2(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
-        .I3(Bus_RNW_reg_reg_0),
+        .I1(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
+        .I2(almost_full),
+        .I3(p_7_in),
+        .I4(Bus_RNW_reg_reg_0),
         .O(wr_ce_or_reduce_core_cmb));
-  LUT6 #(
-    .INIT(64'h0000000000000002)) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_3_n_0 ),
         .I1(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_4_n_0 ),
-        .I2(p_14_in),
+        .I2(p_12_in),
         .I3(\GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg_n_0_[31] ),
-        .I4(p_2_in),
-        .I5(p_10_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_3 
-       (.I0(p_6_in),
-        .I1(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 ),
-        .I2(p_11_in),
-        .I3(p_12_in),
-        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
-        .I5(p_1_in_0),
+       (.I0(p_1_in_0),
+        .I1(p_13_in),
+        .I2(p_10_in),
+        .I3(p_6_in),
+        .I4(p_8_in),
+        .I5(p_2_in),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_4 
-       (.I0(p_9_in),
-        .I1(p_8_in),
-        .I2(p_13_in),
-        .I3(p_3_in),
+       (.I0(p_11_in),
+        .I1(p_3_in),
+        .I2(p_9_in),
+        .I3(p_14_in),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'h00000455)) 
+  LUT6 #(
+    .INIT(64'h0000000055551151)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_i_1 
-       (.I0(Bus_RNW_reg_reg_0),
-        .I1(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
-        .I2(almost_full),
-        .I3(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
-        .I4(ip2Bus_WrAck_core_reg_d1),
+       (.I0(ip2Bus_WrAck_core_reg_d1),
+        .I1(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
+        .I2(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
+        .I3(almost_full),
+        .I4(p_7_in),
+        .I5(Bus_RNW_reg_reg_0),
         .O(ip2Bus_WrAck_core_reg0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'hA8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hAAA8AAAA)) 
     \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_1_i_1 
        (.I0(Bus_RNW_reg_reg_0),
         .I1(p_15_in),
         .I2(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
-        .I3(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
+        .I3(p_7_in),
+        .I4(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
         .O(rd_ce_or_reduce_core_cmb));
   memristor_PGA_SPI_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized0 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]_0 ),
@@ -1423,50 +1449,41 @@ module memristor_PGA_SPI_0_address_decoder
   memristor_PGA_SPI_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23_31 \MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]_0 ),
         .ce_expnd_i_1(ce_expnd_i_1));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \SPICR_REG_78_GENERATE[7].SPI_TRISTATE_CONTROL_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ),
+       (.I0(p_7_in),
         .I1(Bus_RNW_reg_reg_0),
         .O(bus2ip_wrce_int));
-  LUT5 #(
-    .INIT(32'hFBFF0800)) 
-    \SPISSR_WR_GEN[0].SPISSR_Data_reg[0]_i_1 
-       (.I0(s_axi_wdata[0]),
-        .I1(p_3_in),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(ip2Bus_WrAck_core_reg_1),
-        .I4(prmry_in),
-        .O(s_axi_wdata_0_sn_1));
   LUT6 #(
-    .INIT(64'h0000000033320000)) 
+    .INIT(64'h0044004400440040)) 
     intr2bus_rdack_i_1
-       (.I0(p_23_in),
-        .I1(intr2bus_wrack_reg),
-        .I2(p_21_in),
-        .I3(p_24_in),
-        .I4(Bus_RNW_reg_reg_0),
-        .I5(irpt_rdack_d1),
+       (.I0(irpt_rdack_d1),
+        .I1(Bus_RNW_reg_reg_0),
+        .I2(p_24_in),
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] ),
+        .I4(p_21_in),
+        .I5(p_23_in),
         .O(intr2bus_rdack0));
   LUT6 #(
-    .INIT(64'h0000000000003332)) 
+    .INIT(64'h0000050500000504)) 
     intr2bus_wrack_i_1
-       (.I0(p_23_in),
-        .I1(intr2bus_wrack_reg),
-        .I2(p_21_in),
-        .I3(p_24_in),
+       (.I0(irpt_wrack_d1),
+        .I1(p_21_in),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] ),
+        .I3(p_23_in),
         .I4(Bus_RNW_reg_reg_0),
-        .I5(irpt_wrack_d1),
-        .O(interrupt_wrce_strb));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+        .I5(p_24_in),
+        .O(irpt_wrack_d1_reg_0));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     ip2Bus_RdAck_intr_reg_hole_d1_i_1
        (.I0(Bus_RNW_reg_reg_0),
         .I1(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0),
         .O(intr_controller_rd_ce_or_reduce));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h04)) 
     ip2Bus_RdAck_intr_reg_hole_i_1
@@ -1474,41 +1491,41 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(Bus_RNW_reg_reg_0),
         .I2(ip2Bus_RdAck_intr_reg_hole_d1),
         .O(ip2Bus_RdAck_intr_reg_hole0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h1)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_1
        (.I0(Bus_RNW_reg_reg_0),
         .I1(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0),
-        .O(Bus_RNW_reg_reg_2));
+        .O(Bus_RNW_reg_reg_1));
   LUT5 #(
     .INIT(32'h00000002)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_2
        (.I0(ip2Bus_WrAck_intr_reg_hole_d1_i_3_n_0),
         .I1(ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0),
-        .I2(p_30_in),
-        .I3(p_28_in),
-        .I4(p_29_in),
+        .I2(p_17_in),
+        .I3(p_25_in),
+        .I4(p_20_in),
         .O(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_3
-       (.I0(p_20_in),
-        .I1(p_19_in),
-        .I2(p_31_in),
-        .I3(p_22_in),
-        .I4(p_25_in),
-        .I5(p_27_in),
+       (.I0(p_16_in),
+        .I1(p_31_in),
+        .I2(p_28_in),
+        .I3(p_19_in),
+        .I4(p_29_in),
+        .I5(p_30_in),
         .O(ip2Bus_WrAck_intr_reg_hole_d1_i_3_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_4
-       (.I0(p_17_in),
-        .I1(p_16_in),
-        .I2(p_26_in),
-        .I3(p_18_in),
+       (.I0(p_26_in),
+        .I1(p_18_in),
+        .I2(p_27_in),
+        .I3(p_22_in),
         .O(ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h01)) 
     ip2Bus_WrAck_intr_reg_hole_i_1
@@ -1516,7 +1533,7 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(Bus_RNW_reg_reg_0),
         .I2(ip2Bus_WrAck_intr_reg_hole_d1),
         .O(ip2Bus_WrAck_intr_reg_hole0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \ip_irpt_enable_reg[8]_i_1 
@@ -1526,45 +1543,45 @@ module memristor_PGA_SPI_0_address_decoder
         .I3(s_axi_wstrb),
         .O(E));
   LUT6 #(
-    .INIT(64'hFFFFABFF0000A800)) 
+    .INIT(64'hEFEFEFFF20202000)) 
     ipif_glbl_irpt_enable_reg_i_1
-       (.I0(s_axi_wdata[1]),
-        .I1(ipif_glbl_irpt_enable_reg_reg),
-        .I2(s_axi_wstrb),
-        .I3(p_24_in),
-        .I4(Bus_RNW_reg_reg_0),
+       (.I0(s_axi_wdata[2]),
+        .I1(Bus_RNW_reg_reg_0),
+        .I2(p_24_in),
+        .I3(ipif_glbl_irpt_enable_reg_reg),
+        .I4(s_axi_wstrb),
         .I5(p_0_in),
         .O(\s_axi_wdata[31] ));
   LUT6 #(
-    .INIT(64'hAAAAAA00A8A8A800)) 
+    .INIT(64'hAAA0AAA0AAA08880)) 
     irpt_rdack_d1_i_1
        (.I0(Bus_RNW_reg_reg_0),
         .I1(p_24_in),
-        .I2(p_21_in),
-        .I3(ipif_glbl_irpt_enable_reg_reg),
-        .I4(s_axi_wstrb),
+        .I2(ipif_glbl_irpt_enable_reg_reg),
+        .I3(s_axi_wstrb),
+        .I4(p_21_in),
         .I5(p_23_in),
         .O(irpt_rdack));
   LUT6 #(
-    .INIT(64'h5555550054545400)) 
+    .INIT(64'h0000FCFC0000FCA8)) 
     irpt_wrack_d1_i_1
-       (.I0(Bus_RNW_reg_reg_0),
-        .I1(p_24_in),
-        .I2(p_21_in),
-        .I3(ipif_glbl_irpt_enable_reg_reg),
-        .I4(s_axi_wstrb),
-        .I5(p_23_in),
-        .O(Bus_RNW_reg_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+       (.I0(p_21_in),
+        .I1(s_axi_wstrb),
+        .I2(ipif_glbl_irpt_enable_reg_reg),
+        .I3(p_23_in),
+        .I4(Bus_RNW_reg_reg_0),
+        .I5(p_24_in),
+        .O(irpt_wrack));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
-    .INIT(16'h0040)) 
+    .INIT(16'h0004)) 
     reset_trig_i_1
-       (.I0(Bus_RNW_reg_reg_0),
+       (.I0(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
         .I1(p_15_in),
-        .I2(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
+        .I2(Bus_RNW_reg_reg_0),
         .I3(sw_rst_cond_d1),
         .O(reset_trig0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hEA)) 
     s_axi_arready_INST_0
@@ -1572,7 +1589,7 @@ module memristor_PGA_SPI_0_address_decoder
         .I1(s_axi_arready),
         .I2(eqOp__4),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hEA)) 
     s_axi_wready_INST_0
@@ -1590,23 +1607,14 @@ module memristor_PGA_SPI_0_address_decoder
         .I4(s_axi_wready_0[2]),
         .I5(s_axi_wready_0[4]),
         .O(eqOp__4));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    sw_rst_cond_d1_i_1
-       (.I0(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
-        .I1(p_15_in),
-        .I2(Bus_RNW_reg_reg_0),
-        .O(sw_rst_cond));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h0040)) 
-    \xpm_fifo_instance.xpm_fifo_async_inst_i_2 
+  LUT3 #(
+    .INIT(8'h04)) 
+    sw_rst_cond_d1_i_1
        (.I0(Bus_RNW_reg_reg_0),
-        .I1(ip2Bus_WrAck_core_reg_1),
-        .I2(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 ),
-        .I3(almost_full),
-        .O(wr_en));
+        .I1(p_15_in),
+        .I2(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ),
+        .O(sw_rst_cond));
 endmodule
 
 (* ORIG_REF_NAME = "async_fifo_fg" *) 
@@ -1614,106 +1622,108 @@ module memristor_PGA_SPI_0_async_fifo_fg
    (almost_full,
     dout,
     empty,
+    wr_en,
     D,
+    \gwdc.wr_data_count_i_reg[4] ,
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ,
     rst,
     s_axi_aclk,
-    wr_en,
     s_axi_wdata,
     ext_spi_clk,
     rd_en,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ,
+    rd_data_count,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ,
-    Q,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ,
-    p_1_in28_in,
+    Q,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_2 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ,
+    p_5_in,
+    \gwack.wr_ack_i_reg ,
     Bus_RNW_reg,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ,
     p_2_in,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg );
   output almost_full;
-  output [31:0]dout;
+  output [15:0]dout;
   output empty;
-  output [3:0]D;
+  output wr_en;
+  output [2:0]D;
+  output \gwdc.wr_data_count_i_reg[4] ;
   output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
   input rst;
   input s_axi_aclk;
-  input wr_en;
-  input [31:0]s_axi_wdata;
+  input [15:0]s_axi_wdata;
   input ext_spi_clk;
   input rd_en;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
+  input [0:0]rd_data_count;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ;
-  input [0:0]Q;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ;
-  input p_1_in28_in;
+  input [0:0]Q;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_2 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ;
+  input p_5_in;
+  input \gwack.wr_ack_i_reg ;
   input Bus_RNW_reg;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ;
   input p_2_in;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ;
   input \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
 
   wire Bus_RNW_reg;
-  wire [3:0]D;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_n_0 ;
+  wire [2:0]D;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_5_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_8_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_2 ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
   wire [0:0]Q;
   wire [4:0]Tx_FIFO_occ_Reversed;
   wire almost_full;
-  wire [31:0]dout;
+  wire [15:0]dout;
   wire empty;
   wire ext_spi_clk;
   wire full;
   wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
-  wire p_1_in28_in;
+  wire \gwack.wr_ack_i_reg ;
+  wire \gwdc.wr_data_count_i_reg[4] ;
   wire p_2_in;
+  wire p_5_in;
+  wire [0:0]rd_data_count;
   wire rd_en;
   wire rst;
   wire s_axi_aclk;
-  wire [31:0]s_axi_wdata;
+  wire [15:0]s_axi_wdata;
   wire wr_en;
   wire wr_rst_busy;
   wire \xpm_fifo_instance.xpm_fifo_async_inst_n_10 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_45 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_46 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_47 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_48 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_49 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_52 ;
-  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_53 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_29 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_30 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_31 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_32 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_33 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_36 ;
+  wire \xpm_fifo_instance.xpm_fifo_async_inst_n_37 ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_dbiterr_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_overflow_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_prog_empty_UNCONNECTED ;
@@ -1722,85 +1732,79 @@ module memristor_PGA_SPI_0_async_fifo_fg
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_sbiterr_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_underflow_UNCONNECTED ;
 
-  LUT5 #(
-    .INIT(32'hFFFFFFBA)) 
+  LUT6 #(
+    .INIT(64'hFFAEFFAEFFFFFFAE)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_1 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_n_0 ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ),
-        .I2(p_1_in28_in),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ),
-        .O(D[3]));
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ),
+        .I1(Q),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ),
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_5_n_0 ),
+        .O(D[2]));
   LUT6 #(
-    .INIT(64'hAA00AA00AA008820)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ),
-        .I1(Tx_FIFO_occ_Reversed[0]),
-        .I2(Tx_FIFO_occ_Reversed[4]),
-        .I3(Tx_FIFO_occ_Reversed[3]),
-        .I4(Tx_FIFO_occ_Reversed[2]),
-        .I5(Tx_FIFO_occ_Reversed[1]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFA900)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_1 
-       (.I0(Tx_FIFO_occ_Reversed[2]),
+    .INIT(64'h0000FE0000000000)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4 
+       (.I0(Tx_FIFO_occ_Reversed[3]),
+        .I1(Tx_FIFO_occ_Reversed[4]),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_8_n_0 ),
+        .I3(Bus_RNW_reg),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ),
+        .I5(p_2_in),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT4 #(
+    .INIT(16'h5556)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_5 
+       (.I0(Tx_FIFO_occ_Reversed[3]),
         .I1(Tx_FIFO_occ_Reversed[0]),
         .I2(Tx_FIFO_occ_Reversed[1]),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ),
-        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ),
-        .O(D[2]));
-  LUT5 #(
-    .INIT(32'h0000E000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5_n_0 ),
-        .I1(Tx_FIFO_occ_Reversed[0]),
-        .I2(Bus_RNW_reg),
-        .I3(p_2_in),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 
-       (.I0(Tx_FIFO_occ_Reversed[1]),
-        .I1(Tx_FIFO_occ_Reversed[2]),
-        .I2(Tx_FIFO_occ_Reversed[3]),
-        .I3(Tx_FIFO_occ_Reversed[4]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFF90)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_1 
-       (.I0(Tx_FIFO_occ_Reversed[1]),
-        .I1(Tx_FIFO_occ_Reversed[0]),
-        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ),
-        .O(D[1]));
-  LUT5 #(
-    .INIT(32'hFEFFFEFE)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_1 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_n_0 ),
-        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ),
-        .I4(Q),
-        .O(D[0]));
-  LUT5 #(
-    .INIT(32'h4F444444)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ),
-        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_2 ),
+        .I3(Tx_FIFO_occ_Reversed[2]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_8 
+       (.I0(Tx_FIFO_occ_Reversed[2]),
+        .I1(Tx_FIFO_occ_Reversed[1]),
         .I2(Tx_FIFO_occ_Reversed[0]),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5_n_0 ),
-        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_n_0 ));
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555550000000054)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ),
+        .I1(Tx_FIFO_occ_Reversed[4]),
+        .I2(Tx_FIFO_occ_Reversed[3]),
+        .I3(Tx_FIFO_occ_Reversed[0]),
+        .I4(Tx_FIFO_occ_Reversed[1]),
+        .I5(Tx_FIFO_occ_Reversed[2]),
+        .O(\gwdc.wr_data_count_i_reg[4] ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFEAAE)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_1 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ),
+        .I2(Tx_FIFO_occ_Reversed[1]),
+        .I3(Tx_FIFO_occ_Reversed[0]),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFF22F2)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_1 
+       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ),
+        .I1(Tx_FIFO_occ_Reversed[0]),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ),
+        .I3(rd_data_count),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ),
+        .O(D[0]));
   LUT3 #(
     .INIT(8'hB8)) 
     \OTHER_RATIO_GENERATE.Serial_Dout_i_3 
        (.I0(dout[0]),
         .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
-        .I2(dout[31]),
+        .I2(dout[15]),
         .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ));
   (* CASCADE_HEIGHT = "0" *) 
   (* CDC_SYNC_STAGES = "2" *) 
@@ -1819,19 +1823,19 @@ module memristor_PGA_SPI_0_async_fifo_fg
   (* P_READ_MODE = "1" *) 
   (* P_WAKEUP_TIME = "2" *) 
   (* RD_DATA_COUNT_WIDTH = "5" *) 
-  (* READ_DATA_WIDTH = "32" *) 
+  (* READ_DATA_WIDTH = "16" *) 
   (* READ_MODE = "fwft" *) 
   (* RELATED_CLOCKS = "0" *) 
   (* SIM_ASSERT_CHK = "0" *) 
   (* USE_ADV_FEATURES = "1F1F" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH = "32" *) 
+  (* WRITE_DATA_WIDTH = "16" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* XPM_MODULE = "TRUE" *) 
   memristor_PGA_SPI_0_xpm_fifo_async__parameterized1 \xpm_fifo_instance.xpm_fifo_async_inst 
-       (.almost_empty(\xpm_fifo_instance.xpm_fifo_async_inst_n_52 ),
+       (.almost_empty(\xpm_fifo_instance.xpm_fifo_async_inst_n_36 ),
         .almost_full(almost_full),
-        .data_valid(\xpm_fifo_instance.xpm_fifo_async_inst_n_53 ),
+        .data_valid(\xpm_fifo_instance.xpm_fifo_async_inst_n_37 ),
         .dbiterr(\NLW_xpm_fifo_instance.xpm_fifo_async_inst_dbiterr_UNCONNECTED ),
         .din(s_axi_wdata),
         .dout(dout),
@@ -1843,7 +1847,7 @@ module memristor_PGA_SPI_0_async_fifo_fg
         .prog_empty(\NLW_xpm_fifo_instance.xpm_fifo_async_inst_prog_empty_UNCONNECTED ),
         .prog_full(\NLW_xpm_fifo_instance.xpm_fifo_async_inst_prog_full_UNCONNECTED ),
         .rd_clk(ext_spi_clk),
-        .rd_data_count({\xpm_fifo_instance.xpm_fifo_async_inst_n_45 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_46 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_47 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_48 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_49 }),
+        .rd_data_count({\xpm_fifo_instance.xpm_fifo_async_inst_n_29 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_30 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_31 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_32 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_33 }),
         .rd_en(rd_en),
         .rd_rst_busy(\NLW_xpm_fifo_instance.xpm_fifo_async_inst_rd_rst_busy_UNCONNECTED ),
         .rst(rst),
@@ -1855,6 +1859,14 @@ module memristor_PGA_SPI_0_async_fifo_fg
         .wr_data_count(Tx_FIFO_occ_Reversed),
         .wr_en(wr_en),
         .wr_rst_busy(wr_rst_busy));
+  LUT4 #(
+    .INIT(16'h0040)) 
+    \xpm_fifo_instance.xpm_fifo_async_inst_i_2 
+       (.I0(almost_full),
+        .I1(p_5_in),
+        .I2(\gwack.wr_ack_i_reg ),
+        .I3(Bus_RNW_reg),
+        .O(wr_en));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif" *) 
@@ -1862,60 +1874,64 @@ module memristor_PGA_SPI_0_axi_lite_ipif
    (bus2ip_reset_ipif_inverted,
     p_1_in_0,
     p_2_in,
+    p_3_in,
     p_4_in,
     p_5_in,
-    p_7_in,
     s_axi_rresp,
     Bus_RNW_reg,
     s_axi_rvalid_i_reg,
     s_axi_bvalid_i_reg,
-    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ,
-    Bus_RNW_reg_reg,
+    irpt_wrack_d1_reg,
+    irpt_wrack_d1_reg_0,
     E,
-    Bus_RNW_reg_reg_0,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ,
+    Bus_RNW_reg_reg,
+    reset2ip_reset_int,
+    \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ,
     \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ,
-    \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ,
-    \ip_irpt_enable_reg_reg[3] ,
-    \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ,
+    \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ,
     D,
-    wr_en,
+    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ,
     SPICR_data_int_reg0,
     bus2ip_wrce_int,
     IP2Bus_Error_1,
-    \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ,
+    Bus_RNW_reg_reg_0,
     reset_trig0,
     sw_rst_cond,
-    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ,
-    interrupt_wrce_strb,
-    intr2bus_rdack0,
     irpt_rdack,
+    intr2bus_rdack0,
+    irpt_wrack,
+    \ip_irpt_enable_reg_reg[0] ,
+    \ip_irpt_enable_reg_reg[1] ,
     ip2Bus_WrAck_intr_reg_hole0,
     ip2Bus_RdAck_intr_reg_hole0,
     intr_controller_rd_ce_or_reduce,
-    rd_ce_or_reduce_core_cmb,
-    ip2Bus_WrAck_core_reg0,
     wr_ce_or_reduce_core_cmb,
-    \gen_fwft.empty_fwft_i_reg ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
+    ip2Bus_WrAck_core_reg0,
+    rd_ce_or_reduce_core_cmb,
+    \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ,
-    s_axi_wdata_0_sp_1,
     \s_axi_wdata[31] ,
+    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ,
     s_axi_bresp,
     s_axi_rdata,
     s_axi_aclk,
     p_1_in,
     s_axi_arvalid,
     s_axi_wstrb,
+    irpt_wrack_d1,
+    \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ,
     dout,
-    prmry_in,
     p_1_in34_in,
     p_1_in31_in,
+    p_1_in28_in,
     Q,
     p_1_in25_in,
     ip2Bus_RdAck_core_reg,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ,
+    prmry_in,
     p_1_in22_in,
     spicr_5_txfifo_rst_frm_axi_clk,
     scndry_out,
@@ -1926,26 +1942,26 @@ module memristor_PGA_SPI_0_axi_lite_ipif
     p_1_in13_in,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ,
-    p_0_in,
     empty,
     rx_fifo_empty_i,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ,
     ip2Bus_WrAck_core_reg_1,
-    almost_full,
     receive_ip2bus_error,
     sw_rst_cond_d1,
     s_axi_wdata,
-    irpt_wrack_d1,
+    p_0_in,
     irpt_rdack_d1,
     ip2Bus_WrAck_intr_reg_hole_d1,
     ip2Bus_RdAck_intr_reg_hole_d1,
+    almost_full,
     ip2Bus_WrAck_core_reg_d1,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ,
     spicr_2_mst_n_slv_frm_axi_clk,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ,
     Tx_FIFO_Full_int,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ,
     s_axi_rready,
     s_axi_bready,
     s_axi_awvalid,
@@ -1959,60 +1975,64 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   output bus2ip_reset_ipif_inverted;
   output p_1_in_0;
   output p_2_in;
+  output p_3_in;
   output p_4_in;
   output p_5_in;
-  output p_7_in;
   output [0:0]s_axi_rresp;
   output Bus_RNW_reg;
   output s_axi_rvalid_i_reg;
   output s_axi_bvalid_i_reg;
-  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
-  output Bus_RNW_reg_reg;
+  output irpt_wrack_d1_reg;
+  output irpt_wrack_d1_reg_0;
   output [0:0]E;
-  output Bus_RNW_reg_reg_0;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
+  output Bus_RNW_reg_reg;
+  output reset2ip_reset_int;
+  output \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   output \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
-  output \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ;
-  output \ip_irpt_enable_reg_reg[3] ;
-  output \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ;
+  output \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   output [6:0]D;
-  output wr_en;
+  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
   output SPICR_data_int_reg0;
   output [0:0]bus2ip_wrce_int;
   output IP2Bus_Error_1;
-  output \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
+  output Bus_RNW_reg_reg_0;
   output reset_trig0;
   output sw_rst_cond;
-  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
-  output interrupt_wrce_strb;
-  output intr2bus_rdack0;
   output irpt_rdack;
+  output intr2bus_rdack0;
+  output irpt_wrack;
+  output \ip_irpt_enable_reg_reg[0] ;
+  output \ip_irpt_enable_reg_reg[1] ;
   output ip2Bus_WrAck_intr_reg_hole0;
   output ip2Bus_RdAck_intr_reg_hole0;
   output intr_controller_rd_ce_or_reduce;
-  output rd_ce_or_reduce_core_cmb;
-  output ip2Bus_WrAck_core_reg0;
   output wr_ce_or_reduce_core_cmb;
-  output \gen_fwft.empty_fwft_i_reg ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
+  output ip2Bus_WrAck_core_reg0;
+  output rd_ce_or_reduce_core_cmb;
+  output \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
-  output s_axi_wdata_0_sp_1;
   output \s_axi_wdata[31] ;
+  output \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  output \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   output [0:0]s_axi_bresp;
-  output [31:0]s_axi_rdata;
+  output [16:0]s_axi_rdata;
   input s_axi_aclk;
   input [0:0]p_1_in;
   input s_axi_arvalid;
   input [1:0]s_axi_wstrb;
-  input [10:0]dout;
-  input prmry_in;
+  input irpt_wrack_d1;
+  input \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
+  input [9:0]dout;
   input p_1_in34_in;
   input p_1_in31_in;
-  input [7:0]Q;
+  input p_1_in28_in;
+  input [6:0]Q;
   input p_1_in25_in;
   input ip2Bus_RdAck_core_reg;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ;
+  input prmry_in;
   input p_1_in22_in;
   input spicr_5_txfifo_rst_frm_axi_clk;
   input scndry_out;
@@ -2023,31 +2043,31 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   input p_1_in13_in;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ;
-  input [0:0]p_0_in;
   input empty;
   input rx_fifo_empty_i;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
   input ip2Bus_WrAck_core_reg_1;
-  input almost_full;
   input receive_ip2bus_error;
   input sw_rst_cond_d1;
-  input [4:0]s_axi_wdata;
-  input irpt_wrack_d1;
+  input [6:0]s_axi_wdata;
+  input [0:0]p_0_in;
   input irpt_rdack_d1;
   input ip2Bus_WrAck_intr_reg_hole_d1;
   input ip2Bus_RdAck_intr_reg_hole_d1;
+  input almost_full;
   input ip2Bus_WrAck_core_reg_d1;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ;
   input spicr_2_mst_n_slv_frm_axi_clk;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ;
   input Tx_FIFO_Full_int;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ;
   input s_axi_rready;
   input s_axi_bready;
   input s_axi_awvalid;
   input s_axi_wvalid;
-  input [31:0]\s_axi_rdata_i_reg[31] ;
+  input [16:0]\s_axi_rdata_i_reg[31] ;
   input s_axi_aresetn;
   input ip2bus_rdack_int;
   input ip2bus_wrack_int;
@@ -2057,38 +2077,38 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   wire Bus_RNW_reg;
   wire Bus_RNW_reg_reg;
   wire Bus_RNW_reg_reg_0;
+  wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire [6:0]D;
   wire [0:0]E;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
-  wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
+  wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ;
   wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
-  wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
+  wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
-  wire \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ;
+  wire \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   wire IP2Bus_Error_1;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
-  wire [7:0]Q;
+  wire [6:0]Q;
   wire SPICR_data_int_reg0;
+  wire \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ;
   wire Tx_FIFO_Full_int;
   wire almost_full;
   wire bus2ip_reset_ipif_inverted;
   wire [0:0]bus2ip_wrce_int;
-  wire [10:0]dout;
+  wire [9:0]dout;
   wire empty;
-  wire \gen_fwft.empty_fwft_i_reg ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
-  wire interrupt_wrce_strb;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ;
   wire intr2bus_rdack0;
   wire intr_controller_rd_ce_or_reduce;
   wire ip2Bus_RdAck_core_reg;
@@ -2101,10 +2121,14 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   wire ip2Bus_WrAck_intr_reg_hole_d1;
   wire ip2bus_rdack_int;
   wire ip2bus_wrack_int;
-  wire \ip_irpt_enable_reg_reg[3] ;
+  wire \ip_irpt_enable_reg_reg[0] ;
+  wire \ip_irpt_enable_reg_reg[1] ;
   wire irpt_rdack;
   wire irpt_rdack_d1;
+  wire irpt_wrack;
   wire irpt_wrack_d1;
+  wire irpt_wrack_d1_reg;
+  wire irpt_wrack_d1_reg_0;
   wire [0:0]p_0_in;
   wire [0:0]p_1_in;
   wire p_1_in13_in;
@@ -2112,16 +2136,18 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   wire p_1_in19_in;
   wire p_1_in22_in;
   wire p_1_in25_in;
+  wire p_1_in28_in;
   wire p_1_in31_in;
   wire p_1_in34_in;
   wire p_1_in_0;
   wire p_2_in;
+  wire p_3_in;
   wire p_4_in;
   wire p_5_in;
-  wire p_7_in;
   wire prmry_in;
   wire rd_ce_or_reduce_core_cmb;
   wire receive_ip2bus_error;
+  wire reset2ip_reset_int;
   wire reset_trig0;
   wire rx_fifo_empty_i;
   wire s_axi_aclk;
@@ -2133,14 +2159,13 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   wire s_axi_bready;
   wire [0:0]s_axi_bresp;
   wire s_axi_bvalid_i_reg;
-  wire [31:0]s_axi_rdata;
-  wire [31:0]\s_axi_rdata_i_reg[31] ;
+  wire [16:0]s_axi_rdata;
+  wire [16:0]\s_axi_rdata_i_reg[31] ;
   wire s_axi_rready;
   wire [0:0]s_axi_rresp;
   wire s_axi_rvalid_i_reg;
-  wire [4:0]s_axi_wdata;
+  wire [6:0]s_axi_wdata;
   wire \s_axi_wdata[31] ;
-  wire s_axi_wdata_0_sn_1;
   wire [1:0]s_axi_wstrb;
   wire s_axi_wvalid;
   wire scndry_out;
@@ -2150,48 +2175,45 @@ module memristor_PGA_SPI_0_axi_lite_ipif
   wire sw_rst_cond;
   wire sw_rst_cond_d1;
   wire wr_ce_or_reduce_core_cmb;
-  wire wr_en;
 
-  assign s_axi_wdata_0_sp_1 = s_axi_wdata_0_sn_1;
   memristor_PGA_SPI_0_slave_attachment I_SLAVE_ATTACHMENT
        (.Bus_RNW_reg_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg_0(Bus_RNW_reg_reg),
         .Bus_RNW_reg_reg_1(Bus_RNW_reg_reg_0),
+        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
+        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
         .D(D),
         .E(E),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
-        .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
-        .\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] (\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ),
-        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] (p_7_in),
         .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] (p_5_in),
         .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] (p_4_in),
+        .\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] (\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ),
         .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ),
-        .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] (\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ),
-        .\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] (\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ),
+        .\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] (\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ),
         .IP2Bus_Error_1(IP2Bus_Error_1),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ),
         .Q(Q),
         .SPICR_data_int_reg0(SPICR_data_int_reg0),
+        .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
         .SR(bus2ip_reset_ipif_inverted),
         .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
         .almost_full(almost_full),
         .bus2ip_wrce_int(bus2ip_wrce_int),
         .dout(dout),
         .empty(empty),
-        .\gen_fwft.empty_fwft_i_reg (\gen_fwft.empty_fwft_i_reg ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ),
-        .interrupt_wrce_strb(interrupt_wrce_strb),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ),
         .intr2bus_rdack0(intr2bus_rdack0),
         .intr_controller_rd_ce_or_reduce(intr_controller_rd_ce_or_reduce),
         .ip2Bus_RdAck_core_reg(ip2Bus_RdAck_core_reg),
@@ -2204,10 +2226,14 @@ module memristor_PGA_SPI_0_axi_lite_ipif
         .ip2Bus_WrAck_intr_reg_hole_d1(ip2Bus_WrAck_intr_reg_hole_d1),
         .ip2bus_rdack_int(ip2bus_rdack_int),
         .ip2bus_wrack_int(ip2bus_wrack_int),
-        .\ip_irpt_enable_reg_reg[3] (\ip_irpt_enable_reg_reg[3] ),
+        .\ip_irpt_enable_reg_reg[0] (\ip_irpt_enable_reg_reg[0] ),
+        .\ip_irpt_enable_reg_reg[1] (\ip_irpt_enable_reg_reg[1] ),
         .irpt_rdack(irpt_rdack),
         .irpt_rdack_d1(irpt_rdack_d1),
+        .irpt_wrack(irpt_wrack),
         .irpt_wrack_d1(irpt_wrack_d1),
+        .irpt_wrack_d1_reg(irpt_wrack_d1_reg),
+        .irpt_wrack_d1_reg_0(irpt_wrack_d1_reg_0),
         .p_0_in(p_0_in),
         .p_1_in(p_1_in),
         .p_1_in13_in(p_1_in13_in),
@@ -2215,13 +2241,16 @@ module memristor_PGA_SPI_0_axi_lite_ipif
         .p_1_in19_in(p_1_in19_in),
         .p_1_in22_in(p_1_in22_in),
         .p_1_in25_in(p_1_in25_in),
+        .p_1_in28_in(p_1_in28_in),
         .p_1_in31_in(p_1_in31_in),
         .p_1_in34_in(p_1_in34_in),
         .p_1_in_0(p_1_in_0),
         .p_2_in(p_2_in),
+        .p_3_in(p_3_in),
         .prmry_in(prmry_in),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .receive_ip2bus_error(receive_ip2bus_error),
+        .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(reset_trig0),
         .rx_fifo_empty_i(rx_fifo_empty_i),
         .s_axi_aclk(s_axi_aclk),
@@ -2240,7 +2269,6 @@ module memristor_PGA_SPI_0_axi_lite_ipif
         .s_axi_rvalid_i_reg_0(s_axi_rvalid_i_reg),
         .s_axi_wdata(s_axi_wdata),
         .\s_axi_wdata[31] (\s_axi_wdata[31] ),
-        .s_axi_wdata_0_sp_1(s_axi_wdata_0_sn_1),
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid),
         .scndry_out(scndry_out),
@@ -2249,8 +2277,7 @@ module memristor_PGA_SPI_0_axi_lite_ipif
         .spicr_6_rxfifo_rst_frm_axi_clk(spicr_6_rxfifo_rst_frm_axi_clk),
         .sw_rst_cond(sw_rst_cond),
         .sw_rst_cond_d1(sw_rst_cond_d1),
-        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb),
-        .wr_en(wr_en));
+        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
@@ -2654,7 +2681,7 @@ endmodule
 
 (* Async_Clk = "1" *) (* C_DUAL_QUAD_MODE = "0" *) (* C_FAMILY = "zynq" *) 
 (* C_FIFO_DEPTH = "16" *) (* C_INSTANCE = "axi_quad_spi_inst" *) (* C_LSB_STUP = "0" *) 
-(* C_NEW_SEQ_EN = "1" *) (* C_NUM_SS_BITS = "1" *) (* C_NUM_TRANSFER_BITS = "32" *) 
+(* C_NEW_SEQ_EN = "1" *) (* C_NUM_SS_BITS = "1" *) (* C_NUM_TRANSFER_BITS = "16" *) 
 (* C_SCK_RATIO = "16" *) (* C_SELECT_XPM = "1" *) (* C_SHARED_STARTUP = "0" *) 
 (* C_SPI_MEMORY = "1" *) (* C_SPI_MEM_ADDR_BITS = "24" *) (* C_SPI_MODE = "0" *) 
 (* C_SUB_FAMILY = "zynq" *) (* C_S_AXI4_ADDR_WIDTH = "24" *) (* C_S_AXI4_BASEADDR = "-1" *) 
@@ -2891,7 +2918,7 @@ module memristor_PGA_SPI_0_axi_quad_spi
   wire s_axi_bready;
   wire [1:1]\^s_axi_bresp ;
   wire s_axi_bvalid;
-  wire [31:0]s_axi_rdata;
+  wire [31:0]\^s_axi_rdata ;
   wire s_axi_rready;
   wire [1:1]\^s_axi_rresp ;
   wire s_axi_rvalid;
@@ -2968,6 +2995,23 @@ module memristor_PGA_SPI_0_axi_quad_spi
   assign s_axi_awready = s_axi_wready;
   assign s_axi_bresp[1] = \^s_axi_bresp [1];
   assign s_axi_bresp[0] = \<const0> ;
+  assign s_axi_rdata[31] = \^s_axi_rdata [31];
+  assign s_axi_rdata[30] = \<const0> ;
+  assign s_axi_rdata[29] = \<const0> ;
+  assign s_axi_rdata[28] = \<const0> ;
+  assign s_axi_rdata[27] = \<const0> ;
+  assign s_axi_rdata[26] = \<const0> ;
+  assign s_axi_rdata[25] = \<const0> ;
+  assign s_axi_rdata[24] = \<const0> ;
+  assign s_axi_rdata[23] = \<const0> ;
+  assign s_axi_rdata[22] = \<const0> ;
+  assign s_axi_rdata[21] = \<const0> ;
+  assign s_axi_rdata[20] = \<const0> ;
+  assign s_axi_rdata[19] = \<const0> ;
+  assign s_axi_rdata[18] = \<const0> ;
+  assign s_axi_rdata[17] = \<const0> ;
+  assign s_axi_rdata[16] = \<const0> ;
+  assign s_axi_rdata[15:0] = \^s_axi_rdata [15:0];
   assign s_axi_rresp[1] = \^s_axi_rresp [1];
   assign s_axi_rresp[0] = \<const0> ;
   assign ss_1_o = \<const0> ;
@@ -2993,11 +3037,11 @@ module memristor_PGA_SPI_0_axi_quad_spi
         .s_axi_bready(s_axi_bready),
         .s_axi_bresp(\^s_axi_bresp ),
         .s_axi_bvalid_i_reg(s_axi_bvalid),
-        .s_axi_rdata(s_axi_rdata),
+        .s_axi_rdata({\^s_axi_rdata [31],\^s_axi_rdata [15:0]}),
         .s_axi_rready(s_axi_rready),
         .s_axi_rresp(\^s_axi_rresp ),
         .s_axi_rvalid_i_reg(s_axi_rvalid),
-        .s_axi_wdata(s_axi_wdata),
+        .s_axi_wdata({s_axi_wdata[31],s_axi_wdata[15:0]}),
         .s_axi_wstrb({s_axi_wstrb[3],s_axi_wstrb[0]}),
         .s_axi_wvalid(s_axi_wvalid),
         .sck_o(sck_o),
@@ -3043,7 +3087,7 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   output io1_t;
   output sck_o;
   output [0:0]s_axi_bresp;
-  output [31:0]s_axi_rdata;
+  output [16:0]s_axi_rdata;
   output [0:0]s_axi_rresp;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
@@ -3055,7 +3099,7 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   input [1:0]s_axi_wstrb;
   input s_axi_aclk;
   input ext_spi_clk;
-  input [31:0]s_axi_wdata;
+  input [16:0]s_axi_wdata;
   input io0_i;
   input io1_i;
   input s_axi_awvalid;
@@ -3068,10 +3112,10 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   input [4:0]s_axi_awaddr;
 
   wire \CONTROL_REG_I/SPICR_data_int_reg0 ;
-  wire \INTERRUPT_CONTROL_I/interrupt_wrce_strb ;
   wire \INTERRUPT_CONTROL_I/intr2bus_rdack0 ;
   wire \INTERRUPT_CONTROL_I/irpt_rdack ;
   wire \INTERRUPT_CONTROL_I/irpt_rdack_d1 ;
+  wire \INTERRUPT_CONTROL_I/irpt_wrack ;
   wire \INTERRUPT_CONTROL_I/irpt_wrack_d1 ;
   wire [31:31]\INTERRUPT_CONTROL_I/p_0_in ;
   wire \INTERRUPT_CONTROL_I/p_0_in0_in ;
@@ -3079,43 +3123,45 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   wire \INTERRUPT_CONTROL_I/p_0_in14_in ;
   wire \INTERRUPT_CONTROL_I/p_0_in17_in ;
   wire \INTERRUPT_CONTROL_I/p_0_in20_in ;
-  wire \INTERRUPT_CONTROL_I/p_0_in2_in ;
-  wire \INTERRUPT_CONTROL_I/p_0_in5_in ;
   wire \INTERRUPT_CONTROL_I/p_0_in8_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in13_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in16_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in19_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in22_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in25_in ;
+  wire \INTERRUPT_CONTROL_I/p_1_in28_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in31_in ;
   wire \INTERRUPT_CONTROL_I/p_1_in34_in ;
   wire [0:31]IP2Bus_Data;
   wire IP2Bus_Error_1;
-  wire IP2Bus_WrAck_transmit_enable;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/p_1_in ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/p_2_in ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_3_in ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/p_4_in ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/p_5_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_10 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_11 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_12 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_13 ;
-  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_14 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_16 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_17 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_18 ;
+  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_26 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_30 ;
-  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_33 ;
-  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_43 ;
+  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_36 ;
+  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_37 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_44 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_47 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_48 ;
-  wire \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_12 ;
+  wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_49 ;
+  wire \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_11 ;
+  wire \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_29 ;
+  wire \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_46 ;
+  wire \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_65 ;
   wire Rx_FIFO_Empty;
   wire Rx_FIFO_Full_Fifo_d1_synced;
   wire \SOFT_RESET_I/reset_trig0 ;
@@ -3126,9 +3172,10 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   wire Tx_FIFO_Full_int;
   wire bus2ip_reset_ipif_inverted;
   wire [7:7]bus2ip_wrce_int;
-  wire [0:31]data_from_rx_fifo;
+  wire [6:15]data_from_rx_fifo;
   wire ext_spi_clk;
   wire intr_controller_rd_ce_or_reduce;
+  wire [0:0]intr_ip2bus_data;
   wire io0_i;
   wire io0_i_sync;
   wire io0_t;
@@ -3136,7 +3183,7 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   wire io1_i_sync;
   wire io1_o;
   wire io1_t;
-  wire [0:27]ip2Bus_Data_1;
+  wire [22:27]ip2Bus_Data_1;
   wire ip2Bus_RdAck_core_reg;
   wire ip2Bus_RdAck_intr_reg_hole0;
   wire ip2Bus_RdAck_intr_reg_hole_d1;
@@ -3151,6 +3198,7 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   wire [1:1]p_1_in;
   wire rd_ce_or_reduce_core_cmb;
   wire receive_ip2bus_error;
+  wire reset2ip_reset_int;
   wire rx_fifo_empty_i;
   wire s_axi_aclk;
   wire [4:0]s_axi_araddr;
@@ -3161,11 +3209,11 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
   wire s_axi_bready;
   wire [0:0]s_axi_bresp;
   wire s_axi_bvalid_i_reg;
-  wire [31:0]s_axi_rdata;
+  wire [16:0]s_axi_rdata;
   wire s_axi_rready;
   wire [0:0]s_axi_rresp;
   wire s_axi_rvalid_i_reg;
-  wire [31:0]s_axi_wdata;
+  wire [16:0]s_axi_wdata;
   wire [1:0]s_axi_wstrb;
   wire s_axi_wvalid;
   wire sck_o;
@@ -3207,40 +3255,40 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .R(1'b0));
   memristor_PGA_SPI_0_axi_lite_ipif \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I 
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
-        .Bus_RNW_reg_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_11 ),
-        .Bus_RNW_reg_reg_0(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_13 ),
-        .D({ip2Bus_Data_1[0],ip2Bus_Data_1[22],ip2Bus_Data_1[23],ip2Bus_Data_1[24],ip2Bus_Data_1[25],ip2Bus_Data_1[26],ip2Bus_Data_1[27]}),
+        .Bus_RNW_reg_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_13 ),
+        .Bus_RNW_reg_reg_0(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_30 ),
+        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_48 ),
+        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_49 ),
+        .D({intr_ip2bus_data,ip2Bus_Data_1[22],ip2Bus_Data_1[23],ip2Bus_Data_1[24],ip2Bus_Data_1[25],ip2Bus_Data_1[26],ip2Bus_Data_1[27]}),
         .E(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_12 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_44 ),
-        .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_18 ),
-        .\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_30 ),
-        .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_10 ),
-        .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_33 ),
-        .\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ),
-        .\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_16 ),
+        .\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_44 ),
+        .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_26 ),
+        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ),
+        .\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_16 ),
+        .\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_18 ),
         .IP2Bus_Error_1(IP2Bus_Error_1),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 (spicr_3_cpol_frm_axi_clk),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 (spicr_1_spe_frm_axi_clk),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 (Rx_FIFO_Full_Fifo_d1_synced),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 (spicr_0_loop_frm_axi_clk),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 (Tx_FIFO_Empty_SPISR_to_axi_clk),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 (spicr_3_cpol_frm_axi_clk),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 (Tx_FIFO_Empty_SPISR_to_axi_clk),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 (Rx_FIFO_Full_Fifo_d1_synced),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 (spicr_1_spe_frm_axi_clk),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 (spicr_0_loop_frm_axi_clk),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 (SPISSR_frm_axi_clk),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] (spicr_9_lsb_frm_axi_clk),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] (spicr_8_tr_inhibit_frm_axi_clk),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (spicr_7_ss_frm_axi_clk),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] (spicr_4_cpha_frm_axi_clk),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] (\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_29 ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ),
-        .Q({\INTERRUPT_CONTROL_I/p_0_in20_in ,\INTERRUPT_CONTROL_I/p_0_in17_in ,\INTERRUPT_CONTROL_I/p_0_in14_in ,\INTERRUPT_CONTROL_I/p_0_in11_in ,\INTERRUPT_CONTROL_I/p_0_in8_in ,\INTERRUPT_CONTROL_I/p_0_in5_in ,\INTERRUPT_CONTROL_I/p_0_in2_in ,\INTERRUPT_CONTROL_I/p_0_in0_in }),
+        .Q({\INTERRUPT_CONTROL_I/p_0_in20_in ,\INTERRUPT_CONTROL_I/p_0_in17_in ,\INTERRUPT_CONTROL_I/p_0_in14_in ,\INTERRUPT_CONTROL_I/p_0_in11_in ,\INTERRUPT_CONTROL_I/p_0_in8_in ,\INTERRUPT_CONTROL_I/p_0_in0_in ,\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_65 }),
         .SPICR_data_int_reg0(\CONTROL_REG_I/SPICR_data_int_reg0 ),
+        .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] (\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_46 ),
         .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
-        .almost_full(\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_12 ),
+        .almost_full(\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_11 ),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
         .bus2ip_wrce_int(bus2ip_wrce_int),
-        .dout({data_from_rx_fifo[0],data_from_rx_fifo[22],data_from_rx_fifo[23],data_from_rx_fifo[24],data_from_rx_fifo[25],data_from_rx_fifo[26],data_from_rx_fifo[27],data_from_rx_fifo[28],data_from_rx_fifo[29],data_from_rx_fifo[30],data_from_rx_fifo[31]}),
+        .dout({data_from_rx_fifo[6],data_from_rx_fifo[7],data_from_rx_fifo[8],data_from_rx_fifo[9],data_from_rx_fifo[10],data_from_rx_fifo[11],data_from_rx_fifo[12],data_from_rx_fifo[13],data_from_rx_fifo[14],data_from_rx_fifo[15]}),
         .empty(Rx_FIFO_Empty),
-        .\gen_fwft.empty_fwft_i_reg (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_43 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_14 ),
-        .interrupt_wrce_strb(\INTERRUPT_CONTROL_I/interrupt_wrce_strb ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_17 ),
         .intr2bus_rdack0(\INTERRUPT_CONTROL_I/intr2bus_rdack0 ),
         .intr_controller_rd_ce_or_reduce(intr_controller_rd_ce_or_reduce),
         .ip2Bus_RdAck_core_reg(ip2Bus_RdAck_core_reg),
@@ -3253,10 +3301,14 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .ip2Bus_WrAck_intr_reg_hole_d1(ip2Bus_WrAck_intr_reg_hole_d1),
         .ip2bus_rdack_int(ip2bus_rdack_int),
         .ip2bus_wrack_int(ip2bus_wrack_int),
-        .\ip_irpt_enable_reg_reg[3] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_17 ),
+        .\ip_irpt_enable_reg_reg[0] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_36 ),
+        .\ip_irpt_enable_reg_reg[1] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_37 ),
         .irpt_rdack(\INTERRUPT_CONTROL_I/irpt_rdack ),
         .irpt_rdack_d1(\INTERRUPT_CONTROL_I/irpt_rdack_d1 ),
+        .irpt_wrack(\INTERRUPT_CONTROL_I/irpt_wrack ),
         .irpt_wrack_d1(\INTERRUPT_CONTROL_I/irpt_wrack_d1 ),
+        .irpt_wrack_d1_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_10 ),
+        .irpt_wrack_d1_reg_0(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_11 ),
         .p_0_in(\INTERRUPT_CONTROL_I/p_0_in ),
         .p_1_in(p_1_in),
         .p_1_in13_in(\INTERRUPT_CONTROL_I/p_1_in13_in ),
@@ -3264,16 +3316,18 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .p_1_in19_in(\INTERRUPT_CONTROL_I/p_1_in19_in ),
         .p_1_in22_in(\INTERRUPT_CONTROL_I/p_1_in22_in ),
         .p_1_in25_in(\INTERRUPT_CONTROL_I/p_1_in25_in ),
+        .p_1_in28_in(\INTERRUPT_CONTROL_I/p_1_in28_in ),
         .p_1_in31_in(\INTERRUPT_CONTROL_I/p_1_in31_in ),
         .p_1_in34_in(\INTERRUPT_CONTROL_I/p_1_in34_in ),
         .p_1_in_0(\I_SLAVE_ATTACHMENT/I_DECODER/p_1_in ),
         .p_2_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_2_in ),
+        .p_3_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_3_in ),
         .p_4_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_4_in ),
         .p_5_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_5_in ),
-        .p_7_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ),
-        .prmry_in(SPISSR_frm_axi_clk),
+        .prmry_in(spicr_4_cpha_frm_axi_clk),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .receive_ip2bus_error(receive_ip2bus_error),
+        .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(\SOFT_RESET_I/reset_trig0 ),
         .rx_fifo_empty_i(rx_fifo_empty_i),
         .s_axi_aclk(s_axi_aclk),
@@ -3286,13 +3340,12 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .s_axi_bresp(s_axi_bresp),
         .s_axi_bvalid_i_reg(s_axi_bvalid_i_reg),
         .s_axi_rdata(s_axi_rdata),
-        .\s_axi_rdata_i_reg[31] ({IP2Bus_Data[0],IP2Bus_Data[1],IP2Bus_Data[2],IP2Bus_Data[3],IP2Bus_Data[4],IP2Bus_Data[5],IP2Bus_Data[6],IP2Bus_Data[7],IP2Bus_Data[8],IP2Bus_Data[9],IP2Bus_Data[10],IP2Bus_Data[11],IP2Bus_Data[12],IP2Bus_Data[13],IP2Bus_Data[14],IP2Bus_Data[15],IP2Bus_Data[16],IP2Bus_Data[17],IP2Bus_Data[18],IP2Bus_Data[19],IP2Bus_Data[20],IP2Bus_Data[21],IP2Bus_Data[22],IP2Bus_Data[23],IP2Bus_Data[24],IP2Bus_Data[25],IP2Bus_Data[26],IP2Bus_Data[27],IP2Bus_Data[28],IP2Bus_Data[29],IP2Bus_Data[30],IP2Bus_Data[31]}),
+        .\s_axi_rdata_i_reg[31] ({IP2Bus_Data[0],IP2Bus_Data[16],IP2Bus_Data[17],IP2Bus_Data[18],IP2Bus_Data[19],IP2Bus_Data[20],IP2Bus_Data[21],IP2Bus_Data[22],IP2Bus_Data[23],IP2Bus_Data[24],IP2Bus_Data[25],IP2Bus_Data[26],IP2Bus_Data[27],IP2Bus_Data[28],IP2Bus_Data[29],IP2Bus_Data[30],IP2Bus_Data[31]}),
         .s_axi_rready(s_axi_rready),
         .s_axi_rresp(s_axi_rresp),
         .s_axi_rvalid_i_reg(s_axi_rvalid_i_reg),
-        .s_axi_wdata({s_axi_wdata[31],s_axi_wdata[3:0]}),
-        .\s_axi_wdata[31] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_48 ),
-        .s_axi_wdata_0_sp_1(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_47 ),
+        .s_axi_wdata({s_axi_wdata[16],s_axi_wdata[6:5],s_axi_wdata[3:0]}),
+        .\s_axi_wdata[31] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_47 ),
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid),
         .scndry_out(spisel_d1_reg_to_axi_clk),
@@ -3301,45 +3354,47 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .spicr_6_rxfifo_rst_frm_axi_clk(spicr_6_rxfifo_rst_frm_axi_clk),
         .sw_rst_cond(\SOFT_RESET_I/sw_rst_cond ),
         .sw_rst_cond_d1(\SOFT_RESET_I/sw_rst_cond_d1 ),
-        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb),
-        .wr_en(IP2Bus_WrAck_transmit_enable));
+        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
   memristor_PGA_SPI_0_qspi_core_interface \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I 
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
         .\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] (spicr_8_tr_inhibit_frm_axi_clk),
         .\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] (spicr_7_ss_frm_axi_clk),
+        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_48 ),
+        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_49 ),
         .\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] (spicr_4_cpha_frm_axi_clk),
         .\CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] (spicr_3_cpol_frm_axi_clk),
         .\CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8] (spicr_1_spe_frm_axi_clk),
-        .D({ip2Bus_Data_1[0],ip2Bus_Data_1[22],ip2Bus_Data_1[23],ip2Bus_Data_1[24],ip2Bus_Data_1[25],ip2Bus_Data_1[26],ip2Bus_Data_1[27]}),
+        .D({intr_ip2bus_data,ip2Bus_Data_1[22],ip2Bus_Data_1[23],ip2Bus_Data_1[24],ip2Bus_Data_1[25],ip2Bus_Data_1[26],ip2Bus_Data_1[27]}),
         .E(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_12 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (Tx_FIFO_Empty_SPISR_to_axi_clk),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (spisel_d1_reg_to_axi_clk),
-        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_33 ),
+        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_29 ),
+        .\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_10 ),
         .IP2Bus_Error_1(IP2Bus_Error_1),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ({IP2Bus_Data[0],IP2Bus_Data[1],IP2Bus_Data[2],IP2Bus_Data[3],IP2Bus_Data[4],IP2Bus_Data[5],IP2Bus_Data[6],IP2Bus_Data[7],IP2Bus_Data[8],IP2Bus_Data[9],IP2Bus_Data[10],IP2Bus_Data[11],IP2Bus_Data[12],IP2Bus_Data[13],IP2Bus_Data[14],IP2Bus_Data[15],IP2Bus_Data[16],IP2Bus_Data[17],IP2Bus_Data[18],IP2Bus_Data[19],IP2Bus_Data[20],IP2Bus_Data[21],IP2Bus_Data[22],IP2Bus_Data[23],IP2Bus_Data[24],IP2Bus_Data[25],IP2Bus_Data[26],IP2Bus_Data[27],IP2Bus_Data[28],IP2Bus_Data[29],IP2Bus_Data[30],IP2Bus_Data[31]}),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_10 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_17 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_44 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_16 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_43 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_14 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_18 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ({IP2Bus_Data[0],IP2Bus_Data[16],IP2Bus_Data[17],IP2Bus_Data[18],IP2Bus_Data[19],IP2Bus_Data[20],IP2Bus_Data[21],IP2Bus_Data[22],IP2Bus_Data[23],IP2Bus_Data[24],IP2Bus_Data[25],IP2Bus_Data[26],IP2Bus_Data[27],IP2Bus_Data[28],IP2Bus_Data[29],IP2Bus_Data[30],IP2Bus_Data[31]}),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_18 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_26 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_17 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_44 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_37 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_16 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_36 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_30 ),
-        .Q({\INTERRUPT_CONTROL_I/p_0_in20_in ,\INTERRUPT_CONTROL_I/p_0_in17_in ,\INTERRUPT_CONTROL_I/p_0_in14_in ,\INTERRUPT_CONTROL_I/p_0_in11_in ,\INTERRUPT_CONTROL_I/p_0_in8_in ,\INTERRUPT_CONTROL_I/p_0_in5_in ,\INTERRUPT_CONTROL_I/p_0_in2_in ,\INTERRUPT_CONTROL_I/p_0_in0_in }),
+        .Q({\INTERRUPT_CONTROL_I/p_0_in20_in ,\INTERRUPT_CONTROL_I/p_0_in17_in ,\INTERRUPT_CONTROL_I/p_0_in14_in ,\INTERRUPT_CONTROL_I/p_0_in11_in ,\INTERRUPT_CONTROL_I/p_0_in8_in ,\INTERRUPT_CONTROL_I/p_0_in0_in ,\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_65 }),
+        .\RESET_FLOPS[15].RST_FLOPS (\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_46 ),
         .SPICR_data_int_reg0(\CONTROL_REG_I/SPICR_data_int_reg0 ),
         .\SPICR_data_int_reg[0] (spicr_9_lsb_frm_axi_clk),
         .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] (SPISSR_frm_axi_clk),
-        .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_47 ),
         .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
-        .almost_full(\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_12 ),
+        .almost_full(\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_11 ),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
         .bus2ip_wrce_int(bus2ip_wrce_int),
-        .dout({data_from_rx_fifo[0],data_from_rx_fifo[22],data_from_rx_fifo[23],data_from_rx_fifo[24],data_from_rx_fifo[25],data_from_rx_fifo[26],data_from_rx_fifo[27],data_from_rx_fifo[28],data_from_rx_fifo[29],data_from_rx_fifo[30],data_from_rx_fifo[31]}),
+        .dout({data_from_rx_fifo[6],data_from_rx_fifo[7],data_from_rx_fifo[8],data_from_rx_fifo[9],data_from_rx_fifo[10],data_from_rx_fifo[11],data_from_rx_fifo[12],data_from_rx_fifo[13],data_from_rx_fifo[14],data_from_rx_fifo[15]}),
         .empty(Rx_FIFO_Empty),
         .ext_spi_clk(ext_spi_clk),
-        .interrupt_wrce_strb(\INTERRUPT_CONTROL_I/interrupt_wrce_strb ),
         .intr2bus_rdack0(\INTERRUPT_CONTROL_I/intr2bus_rdack0 ),
+        .intr2bus_wrack_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_11 ),
         .intr_controller_rd_ce_or_reduce(intr_controller_rd_ce_or_reduce),
         .io0_i_sync(io0_i_sync),
         .io0_t(io0_t),
@@ -3358,11 +3413,11 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .ip2bus_rdack_int(ip2bus_rdack_int),
         .ip2bus_wrack_int(ip2bus_wrack_int),
         .ip2intc_irpt(ip2intc_irpt),
-        .ipif_glbl_irpt_enable_reg_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_48 ),
+        .ipif_glbl_irpt_enable_reg_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_47 ),
         .irpt_rdack(\INTERRUPT_CONTROL_I/irpt_rdack ),
         .irpt_rdack_d1(\INTERRUPT_CONTROL_I/irpt_rdack_d1 ),
+        .irpt_wrack(\INTERRUPT_CONTROL_I/irpt_wrack ),
         .irpt_wrack_d1(\INTERRUPT_CONTROL_I/irpt_wrack_d1 ),
-        .irpt_wrack_d1_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_11 ),
         .p_0_in(\INTERRUPT_CONTROL_I/p_0_in ),
         .p_1_in(p_1_in),
         .p_1_in13_in(\INTERRUPT_CONTROL_I/p_1_in13_in ),
@@ -3370,20 +3425,22 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .p_1_in19_in(\INTERRUPT_CONTROL_I/p_1_in19_in ),
         .p_1_in22_in(\INTERRUPT_CONTROL_I/p_1_in22_in ),
         .p_1_in25_in(\INTERRUPT_CONTROL_I/p_1_in25_in ),
+        .p_1_in28_in(\INTERRUPT_CONTROL_I/p_1_in28_in ),
         .p_1_in31_in(\INTERRUPT_CONTROL_I/p_1_in31_in ),
         .p_1_in34_in(\INTERRUPT_CONTROL_I/p_1_in34_in ),
         .p_1_in_0(\I_SLAVE_ATTACHMENT/I_DECODER/p_1_in ),
         .p_2_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_2_in ),
+        .p_3_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_3_in ),
         .p_4_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_4_in ),
         .p_5_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_5_in ),
-        .p_7_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ),
         .prmry_in(spicr_0_loop_frm_axi_clk),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .receive_ip2bus_error(receive_ip2bus_error),
+        .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(\SOFT_RESET_I/reset_trig0 ),
         .rx_fifo_empty_i(rx_fifo_empty_i),
         .s_axi_aclk(s_axi_aclk),
-        .s_axi_wdata(s_axi_wdata),
+        .s_axi_wdata(s_axi_wdata[15:0]),
         .sck_o(sck_o),
         .sck_t(sck_t),
         .scndry_out(Rx_FIFO_Full_Fifo_d1_synced),
@@ -3394,24 +3451,23 @@ module memristor_PGA_SPI_0_axi_quad_spi_top
         .ss_t(ss_t),
         .sw_rst_cond(\SOFT_RESET_I/sw_rst_cond ),
         .sw_rst_cond_d1(\SOFT_RESET_I/sw_rst_cond_d1 ),
-        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb),
-        .wr_en(IP2Bus_WrAck_transmit_enable));
+        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
 module memristor_PGA_SPI_0_cdc_sync
    (\s_axi_wdata[5] ,
     scndry_out,
-    \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ,
     s_axi_wdata,
+    \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ,
     p_1_in22_in,
     drr_Overrun_int_cdc_from_spi_d3,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ,
     s_axi_aclk);
   output \s_axi_wdata[5] ;
   output scndry_out;
-  input \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ;
   input [0:0]s_axi_wdata;
+  input \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ;
   input p_1_in22_in;
   input drr_Overrun_int_cdc_from_spi_d3;
   input \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
@@ -3476,8 +3532,8 @@ module memristor_PGA_SPI_0_cdc_sync
   LUT5 #(
     .INIT(32'h78FFFF78)) 
     \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg[5]_i_1 
-       (.I0(\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ),
-        .I1(s_axi_wdata),
+       (.I0(s_axi_wdata),
+        .I1(\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ),
         .I2(p_1_in22_in),
         .I3(drr_Overrun_int_cdc_from_spi_d3),
         .I4(scndry_out),
@@ -3545,64 +3601,64 @@ endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
 module memristor_PGA_SPI_0_cdc_sync_16
-   (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
+   (\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg ,
     scndry_out,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ,
-    \RESET_FLOPS[15].RST_FLOPS ,
-    \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ,
+    \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ,
+    \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
     spiXfer_done_to_axi_1,
+    wr_en,
     spiXfer_done_d3,
-    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    \icount_out_reg[3] ,
     bus2ip_reset_ipif_inverted,
+    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
+    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ,
+    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ,
     spicr_6_rxfifo_rst_frm_axi_clk,
+    reset2ip_reset_int,
     Tx_FIFO_Full_i,
     Tx_FIFO_Full_int,
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ,
-    reset2ip_reset_int,
-    wr_en,
-    almost_full,
-    p_5_in,
-    ip2Bus_WrAck_core_reg_1,
     Bus_RNW_reg,
+    \icount_out_reg[1] ,
+    p_5_in,
+    almost_full,
     prmry_in,
     s_axi_aclk);
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
+  output \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg ;
   output scndry_out;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
-  output \RESET_FLOPS[15].RST_FLOPS ;
-  output \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ;
+  output \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ;
+  output \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
   output spiXfer_done_to_axi_1;
+  input wr_en;
   input spiXfer_done_d3;
-  input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input \icount_out_reg[3] ;
   input bus2ip_reset_ipif_inverted;
+  input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
+  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
+  input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ;
   input spicr_6_rxfifo_rst_frm_axi_clk;
+  input reset2ip_reset_int;
   input Tx_FIFO_Full_i;
   input Tx_FIFO_Full_int;
-  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
-  input reset2ip_reset_int;
-  input wr_en;
-  input almost_full;
-  input p_5_in;
-  input ip2Bus_WrAck_core_reg_1;
   input Bus_RNW_reg;
+  input \icount_out_reg[1] ;
+  input p_5_in;
+  input almost_full;
   input prmry_in;
   input s_axi_aclk;
 
   wire Bus_RNW_reg;
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
+  wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ;
   wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
-  wire \RESET_FLOPS[15].RST_FLOPS ;
+  wire \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg ;
+  wire \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ;
+  wire \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ;
   wire Tx_FIFO_Full_i;
   wire Tx_FIFO_Full_int;
   wire almost_full;
   wire bus2ip_reset_ipif_inverted;
-  wire \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ;
-  wire \icount_out_reg[3] ;
-  wire ip2Bus_WrAck_core_reg_1;
+  wire \icount_out_reg[1] ;
   wire p_5_in;
   wire prmry_in;
   wire reset2ip_reset_int;
@@ -3619,28 +3675,28 @@ module memristor_PGA_SPI_0_cdc_sync_16
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFF90)) 
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_i_1 
-       (.I0(scndry_out),
-        .I1(spiXfer_done_d3),
-        .I2(\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
-        .I3(\icount_out_reg[3] ),
-        .I4(bus2ip_reset_ipif_inverted),
+       (.I0(spiXfer_done_d3),
+        .I1(scndry_out),
+        .I2(\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ),
+        .I3(bus2ip_reset_ipif_inverted),
+        .I4(\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .I5(spicr_6_rxfifo_rst_frm_axi_clk),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ));
+        .O(\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ));
   LUT6 #(
-    .INIT(64'h00000000000099F0)) 
+    .INIT(64'h00090009000F0000)) 
     \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_i_1 
-       (.I0(scndry_out),
-        .I1(spiXfer_done_d3),
-        .I2(Tx_FIFO_Full_i),
-        .I3(Tx_FIFO_Full_int),
-        .I4(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ),
-        .I5(reset2ip_reset_int),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ));
+       (.I0(spiXfer_done_d3),
+        .I1(scndry_out),
+        .I2(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ),
+        .I3(reset2ip_reset_int),
+        .I4(Tx_FIFO_Full_i),
+        .I5(Tx_FIFO_Full_int),
+        .O(\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ));
   LUT2 #(
     .INIT(4'h6)) 
     \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.spiXfer_done_to_axi_d1_i_1 
-       (.I0(scndry_out),
-        .I1(spiXfer_done_d3),
+       (.I0(spiXfer_done_d3),
+        .I1(scndry_out),
         .O(spiXfer_done_to_axi_1));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
@@ -3687,49 +3743,46 @@ module memristor_PGA_SPI_0_cdc_sync_16
         .Q(scndry_out),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFFEFEFFFEFFFFFE)) 
+    .INIT(64'hFFFFFFFFFFFFFF96)) 
     \icount_out[3]_i_1 
-       (.I0(\icount_out_reg[3] ),
-        .I1(bus2ip_reset_ipif_inverted),
-        .I2(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ),
-        .I3(wr_en),
-        .I4(scndry_out),
-        .I5(spiXfer_done_d3),
-        .O(\RESET_FLOPS[15].RST_FLOPS ));
+       (.I0(wr_en),
+        .I1(spiXfer_done_d3),
+        .I2(scndry_out),
+        .I3(bus2ip_reset_ipif_inverted),
+        .I4(\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
+        .I5(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ),
+        .O(\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg ));
   LUT6 #(
-    .INIT(64'hFFFF00400040FFFF)) 
-    \icount_out[3]_i_3 
-       (.I0(almost_full),
-        .I1(p_5_in),
-        .I2(ip2Bus_WrAck_core_reg_1),
-        .I3(Bus_RNW_reg),
-        .I4(spiXfer_done_d3),
-        .I5(scndry_out),
-        .O(\gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ));
+    .INIT(64'h6666666660666666)) 
+    \icount_out[3]_i_4 
+       (.I0(scndry_out),
+        .I1(spiXfer_done_d3),
+        .I2(Bus_RNW_reg),
+        .I3(\icount_out_reg[1] ),
+        .I4(p_5_in),
+        .I5(almost_full),
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
 module memristor_PGA_SPI_0_cdc_sync_17
    (Tx_FIFO_Empty_intr,
     scndry_out,
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ,
     tx_occ_msb,
-    spiXfer_done_to_axi_d1,
     tx_fifo_count_d2,
+    spiXfer_done_to_axi_d1,
     tx_occ_msb_4,
     empty,
     s_axi_aclk);
   output Tx_FIFO_Empty_intr;
   output scndry_out;
-  output \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ;
   output tx_occ_msb;
-  input spiXfer_done_to_axi_d1;
   input [3:0]tx_fifo_count_d2;
+  input spiXfer_done_to_axi_d1;
   input tx_occ_msb_4;
   input empty;
   input s_axi_aclk;
 
-  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ;
   wire Tx_FIFO_Empty_intr;
   wire empty;
   wire s_axi_aclk;
@@ -3787,24 +3840,14 @@ module memristor_PGA_SPI_0_cdc_sync_17
         .Q(scndry_out),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFFFF)) 
-    \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_2 
+    .INIT(64'h0000010000000000)) 
+    tx_FIFO_Empty_d1_i_1
        (.I0(tx_fifo_count_d2[1]),
-        .I1(tx_fifo_count_d2[2]),
-        .I2(tx_fifo_count_d2[3]),
+        .I1(tx_fifo_count_d2[3]),
+        .I2(tx_fifo_count_d2[2]),
         .I3(scndry_out),
         .I4(tx_fifo_count_d2[0]),
         .I5(spiXfer_done_to_axi_d1),
-        .O(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ));
-  LUT6 #(
-    .INIT(64'h0000000000000020)) 
-    tx_FIFO_Empty_d1_i_1
-       (.I0(spiXfer_done_to_axi_d1),
-        .I1(tx_fifo_count_d2[0]),
-        .I2(scndry_out),
-        .I3(tx_fifo_count_d2[3]),
-        .I4(tx_fifo_count_d2[2]),
-        .I5(tx_fifo_count_d2[1]),
         .O(Tx_FIFO_Empty_intr));
   LUT2 #(
     .INIT(4'h2)) 
@@ -3819,9 +3862,9 @@ module memristor_PGA_SPI_0_cdc_sync__parameterized0
    (D,
     \OTHER_RATIO_GENERATE.serial_dout_int_reg ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ,
-    \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ,
+    \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ,
     dout,
-    \OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ,
+    \OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ,
     serial_dout_int,
     io1_i_sync,
     scndry_out,
@@ -3831,9 +3874,9 @@ module memristor_PGA_SPI_0_cdc_sync__parameterized0
   output [0:0]D;
   output [0:0]\OTHER_RATIO_GENERATE.serial_dout_int_reg ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ;
-  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ;
+  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ;
   input [1:0]dout;
-  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ;
+  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ;
   input serial_dout_int;
   input io1_i_sync;
   input scndry_out;
@@ -3844,8 +3887,8 @@ module memristor_PGA_SPI_0_cdc_sync__parameterized0
   wire [0:0]D;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ;
+  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ;
+  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ;
   wire [0:0]\OTHER_RATIO_GENERATE.serial_dout_int_reg ;
   wire [1:0]dout;
   wire ext_spi_clk;
@@ -3891,16 +3934,16 @@ module memristor_PGA_SPI_0_cdc_sync__parameterized0
         .R(1'b0));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[31]_i_1 
+    \OTHER_RATIO_GENERATE.Shift_Reg[15]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.serial_dout_int_reg ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ),
+        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ),
         .I2(dout[1]),
-        .I3(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I3(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I4(dout[0]),
         .O(D));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110[31]_i_1 
+    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110[15]_i_1 
        (.I0(serial_dout_int),
         .I1(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ),
         .I2(io1_i_sync),
@@ -4630,133 +4673,126 @@ endmodule
 
 (* ORIG_REF_NAME = "counter_f" *) 
 module memristor_PGA_SPI_0_counter_f
-   (tx_fifo_count,
-    \icount_out_reg[1]_0 ,
+   (\icount_out_reg[1]_0 ,
+    tx_fifo_count,
     \icount_out_reg[2]_0 ,
     tx_occ_msb_1,
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ,
+    \icount_out_reg[2]_1 ,
     \icount_out_reg[1]_1 ,
     bus2ip_reset_ipif_inverted,
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ,
-    \icount_out_reg[1]_2 ,
+    \icount_out_reg[0]_0 ,
+    \icount_out_reg[0]_1 ,
     reset2ip_reset_int,
-    rst,
-    Tx_FIFO_Full_int,
+    \icount_out_reg[3]_0 ,
     wr_en,
     Tx_FIFO_Full_i,
-    \icount_out_reg[3]_0 ,
-    s_axi_aclk,
-    \icount_out_reg[0]_0 );
-  output [0:0]tx_fifo_count;
+    \icount_out_reg[0]_2 ,
+    s_axi_aclk);
   output \icount_out_reg[1]_0 ;
+  output [0:0]tx_fifo_count;
   output \icount_out_reg[2]_0 ;
   output tx_occ_msb_1;
-  output \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
+  output \icount_out_reg[2]_1 ;
   input \icount_out_reg[1]_1 ;
   input bus2ip_reset_ipif_inverted;
-  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ;
-  input \icount_out_reg[1]_2 ;
+  input \icount_out_reg[0]_0 ;
+  input \icount_out_reg[0]_1 ;
   input reset2ip_reset_int;
-  input rst;
-  input Tx_FIFO_Full_int;
+  input \icount_out_reg[3]_0 ;
   input wr_en;
   input Tx_FIFO_Full_i;
-  input \icount_out_reg[3]_0 ;
+  input \icount_out_reg[0]_2 ;
   input s_axi_aclk;
-  input \icount_out_reg[0]_0 ;
 
-  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_2_n_0 ;
-  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ;
-  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
   wire Tx_FIFO_Full_i;
-  wire Tx_FIFO_Full_int;
   wire bus2ip_reset_ipif_inverted;
+  wire \icount_out[0]_i_1_n_0 ;
   wire \icount_out[1]_i_1_n_0 ;
   wire \icount_out[2]_i_1_n_0 ;
   wire \icount_out[3]_i_2_n_0 ;
   wire \icount_out_reg[0]_0 ;
+  wire \icount_out_reg[0]_1 ;
+  wire \icount_out_reg[0]_2 ;
   wire \icount_out_reg[1]_0 ;
   wire \icount_out_reg[1]_1 ;
-  wire \icount_out_reg[1]_2 ;
   wire \icount_out_reg[2]_0 ;
+  wire \icount_out_reg[2]_1 ;
   wire \icount_out_reg[3]_0 ;
   wire reset2ip_reset_int;
-  wire rst;
   wire s_axi_aclk;
   wire [0:0]tx_fifo_count;
   wire tx_occ_msb_1;
   wire wr_en;
 
-  LUT5 #(
-    .INIT(32'h00000004)) 
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_1 
-       (.I0(Tx_FIFO_Full_int),
-        .I1(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_2_n_0 ),
-        .I2(\icount_out_reg[1]_1 ),
-        .I3(bus2ip_reset_ipif_inverted),
-        .I4(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ),
-        .O(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ));
   LUT6 #(
     .INIT(64'hFFFFFFFF00800000)) 
     \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_2 
        (.I0(\icount_out_reg[2]_0 ),
-        .I1(tx_occ_msb_1),
-        .I2(\icount_out_reg[1]_0 ),
+        .I1(\icount_out_reg[1]_0 ),
+        .I2(tx_occ_msb_1),
         .I3(tx_fifo_count),
         .I4(wr_en),
         .I5(Tx_FIFO_Full_i),
-        .O(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFEFFFFFEFFFEFEFF)) 
-    \icount_out[1]_i_1 
-       (.I0(\icount_out_reg[1]_1 ),
+        .O(\icount_out_reg[2]_1 ));
+  LUT4 #(
+    .INIT(16'hFFFD)) 
+    \icount_out[0]_i_1 
+       (.I0(tx_fifo_count),
         .I1(bus2ip_reset_ipif_inverted),
-        .I2(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ),
-        .I3(tx_fifo_count),
-        .I4(\icount_out_reg[1]_2 ),
-        .I5(\icount_out_reg[1]_0 ),
+        .I2(\icount_out_reg[0]_0 ),
+        .I3(\icount_out_reg[0]_1 ),
+        .O(\icount_out[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFF96)) 
+    \icount_out[1]_i_1 
+       (.I0(\icount_out_reg[1]_0 ),
+        .I1(\icount_out_reg[1]_1 ),
+        .I2(tx_fifo_count),
+        .I3(bus2ip_reset_ipif_inverted),
+        .I4(\icount_out_reg[0]_0 ),
+        .I5(\icount_out_reg[0]_1 ),
         .O(\icount_out[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hEFFFFFFEFEEEEEEF)) 
+    .INIT(64'hFFFFFFFFFFFFC69C)) 
     \icount_out[2]_i_1 
-       (.I0(reset2ip_reset_int),
-        .I1(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ),
-        .I2(tx_fifo_count),
-        .I3(\icount_out_reg[1]_2 ),
-        .I4(\icount_out_reg[1]_0 ),
-        .I5(\icount_out_reg[2]_0 ),
+       (.I0(\icount_out_reg[1]_0 ),
+        .I1(\icount_out_reg[2]_0 ),
+        .I2(\icount_out_reg[1]_1 ),
+        .I3(tx_fifo_count),
+        .I4(reset2ip_reset_int),
+        .I5(\icount_out_reg[0]_1 ),
         .O(\icount_out[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBFFFFFFEEAAAAAAB)) 
+    .INIT(64'hD7DDDDDDDDDDDD7D)) 
     \icount_out[3]_i_2 
-       (.I0(rst),
-        .I1(\icount_out_reg[2]_0 ),
-        .I2(tx_fifo_count),
-        .I3(\icount_out_reg[1]_2 ),
-        .I4(\icount_out_reg[1]_0 ),
-        .I5(tx_occ_msb_1),
+       (.I0(\icount_out_reg[3]_0 ),
+        .I1(tx_occ_msb_1),
+        .I2(\icount_out_reg[1]_1 ),
+        .I3(tx_fifo_count),
+        .I4(\icount_out_reg[2]_0 ),
+        .I5(\icount_out_reg[1]_0 ),
         .O(\icount_out[3]_i_2_n_0 ));
   FDRE \icount_out_reg[0] 
        (.C(s_axi_aclk),
-        .CE(\icount_out_reg[3]_0 ),
-        .D(\icount_out_reg[0]_0 ),
+        .CE(\icount_out_reg[0]_2 ),
+        .D(\icount_out[0]_i_1_n_0 ),
         .Q(tx_fifo_count),
         .R(1'b0));
   FDRE \icount_out_reg[1] 
        (.C(s_axi_aclk),
-        .CE(\icount_out_reg[3]_0 ),
+        .CE(\icount_out_reg[0]_2 ),
         .D(\icount_out[1]_i_1_n_0 ),
         .Q(\icount_out_reg[1]_0 ),
         .R(1'b0));
   FDRE \icount_out_reg[2] 
        (.C(s_axi_aclk),
-        .CE(\icount_out_reg[3]_0 ),
+        .CE(\icount_out_reg[0]_2 ),
         .D(\icount_out[2]_i_1_n_0 ),
         .Q(\icount_out_reg[2]_0 ),
         .R(1'b0));
   FDRE \icount_out_reg[3] 
        (.C(s_axi_aclk),
-        .CE(\icount_out_reg[3]_0 ),
+        .CE(\icount_out_reg[0]_2 ),
         .D(\icount_out[3]_i_2_n_0 ),
         .Q(tx_occ_msb_1),
         .R(1'b0));
@@ -4766,17 +4802,16 @@ endmodule
 module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
    (prmry_in,
     \LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg_0 ,
+    \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ,
+    \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ,
+    \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_2 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
-    \RESET_FLOPS[15].RST_FLOPS ,
-    \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ,
     spiXfer_done_to_axi_1,
     Tx_FIFO_Empty_intr,
     scndry_out,
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ,
     tx_occ_msb,
-    \s_axi_wdata[7] ,
     \s_axi_wdata[5] ,
+    \s_axi_wdata[7] ,
     R,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ,
@@ -4790,33 +4825,33 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_5 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
     ext_spi_clk,
     reset2ip_reset_int,
     s_axi_aclk,
     Rst_to_spi,
     spiXfer_done_cdc_from_spi_int_20,
     drr_Overrun_int_cdc_from_spi_int_20,
-    spicr_6_rxfifo_rst_frm_axi_clk,
-    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    \icount_out_reg[3] ,
+    wr_en,
     bus2ip_reset_ipif_inverted,
+    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
+    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ,
+    spicr_6_rxfifo_rst_frm_axi_clk,
+    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ,
     Tx_FIFO_Full_i,
     Tx_FIFO_Full_int,
-    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ,
-    wr_en,
-    almost_full,
-    p_5_in,
-    ip2Bus_WrAck_core_reg_1,
     Bus_RNW_reg,
-    spiXfer_done_to_axi_d1,
+    \icount_out_reg[1] ,
+    p_5_in,
+    almost_full,
     tx_fifo_count_d2,
+    spiXfer_done_to_axi_d1,
     tx_occ_msb_4,
-    \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ,
     s_axi_wdata,
-    p_1_in16_in,
+    \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ,
     p_1_in22_in,
-    \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ,
+    p_1_in16_in,
+    \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ,
     dout,
     transfer_start_d1,
     \SS_O_reg[0] ,
@@ -4837,17 +4872,16 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
     spicr_bits_7_8_frm_axi_clk);
   output prmry_in;
   output \LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg_0 ;
+  output \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ;
+  output \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ;
+  output \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_2 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  output \RESET_FLOPS[15].RST_FLOPS ;
-  output \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ;
   output spiXfer_done_to_axi_1;
   output Tx_FIFO_Empty_intr;
   output scndry_out;
-  output \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ;
   output tx_occ_msb;
-  output \s_axi_wdata[7] ;
   output \s_axi_wdata[5] ;
+  output \s_axi_wdata[7] ;
   output R;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ;
@@ -4861,33 +4895,33 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_5 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
   input ext_spi_clk;
   input reset2ip_reset_int;
   input s_axi_aclk;
   input Rst_to_spi;
   input spiXfer_done_cdc_from_spi_int_20;
   input drr_Overrun_int_cdc_from_spi_int_20;
-  input spicr_6_rxfifo_rst_frm_axi_clk;
-  input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input \icount_out_reg[3] ;
+  input wr_en;
   input bus2ip_reset_ipif_inverted;
+  input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
+  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
+  input spicr_6_rxfifo_rst_frm_axi_clk;
+  input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ;
   input Tx_FIFO_Full_i;
   input Tx_FIFO_Full_int;
-  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
-  input wr_en;
-  input almost_full;
-  input p_5_in;
-  input ip2Bus_WrAck_core_reg_1;
   input Bus_RNW_reg;
-  input spiXfer_done_to_axi_d1;
+  input \icount_out_reg[1] ;
+  input p_5_in;
+  input almost_full;
   input [3:0]tx_fifo_count_d2;
+  input spiXfer_done_to_axi_d1;
   input tx_occ_msb_4;
-  input \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ;
   input [1:0]s_axi_wdata;
-  input p_1_in16_in;
+  input \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ;
   input p_1_in22_in;
-  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ;
+  input p_1_in16_in;
+  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ;
   input [1:0]dout;
   input transfer_start_d1;
   input \SS_O_reg[0] ;
@@ -4911,8 +4945,8 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
   wire [0:0]D;
   wire D_0;
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
+  wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ;
   wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
-  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_1 ;
@@ -4931,14 +4965,15 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
   wire \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ;
   wire \LOGIC_GENERATION_CDC.SPICR_RX_FIFO_Rst_en_d1_i_1_n_0 ;
   wire \LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ;
+  wire \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ;
+  wire \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ;
+  wire \LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_2 ;
+  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ;
   wire [0:0]\OTHER_RATIO_GENERATE.serial_dout_int_reg ;
   wire R;
-  wire \RESET_FLOPS[15].RST_FLOPS ;
   wire Rst_to_spi;
   wire SPICR_RX_FIFO_Rst_en_d1;
   wire SPICR_RX_FIFO_Rst_en_d2;
@@ -4954,11 +4989,9 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
   wire drr_Overrun_int_cdc_from_spi_int_20;
   wire empty;
   wire ext_spi_clk;
-  wire \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ;
-  wire \icount_out_reg[3] ;
+  wire \icount_out_reg[1] ;
   wire io0_i_sync;
   wire io1_i_sync;
-  wire ip2Bus_WrAck_core_reg_1;
   wire p_1_in16_in;
   wire p_1_in22_in;
   wire p_5_in;
@@ -5005,8 +5038,8 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
   LUT5 #(
     .INIT(32'h78FFFF78)) 
     \GEN_IP_IRPT_STATUS_REG[7].GEN_REG_STATUS.ip_irpt_status_reg[7]_i_1 
-       (.I0(\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ),
-        .I1(s_axi_wdata[1]),
+       (.I0(s_axi_wdata[1]),
+        .I1(\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ),
         .I2(p_1_in16_in),
         .I3(spisel_pulse_cdc_from_spi_d3),
         .I4(spisel_pulse_cdc_from_spi_d4),
@@ -5049,8 +5082,8 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
        (.D(D),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3 ),
-        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[31] (\OTHER_RATIO_GENERATE.Shift_Reg_reg[31] ),
-        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2 ),
+        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[15] (\OTHER_RATIO_GENERATE.Shift_Reg_reg[15] ),
+        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2 ),
         .\OTHER_RATIO_GENERATE.serial_dout_int_reg (\OTHER_RATIO_GENERATE.serial_dout_int_reg ),
         .dout(dout),
         .ext_spi_clk(ext_spi_clk),
@@ -5122,7 +5155,7 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
         .Q(SPICR_RX_FIFO_Rst_en_d1),
         .R(reset2ip_reset_int));
   memristor_PGA_SPI_0_cdc_sync_14 \LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1 
-       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ),
+       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
         .s_axi_aclk(s_axi_aclk));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
@@ -5173,17 +5206,17 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
   memristor_PGA_SPI_0_cdc_sync_16 \LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
+        .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ),
         .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg (\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
-        .\RESET_FLOPS[15].RST_FLOPS (\RESET_FLOPS[15].RST_FLOPS ),
+        .\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg (\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 ),
+        .\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 (\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 ),
+        .\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 (\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_2 ),
         .Tx_FIFO_Full_i(Tx_FIFO_Full_i),
         .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
         .almost_full(almost_full),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
-        .\gen_pf_ic_rc.gaf_ic.ram_afull_i_reg (\gen_pf_ic_rc.gaf_ic.ram_afull_i_reg ),
-        .\icount_out_reg[3] (\icount_out_reg[3] ),
-        .ip2Bus_WrAck_core_reg_1(ip2Bus_WrAck_core_reg_1),
+        .\icount_out_reg[1] (\icount_out_reg[1] ),
         .p_5_in(p_5_in),
         .prmry_in(prmry_in),
         .reset2ip_reset_int(reset2ip_reset_int),
@@ -5194,8 +5227,7 @@ module memristor_PGA_SPI_0_cross_clk_sync_fifo_1
         .spicr_6_rxfifo_rst_frm_axi_clk(spicr_6_rxfifo_rst_frm_axi_clk),
         .wr_en(wr_en));
   memristor_PGA_SPI_0_cdc_sync_17 \LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1 
-       (.\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] (\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] ),
-        .Tx_FIFO_Empty_intr(Tx_FIFO_Empty_intr),
+       (.Tx_FIFO_Empty_intr(Tx_FIFO_Empty_intr),
         .empty(empty),
         .s_axi_aclk(s_axi_aclk),
         .scndry_out(scndry_out),
@@ -5243,38 +5275,44 @@ module memristor_PGA_SPI_0_interrupt_control
     p_1_in13_in,
     irpt_rdack_d1,
     p_0_in,
+    D,
     IP2Bus_WrAck_1,
     ip2intc_irpt,
     Q,
     IP2Bus_RdAck_1,
     reset2ip_reset_int,
-    irpt_wrack_d1_reg_0,
+    irpt_wrack,
     s_axi_aclk,
     \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0 ,
     \GEN_IP_IRPT_STATUS_REG[7].GEN_REG_STATUS.ip_irpt_status_reg_reg[7]_0 ,
     \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ,
-    interrupt_wrce_strb,
+    intr2bus_wrack_reg_0,
     irpt_rdack,
     intr2bus_rdack0,
     ipif_glbl_irpt_enable_reg_reg_0,
-    \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ,
     s_axi_wdata,
+    \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ,
     rc_FIFO_Full_d1,
     scndry_out,
     empty,
     tx_FIFO_Empty_d1,
-    \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0 ,
-    tx_FIFO_Occpncy_MSB_d1,
-    \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]_0 ,
+    Tx_FIFO_Empty_intr,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_3 ,
     tx_occ_msb_4,
+    \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]_0 ,
+    tx_FIFO_Occpncy_MSB_d1,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ,
     ip2Bus_WrAck_core_reg,
-    ip2Bus_WrAck_intr_reg_hole,
     wrack,
+    ip2Bus_WrAck_intr_reg_hole,
     ip2Bus_RdAck_intr_reg_hole,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ,
     E,
-    D);
+    \ip_irpt_enable_reg_reg[8]_0 );
   output irpt_wrack_d1;
   output \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ;
   output p_1_in34_in;
@@ -5287,48 +5325,53 @@ module memristor_PGA_SPI_0_interrupt_control
   output p_1_in13_in;
   output irpt_rdack_d1;
   output [0:0]p_0_in;
+  output [0:0]D;
   output IP2Bus_WrAck_1;
   output ip2intc_irpt;
-  output [8:0]Q;
+  output [7:0]Q;
   output IP2Bus_RdAck_1;
   input reset2ip_reset_int;
-  input irpt_wrack_d1_reg_0;
+  input irpt_wrack;
   input s_axi_aclk;
   input \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0 ;
   input \GEN_IP_IRPT_STATUS_REG[7].GEN_REG_STATUS.ip_irpt_status_reg_reg[7]_0 ;
   input \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ;
-  input interrupt_wrce_strb;
+  input intr2bus_wrack_reg_0;
   input irpt_rdack;
   input intr2bus_rdack0;
   input ipif_glbl_irpt_enable_reg_reg_0;
-  input \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ;
   input [7:0]s_axi_wdata;
+  input \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ;
   input rc_FIFO_Full_d1;
   input scndry_out;
   input empty;
   input tx_FIFO_Empty_d1;
-  input \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0 ;
-  input tx_FIFO_Occpncy_MSB_d1;
-  input \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]_0 ;
+  input Tx_FIFO_Empty_intr;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_3 ;
   input tx_occ_msb_4;
+  input \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]_0 ;
+  input tx_FIFO_Occpncy_MSB_d1;
   input \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
   input ip2Bus_WrAck_core_reg;
-  input ip2Bus_WrAck_intr_reg_hole;
   input wrack;
+  input ip2Bus_WrAck_intr_reg_hole;
   input ip2Bus_RdAck_intr_reg_hole;
   input \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   input [0:0]E;
-  input [0:0]D;
+  input [0:0]\ip_irpt_enable_reg_reg[8]_0 ;
 
   wire [0:0]D;
   wire [0:0]E;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_1_n_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ;
-  wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ;
   wire \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg[1]_i_1_n_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1_n_0 ;
-  wire \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg[3]_i_1_n_0 ;
+  wire \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[4].GEN_REG_STATUS.ip_irpt_status_reg[4]_i_1_n_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg[6]_i_1_n_0 ;
@@ -5337,12 +5380,18 @@ module memristor_PGA_SPI_0_interrupt_control
   wire \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ;
   wire IP2Bus_RdAck_1;
   wire IP2Bus_WrAck_1;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_3 ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
-  wire [8:0]Q;
+  wire [7:0]Q;
+  wire Tx_FIFO_Empty_intr;
   wire empty;
-  wire interrupt_wrce_strb;
   wire intr2bus_rdack0;
+  wire intr2bus_wrack_reg_0;
   wire intr_ip2bus_rdack;
   wire intr_ip2bus_wrack;
   wire ip2Bus_RdAck_intr_reg_hole;
@@ -5353,12 +5402,14 @@ module memristor_PGA_SPI_0_interrupt_control
   wire ip2intc_irpt_INST_0_i_2_n_0;
   wire ip2intc_irpt_INST_0_i_3_n_0;
   wire ip2intc_irpt_INST_0_i_4_n_0;
+  wire [0:0]\ip_irpt_enable_reg_reg[8]_0 ;
   wire ipif_glbl_irpt_enable_reg_reg_0;
   wire irpt_rdack;
   wire irpt_rdack_d1;
+  wire irpt_wrack;
   wire irpt_wrack_d1;
-  wire irpt_wrack_d1_reg_0;
   wire [0:0]p_0_in;
+  wire p_0_in2_in;
   wire p_1_in13_in;
   wire p_1_in16_in;
   wire p_1_in19_in;
@@ -5377,11 +5428,12 @@ module memristor_PGA_SPI_0_interrupt_control
   wire tx_occ_msb_4;
   wire wrack;
 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_1 
        (.I0(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ),
-        .I1(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ),
+        .I1(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ),
         .I2(s_axi_wdata[0]),
         .O(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_1_n_0 ));
   FDRE \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] 
@@ -5390,12 +5442,12 @@ module memristor_PGA_SPI_0_interrupt_control
         .D(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_1_n_0 ),
         .Q(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ),
         .R(reset2ip_reset_int));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg[1]_i_1 
        (.I0(p_1_in34_in),
-        .I1(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ),
+        .I1(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ),
         .I2(s_axi_wdata[1]),
         .O(\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg[1]_i_1_n_0 ));
   FDRE \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] 
@@ -5405,13 +5457,13 @@ module memristor_PGA_SPI_0_interrupt_control
         .Q(p_1_in34_in),
         .R(reset2ip_reset_int));
   LUT5 #(
-    .INIT(32'h6C6C6CFF)) 
+    .INIT(32'h78FF7878)) 
     \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1 
-       (.I0(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ),
-        .I1(p_1_in31_in),
-        .I2(s_axi_wdata[2]),
+       (.I0(s_axi_wdata[2]),
+        .I1(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ),
+        .I2(p_1_in31_in),
         .I3(tx_FIFO_Empty_d1),
-        .I4(\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0 ),
+        .I4(Tx_FIFO_Empty_intr),
         .O(\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1_n_0 ));
   FDRE \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] 
        (.C(s_axi_aclk),
@@ -5419,12 +5471,11 @@ module memristor_PGA_SPI_0_interrupt_control
         .D(\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1_n_0 ),
         .Q(p_1_in31_in),
         .R(reset2ip_reset_int));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg[3]_i_1 
        (.I0(p_1_in28_in),
-        .I1(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ),
+        .I1(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ),
         .I2(s_axi_wdata[3]),
         .O(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg[3]_i_1_n_0 ));
   FDRE \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] 
@@ -5436,8 +5487,8 @@ module memristor_PGA_SPI_0_interrupt_control
   LUT6 #(
     .INIT(64'h7878787878FF7878)) 
     \GEN_IP_IRPT_STATUS_REG[4].GEN_REG_STATUS.ip_irpt_status_reg[4]_i_1 
-       (.I0(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ),
-        .I1(s_axi_wdata[4]),
+       (.I0(s_axi_wdata[4]),
+        .I1(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ),
         .I2(p_1_in25_in),
         .I3(rc_FIFO_Full_d1),
         .I4(scndry_out),
@@ -5456,14 +5507,14 @@ module memristor_PGA_SPI_0_interrupt_control
         .Q(p_1_in22_in),
         .R(reset2ip_reset_int));
   LUT6 #(
-    .INIT(64'hFF787878FF78FF78)) 
+    .INIT(64'hFFFF78FF78787878)) 
     \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg[6]_i_1 
-       (.I0(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 ),
-        .I1(s_axi_wdata[6]),
+       (.I0(s_axi_wdata[6]),
+        .I1(\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 ),
         .I2(p_1_in19_in),
-        .I3(tx_FIFO_Occpncy_MSB_d1),
+        .I3(tx_occ_msb_4),
         .I4(\GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]_0 ),
-        .I5(tx_occ_msb_4),
+        .I5(tx_FIFO_Occpncy_MSB_d1),
         .O(\GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg[6]_i_1_n_0 ));
   FDRE \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6] 
        (.C(s_axi_aclk),
@@ -5483,6 +5534,16 @@ module memristor_PGA_SPI_0_interrupt_control
         .D(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ),
         .Q(p_1_in13_in),
         .R(reset2ip_reset_int));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFF22F2)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_1 
+       (.I0(p_0_in2_in),
+        .I1(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ),
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ),
+        .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_3 ),
+        .O(D));
   LUT3 #(
     .INIT(8'hFE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_i_1 
@@ -5494,10 +5555,10 @@ module memristor_PGA_SPI_0_interrupt_control
     .INIT(32'hFFFFFFFE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_i_1 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ),
-        .I1(ip2Bus_WrAck_core_reg),
-        .I2(ip2Bus_WrAck_intr_reg_hole),
-        .I3(intr_ip2bus_wrack),
-        .I4(wrack),
+        .I1(intr_ip2bus_wrack),
+        .I2(ip2Bus_WrAck_core_reg),
+        .I3(wrack),
+        .I4(ip2Bus_WrAck_intr_reg_hole),
         .O(IP2Bus_WrAck_1));
   FDRE intr2bus_rdack_reg
        (.C(s_axi_aclk),
@@ -5508,7 +5569,7 @@ module memristor_PGA_SPI_0_interrupt_control
   FDRE intr2bus_wrack_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(interrupt_wrce_strb),
+        .D(intr2bus_wrack_reg_0),
         .Q(intr_ip2bus_wrack),
         .R(reset2ip_reset_int));
   LUT5 #(
@@ -5523,36 +5584,36 @@ module memristor_PGA_SPI_0_interrupt_control
   LUT4 #(
     .INIT(16'hF888)) 
     ip2intc_irpt_INST_0_i_1
-       (.I0(Q[0]),
-        .I1(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ),
-        .I2(Q[2]),
+       (.I0(Q[5]),
+        .I1(p_1_in19_in),
+        .I2(p_0_in2_in),
         .I3(p_1_in31_in),
         .O(ip2intc_irpt_INST_0_i_1_n_0));
   LUT4 #(
     .INIT(16'hF888)) 
     ip2intc_irpt_INST_0_i_2
-       (.I0(Q[7]),
-        .I1(p_1_in16_in),
-        .I2(Q[1]),
-        .I3(p_1_in34_in),
+       (.I0(Q[2]),
+        .I1(p_1_in28_in),
+        .I2(Q[0]),
+        .I3(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ),
         .O(ip2intc_irpt_INST_0_i_2_n_0));
   LUT4 #(
     .INIT(16'hF888)) 
     ip2intc_irpt_INST_0_i_3
-       (.I0(Q[5]),
-        .I1(p_1_in22_in),
+       (.I0(Q[3]),
+        .I1(p_1_in25_in),
         .I2(Q[4]),
-        .I3(p_1_in25_in),
+        .I3(p_1_in22_in),
         .O(ip2intc_irpt_INST_0_i_3_n_0));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     ip2intc_irpt_INST_0_i_4
-       (.I0(Q[8]),
+       (.I0(Q[7]),
         .I1(p_1_in13_in),
-        .I2(p_1_in19_in),
-        .I3(Q[6]),
-        .I4(p_1_in28_in),
-        .I5(Q[3]),
+        .I2(p_1_in34_in),
+        .I3(Q[1]),
+        .I4(p_1_in16_in),
+        .I5(Q[6]),
         .O(ip2intc_irpt_INST_0_i_4_n_0));
   FDRE \ip_irpt_enable_reg_reg[0] 
        (.C(s_axi_aclk),
@@ -5570,43 +5631,43 @@ module memristor_PGA_SPI_0_interrupt_control
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[2]),
-        .Q(Q[2]),
+        .Q(p_0_in2_in),
         .R(reset2ip_reset_int));
   FDRE \ip_irpt_enable_reg_reg[3] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[3]),
-        .Q(Q[3]),
+        .Q(Q[2]),
         .R(reset2ip_reset_int));
   FDRE \ip_irpt_enable_reg_reg[4] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[4]),
-        .Q(Q[4]),
+        .Q(Q[3]),
         .R(reset2ip_reset_int));
   FDRE \ip_irpt_enable_reg_reg[5] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[5]),
-        .Q(Q[5]),
+        .Q(Q[4]),
         .R(reset2ip_reset_int));
   FDRE \ip_irpt_enable_reg_reg[6] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[6]),
-        .Q(Q[6]),
+        .Q(Q[5]),
         .R(reset2ip_reset_int));
   FDRE \ip_irpt_enable_reg_reg[7] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(s_axi_wdata[7]),
-        .Q(Q[7]),
+        .Q(Q[6]),
         .R(reset2ip_reset_int));
   FDRE \ip_irpt_enable_reg_reg[8] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(D),
-        .Q(Q[8]),
+        .D(\ip_irpt_enable_reg_reg[8]_0 ),
+        .Q(Q[7]),
         .R(reset2ip_reset_int));
   FDRE ipif_glbl_irpt_enable_reg_reg
        (.C(s_axi_aclk),
@@ -5623,7 +5684,7 @@ module memristor_PGA_SPI_0_interrupt_control
   FDRE irpt_wrack_d1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(irpt_wrack_d1_reg_0),
+        .D(irpt_wrack),
         .Q(irpt_wrack_d1),
         .R(reset2ip_reset_int));
 endmodule
@@ -5640,25 +5701,24 @@ module memristor_PGA_SPI_0_qspi_cntrl_reg
     \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]_0 ,
     \SPICR_data_int_reg[0]_0 ,
     \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ,
-    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ,
-    rst,
-    \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
+    spicr_6_rxfifo_rst_frm_axi_clk,
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ,
+    \s_axi_wdata[8] ,
     D,
     reset2ip_reset_int,
     bus2ip_wrce_int,
     s_axi_wdata,
     s_axi_aclk,
     SPICR_data_int_reg0,
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_2 ,
+    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ,
+    \icount_out_reg[3] ,
     bus2ip_reset_ipif_inverted,
-    \gen_rst_ic.wr_rst_busy_ic_reg ,
+    scndry_out,
     \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] ,
-    data_Exists_RcFIFO_int_d1,
-    \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ,
     p_1_in13_in,
-    \ip_irpt_enable_reg_reg[8] ,
-    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ,
-    p_7_in,
-    Bus_RNW_reg);
+    data_Exists_RcFIFO_int_d1,
+    \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 );
   output [1:0]spicr_bits_7_8_frm_axi_clk;
   output prmry_in;
   output \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]_0 ;
@@ -5669,40 +5729,36 @@ module memristor_PGA_SPI_0_qspi_cntrl_reg
   output \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]_0 ;
   output \SPICR_data_int_reg[0]_0 ;
   output \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ;
-  output \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ;
-  output rst;
-  output \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
+  output spicr_6_rxfifo_rst_frm_axi_clk;
+  output \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ;
+  output \s_axi_wdata[8] ;
   output [0:0]D;
   input reset2ip_reset_int;
   input [0:0]bus2ip_wrce_int;
-  input [9:0]s_axi_wdata;
+  input [7:0]s_axi_wdata;
   input s_axi_aclk;
   input SPICR_data_int_reg0;
+  input \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_2 ;
+  input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ;
+  input \icount_out_reg[3] ;
   input bus2ip_reset_ipif_inverted;
-  input \gen_rst_ic.wr_rst_busy_ic_reg ;
+  input scndry_out;
   input \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] ;
+  input p_1_in13_in;
   input data_Exists_RcFIFO_int_d1;
   input \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ;
-  input p_1_in13_in;
-  input \ip_irpt_enable_reg_reg[8] ;
-  input \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ;
-  input p_7_in;
-  input Bus_RNW_reg;
 
-  wire Bus_RNW_reg;
   wire \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]_0 ;
   wire \CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2]_0 ;
-  wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int[3]_i_1_n_0 ;
   wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ;
-  wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int[4]_i_1_n_0 ;
   wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ;
   wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ;
+  wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_2 ;
   wire \CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5]_0 ;
   wire \CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6]_0 ;
   wire \CONTROL_REG_5_9_GENERATE[7].SPICR_data_int_reg[7]_0 ;
   wire \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]_0 ;
   wire [0:0]D;
-  wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg[8]_i_2_n_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] ;
   wire \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ;
@@ -5711,59 +5767,39 @@ module memristor_PGA_SPI_0_qspi_cntrl_reg
   wire bus2ip_reset_ipif_inverted;
   wire [0:0]bus2ip_wrce_int;
   wire data_Exists_RcFIFO_int_d1;
-  wire \gen_rst_ic.wr_rst_busy_ic_reg ;
-  wire \ip_irpt_enable_reg_reg[8] ;
+  wire \icount_out_reg[3] ;
   wire p_1_in13_in;
-  wire p_7_in;
   wire prmry_in;
   wire reset2ip_reset_int;
-  wire rst;
   wire s_axi_aclk;
-  wire [9:0]s_axi_wdata;
+  wire [7:0]s_axi_wdata;
+  wire \s_axi_wdata[8] ;
+  wire scndry_out;
+  wire spicr_6_rxfifo_rst_frm_axi_clk;
   wire [1:0]spicr_bits_7_8_frm_axi_clk;
 
   FDSE \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] 
        (.C(s_axi_aclk),
         .CE(SPICR_data_int_reg0),
-        .D(s_axi_wdata[8]),
+        .D(s_axi_wdata[6]),
         .Q(\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]_0 ),
         .S(reset2ip_reset_int));
   FDSE \CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] 
        (.C(s_axi_aclk),
         .CE(SPICR_data_int_reg0),
-        .D(s_axi_wdata[7]),
+        .D(s_axi_wdata[5]),
         .Q(\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2]_0 ),
         .S(reset2ip_reset_int));
-  LUT6 #(
-    .INIT(64'h000000000000E200)) 
-    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int[3]_i_1 
-       (.I0(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ),
-        .I1(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ),
-        .I2(s_axi_wdata[6]),
-        .I3(p_7_in),
-        .I4(Bus_RNW_reg),
-        .I5(reset2ip_reset_int),
-        .O(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int[3]_i_1_n_0 ));
   FDRE \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int[3]_i_1_n_0 ),
-        .Q(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ),
+        .D(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ),
+        .Q(spicr_6_rxfifo_rst_frm_axi_clk),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h000000000000E200)) 
-    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int[4]_i_1 
-       (.I0(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ),
-        .I1(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ),
-        .I2(s_axi_wdata[5]),
-        .I3(p_7_in),
-        .I4(Bus_RNW_reg),
-        .I5(reset2ip_reset_int),
-        .O(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int[4]_i_1_n_0 ));
   FDRE \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int[4]_i_1_n_0 ),
+        .D(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_2 ),
         .Q(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ),
         .R(1'b0));
   FDRE \CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] 
@@ -5797,21 +5833,23 @@ module memristor_PGA_SPI_0_qspi_cntrl_reg
         .Q(prmry_in),
         .R(reset2ip_reset_int));
   LUT6 #(
-    .INIT(64'hFFFF1FFF0000F111)) 
+    .INIT(64'hFFFFFFFFD5FF2A00)) 
     \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg[8]_i_1 
-       (.I0(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] ),
-        .I1(data_Exists_RcFIFO_int_d1),
-        .I2(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ),
-        .I3(s_axi_wdata[8]),
-        .I4(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg[8]_i_2_n_0 ),
-        .I5(p_1_in13_in),
-        .O(\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+       (.I0(s_axi_wdata[6]),
+        .I1(\CONTROL_REG_5_9_GENERATE[7].SPICR_data_int_reg[7]_0 ),
+        .I2(scndry_out),
+        .I3(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] ),
+        .I4(p_1_in13_in),
+        .I5(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg[8]_i_2_n_0 ),
+        .O(\s_axi_wdata[8] ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT4 #(
+    .INIT(16'h0111)) 
     \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg[8]_i_2 
-       (.I0(\CONTROL_REG_5_9_GENERATE[7].SPICR_data_int_reg[7]_0 ),
-        .I1(\ip_irpt_enable_reg_reg[8] ),
+       (.I0(data_Exists_RcFIFO_int_d1),
+        .I1(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 ),
+        .I2(\CONTROL_REG_5_9_GENERATE[7].SPICR_data_int_reg[7]_0 ),
+        .I3(scndry_out),
         .O(\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg[8]_i_2_n_0 ));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -5840,24 +5878,24 @@ module memristor_PGA_SPI_0_qspi_cntrl_reg
   FDRE \SPICR_data_int_reg[0] 
        (.C(s_axi_aclk),
         .CE(SPICR_data_int_reg0),
-        .D(s_axi_wdata[9]),
+        .D(s_axi_wdata[7]),
         .Q(\SPICR_data_int_reg[0]_0 ),
         .R(reset2ip_reset_int));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \icount_out[3]_i_3 
+       (.I0(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ),
+        .I1(\icount_out_reg[3] ),
+        .I2(bus2ip_reset_ipif_inverted),
+        .O(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'h2A)) 
     \ip_irpt_enable_reg[8]_i_2 
-       (.I0(s_axi_wdata[8]),
+       (.I0(s_axi_wdata[6]),
         .I1(\CONTROL_REG_5_9_GENERATE[7].SPICR_data_int_reg[7]_0 ),
-        .I2(\ip_irpt_enable_reg_reg[8] ),
+        .I2(scndry_out),
         .O(D));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \xpm_fifo_instance.xpm_fifo_async_inst_i_1 
-       (.I0(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 ),
-        .I1(bus2ip_reset_ipif_inverted),
-        .I2(\gen_rst_ic.wr_rst_busy_ic_reg ),
-        .O(rst));
 endmodule
 
 (* ORIG_REF_NAME = "qspi_core_interface" *) 
@@ -5882,8 +5920,10 @@ module memristor_PGA_SPI_0_qspi_core_interface
     \SPICR_data_int_reg[0] ,
     sw_rst_cond_d1,
     irpt_wrack_d1,
+    \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ,
     p_1_in34_in,
     p_1_in31_in,
+    p_1_in28_in,
     p_1_in25_in,
     p_1_in22_in,
     p_1_in19_in,
@@ -5897,6 +5937,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
     ip2Bus_RdAck_core_reg,
     ip2bus_rdack_int,
     ip2Bus_WrAck_core_reg_1,
+    \RESET_FLOPS[15].RST_FLOPS ,
     io1_o,
     ss_o,
     spicr_5_txfifo_rst_frm_axi_clk,
@@ -5912,8 +5953,8 @@ module memristor_PGA_SPI_0_qspi_core_interface
     Q,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ,
     ext_spi_clk,
+    reset2ip_reset_int,
     s_axi_aclk,
-    wr_en,
     s_axi_wdata,
     bus2ip_wrce_int,
     IP2Bus_Error_1,
@@ -5921,8 +5962,8 @@ module memristor_PGA_SPI_0_qspi_core_interface
     bus2ip_reset_ipif_inverted,
     sw_rst_cond,
     reset_trig0,
-    irpt_wrack_d1_reg,
-    interrupt_wrce_strb,
+    irpt_wrack,
+    intr2bus_wrack_reg,
     irpt_rdack,
     intr2bus_rdack0,
     ip2Bus_WrAck_intr_reg_hole_d1_reg_0,
@@ -5932,29 +5973,30 @@ module memristor_PGA_SPI_0_qspi_core_interface
     intr_controller_rd_ce_or_reduce,
     ip2Bus_RdAck_intr_reg_hole0,
     rd_ce_or_reduce_core_cmb,
-    \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ,
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ,
+    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
     ipif_glbl_irpt_enable_reg_reg,
-    p_5_in,
     Bus_RNW_reg,
-    \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ,
+    p_5_in,
+    \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ,
     p_4_in,
     D,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ,
-    \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ,
-    p_1_in_0,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ,
+    \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 ,
+    p_1_in_0,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ,
     p_2_in,
-    p_7_in,
+    p_3_in,
     E,
     io1_i_sync,
     io0_i_sync);
-  output [10:0]dout;
+  output [9:0]dout;
   output empty;
   output almost_full;
   output sck_t;
@@ -5974,8 +6016,10 @@ module memristor_PGA_SPI_0_qspi_core_interface
   output \SPICR_data_int_reg[0] ;
   output sw_rst_cond_d1;
   output irpt_wrack_d1;
+  output \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   output p_1_in34_in;
   output p_1_in31_in;
+  output p_1_in28_in;
   output p_1_in25_in;
   output p_1_in22_in;
   output p_1_in19_in;
@@ -5989,6 +6033,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
   output ip2Bus_RdAck_core_reg;
   output ip2bus_rdack_int;
   output ip2Bus_WrAck_core_reg_1;
+  output \RESET_FLOPS[15].RST_FLOPS ;
   output io1_o;
   output [0:0]ss_o;
   output spicr_5_txfifo_rst_frm_axi_clk;
@@ -6001,20 +6046,20 @@ module memristor_PGA_SPI_0_qspi_core_interface
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
   output ip2intc_irpt;
-  output [7:0]Q;
-  output [31:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ;
+  output [6:0]Q;
+  output [16:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ;
   input ext_spi_clk;
+  input reset2ip_reset_int;
   input s_axi_aclk;
-  input wr_en;
-  input [31:0]s_axi_wdata;
+  input [15:0]s_axi_wdata;
   input [0:0]bus2ip_wrce_int;
   input IP2Bus_Error_1;
   input SPICR_data_int_reg0;
   input bus2ip_reset_ipif_inverted;
   input sw_rst_cond;
   input reset_trig0;
-  input irpt_wrack_d1_reg;
-  input interrupt_wrce_strb;
+  input irpt_wrack;
+  input intr2bus_wrack_reg;
   input irpt_rdack;
   input intr2bus_rdack0;
   input ip2Bus_WrAck_intr_reg_hole_d1_reg_0;
@@ -6024,25 +6069,26 @@ module memristor_PGA_SPI_0_qspi_core_interface
   input intr_controller_rd_ce_or_reduce;
   input ip2Bus_RdAck_intr_reg_hole0;
   input rd_ce_or_reduce_core_cmb;
-  input \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ;
+  input \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
+  input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
   input ipif_glbl_irpt_enable_reg_reg;
-  input p_5_in;
   input Bus_RNW_reg;
-  input \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
+  input p_5_in;
+  input \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   input p_4_in;
   input [6:0]D;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ;
-  input \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ;
-  input p_1_in_0;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ;
+  input \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 ;
+  input p_1_in_0;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ;
   input p_2_in;
-  input p_7_in;
+  input p_3_in;
   input [0:0]E;
   input io1_i_sync;
   input io0_i_sync;
@@ -6050,49 +6096,53 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire Bus_RNW_reg;
   wire \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] ;
   wire \CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] ;
+  wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire \CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] ;
   wire \CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] ;
   wire \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8] ;
+  wire CONTROL_REG_I_n_12;
   wire CONTROL_REG_I_n_13;
   wire [6:0]D;
   wire D_0;
   wire [0:0]E;
+  wire \FIFO_EXISTS.CLK_CROSS_I_n_10 ;
   wire \FIFO_EXISTS.CLK_CROSS_I_n_11 ;
-  wire \FIFO_EXISTS.CLK_CROSS_I_n_12 ;
-  wire \FIFO_EXISTS.CLK_CROSS_I_n_15 ;
-  wire \FIFO_EXISTS.CLK_CROSS_I_n_17 ;
+  wire \FIFO_EXISTS.CLK_CROSS_I_n_14 ;
+  wire \FIFO_EXISTS.CLK_CROSS_I_n_16 ;
   wire \FIFO_EXISTS.CLK_CROSS_I_n_2 ;
-  wire \FIFO_EXISTS.CLK_CROSS_I_n_23 ;
-  wire \FIFO_EXISTS.CLK_CROSS_I_n_25 ;
+  wire \FIFO_EXISTS.CLK_CROSS_I_n_22 ;
+  wire \FIFO_EXISTS.CLK_CROSS_I_n_24 ;
   wire \FIFO_EXISTS.CLK_CROSS_I_n_3 ;
   wire \FIFO_EXISTS.CLK_CROSS_I_n_4 ;
   wire \FIFO_EXISTS.CLK_CROSS_I_n_5 ;
-  wire \FIFO_EXISTS.CLK_CROSS_I_n_9 ;
-  wire \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_1 ;
+  wire \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_0 ;
   wire \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_2 ;
   wire \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_4 ;
-  wire \FIFO_EXISTS.TX_FIFO_II_n_38 ;
+  wire \FIFO_EXISTS.TX_FIFO_II_n_22 ;
+  wire \FIFO_EXISTS.TX_FIFO_II_n_23 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
-  wire INTERRUPT_CONTROL_I_n_1;
-  wire INTERRUPT_CONTROL_I_n_22;
+  wire \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   wire IP2Bus_Error_1;
   wire IP2Bus_RdAck_1;
-  wire [1:21]IP2Bus_Receive_Reg_Data_int;
+  wire [0:5]IP2Bus_Receive_Reg_Data_int;
   wire IP2Bus_WrAck_1;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_4_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_n_0 ;
+  wire IP2Bus_WrAck_transmit_enable;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_7_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_3_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6_n_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ;
-  wire [31:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ;
+  wire [16:0]\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 ;
@@ -6100,21 +6150,20 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_14 ;
   wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_15 ;
   wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_6 ;
-  wire [7:0]Q;
+  wire [6:0]Q;
   wire R;
+  wire \RESET_FLOPS[15].RST_FLOPS ;
   wire RESET_SYNC_AXI_SPI_CLK_INST_n_0;
   wire Rx_FIFO_Empty_Synced_in_SPI_domain;
   wire Rx_FIFO_Full_Fifo;
   wire Rx_FIFO_Full_Fifo_d1;
   wire Rx_FIFO_Full_Fifo_d1_synced_i;
   wire [4:0]Rx_FIFO_occ_Reversed;
-  wire SOFT_RESET_I_n_2;
   wire SOFT_RESET_I_n_3;
   wire SPICR_2_MST_N_SLV_to_spi_clk;
   wire SPICR_data_int_reg0;
   wire \SPICR_data_int_reg[0] ;
   wire \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ;
-  wire \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ;
   wire Tx_FIFO_Empty_intr;
   wire Tx_FIFO_Full_i;
   wire Tx_FIFO_Full_int;
@@ -6125,16 +6174,16 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire [0:0]bus2ip_wrce_int;
   wire data_Exists_RcFIFO_int_d1;
   wire data_Exists_RcFIFO_pulse028_in;
-  wire [1:21]data_from_rx_fifo;
-  wire [0:31]data_from_txfifo;
-  wire [0:31]data_to_rx_fifo;
-  wire [10:0]dout;
+  wire [0:5]data_from_rx_fifo;
+  wire [0:15]data_from_txfifo;
+  wire [0:15]data_to_rx_fifo;
+  wire [9:0]dout;
   wire drr_Overrun_int_cdc_from_spi_int_2;
   wire drr_Overrun_int_cdc_from_spi_int_20;
   wire empty;
   wire ext_spi_clk;
-  wire interrupt_wrce_strb;
   wire intr2bus_rdack0;
+  wire intr2bus_wrack_reg;
   wire intr_controller_rd_ce_or_reduce;
   wire io0_i_sync;
   wire io0_t;
@@ -6161,9 +6210,10 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire ipif_glbl_irpt_enable_reg_reg;
   wire irpt_rdack;
   wire irpt_rdack_d1;
+  wire irpt_wrack;
   wire irpt_wrack_d1;
-  wire irpt_wrack_d1_reg;
   wire [0:0]p_0_in;
+  wire p_0_in5_in;
   wire [0:0]p_1_in;
   wire p_1_in13_in;
   wire p_1_in16_in;
@@ -6176,9 +6226,9 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire p_1_in_0;
   wire p_2_in;
   wire [0:0]p_2_in_1;
+  wire p_3_in;
   wire p_4_in;
   wire p_5_in;
-  wire p_7_in;
   wire prmry_in;
   wire rc_FIFO_Full_d1;
   wire rd_ce_or_reduce_core_cmb;
@@ -6199,7 +6249,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire rst_to_spi_int;
   wire rx_fifo_empty_i;
   wire s_axi_aclk;
-  wire [31:0]s_axi_wdata;
+  wire [15:0]s_axi_wdata;
   wire sck_o;
   wire sck_t;
   wire scndry_out;
@@ -6231,7 +6281,6 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire tx_occ_msb_1;
   wire tx_occ_msb_4;
   wire wr_ce_or_reduce_core_cmb;
-  wire wr_en;
   wire wrack;
   wire \NLW_FIFO_EXISTS.RX_FIFO_II_almost_empty_UNCONNECTED ;
   wire \NLW_FIFO_EXISTS.RX_FIFO_II_data_valid_UNCONNECTED ;
@@ -6248,42 +6297,41 @@ module memristor_PGA_SPI_0_qspi_core_interface
   wire [4:0]\NLW_FIFO_EXISTS.RX_FIFO_II_wr_data_count_UNCONNECTED ;
 
   memristor_PGA_SPI_0_qspi_cntrl_reg CONTROL_REG_I
-       (.Bus_RNW_reg(Bus_RNW_reg),
-        .\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]_0 (\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] ),
+       (.\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]_0 (\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] ),
         .\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2]_0 (\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] ),
-        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 (spicr_6_rxfifo_rst_frm_axi_clk),
+        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_0 (spicr_5_txfifo_rst_frm_axi_clk),
-        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 (ip2Bus_WrAck_core_reg_1),
+        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_1 (CONTROL_REG_I_n_12),
+        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]_2 (\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
         .\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5]_0 (\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] ),
         .\CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6]_0 (\CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] ),
         .\CONTROL_REG_5_9_GENERATE[7].SPICR_data_int_reg[7]_0 (spicr_2_mst_n_slv_frm_axi_clk),
         .\CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]_0 (\CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8] ),
         .D(bus2IP_Data_for_interrupt_core),
-        .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (CONTROL_REG_I_n_13),
-        .\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] (rx_fifo_empty_i),
-        .\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
+        .\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8] (\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ),
+        .\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 (rx_fifo_empty_i),
         .SPICR_data_int_reg0(SPICR_data_int_reg0),
         .\SPICR_data_int_reg[0]_0 (\SPICR_data_int_reg[0] ),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
         .bus2ip_wrce_int(bus2ip_wrce_int),
         .data_Exists_RcFIFO_int_d1(data_Exists_RcFIFO_int_d1),
-        .\gen_rst_ic.wr_rst_busy_ic_reg (SOFT_RESET_I_n_2),
-        .\ip_irpt_enable_reg_reg[8] (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .\icount_out_reg[3] (\RESET_FLOPS[15].RST_FLOPS ),
         .p_1_in13_in(p_1_in13_in),
-        .p_7_in(p_7_in),
         .prmry_in(prmry_in),
         .reset2ip_reset_int(reset2ip_reset_int),
-        .rst(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
-        .s_axi_wdata(s_axi_wdata[9:0]),
+        .s_axi_wdata({s_axi_wdata[9:7],s_axi_wdata[4:0]}),
+        .\s_axi_wdata[8] (CONTROL_REG_I_n_13),
+        .scndry_out(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .spicr_6_rxfifo_rst_frm_axi_clk(spicr_6_rxfifo_rst_frm_axi_clk),
         .spicr_bits_7_8_frm_axi_clk(spicr_bits_7_8_frm_axi_clk));
   memristor_PGA_SPI_0_cross_clk_sync_fifo_1 \FIFO_EXISTS.CLK_CROSS_I 
        (.Bus_RNW_reg(Bus_RNW_reg),
-        .D(\FIFO_EXISTS.CLK_CROSS_I_n_17 ),
+        .D(\FIFO_EXISTS.CLK_CROSS_I_n_16 ),
         .D_0(D_0),
-        .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (rx_fifo_empty_i),
+        .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\RESET_FLOPS[15].RST_FLOPS ),
+        .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 (rx_fifo_empty_i),
         .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg (spicr_5_txfifo_rst_frm_axi_clk),
-        .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d2_reg[1] (\FIFO_EXISTS.CLK_CROSS_I_n_9 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to (prmry_in),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 (\CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_1 (\CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] ),
@@ -6293,22 +6341,23 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_5 (\SPICR_data_int_reg[0] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_6 (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (SPICR_2_MST_N_SLV_to_spi_clk),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (\FIFO_EXISTS.CLK_CROSS_I_n_15 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (\FIFO_EXISTS.CLK_CROSS_I_n_14 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1 (spicr_3_cpol_to_spi_clk),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2 (spicr_9_lsb_to_spi_clk),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3 (spicr_0_loop_to_spi_clk),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4 (\FIFO_EXISTS.CLK_CROSS_I_n_23 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4 (\FIFO_EXISTS.CLK_CROSS_I_n_22 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_5 (register_Data_slvsel_int),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6 (\FIFO_EXISTS.CLK_CROSS_I_n_25 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (\FIFO_EXISTS.CLK_CROSS_I_n_2 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\FIFO_EXISTS.CLK_CROSS_I_n_3 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
-        .\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6 (\FIFO_EXISTS.CLK_CROSS_I_n_24 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (\FIFO_EXISTS.CLK_CROSS_I_n_5 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] (\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ),
         .\LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg_0 (drr_Overrun_int_cdc_from_spi_int_2),
-        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[31] (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ),
+        .\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_0 (\FIFO_EXISTS.CLK_CROSS_I_n_2 ),
+        .\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_1 (\FIFO_EXISTS.CLK_CROSS_I_n_3 ),
+        .\LOGIC_GENERATION_CDC.spiXfer_done_d3_reg_2 (\FIFO_EXISTS.CLK_CROSS_I_n_4 ),
+        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[15] (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ),
         .\OTHER_RATIO_GENERATE.serial_dout_int_reg (p_2_in_1),
         .R(R),
-        .\RESET_FLOPS[15].RST_FLOPS (\FIFO_EXISTS.CLK_CROSS_I_n_4 ),
         .Rst_to_spi(rst_to_spi_int),
         .\SS_O_reg[0] (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_15 ),
         .Tx_FIFO_Empty_intr(Tx_FIFO_Empty_intr),
@@ -6316,15 +6365,13 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
         .almost_full(almost_full),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
-        .dout({data_from_txfifo[0],data_from_txfifo[31]}),
+        .dout({data_from_txfifo[0],data_from_txfifo[15]}),
         .drr_Overrun_int_cdc_from_spi_int_20(drr_Overrun_int_cdc_from_spi_int_20),
         .empty(tx_fifo_empty),
         .ext_spi_clk(ext_spi_clk),
-        .\gen_pf_ic_rc.gaf_ic.ram_afull_i_reg (\FIFO_EXISTS.CLK_CROSS_I_n_5 ),
-        .\icount_out_reg[3] (SOFT_RESET_I_n_2),
+        .\icount_out_reg[1] (ip2Bus_WrAck_core_reg_1),
         .io0_i_sync(io0_i_sync),
         .io1_i_sync(io1_i_sync),
-        .ip2Bus_WrAck_core_reg_1(ip2Bus_WrAck_core_reg_1),
         .p_1_in16_in(p_1_in16_in),
         .p_1_in22_in(p_1_in22_in),
         .p_5_in(p_5_in),
@@ -6333,7 +6380,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .rst(rst),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata({s_axi_wdata[7],s_axi_wdata[5]}),
-        .\s_axi_wdata[5] (\FIFO_EXISTS.CLK_CROSS_I_n_12 ),
+        .\s_axi_wdata[5] (\FIFO_EXISTS.CLK_CROSS_I_n_10 ),
         .\s_axi_wdata[7] (\FIFO_EXISTS.CLK_CROSS_I_n_11 ),
         .scndry_out(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
         .serial_dout_int(serial_dout_int),
@@ -6348,7 +6395,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .tx_fifo_count_d2(tx_fifo_count_d2),
         .tx_occ_msb(tx_occ_msb),
         .tx_occ_msb_4(tx_occ_msb_4),
-        .wr_en(wr_en));
+        .wr_en(IP2Bus_WrAck_transmit_enable));
   memristor_PGA_SPI_0_qspi_fifo_ifmodule \FIFO_EXISTS.FIFO_IF_MODULE_I 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .Receive_ip2bus_error_reg_0(rx_fifo_empty_i),
@@ -6392,13 +6439,13 @@ module memristor_PGA_SPI_0_qspi_core_interface
   (* P_READ_MODE = "1" *) 
   (* P_WAKEUP_TIME = "2" *) 
   (* RD_DATA_COUNT_WIDTH = "5" *) 
-  (* READ_DATA_WIDTH = "32" *) 
+  (* READ_DATA_WIDTH = "16" *) 
   (* READ_MODE = "fwft" *) 
   (* RELATED_CLOCKS = "0" *) 
   (* SIM_ASSERT_CHK = "0" *) 
   (* USE_ADV_FEATURES = "1f1f" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH = "32" *) 
+  (* WRITE_DATA_WIDTH = "16" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* XPM_MODULE = "TRUE" *) 
   memristor_PGA_SPI_0_xpm_fifo_async \FIFO_EXISTS.RX_FIFO_II 
@@ -6406,8 +6453,8 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .almost_full(almost_full_0),
         .data_valid(\NLW_FIFO_EXISTS.RX_FIFO_II_data_valid_UNCONNECTED ),
         .dbiterr(\NLW_FIFO_EXISTS.RX_FIFO_II_dbiterr_UNCONNECTED ),
-        .din({data_to_rx_fifo[0],data_to_rx_fifo[1],data_to_rx_fifo[2],data_to_rx_fifo[3],data_to_rx_fifo[4],data_to_rx_fifo[5],data_to_rx_fifo[6],data_to_rx_fifo[7],data_to_rx_fifo[8],data_to_rx_fifo[9],data_to_rx_fifo[10],data_to_rx_fifo[11],data_to_rx_fifo[12],data_to_rx_fifo[13],data_to_rx_fifo[14],data_to_rx_fifo[15],data_to_rx_fifo[16],data_to_rx_fifo[17],data_to_rx_fifo[18],data_to_rx_fifo[19],data_to_rx_fifo[20],data_to_rx_fifo[21],data_to_rx_fifo[22],data_to_rx_fifo[23],data_to_rx_fifo[24],data_to_rx_fifo[25],data_to_rx_fifo[26],data_to_rx_fifo[27],data_to_rx_fifo[28],data_to_rx_fifo[29],data_to_rx_fifo[30],data_to_rx_fifo[31]}),
-        .dout({dout[10],data_from_rx_fifo[1],data_from_rx_fifo[2],data_from_rx_fifo[3],data_from_rx_fifo[4],data_from_rx_fifo[5],data_from_rx_fifo[6],data_from_rx_fifo[7],data_from_rx_fifo[8],data_from_rx_fifo[9],data_from_rx_fifo[10],data_from_rx_fifo[11],data_from_rx_fifo[12],data_from_rx_fifo[13],data_from_rx_fifo[14],data_from_rx_fifo[15],data_from_rx_fifo[16],data_from_rx_fifo[17],data_from_rx_fifo[18],data_from_rx_fifo[19],data_from_rx_fifo[20],data_from_rx_fifo[21],dout[9:0]}),
+        .din({data_to_rx_fifo[0],data_to_rx_fifo[1],data_to_rx_fifo[2],data_to_rx_fifo[3],data_to_rx_fifo[4],data_to_rx_fifo[5],data_to_rx_fifo[6],data_to_rx_fifo[7],data_to_rx_fifo[8],data_to_rx_fifo[9],data_to_rx_fifo[10],data_to_rx_fifo[11],data_to_rx_fifo[12],data_to_rx_fifo[13],data_to_rx_fifo[14],data_to_rx_fifo[15]}),
+        .dout({data_from_rx_fifo[0],data_from_rx_fifo[1],data_from_rx_fifo[2],data_from_rx_fifo[3],data_from_rx_fifo[4],data_from_rx_fifo[5],dout}),
         .empty(empty),
         .full(\NLW_FIFO_EXISTS.RX_FIFO_II_full_UNCONNECTED ),
         .injectdbiterr(1'b0),
@@ -6434,13 +6481,13 @@ module memristor_PGA_SPI_0_qspi_core_interface
     \FIFO_EXISTS.RX_FIFO_II_i_2 
        (.I0(empty),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
         .O(rd_en));
   FDRE \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\FIFO_EXISTS.CLK_CROSS_I_n_2 ),
+        .D(\FIFO_EXISTS.CLK_CROSS_I_n_3 ),
         .Q(rx_fifo_empty_i),
         .R(1'b0));
   FDRE \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg 
@@ -6450,63 +6497,62 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .Q(Rx_FIFO_Full_Fifo_d1),
         .R(rst_to_spi_int));
   memristor_PGA_SPI_0_counter_f \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I 
-       (.\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg (spicr_5_txfifo_rst_frm_axi_clk),
-        .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_4 ),
-        .Tx_FIFO_Full_i(Tx_FIFO_Full_i),
-        .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
+       (.Tx_FIFO_Full_i(Tx_FIFO_Full_i),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
-        .\icount_out_reg[0]_0 (SOFT_RESET_I_n_3),
-        .\icount_out_reg[1]_0 (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_1 ),
-        .\icount_out_reg[1]_1 (SOFT_RESET_I_n_2),
-        .\icount_out_reg[1]_2 (\FIFO_EXISTS.CLK_CROSS_I_n_5 ),
+        .\icount_out_reg[0]_0 (\RESET_FLOPS[15].RST_FLOPS ),
+        .\icount_out_reg[0]_1 (spicr_5_txfifo_rst_frm_axi_clk),
+        .\icount_out_reg[0]_2 (\FIFO_EXISTS.CLK_CROSS_I_n_2 ),
+        .\icount_out_reg[1]_0 (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_0 ),
+        .\icount_out_reg[1]_1 (\FIFO_EXISTS.CLK_CROSS_I_n_5 ),
         .\icount_out_reg[2]_0 (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_2 ),
-        .\icount_out_reg[3]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_4 ),
+        .\icount_out_reg[2]_1 (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_4 ),
+        .\icount_out_reg[3]_0 (CONTROL_REG_I_n_12),
         .reset2ip_reset_int(reset2ip_reset_int),
-        .rst(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .tx_fifo_count(tx_fifo_count),
         .tx_occ_msb_1(tx_occ_msb_1),
-        .wr_en(wr_en));
+        .wr_en(IP2Bus_WrAck_transmit_enable));
   memristor_PGA_SPI_0_async_fifo_fg \FIFO_EXISTS.TX_FIFO_II 
        (.Bus_RNW_reg(Bus_RNW_reg),
-        .D({ip2Bus_Data_1[28],ip2Bus_Data_1[29],ip2Bus_Data_1[30],ip2Bus_Data_1[31]}),
+        .D({ip2Bus_Data_1[28],ip2Bus_Data_1[30],ip2Bus_Data_1[31]}),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_4_n_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_n_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_2 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_n_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4_n_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_0 ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_1 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31]_2 (INTERRUPT_CONTROL_I_n_1),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (spicr_9_lsb_to_spi_clk),
-        .Q(INTERRUPT_CONTROL_I_n_22),
+        .Q(p_0_in5_in),
         .almost_full(almost_full),
-        .dout({data_from_txfifo[0],data_from_txfifo[1],data_from_txfifo[2],data_from_txfifo[3],data_from_txfifo[4],data_from_txfifo[5],data_from_txfifo[6],data_from_txfifo[7],data_from_txfifo[8],data_from_txfifo[9],data_from_txfifo[10],data_from_txfifo[11],data_from_txfifo[12],data_from_txfifo[13],data_from_txfifo[14],data_from_txfifo[15],data_from_txfifo[16],data_from_txfifo[17],data_from_txfifo[18],data_from_txfifo[19],data_from_txfifo[20],data_from_txfifo[21],data_from_txfifo[22],data_from_txfifo[23],data_from_txfifo[24],data_from_txfifo[25],data_from_txfifo[26],data_from_txfifo[27],data_from_txfifo[28],data_from_txfifo[29],data_from_txfifo[30],data_from_txfifo[31]}),
+        .dout({data_from_txfifo[0],data_from_txfifo[1],data_from_txfifo[2],data_from_txfifo[3],data_from_txfifo[4],data_from_txfifo[5],data_from_txfifo[6],data_from_txfifo[7],data_from_txfifo[8],data_from_txfifo[9],data_from_txfifo[10],data_from_txfifo[11],data_from_txfifo[12],data_from_txfifo[13],data_from_txfifo[14],data_from_txfifo[15]}),
         .empty(tx_fifo_empty),
         .ext_spi_clk(ext_spi_clk),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] (\FIFO_EXISTS.TX_FIFO_II_n_38 ),
-        .p_1_in28_in(p_1_in28_in),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] (\FIFO_EXISTS.TX_FIFO_II_n_23 ),
+        .\gwack.wr_ack_i_reg (ip2Bus_WrAck_core_reg_1),
+        .\gwdc.wr_data_count_i_reg[4] (\FIFO_EXISTS.TX_FIFO_II_n_22 ),
         .p_2_in(p_2_in),
+        .p_5_in(p_5_in),
+        .rd_data_count(Rx_FIFO_occ_Reversed[0]),
         .rd_en(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_14 ),
         .rst(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata),
-        .wr_en(wr_en));
+        .wr_en(IP2Bus_WrAck_transmit_enable));
   FDRE \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_4 ),
+        .D(SOFT_RESET_I_n_3),
         .Q(Tx_FIFO_Full_i),
         .R(1'b0));
   FDRE \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\FIFO_EXISTS.CLK_CROSS_I_n_3 ),
+        .D(\FIFO_EXISTS.CLK_CROSS_I_n_4 ),
         .Q(Tx_FIFO_Full_int),
         .R(1'b0));
   FDRE \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.spiXfer_done_to_axi_d1_reg 
@@ -6524,7 +6570,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
   FDRE \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d1_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_1 ),
+        .D(\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_0 ),
         .Q(tx_fifo_count_d1[1]),
         .R(reset2ip_reset_int));
   FDRE \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d1_reg[2] 
@@ -6581,32 +6627,38 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .Q(tx_occ_msb_4),
         .R(reset2ip_reset_int));
   memristor_PGA_SPI_0_interrupt_control INTERRUPT_CONTROL_I
-       (.D(bus2IP_Data_for_interrupt_core),
+       (.D(ip2Bus_Data_1[29]),
         .E(E),
-        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 (INTERRUPT_CONTROL_I_n_1),
-        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1 (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
-        .\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_9 ),
-        .\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_12 ),
+        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
+        .\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]_0 (\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ),
+        .\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_10 ),
         .\GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
         .\GEN_IP_IRPT_STATUS_REG[7].GEN_REG_STATUS.ip_irpt_status_reg_reg[7]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_11 ),
         .\GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0 (CONTROL_REG_I_n_13),
         .IP2Bus_RdAck_1(IP2Bus_RdAck_1),
         .IP2Bus_WrAck_1(IP2Bus_WrAck_1),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_3_n_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_2 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_3 (\FIFO_EXISTS.TX_FIFO_II_n_22 ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg (ip2Bus_RdAck_core_reg),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg_0 ),
-        .Q({Q,INTERRUPT_CONTROL_I_n_22}),
+        .Q({Q[6:2],p_0_in5_in,Q[1:0]}),
+        .Tx_FIFO_Empty_intr(Tx_FIFO_Empty_intr),
         .empty(empty),
-        .interrupt_wrce_strb(interrupt_wrce_strb),
         .intr2bus_rdack0(intr2bus_rdack0),
+        .intr2bus_wrack_reg_0(intr2bus_wrack_reg),
         .ip2Bus_RdAck_intr_reg_hole(ip2Bus_RdAck_intr_reg_hole),
         .ip2Bus_WrAck_core_reg(ip2Bus_WrAck_core_reg),
         .ip2Bus_WrAck_intr_reg_hole(ip2Bus_WrAck_intr_reg_hole),
         .ip2intc_irpt(ip2intc_irpt),
+        .\ip_irpt_enable_reg_reg[8]_0 (bus2IP_Data_for_interrupt_core),
         .ipif_glbl_irpt_enable_reg_reg_0(ipif_glbl_irpt_enable_reg_reg),
         .irpt_rdack(irpt_rdack),
         .irpt_rdack_d1(irpt_rdack_d1),
+        .irpt_wrack(irpt_wrack),
         .irpt_wrack_d1(irpt_wrack_d1),
-        .irpt_wrack_d1_reg_0(irpt_wrack_d1_reg),
         .p_0_in(p_0_in),
         .p_1_in13_in(p_1_in13_in),
         .p_1_in16_in(p_1_in16_in),
@@ -6625,324 +6677,154 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .tx_FIFO_Occpncy_MSB_d1(tx_FIFO_Occpncy_MSB_d1),
         .tx_occ_msb_4(tx_occ_msb_4),
         .wrack(wrack));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[10]_i_1 
-       (.I0(data_from_rx_fifo[10]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[10]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[11]_i_1 
-       (.I0(data_from_rx_fifo[11]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[11]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[12]_i_1 
-       (.I0(data_from_rx_fifo[12]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[12]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[13]_i_1 
-       (.I0(data_from_rx_fifo[13]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[13]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[14]_i_1 
-       (.I0(data_from_rx_fifo[14]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[14]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[15]_i_1 
-       (.I0(data_from_rx_fifo[15]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[15]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[16]_i_1 
-       (.I0(data_from_rx_fifo[16]),
+       (.I0(data_from_rx_fifo[0]),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[16]));
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
+        .O(IP2Bus_Receive_Reg_Data_int[0]));
   (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[17]_i_1 
-       (.I0(data_from_rx_fifo[17]),
+       (.I0(data_from_rx_fifo[1]),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[17]));
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
+        .O(IP2Bus_Receive_Reg_Data_int[1]));
   (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_1 
-       (.I0(data_from_rx_fifo[18]),
+       (.I0(data_from_rx_fifo[2]),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[18]));
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
+        .O(IP2Bus_Receive_Reg_Data_int[2]));
   (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[19]_i_1 
-       (.I0(data_from_rx_fifo[19]),
+       (.I0(data_from_rx_fifo[3]),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[19]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[1]_i_1 
-       (.I0(data_from_rx_fifo[1]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[1]));
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
+        .O(IP2Bus_Receive_Reg_Data_int[3]));
   (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[20]_i_1 
-       (.I0(data_from_rx_fifo[20]),
+       (.I0(data_from_rx_fifo[4]),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[20]));
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
+        .O(IP2Bus_Receive_Reg_Data_int[4]));
   (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[21]_i_1 
-       (.I0(data_from_rx_fifo[21]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[21]));
-  LUT6 #(
-    .INIT(64'h5500550055004410)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ),
-        .I1(Rx_FIFO_occ_Reversed[0]),
-        .I2(Rx_FIFO_occ_Reversed[4]),
-        .I3(Rx_FIFO_occ_Reversed[3]),
-        .I4(Rx_FIFO_occ_Reversed[2]),
-        .I5(Rx_FIFO_occ_Reversed[1]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h5555550000000054)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_4 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_1 ),
-        .I1(Rx_FIFO_occ_Reversed[4]),
-        .I2(Rx_FIFO_occ_Reversed[3]),
-        .I3(Rx_FIFO_occ_Reversed[1]),
-        .I4(Rx_FIFO_occ_Reversed[0]),
-        .I5(Rx_FIFO_occ_Reversed[2]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[2]_i_1 
-       (.I0(data_from_rx_fifo[2]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[2]));
-  LUT6 #(
-    .INIT(64'h4040000000004000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 
-       (.I0(empty),
-        .I1(p_1_in_0),
-        .I2(Bus_RNW_reg),
-        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6_n_0 ),
-        .I4(Rx_FIFO_occ_Reversed[0]),
-        .I5(Rx_FIFO_occ_Reversed[1]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6 
-       (.I0(Rx_FIFO_occ_Reversed[1]),
-        .I1(Rx_FIFO_occ_Reversed[2]),
-        .I2(Rx_FIFO_occ_Reversed[3]),
-        .I3(Rx_FIFO_occ_Reversed[4]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'h00002000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4 
-       (.I0(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6_n_0 ),
-        .I1(empty),
-        .I2(p_1_in_0),
-        .I3(Bus_RNW_reg),
-        .I4(Rx_FIFO_occ_Reversed[0]),
-        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[3]_i_1 
-       (.I0(data_from_rx_fifo[3]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[3]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[4]_i_1 
-       (.I0(data_from_rx_fifo[4]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[4]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[5]_i_1 
        (.I0(data_from_rx_fifo[5]),
         .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
+        .I2(p_4_in),
+        .I3(Bus_RNW_reg),
         .O(IP2Bus_Receive_Reg_Data_int[5]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[6]_i_1 
-       (.I0(data_from_rx_fifo[6]),
-        .I1(ip2Bus_RdAck_core_reg),
+  LUT6 #(
+    .INIT(64'h2020000000002000)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 
+       (.I0(p_1_in_0),
+        .I1(empty),
         .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[6]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[7]_i_1 
-       (.I0(data_from_rx_fifo[7]),
-        .I1(ip2Bus_RdAck_core_reg),
+        .I3(Rx_FIFO_occ_Reversed[4]),
+        .I4(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_7_n_0 ),
+        .I5(Rx_FIFO_occ_Reversed[3]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_7 
+       (.I0(Rx_FIFO_occ_Reversed[2]),
+        .I1(Rx_FIFO_occ_Reversed[1]),
+        .I2(Rx_FIFO_occ_Reversed[0]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000FE0000000000)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2 
+       (.I0(Rx_FIFO_occ_Reversed[3]),
+        .I1(Rx_FIFO_occ_Reversed[4]),
+        .I2(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_7_n_0 ),
+        .I3(Bus_RNW_reg),
+        .I4(empty),
+        .I5(p_1_in_0),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h56)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_3 
+       (.I0(Rx_FIFO_occ_Reversed[2]),
+        .I1(Rx_FIFO_occ_Reversed[1]),
+        .I2(Rx_FIFO_occ_Reversed[0]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h2000000000002000)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4 
+       (.I0(p_1_in_0),
+        .I1(empty),
         .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[7]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[8]_i_1 
-       (.I0(data_from_rx_fifo[8]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[8]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[9]_i_1 
-       (.I0(data_from_rx_fifo[9]),
-        .I1(ip2Bus_RdAck_core_reg),
-        .I2(Bus_RNW_reg),
-        .I3(p_4_in),
-        .O(IP2Bus_Receive_Reg_Data_int[9]));
+        .I3(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6_n_0 ),
+        .I4(Rx_FIFO_occ_Reversed[1]),
+        .I5(Rx_FIFO_occ_Reversed[0]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6 
+       (.I0(Rx_FIFO_occ_Reversed[0]),
+        .I1(Rx_FIFO_occ_Reversed[1]),
+        .I2(Rx_FIFO_occ_Reversed[2]),
+        .I3(Rx_FIFO_occ_Reversed[4]),
+        .I4(Rx_FIFO_occ_Reversed[3]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_6_n_0 ));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(D[6]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [31]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[10] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[10]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [21]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[11] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[11]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [20]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[12] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[12]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [19]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[13] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[13]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [18]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[14] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[14]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [17]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[15] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[15]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [16]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[16] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[16]),
+        .D(IP2Bus_Receive_Reg_Data_int[0]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [15]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[17] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[17]),
+        .D(IP2Bus_Receive_Reg_Data_int[1]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [14]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[18] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[18]),
+        .D(IP2Bus_Receive_Reg_Data_int[2]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [13]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[19] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[19]),
+        .D(IP2Bus_Receive_Reg_Data_int[3]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [12]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[1] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[1]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [30]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[20] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[20]),
+        .D(IP2Bus_Receive_Reg_Data_int[4]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [11]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[21] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[21]),
+        .D(IP2Bus_Receive_Reg_Data_int[5]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [10]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] 
@@ -6993,12 +6875,6 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .D(ip2Bus_Data_1[29]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [2]),
         .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[2] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[2]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [29]),
-        .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -7010,48 +6886,6 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .CE(1'b1),
         .D(ip2Bus_Data_1[31]),
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [0]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[3] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[3]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [28]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[4] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[4]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [27]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[5] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[5]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [26]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[6] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[6]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [25]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[7] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[7]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [24]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[8] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[8]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [23]),
-        .R(reset2ip_reset_int));
-  FDRE \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[9] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(IP2Bus_Receive_Reg_Data_int[9]),
-        .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0]_0 [22]),
         .R(reset2ip_reset_int));
   FDRE \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg 
        (.C(s_axi_aclk),
@@ -7144,27 +6978,27 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .Q(read_ack_delay_7),
         .R(reset2ip_reset_int));
   memristor_PGA_SPI_0_qspi_mode_0_module \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I 
-       (.D(\FIFO_EXISTS.CLK_CROSS_I_n_17 ),
+       (.D(\FIFO_EXISTS.CLK_CROSS_I_n_16 ),
         .D_0(D_0),
         .\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg[1]_0 (register_Data_slvsel_int),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_15 ),
         .\LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg (drr_Overrun_int_cdc_from_spi_int_2),
-        .\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 (\FIFO_EXISTS.TX_FIFO_II_n_38 ),
-        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 (SPICR_2_MST_N_SLV_to_spi_clk),
-        .\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31]_0 (p_2_in_1),
-        .\OTHER_RATIO_GENERATE.sck_o_int_reg_0 (\FIFO_EXISTS.CLK_CROSS_I_n_15 ),
+        .\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 (\FIFO_EXISTS.TX_FIFO_II_n_23 ),
+        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 (SPICR_2_MST_N_SLV_to_spi_clk),
+        .\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15]_0 (p_2_in_1),
+        .\OTHER_RATIO_GENERATE.sck_o_int_reg_0 (\FIFO_EXISTS.CLK_CROSS_I_n_14 ),
         .\OTHER_RATIO_GENERATE.sck_o_int_reg_1 (RESET_SYNC_AXI_SPI_CLK_INST_n_0),
         .\OTHER_RATIO_GENERATE.serial_dout_int_reg_0 (spicr_0_loop_to_spi_clk),
         .R(R),
         .\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_0 (spicr_3_cpol_to_spi_clk),
         .\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_0 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_6 ),
         .\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ),
-        .\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 (spicr_9_lsb_to_spi_clk),
+        .\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 (spicr_9_lsb_to_spi_clk),
         .Rst_to_spi(rst_to_spi_int),
-        .\SS_O_reg[0]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_23 ),
+        .\SS_O_reg[0]_0 (\FIFO_EXISTS.CLK_CROSS_I_n_22 ),
         .almost_full(almost_full_0),
-        .din({data_to_rx_fifo[0],data_to_rx_fifo[1],data_to_rx_fifo[2],data_to_rx_fifo[3],data_to_rx_fifo[4],data_to_rx_fifo[5],data_to_rx_fifo[6],data_to_rx_fifo[7],data_to_rx_fifo[8],data_to_rx_fifo[9],data_to_rx_fifo[10],data_to_rx_fifo[11],data_to_rx_fifo[12],data_to_rx_fifo[13],data_to_rx_fifo[14],data_to_rx_fifo[15],data_to_rx_fifo[16],data_to_rx_fifo[17],data_to_rx_fifo[18],data_to_rx_fifo[19],data_to_rx_fifo[20],data_to_rx_fifo[21],data_to_rx_fifo[22],data_to_rx_fifo[23],data_to_rx_fifo[24],data_to_rx_fifo[25],data_to_rx_fifo[26],data_to_rx_fifo[27],data_to_rx_fifo[28],data_to_rx_fifo[29],data_to_rx_fifo[30],data_to_rx_fifo[31]}),
-        .dout({data_from_txfifo[0],data_from_txfifo[1],data_from_txfifo[2],data_from_txfifo[3],data_from_txfifo[4],data_from_txfifo[5],data_from_txfifo[6],data_from_txfifo[7],data_from_txfifo[8],data_from_txfifo[9],data_from_txfifo[10],data_from_txfifo[11],data_from_txfifo[12],data_from_txfifo[13],data_from_txfifo[14],data_from_txfifo[15],data_from_txfifo[16],data_from_txfifo[17],data_from_txfifo[18],data_from_txfifo[19],data_from_txfifo[20],data_from_txfifo[21],data_from_txfifo[22],data_from_txfifo[23],data_from_txfifo[24],data_from_txfifo[25],data_from_txfifo[26],data_from_txfifo[27],data_from_txfifo[28],data_from_txfifo[29],data_from_txfifo[30],data_from_txfifo[31]}),
+        .din({data_to_rx_fifo[0],data_to_rx_fifo[1],data_to_rx_fifo[2],data_to_rx_fifo[3],data_to_rx_fifo[4],data_to_rx_fifo[5],data_to_rx_fifo[6],data_to_rx_fifo[7],data_to_rx_fifo[8],data_to_rx_fifo[9],data_to_rx_fifo[10],data_to_rx_fifo[11],data_to_rx_fifo[12],data_to_rx_fifo[13],data_to_rx_fifo[14],data_to_rx_fifo[15]}),
+        .dout({data_from_txfifo[0],data_from_txfifo[1],data_from_txfifo[2],data_from_txfifo[3],data_from_txfifo[4],data_from_txfifo[5],data_from_txfifo[6],data_from_txfifo[7],data_from_txfifo[8],data_from_txfifo[9],data_from_txfifo[10],data_from_txfifo[11],data_from_txfifo[12],data_from_txfifo[13],data_from_txfifo[14],data_from_txfifo[15]}),
         .drr_Overrun_int_cdc_from_spi_int_20(drr_Overrun_int_cdc_from_spi_int_20),
         .empty(tx_fifo_empty),
         .ext_spi_clk(ext_spi_clk),
@@ -7182,7 +7016,7 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .ss_o(ss_o),
         .ss_t(ss_t),
         .transfer_start_d1(transfer_start_d1),
-        .transfer_start_reg_0(\FIFO_EXISTS.CLK_CROSS_I_n_25 ));
+        .transfer_start_reg_0(\FIFO_EXISTS.CLK_CROSS_I_n_24 ));
   memristor_PGA_SPI_0_reset_sync_module RESET_SYNC_AXI_SPI_CLK_INST
        (.\OTHER_RATIO_GENERATE.sck_o_int_reg (SPICR_2_MST_N_SLV_to_spi_clk),
         .RESET_SYNC_AX2S_2_0(RESET_SYNC_AXI_SPI_CLK_INST_n_0),
@@ -7190,22 +7024,26 @@ module memristor_PGA_SPI_0_qspi_core_interface
         .ext_spi_clk(ext_spi_clk),
         .reset2ip_reset_int(reset2ip_reset_int));
   memristor_PGA_SPI_0_soft_reset SOFT_RESET_I
-       (.D(tx_fifo_count),
-        .\RESET_FLOPS[15].RST_FLOPS_0 (SOFT_RESET_I_n_2),
-        .\RESET_FLOPS[15].RST_FLOPS_1 (SOFT_RESET_I_n_3),
+       (.\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg (spicr_5_txfifo_rst_frm_axi_clk),
+        .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg_0 (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_4 ),
+        .\RESET_FLOPS[15].RST_FLOPS_0 (\RESET_FLOPS[15].RST_FLOPS ),
+        .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
-        .\icount_out_reg[0] (spicr_5_txfifo_rst_frm_axi_clk),
-        .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(reset_trig0),
+        .rst(reset_TxFIFO_ptr_int),
+        .rst_reg(SOFT_RESET_I_n_3),
         .s_axi_aclk(s_axi_aclk),
         .sw_rst_cond(sw_rst_cond),
         .sw_rst_cond_d1(sw_rst_cond_d1),
         .wrack(wrack));
   memristor_PGA_SPI_0_qspi_status_slave_sel_reg \STATUS_REG_MODE_0_GEN.STATUS_SLAVE_SEL_REG_I 
-       (.\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
-        .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ),
+       (.Bus_RNW_reg(Bus_RNW_reg),
+        .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
+        .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 (ip2Bus_WrAck_core_reg_1),
+        .p_3_in(p_3_in),
         .reset2ip_reset_int(reset2ip_reset_int),
-        .s_axi_aclk(s_axi_aclk));
+        .s_axi_aclk(s_axi_aclk),
+        .s_axi_wdata(s_axi_wdata[0]));
   FDRE ip2Bus_RdAck_intr_reg_hole_d1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -7245,8 +7083,8 @@ module memristor_PGA_SPI_0_qspi_fifo_ifmodule
     tx_occ_msb,
     Receive_ip2bus_error_reg_0,
     prmry_in,
-    p_4_in,
-    Bus_RNW_reg);
+    Bus_RNW_reg,
+    p_4_in);
   output rc_FIFO_Full_d1;
   output tx_FIFO_Empty_d1;
   output receive_ip2bus_error;
@@ -7258,8 +7096,8 @@ module memristor_PGA_SPI_0_qspi_fifo_ifmodule
   input tx_occ_msb;
   input Receive_ip2bus_error_reg_0;
   input prmry_in;
-  input p_4_in;
   input Bus_RNW_reg;
+  input p_4_in;
 
   wire Bus_RNW_reg;
   wire Receive_ip2bus_error0;
@@ -7281,8 +7119,8 @@ module memristor_PGA_SPI_0_qspi_fifo_ifmodule
     Receive_ip2bus_error_i_1
        (.I0(Receive_ip2bus_error_reg_0),
         .I1(prmry_in),
-        .I2(p_4_in),
-        .I3(Bus_RNW_reg),
+        .I2(Bus_RNW_reg),
+        .I3(p_4_in),
         .O(Receive_ip2bus_error0));
   FDRE Receive_ip2bus_error_reg
        (.C(s_axi_aclk),
@@ -7336,13 +7174,13 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     empty,
     transfer_start_reg_0,
     \SS_O_reg[0]_0 ,
-    \OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ,
+    \OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ,
     \OTHER_RATIO_GENERATE.sck_o_int_reg_0 ,
     \OTHER_RATIO_GENERATE.sck_o_int_reg_1 ,
     prmry_in,
     \LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg ,
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ,
+    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ,
     dout,
     \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_0 ,
     scndry_out,
@@ -7350,7 +7188,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     \OTHER_RATIO_GENERATE.serial_dout_int_reg_0 ,
     \FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg[1]_0 ,
     D,
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31]_0 );
+    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15]_0 );
   output sck_t;
   output io0_t;
   output ss_t;
@@ -7367,7 +7205,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   output drr_Overrun_int_cdc_from_spi_int_20;
   output rd_en;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ;
-  output [31:0]din;
+  output [15:0]din;
   input D_0;
   input ext_spi_clk;
   input R;
@@ -7375,21 +7213,21 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   input empty;
   input transfer_start_reg_0;
   input \SS_O_reg[0]_0 ;
-  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ;
+  input \OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ;
   input \OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ;
   input \OTHER_RATIO_GENERATE.sck_o_int_reg_0 ;
   input \OTHER_RATIO_GENERATE.sck_o_int_reg_1 ;
   input prmry_in;
   input \LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg ;
-  input \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ;
-  input [31:0]dout;
+  input \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ;
+  input [15:0]dout;
   input \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_0 ;
   input scndry_out;
   input almost_full;
   input \OTHER_RATIO_GENERATE.serial_dout_int_reg_0 ;
   input \FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg[1]_0 ;
   input [0:0]D;
-  input [0:0]\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31]_0 ;
+  input [0:0]\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15]_0 ;
 
   wire [1:0]Count;
   wire Count_trigger;
@@ -7408,16 +7246,13 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \OTHER_RATIO_GENERATE.Count[3]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Count[4]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Count[6]_i_3_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Count[6]_i_4_n_0 ;
+  wire \OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ;
+  wire \OTHER_RATIO_GENERATE.Count[5]_i_3_n_0 ;
   wire \OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ;
   wire \OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ;
   wire \OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ;
   wire \OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ;
   wire \OTHER_RATIO_GENERATE.Count_reg_n_0_[4] ;
-  wire \OTHER_RATIO_GENERATE.Count_reg_n_0_[5] ;
   wire \OTHER_RATIO_GENERATE.Count_trigger_d1_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Count_trigger_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0 ;
@@ -7434,24 +7269,8 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \OTHER_RATIO_GENERATE.Shift_Reg[12]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[13]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[14]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[15]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[16]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[17]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[18]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[19]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[20]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[21]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[22]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[23]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[24]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[25]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[26]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[27]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[28]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[29]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[2]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg[30]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[3]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[4]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[5]_i_1_n_0 ;
@@ -7459,8 +7278,8 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[8]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[9]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ;
-  wire [0:0]\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31]_0 ;
+  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ;
+  wire [0:0]\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15]_0 ;
   wire \OTHER_RATIO_GENERATE.sck_o_int_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ;
   wire \OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0 ;
@@ -7473,6 +7292,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ;
+  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ;
@@ -7483,24 +7303,8 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[13]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[14]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[15]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[16]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[17]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[18]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[19]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[20]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[21]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[22]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[23]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[24]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[25]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[26]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[27]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[28]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[29]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[30]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[31]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[3]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[4]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[5]_i_1_n_0 ;
@@ -7508,7 +7312,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[7]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[8]_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[9]_i_1_n_0 ;
-  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ;
+  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ;
   wire [0:2]Ratio_Count;
   wire Rst_to_spi;
   wire SPIXfer_done_int_d1;
@@ -7520,8 +7324,8 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire \SS_O[0]_i_4_n_0 ;
   wire \SS_O_reg[0]_0 ;
   wire almost_full;
-  wire [31:0]din;
-  wire [31:0]dout;
+  wire [15:0]din;
+  wire [15:0]dout;
   wire drr_Overrun_int;
   wire drr_Overrun_int_cdc_from_spi_int_20;
   wire empty;
@@ -7531,13 +7335,13 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   wire io1_t;
   wire load;
   wire p_19_in;
-  wire [31:1]p_2_in__0;
+  wire [15:1]p_2_in__0;
   wire p_3_in;
   wire prmry_in;
   wire rd_en;
-  wire [0:31]rx_shft_reg_mode_0011;
+  wire [0:15]rx_shft_reg_mode_0011;
   wire rx_shft_reg_mode_00110;
-  wire [0:31]rx_shft_reg_mode_0110;
+  wire [0:15]rx_shft_reg_mode_0110;
   wire rx_shft_reg_mode_01100;
   wire sck_d1;
   wire sck_d2;
@@ -7561,20 +7365,20 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     .INIT(64'h000F0008000FFF08)) 
     \FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_1 
        (.I0(\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2_n_0 ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I2(empty),
         .I3(spi_cntrl_ps[1]),
         .I4(spi_cntrl_ps[0]),
         .I5(SR_5_Tx_comeplete_Empty),
         .O(\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2 
        (.I0(transfer_start_reg_n_0),
         .I1(transfer_start_d1),
         .O(\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'hAA8A)) 
     \FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[1]_i_1 
@@ -7607,7 +7411,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .D(\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[1]_i_1_n_0 ),
         .Q(spi_cntrl_ps[1]),
         .R(Rst_to_spi));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \LOCAL_TX_EMPTY_FIFO_12_GEN.DRR_Overrun_reg_int_i_1 
@@ -7633,14 +7437,14 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .D(stop_clock),
         .Q(stop_clock_reg),
         .R(Rst_to_spi));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_i_1 
        (.I0(drr_Overrun_int),
         .I1(\LOGIC_GENERATION_CDC.drr_Overrun_int_cdc_from_spi_int_2_reg ),
         .O(drr_Overrun_int_cdc_from_spi_int_20));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \LOGIC_GENERATION_CDC.spiXfer_done_cdc_from_spi_int_2_i_1 
@@ -7652,14 +7456,14 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     \OTHER_RATIO_GENERATE.Count[0]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
         .O(Count[0]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \OTHER_RATIO_GENERATE.Count[1]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
         .I1(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
         .O(Count[1]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \OTHER_RATIO_GENERATE.Count[2]_i_1 
@@ -7667,7 +7471,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I1(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
         .I2(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
         .O(\OTHER_RATIO_GENERATE.Count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \OTHER_RATIO_GENERATE.Count[3]_i_1 
@@ -7676,7 +7480,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I2(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
         .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
         .O(\OTHER_RATIO_GENERATE.Count[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \OTHER_RATIO_GENERATE.Count[4]_i_1 
@@ -7686,103 +7490,80 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
         .I4(\OTHER_RATIO_GENERATE.Count_reg_n_0_[4] ),
         .O(\OTHER_RATIO_GENERATE.Count[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \OTHER_RATIO_GENERATE.Count[5]_i_1 
-       (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
-        .I1(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
-        .I2(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
-        .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
-        .I4(\OTHER_RATIO_GENERATE.Count_reg_n_0_[4] ),
-        .I5(\OTHER_RATIO_GENERATE.Count_reg_n_0_[5] ),
-        .O(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFFDF)) 
-    \OTHER_RATIO_GENERATE.Count[6]_i_1 
-       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+    \OTHER_RATIO_GENERATE.Count[5]_i_1 
+       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I1(Rst_to_spi),
         .I2(transfer_start_reg_n_0),
         .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_0 ),
-        .O(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
+        .O(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h14)) 
-    \OTHER_RATIO_GENERATE.Count[6]_i_2 
+    \OTHER_RATIO_GENERATE.Count[5]_i_2 
        (.I0(load),
         .I1(Count_trigger_d1),
         .I2(Count_trigger),
-        .O(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \OTHER_RATIO_GENERATE.Count[6]_i_3 
-       (.I0(\OTHER_RATIO_GENERATE.Count[6]_i_4_n_0 ),
-        .O(\OTHER_RATIO_GENERATE.Count[6]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFFFFFFFFFF)) 
-    \OTHER_RATIO_GENERATE.Count[6]_i_4 
+        .O(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \OTHER_RATIO_GENERATE.Count[5]_i_3 
        (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[4] ),
         .I1(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
         .I2(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
         .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
         .I4(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
-        .I5(\OTHER_RATIO_GENERATE.Count_reg_n_0_[5] ),
-        .O(\OTHER_RATIO_GENERATE.Count[6]_i_4_n_0 ));
+        .O(\OTHER_RATIO_GENERATE.Count[5]_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.Count_reg[0] 
        (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
+        .CE(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ),
         .D(Count[0]),
         .Q(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
+        .R(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.Count_reg[1] 
        (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
+        .CE(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ),
         .D(Count[1]),
         .Q(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
+        .R(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.Count_reg[2] 
        (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
+        .CE(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Count[2]_i_1_n_0 ),
         .Q(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
+        .R(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.Count_reg[3] 
        (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
+        .CE(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Count[3]_i_1_n_0 ),
         .Q(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
+        .R(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.Count_reg[4] 
        (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
+        .CE(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Count[4]_i_1_n_0 ),
         .Q(\OTHER_RATIO_GENERATE.Count_reg_n_0_[4] ),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
+        .R(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.Count_reg[5] 
        (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ),
-        .Q(\OTHER_RATIO_GENERATE.Count_reg_n_0_[5] ),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.Count_reg[6] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Count[6]_i_2_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Count[6]_i_3_n_0 ),
+        .CE(\OTHER_RATIO_GENERATE.Count[5]_i_2_n_0 ),
+        .D(\OTHER_RATIO_GENERATE.Count[5]_i_3_n_0 ),
         .Q(load),
-        .R(\OTHER_RATIO_GENERATE.Count[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+        .R(\OTHER_RATIO_GENERATE.Count[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \OTHER_RATIO_GENERATE.Count_trigger_d1_i_1 
@@ -7812,7 +7593,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .D(\OTHER_RATIO_GENERATE.Count_trigger_i_1_n_0 ),
         .Q(Count_trigger),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT5 #(
     .INIT(32'hFFA9FFFF)) 
     \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1 
@@ -7822,7 +7603,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I3(Rst_to_spi),
         .I4(transfer_start_reg_n_0),
         .O(\OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
     .INIT(16'hF9FF)) 
     \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1 
@@ -7831,7 +7612,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I2(Rst_to_spi),
         .I3(transfer_start_reg_n_0),
         .O(\OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \OTHER_RATIO_GENERATE.Ratio_Count[2]_i_1 
@@ -7873,7 +7654,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I1(empty),
         .I2(SR_5_Tx_Empty_d1),
         .I3(SPIXfer_done_int_d1),
-        .I4(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I4(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I5(\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2_n_0 ),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ));
   LUT6 #(
@@ -7881,19 +7662,19 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     \OTHER_RATIO_GENERATE.Serial_Dout_i_4 
        (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
         .I1(transfer_start_d1),
-        .I2(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I2(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I3(SPIXfer_done_int_d1),
         .I4(transfer_start_reg_n_0),
         .I5(\OTHER_RATIO_GENERATE.Serial_Dout_i_5_n_0 ),
         .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT4 #(
     .INIT(16'h000D)) 
     \OTHER_RATIO_GENERATE.Serial_Dout_i_5 
        (.I0(SR_5_Tx_Empty_d1),
         .I1(empty),
         .I2(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_0 ),
-        .I3(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I3(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_5_n_0 ));
   FDSE \OTHER_RATIO_GENERATE.Serial_Dout_reg 
        (.C(ext_spi_clk),
@@ -7904,7 +7685,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   LUT5 #(
     .INIT(32'h2800FFFF)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1 
-       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I1(Count_trigger),
         .I2(Count_trigger_d1),
         .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
@@ -7913,281 +7694,137 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_2 
-       (.I0(p_2_in__0[31]),
+       (.I0(p_2_in__0[15]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[0]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[31]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[15]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[10]_i_1 
-       (.I0(p_2_in__0[21]),
+       (.I0(p_2_in__0[5]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[10]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[21]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[5]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[10]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[11]_i_1 
-       (.I0(p_2_in__0[20]),
+       (.I0(p_2_in__0[4]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[11]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[20]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[4]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[11]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[12]_i_1 
-       (.I0(p_2_in__0[19]),
+       (.I0(p_2_in__0[3]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[12]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[19]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[3]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[12]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[13]_i_1 
-       (.I0(p_2_in__0[18]),
+       (.I0(p_2_in__0[2]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[13]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[18]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[2]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[13]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[14]_i_1 
-       (.I0(p_2_in__0[17]),
+       (.I0(p_2_in__0[1]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[14]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[17]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[1]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[14]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[15]_i_1 
-       (.I0(p_2_in__0[16]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[15]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[16]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[15]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[16]_i_1 
-       (.I0(p_2_in__0[15]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[16]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[15]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[16]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[17]_i_1 
+    \OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1 
        (.I0(p_2_in__0[14]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[17]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[14]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[17]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[18]_i_1 
-       (.I0(p_2_in__0[13]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[18]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[13]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[18]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[19]_i_1 
-       (.I0(p_2_in__0[12]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[19]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[12]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[19]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1 
-       (.I0(p_2_in__0[30]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[1]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[30]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[14]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[20]_i_1 
-       (.I0(p_2_in__0[11]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[20]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[11]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[20]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[21]_i_1 
-       (.I0(p_2_in__0[10]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[21]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[10]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[21]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[22]_i_1 
-       (.I0(p_2_in__0[9]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[22]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[9]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[22]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[23]_i_1 
-       (.I0(p_2_in__0[8]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[23]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[8]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[23]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[24]_i_1 
-       (.I0(p_2_in__0[7]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[24]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[7]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[24]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[25]_i_1 
-       (.I0(p_2_in__0[6]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[25]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[6]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[25]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[26]_i_1 
-       (.I0(p_2_in__0[5]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[26]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[5]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[26]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[27]_i_1 
-       (.I0(p_2_in__0[4]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[27]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[4]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[27]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[28]_i_1 
-       (.I0(p_2_in__0[3]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[28]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[3]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[28]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[29]_i_1 
-       (.I0(p_2_in__0[2]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[29]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[2]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[29]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[2]_i_1 
-       (.I0(p_2_in__0[29]),
+       (.I0(p_2_in__0[13]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[2]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[29]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[13]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[2]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[30]_i_1 
-       (.I0(p_2_in__0[1]),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
-        .I2(dout[30]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[1]),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[30]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[3]_i_1 
-       (.I0(p_2_in__0[28]),
+       (.I0(p_2_in__0[12]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[3]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[28]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[12]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[3]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[4]_i_1 
-       (.I0(p_2_in__0[27]),
+       (.I0(p_2_in__0[11]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[4]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[27]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[11]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[4]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[5]_i_1 
-       (.I0(p_2_in__0[26]),
+       (.I0(p_2_in__0[10]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[5]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[26]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[10]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[5]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[6]_i_1 
-       (.I0(p_2_in__0[25]),
+       (.I0(p_2_in__0[9]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[6]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[25]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[9]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[6]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1 
-       (.I0(p_2_in__0[24]),
+       (.I0(p_2_in__0[8]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[7]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[24]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[8]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[8]_i_1 
-       (.I0(p_2_in__0[23]),
+       (.I0(p_2_in__0[7]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[8]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[23]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[7]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[8]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[9]_i_1 
-       (.I0(p_2_in__0[22]),
+       (.I0(p_2_in__0[6]),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_1 ),
         .I2(dout[9]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(dout[22]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(dout[6]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[9]_i_1_n_0 ));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[0] 
        (.C(ext_spi_clk),
@@ -8199,187 +7836,91 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[10]_i_1_n_0 ),
-        .Q(p_2_in__0[22]),
+        .Q(p_2_in__0[6]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[11] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[11]_i_1_n_0 ),
-        .Q(p_2_in__0[21]),
+        .Q(p_2_in__0[5]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[12] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[12]_i_1_n_0 ),
-        .Q(p_2_in__0[20]),
+        .Q(p_2_in__0[4]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[13] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[13]_i_1_n_0 ),
-        .Q(p_2_in__0[19]),
+        .Q(p_2_in__0[3]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[14] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[14]_i_1_n_0 ),
-        .Q(p_2_in__0[18]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[15]_i_1_n_0 ),
-        .Q(p_2_in__0[17]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[16] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[16]_i_1_n_0 ),
-        .Q(p_2_in__0[16]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[17] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[17]_i_1_n_0 ),
-        .Q(p_2_in__0[15]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[18] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[18]_i_1_n_0 ),
-        .Q(p_2_in__0[14]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[19] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[19]_i_1_n_0 ),
-        .Q(p_2_in__0[13]),
-        .R(Rst_to_spi));
-  FDSE \OTHER_RATIO_GENERATE.Shift_Reg_reg[1] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1_n_0 ),
-        .Q(p_2_in__0[31]),
-        .S(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[20] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[20]_i_1_n_0 ),
-        .Q(p_2_in__0[12]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[21] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[21]_i_1_n_0 ),
-        .Q(p_2_in__0[11]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[22] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[22]_i_1_n_0 ),
-        .Q(p_2_in__0[10]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[23] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[23]_i_1_n_0 ),
-        .Q(p_2_in__0[9]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[24] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[24]_i_1_n_0 ),
-        .Q(p_2_in__0[8]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[25] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[25]_i_1_n_0 ),
-        .Q(p_2_in__0[7]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[26] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[26]_i_1_n_0 ),
-        .Q(p_2_in__0[6]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[27] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[27]_i_1_n_0 ),
-        .Q(p_2_in__0[5]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[28] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[28]_i_1_n_0 ),
-        .Q(p_2_in__0[4]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[29] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[29]_i_1_n_0 ),
-        .Q(p_2_in__0[3]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[2] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[2]_i_1_n_0 ),
-        .Q(p_2_in__0[30]),
-        .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[30] 
-       (.C(ext_spi_clk),
-        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
-        .D(\OTHER_RATIO_GENERATE.Shift_Reg[30]_i_1_n_0 ),
         .Q(p_2_in__0[2]),
         .R(Rst_to_spi));
-  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[31] 
+  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[15] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(D),
         .Q(p_2_in__0[1]),
         .R(Rst_to_spi));
+  FDSE \OTHER_RATIO_GENERATE.Shift_Reg_reg[1] 
+       (.C(ext_spi_clk),
+        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
+        .D(\OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1_n_0 ),
+        .Q(p_2_in__0[15]),
+        .S(Rst_to_spi));
+  FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[2] 
+       (.C(ext_spi_clk),
+        .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
+        .D(\OTHER_RATIO_GENERATE.Shift_Reg[2]_i_1_n_0 ),
+        .Q(p_2_in__0[14]),
+        .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[3] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[3]_i_1_n_0 ),
-        .Q(p_2_in__0[29]),
+        .Q(p_2_in__0[13]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[4] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[4]_i_1_n_0 ),
-        .Q(p_2_in__0[28]),
+        .Q(p_2_in__0[12]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[5] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[5]_i_1_n_0 ),
-        .Q(p_2_in__0[27]),
+        .Q(p_2_in__0[11]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[6] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[6]_i_1_n_0 ),
-        .Q(p_2_in__0[26]),
+        .Q(p_2_in__0[10]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[7] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1_n_0 ),
-        .Q(p_2_in__0[25]),
+        .Q(p_2_in__0[9]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[8] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[8]_i_1_n_0 ),
-        .Q(p_2_in__0[24]),
+        .Q(p_2_in__0[8]),
         .R(Rst_to_spi));
   FDRE \OTHER_RATIO_GENERATE.Shift_Reg_reg[9] 
        (.C(ext_spi_clk),
         .CE(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ),
         .D(\OTHER_RATIO_GENERATE.Shift_Reg[9]_i_1_n_0 ),
-        .Q(p_2_in__0[23]),
+        .Q(p_2_in__0[7]),
         .R(Rst_to_spi));
   LUT3 #(
     .INIT(8'h08)) 
@@ -8441,40 +7982,8 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[15] 
        (.C(ext_spi_clk),
         .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[16]),
+        .D(\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15]_0 ),
         .Q(rx_shft_reg_mode_0011[15]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[16] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[17]),
-        .Q(rx_shft_reg_mode_0011[16]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[17] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[18]),
-        .Q(rx_shft_reg_mode_0011[17]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[18] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[19]),
-        .Q(rx_shft_reg_mode_0011[18]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[19] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[20]),
-        .Q(rx_shft_reg_mode_0011[19]),
         .R(Rst_to_spi));
   FDRE #(
     .INIT(1'b0)) 
@@ -8486,107 +7995,11 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .R(Rst_to_spi));
   FDRE #(
     .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[20] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[21]),
-        .Q(rx_shft_reg_mode_0011[20]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[21] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[22]),
-        .Q(rx_shft_reg_mode_0011[21]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[22] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[23]),
-        .Q(rx_shft_reg_mode_0011[22]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[23] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[24]),
-        .Q(rx_shft_reg_mode_0011[23]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[24] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[25]),
-        .Q(rx_shft_reg_mode_0011[24]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[25] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[26]),
-        .Q(rx_shft_reg_mode_0011[25]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[26] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[27]),
-        .Q(rx_shft_reg_mode_0011[26]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[27] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[28]),
-        .Q(rx_shft_reg_mode_0011[27]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[28] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[29]),
-        .Q(rx_shft_reg_mode_0011[28]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[29] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[30]),
-        .Q(rx_shft_reg_mode_0011[29]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[2] 
        (.C(ext_spi_clk),
         .CE(rx_shft_reg_mode_00110),
         .D(rx_shft_reg_mode_0011[3]),
         .Q(rx_shft_reg_mode_0011[2]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[30] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(rx_shft_reg_mode_0011[31]),
-        .Q(rx_shft_reg_mode_0011[30]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[31] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_00110),
-        .D(\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31]_0 ),
-        .Q(rx_shft_reg_mode_0011[31]),
         .R(Rst_to_spi));
   FDRE #(
     .INIT(1'b0)) 
@@ -8704,40 +8117,8 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15] 
        (.C(ext_spi_clk),
         .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[16]),
+        .D(\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[15]_0 ),
         .Q(rx_shft_reg_mode_0110[15]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[16] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[17]),
-        .Q(rx_shft_reg_mode_0110[16]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[17] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[18]),
-        .Q(rx_shft_reg_mode_0110[17]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[18] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[19]),
-        .Q(rx_shft_reg_mode_0110[18]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[19] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[20]),
-        .Q(rx_shft_reg_mode_0110[19]),
         .R(Rst_to_spi));
   FDRE #(
     .INIT(1'b0)) 
@@ -8749,107 +8130,11 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .R(Rst_to_spi));
   FDRE #(
     .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[20] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[21]),
-        .Q(rx_shft_reg_mode_0110[20]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[21] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[22]),
-        .Q(rx_shft_reg_mode_0110[21]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[22] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[23]),
-        .Q(rx_shft_reg_mode_0110[22]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[23] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[24]),
-        .Q(rx_shft_reg_mode_0110[23]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[24] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[25]),
-        .Q(rx_shft_reg_mode_0110[24]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[25] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[26]),
-        .Q(rx_shft_reg_mode_0110[25]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[26] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[27]),
-        .Q(rx_shft_reg_mode_0110[26]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[27] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[28]),
-        .Q(rx_shft_reg_mode_0110[27]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[28] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[29]),
-        .Q(rx_shft_reg_mode_0110[28]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[29] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[30]),
-        .Q(rx_shft_reg_mode_0110[29]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[2] 
        (.C(ext_spi_clk),
         .CE(rx_shft_reg_mode_01100),
         .D(rx_shft_reg_mode_0110[3]),
         .Q(rx_shft_reg_mode_0110[2]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[30] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(rx_shft_reg_mode_0110[31]),
-        .Q(rx_shft_reg_mode_0110[30]),
-        .R(Rst_to_spi));
-  FDRE #(
-    .INIT(1'b0)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31] 
-       (.C(ext_spi_clk),
-        .CE(rx_shft_reg_mode_01100),
-        .D(\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[31]_0 ),
-        .Q(rx_shft_reg_mode_0110[31]),
         .R(Rst_to_spi));
   FDRE #(
     .INIT(1'b0)) 
@@ -8935,7 +8220,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(Count_trigger_d1),
         .I1(Count_trigger),
         .O(\OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'h45)) 
     \OTHER_RATIO_GENERATE.sck_o_int_i_3 
@@ -8975,7 +8260,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .D(\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0 ),
         .Q(sck_o),
         .R(R));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT5 #(
     .INIT(32'hBAAA8AAA)) 
     \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2 
@@ -8990,21 +8275,31 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_1 
        (.I0(transfer_start_reg_n_0),
         .I1(transfer_start_d1),
-        .I2(\OTHER_RATIO_GENERATE.Count[6]_i_4_n_0 ),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ),
+        .I2(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3_n_0 ),
         .I4(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_0 ),
         .I5(Rst_to_spi),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
+    \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2 
+       (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
+        .I1(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
+        .I2(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
+        .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
+        .I4(\OTHER_RATIO_GENERATE.Count_reg_n_0_[4] ),
+        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h00000000000000E0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2 
+    \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3 
        (.I0(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I1(Count_trigger),
-        .I2(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I2(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .I3(Ratio_Count[0]),
         .I4(Ratio_Count[1]),
         .I5(Ratio_Count[2]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ));
+        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3_n_0 ));
   FDRE \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg 
        (.C(ext_spi_clk),
         .CE(1'b1),
@@ -9015,7 +8310,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
     .INIT(4'h2)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1 
        (.I0(SPIXfer_done_int_pulse_d1),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[31]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[15]_0 ),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9023,9 +8318,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[0]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[0]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[31]),
-        .I5(rx_shft_reg_mode_0110[31]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[15]),
+        .I5(rx_shft_reg_mode_0110[15]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9033,9 +8328,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[10]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[10]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[21]),
-        .I5(rx_shft_reg_mode_0110[21]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[5]),
+        .I5(rx_shft_reg_mode_0110[5]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[10]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9043,9 +8338,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[11]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[11]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[20]),
-        .I5(rx_shft_reg_mode_0110[20]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[4]),
+        .I5(rx_shft_reg_mode_0110[4]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[11]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9053,9 +8348,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[12]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[12]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[19]),
-        .I5(rx_shft_reg_mode_0110[19]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[3]),
+        .I5(rx_shft_reg_mode_0110[3]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[12]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9063,9 +8358,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[13]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[13]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[18]),
-        .I5(rx_shft_reg_mode_0110[18]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[2]),
+        .I5(rx_shft_reg_mode_0110[2]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[13]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9073,9 +8368,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[14]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[14]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[17]),
-        .I5(rx_shft_reg_mode_0110[17]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[1]),
+        .I5(rx_shft_reg_mode_0110[1]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[14]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9083,199 +8378,39 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[15]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[15]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[16]),
-        .I5(rx_shft_reg_mode_0110[16]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[0]),
+        .I5(rx_shft_reg_mode_0110[0]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[15]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[16]_i_1 
-       (.I0(rx_shft_reg_mode_0011[16]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[16]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[15]),
-        .I5(rx_shft_reg_mode_0110[15]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[16]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[17]_i_1 
-       (.I0(rx_shft_reg_mode_0011[17]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[17]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[14]),
-        .I5(rx_shft_reg_mode_0110[14]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[17]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[18]_i_1 
-       (.I0(rx_shft_reg_mode_0011[18]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[18]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[13]),
-        .I5(rx_shft_reg_mode_0110[13]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[18]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[19]_i_1 
-       (.I0(rx_shft_reg_mode_0011[19]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[19]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[12]),
-        .I5(rx_shft_reg_mode_0110[12]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[19]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_1 
        (.I0(rx_shft_reg_mode_0011[1]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[1]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[30]),
-        .I5(rx_shft_reg_mode_0110[30]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[14]),
+        .I5(rx_shft_reg_mode_0110[14]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[20]_i_1 
-       (.I0(rx_shft_reg_mode_0011[20]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[20]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[11]),
-        .I5(rx_shft_reg_mode_0110[11]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[20]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[21]_i_1 
-       (.I0(rx_shft_reg_mode_0011[21]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[21]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[10]),
-        .I5(rx_shft_reg_mode_0110[10]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[21]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[22]_i_1 
-       (.I0(rx_shft_reg_mode_0011[22]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[22]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[9]),
-        .I5(rx_shft_reg_mode_0110[9]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[22]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[23]_i_1 
-       (.I0(rx_shft_reg_mode_0011[23]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[23]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[8]),
-        .I5(rx_shft_reg_mode_0110[8]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[23]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[24]_i_1 
-       (.I0(rx_shft_reg_mode_0011[24]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[24]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[7]),
-        .I5(rx_shft_reg_mode_0110[7]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[24]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[25]_i_1 
-       (.I0(rx_shft_reg_mode_0011[25]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[25]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[6]),
-        .I5(rx_shft_reg_mode_0110[6]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[25]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[26]_i_1 
-       (.I0(rx_shft_reg_mode_0011[26]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[26]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[5]),
-        .I5(rx_shft_reg_mode_0110[5]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[26]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[27]_i_1 
-       (.I0(rx_shft_reg_mode_0011[27]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[27]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[4]),
-        .I5(rx_shft_reg_mode_0110[4]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[27]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[28]_i_1 
-       (.I0(rx_shft_reg_mode_0011[28]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[28]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[3]),
-        .I5(rx_shft_reg_mode_0110[3]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[28]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[29]_i_1 
-       (.I0(rx_shft_reg_mode_0011[29]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[29]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[2]),
-        .I5(rx_shft_reg_mode_0110[2]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[29]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_1 
        (.I0(rx_shft_reg_mode_0011[2]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[2]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[29]),
-        .I5(rx_shft_reg_mode_0110[29]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[13]),
+        .I5(rx_shft_reg_mode_0110[13]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[30]_i_1 
-       (.I0(rx_shft_reg_mode_0011[30]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[30]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[1]),
-        .I5(rx_shft_reg_mode_0110[1]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[30]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE2CCE233E200E2)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[31]_i_1 
-       (.I0(rx_shft_reg_mode_0011[31]),
-        .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
-        .I2(rx_shft_reg_mode_0110[31]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[0]),
-        .I5(rx_shft_reg_mode_0110[0]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[31]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[3]_i_1 
        (.I0(rx_shft_reg_mode_0011[3]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[3]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[28]),
-        .I5(rx_shft_reg_mode_0110[28]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[12]),
+        .I5(rx_shft_reg_mode_0110[12]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9283,9 +8418,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[4]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[4]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[27]),
-        .I5(rx_shft_reg_mode_0110[27]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[11]),
+        .I5(rx_shft_reg_mode_0110[11]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9293,9 +8428,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[5]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[5]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[26]),
-        .I5(rx_shft_reg_mode_0110[26]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[10]),
+        .I5(rx_shft_reg_mode_0110[10]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9303,9 +8438,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[6]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[6]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[25]),
-        .I5(rx_shft_reg_mode_0110[25]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[9]),
+        .I5(rx_shft_reg_mode_0110[9]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9313,9 +8448,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[7]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[7]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[24]),
-        .I5(rx_shft_reg_mode_0110[24]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[8]),
+        .I5(rx_shft_reg_mode_0110[8]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[7]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9323,9 +8458,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[8]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[8]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[23]),
-        .I5(rx_shft_reg_mode_0110[23]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[7]),
+        .I5(rx_shft_reg_mode_0110[7]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[8]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFE2CCE233E200E2)) 
@@ -9333,9 +8468,9 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.I0(rx_shft_reg_mode_0011[9]),
         .I1(\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .I2(rx_shft_reg_mode_0110[9]),
-        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[15]_0 ),
-        .I4(rx_shft_reg_mode_0011[22]),
-        .I5(rx_shft_reg_mode_0110[22]),
+        .I3(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[7]_0 ),
+        .I4(rx_shft_reg_mode_0011[6]),
+        .I5(rx_shft_reg_mode_0110[6]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[9]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9343,7 +8478,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_2_n_0 ),
-        .Q(din[31]),
+        .Q(din[15]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9351,7 +8486,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[10]_i_1_n_0 ),
-        .Q(din[21]),
+        .Q(din[5]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9359,7 +8494,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[11]_i_1_n_0 ),
-        .Q(din[20]),
+        .Q(din[4]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9367,7 +8502,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[12]_i_1_n_0 ),
-        .Q(din[19]),
+        .Q(din[3]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9375,7 +8510,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[13]_i_1_n_0 ),
-        .Q(din[18]),
+        .Q(din[2]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9383,7 +8518,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[14]_i_1_n_0 ),
-        .Q(din[17]),
+        .Q(din[1]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9391,39 +8526,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[15]_i_1_n_0 ),
-        .Q(din[16]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[16] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[16]_i_1_n_0 ),
-        .Q(din[15]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[17] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[17]_i_1_n_0 ),
-        .Q(din[14]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[18] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[18]_i_1_n_0 ),
-        .Q(din[13]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[19] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[19]_i_1_n_0 ),
-        .Q(din[12]),
+        .Q(din[0]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9431,87 +8534,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_1_n_0 ),
-        .Q(din[30]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[20] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[20]_i_1_n_0 ),
-        .Q(din[11]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[21] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[21]_i_1_n_0 ),
-        .Q(din[10]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[22] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[22]_i_1_n_0 ),
-        .Q(din[9]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[23] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[23]_i_1_n_0 ),
-        .Q(din[8]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[24] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[24]_i_1_n_0 ),
-        .Q(din[7]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[25] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[25]_i_1_n_0 ),
-        .Q(din[6]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[26] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[26]_i_1_n_0 ),
-        .Q(din[5]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[27] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[27]_i_1_n_0 ),
-        .Q(din[4]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[28] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[28]_i_1_n_0 ),
-        .Q(din[3]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[29] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[29]_i_1_n_0 ),
-        .Q(din[2]),
+        .Q(din[14]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9519,23 +8542,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_1_n_0 ),
-        .Q(din[29]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[30] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[30]_i_1_n_0 ),
-        .Q(din[1]),
-        .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[31] 
-       (.C(ext_spi_clk),
-        .CE(SPIXfer_done_int_pulse_d1),
-        .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[31]_i_1_n_0 ),
-        .Q(din[0]),
+        .Q(din[13]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9543,7 +8550,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[3]_i_1_n_0 ),
-        .Q(din[28]),
+        .Q(din[12]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9551,7 +8558,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[4]_i_1_n_0 ),
-        .Q(din[27]),
+        .Q(din[11]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9559,7 +8566,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[5]_i_1_n_0 ),
-        .Q(din[26]),
+        .Q(din[10]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9567,7 +8574,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[6]_i_1_n_0 ),
-        .Q(din[25]),
+        .Q(din[9]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9575,7 +8582,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[7]_i_1_n_0 ),
-        .Q(din[24]),
+        .Q(din[8]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9583,7 +8590,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[8]_i_1_n_0 ),
-        .Q(din[23]),
+        .Q(din[7]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -9591,7 +8598,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(SPIXfer_done_int_pulse_d1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[9]_i_1_n_0 ),
-        .Q(din[22]),
+        .Q(din[6]),
         .R(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_1_n_0 ));
   FDRE SPIXfer_done_int_d1_reg
        (.C(ext_spi_clk),
@@ -9599,7 +8606,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg_0 ),
         .Q(SPIXfer_done_int_d1),
         .R(Rst_to_spi));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT2 #(
     .INIT(4'h2)) 
     SPIXfer_done_int_pulse_d1_i_1
@@ -9689,7 +8696,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I4(empty),
         .I5(spi_cntrl_ps[1]),
         .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'hFFC8)) 
     \SS_O[0]_i_3 
@@ -9698,7 +8705,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .I2(\FSM_sequential_LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg[1]_0 ),
         .I3(stop_clock_reg),
         .O(\SS_O[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \SS_O[0]_i_4 
@@ -9723,7 +8730,7 @@ module memristor_PGA_SPI_0_qspi_mode_0_module
         .D(transfer_start_reg_0),
         .Q(transfer_start_reg_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     \xpm_fifo_instance.xpm_fifo_async_inst_i_3 
@@ -9737,22 +8744,41 @@ endmodule
 module memristor_PGA_SPI_0_qspi_status_slave_sel_reg
    (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ,
     reset2ip_reset_int,
+    s_axi_aclk,
+    s_axi_wdata,
     \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 ,
-    s_axi_aclk);
+    p_3_in,
+    Bus_RNW_reg);
   output \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ;
   input reset2ip_reset_int;
-  input \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 ;
   input s_axi_aclk;
+  input [0:0]s_axi_wdata;
+  input \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 ;
+  input p_3_in;
+  input Bus_RNW_reg;
 
+  wire Bus_RNW_reg;
+  wire \SPISSR_WR_GEN[0].SPISSR_Data_reg[0]_i_1_n_0 ;
   wire \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ;
   wire \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 ;
+  wire p_3_in;
   wire reset2ip_reset_int;
   wire s_axi_aclk;
+  wire [0:0]s_axi_wdata;
 
+  LUT5 #(
+    .INIT(32'hFFBF0080)) 
+    \SPISSR_WR_GEN[0].SPISSR_Data_reg[0]_i_1 
+       (.I0(s_axi_wdata),
+        .I1(\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 ),
+        .I2(p_3_in),
+        .I3(Bus_RNW_reg),
+        .I4(\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ),
+        .O(\SPISSR_WR_GEN[0].SPISSR_Data_reg[0]_i_1_n_0 ));
   FDSE \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_1 ),
+        .D(\SPISSR_WR_GEN[0].SPISSR_Data_reg[0]_i_1_n_0 ),
         .Q(\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]_0 ),
         .S(reset2ip_reset_int));
 endmodule
@@ -9812,60 +8838,64 @@ module memristor_PGA_SPI_0_slave_attachment
    (SR,
     p_1_in_0,
     p_2_in,
+    p_3_in,
     \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] ,
     \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ,
-    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] ,
     s_axi_rresp,
     Bus_RNW_reg_reg,
     s_axi_rvalid_i_reg_0,
     s_axi_bvalid_i_reg_0,
-    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ,
-    Bus_RNW_reg_reg_0,
+    irpt_wrack_d1_reg,
+    irpt_wrack_d1_reg_0,
     E,
-    Bus_RNW_reg_reg_1,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ,
+    Bus_RNW_reg_reg_0,
+    reset2ip_reset_int,
+    \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ,
     \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ,
-    \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ,
-    \ip_irpt_enable_reg_reg[3] ,
-    \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ,
+    \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ,
     D,
-    wr_en,
+    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ,
     SPICR_data_int_reg0,
     bus2ip_wrce_int,
     IP2Bus_Error_1,
-    \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ,
+    Bus_RNW_reg_reg_1,
     reset_trig0,
     sw_rst_cond,
-    \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ,
-    interrupt_wrce_strb,
-    intr2bus_rdack0,
     irpt_rdack,
+    intr2bus_rdack0,
+    irpt_wrack,
+    \ip_irpt_enable_reg_reg[0] ,
+    \ip_irpt_enable_reg_reg[1] ,
     ip2Bus_WrAck_intr_reg_hole0,
     ip2Bus_RdAck_intr_reg_hole0,
     intr_controller_rd_ce_or_reduce,
-    rd_ce_or_reduce_core_cmb,
-    ip2Bus_WrAck_core_reg0,
     wr_ce_or_reduce_core_cmb,
-    \gen_fwft.empty_fwft_i_reg ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
+    ip2Bus_WrAck_core_reg0,
+    rd_ce_or_reduce_core_cmb,
+    \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ,
-    s_axi_wdata_0_sp_1,
     \s_axi_wdata[31] ,
+    \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ,
     s_axi_bresp,
     s_axi_rdata,
     s_axi_aclk,
     p_1_in,
     s_axi_arvalid,
     s_axi_wstrb,
+    irpt_wrack_d1,
+    \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ,
     dout,
-    prmry_in,
     p_1_in34_in,
     p_1_in31_in,
+    p_1_in28_in,
     Q,
     p_1_in25_in,
     ip2Bus_RdAck_core_reg,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ,
+    prmry_in,
     p_1_in22_in,
     spicr_5_txfifo_rst_frm_axi_clk,
     scndry_out,
@@ -9876,26 +8906,26 @@ module memristor_PGA_SPI_0_slave_attachment
     p_1_in13_in,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ,
-    p_0_in,
     empty,
     rx_fifo_empty_i,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ,
     ip2Bus_WrAck_core_reg_1,
-    almost_full,
     receive_ip2bus_error,
     sw_rst_cond_d1,
     s_axi_wdata,
-    irpt_wrack_d1,
+    p_0_in,
     irpt_rdack_d1,
     ip2Bus_WrAck_intr_reg_hole_d1,
     ip2Bus_RdAck_intr_reg_hole_d1,
+    almost_full,
     ip2Bus_WrAck_core_reg_d1,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ,
     spicr_2_mst_n_slv_frm_axi_clk,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ,
     Tx_FIFO_Full_int,
-    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ,
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ,
     s_axi_rready,
     s_axi_bready,
     s_axi_awvalid,
@@ -9909,60 +8939,64 @@ module memristor_PGA_SPI_0_slave_attachment
   output [0:0]SR;
   output p_1_in_0;
   output p_2_in;
+  output p_3_in;
   output \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] ;
   output \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ;
-  output \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] ;
   output [0:0]s_axi_rresp;
   output Bus_RNW_reg_reg;
   output s_axi_rvalid_i_reg_0;
   output s_axi_bvalid_i_reg_0;
-  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
-  output Bus_RNW_reg_reg_0;
+  output irpt_wrack_d1_reg;
+  output irpt_wrack_d1_reg_0;
   output [0:0]E;
-  output Bus_RNW_reg_reg_1;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
+  output Bus_RNW_reg_reg_0;
+  output reset2ip_reset_int;
+  output \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   output \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
-  output \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ;
-  output \ip_irpt_enable_reg_reg[3] ;
-  output \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ;
+  output \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   output [6:0]D;
-  output wr_en;
+  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
   output SPICR_data_int_reg0;
   output [0:0]bus2ip_wrce_int;
   output IP2Bus_Error_1;
-  output \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
+  output Bus_RNW_reg_reg_1;
   output reset_trig0;
   output sw_rst_cond;
-  output \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
-  output interrupt_wrce_strb;
-  output intr2bus_rdack0;
   output irpt_rdack;
+  output intr2bus_rdack0;
+  output irpt_wrack;
+  output \ip_irpt_enable_reg_reg[0] ;
+  output \ip_irpt_enable_reg_reg[1] ;
   output ip2Bus_WrAck_intr_reg_hole0;
   output ip2Bus_RdAck_intr_reg_hole0;
   output intr_controller_rd_ce_or_reduce;
-  output rd_ce_or_reduce_core_cmb;
-  output ip2Bus_WrAck_core_reg0;
   output wr_ce_or_reduce_core_cmb;
-  output \gen_fwft.empty_fwft_i_reg ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
+  output ip2Bus_WrAck_core_reg0;
+  output rd_ce_or_reduce_core_cmb;
+  output \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   output \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
-  output s_axi_wdata_0_sp_1;
   output \s_axi_wdata[31] ;
+  output \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  output \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   output [0:0]s_axi_bresp;
-  output [31:0]s_axi_rdata;
+  output [16:0]s_axi_rdata;
   input s_axi_aclk;
   input [0:0]p_1_in;
   input s_axi_arvalid;
   input [1:0]s_axi_wstrb;
-  input [10:0]dout;
-  input prmry_in;
+  input irpt_wrack_d1;
+  input \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
+  input [9:0]dout;
   input p_1_in34_in;
   input p_1_in31_in;
-  input [7:0]Q;
+  input p_1_in28_in;
+  input [6:0]Q;
   input p_1_in25_in;
   input ip2Bus_RdAck_core_reg;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ;
+  input prmry_in;
   input p_1_in22_in;
   input spicr_5_txfifo_rst_frm_axi_clk;
   input scndry_out;
@@ -9973,31 +9007,31 @@ module memristor_PGA_SPI_0_slave_attachment
   input p_1_in13_in;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
   input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ;
-  input [0:0]p_0_in;
   input empty;
   input rx_fifo_empty_i;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
   input ip2Bus_WrAck_core_reg_1;
-  input almost_full;
   input receive_ip2bus_error;
   input sw_rst_cond_d1;
-  input [4:0]s_axi_wdata;
-  input irpt_wrack_d1;
+  input [6:0]s_axi_wdata;
+  input [0:0]p_0_in;
   input irpt_rdack_d1;
   input ip2Bus_WrAck_intr_reg_hole_d1;
   input ip2Bus_RdAck_intr_reg_hole_d1;
+  input almost_full;
   input ip2Bus_WrAck_core_reg_d1;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ;
   input spicr_2_mst_n_slv_frm_axi_clk;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ;
   input Tx_FIFO_Full_int;
-  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ;
+  input \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ;
   input s_axi_rready;
   input s_axi_bready;
   input s_axi_awvalid;
   input s_axi_wvalid;
-  input [31:0]\s_axi_rdata_i_reg[31]_0 ;
+  input [16:0]\s_axi_rdata_i_reg[31]_0 ;
   input s_axi_aresetn;
   input ip2bus_rdack_int;
   input ip2bus_wrack_int;
@@ -10007,6 +9041,8 @@ module memristor_PGA_SPI_0_slave_attachment
   wire Bus_RNW_reg_reg;
   wire Bus_RNW_reg_reg_0;
   wire Bus_RNW_reg_reg_1;
+  wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
+  wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire [6:0]D;
   wire [0:0]E;
   wire \FSM_onehot_state[0]_i_1_n_0 ;
@@ -10015,32 +9051,32 @@ module memristor_PGA_SPI_0_slave_attachment
   wire \FSM_onehot_state[3]_i_1_n_0 ;
   wire \FSM_onehot_state_reg_n_0_[0] ;
   wire \FSM_onehot_state_reg_n_0_[3] ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
-  wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
-  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] ;
   wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ;
   wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] ;
+  wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ;
   wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
-  wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
+  wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
-  wire \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ;
+  wire \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ;
   wire [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg ;
   wire IP2Bus_Error_1;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
-  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ;
+  wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_2_n_0 ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ;
-  wire [7:0]Q;
+  wire [6:0]Q;
   wire SPICR_data_int_reg0;
+  wire \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ;
   wire [0:0]SR;
   wire Tx_FIFO_Full_int;
   wire almost_full;
@@ -10058,13 +9094,10 @@ module memristor_PGA_SPI_0_slave_attachment
   wire bus2ip_rnw_i_reg_n_0;
   wire [0:0]bus2ip_wrce_int;
   wire clear;
-  wire [10:0]dout;
+  wire [9:0]dout;
   wire empty;
-  wire \gen_fwft.empty_fwft_i_reg ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
-  wire interrupt_wrce_strb;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ;
   wire intr2bus_rdack0;
-  wire intr2bus_wrack_i_2_n_0;
   wire intr_controller_rd_ce_or_reduce;
   wire ip2Bus_RdAck_core_reg;
   wire ip2Bus_RdAck_intr_reg_hole0;
@@ -10076,10 +9109,14 @@ module memristor_PGA_SPI_0_slave_attachment
   wire ip2Bus_WrAck_intr_reg_hole_d1;
   wire ip2bus_rdack_int;
   wire ip2bus_wrack_int;
-  wire \ip_irpt_enable_reg_reg[3] ;
+  wire \ip_irpt_enable_reg_reg[0] ;
+  wire \ip_irpt_enable_reg_reg[1] ;
   wire irpt_rdack;
   wire irpt_rdack_d1;
+  wire irpt_wrack;
   wire irpt_wrack_d1;
+  wire irpt_wrack_d1_reg;
+  wire irpt_wrack_d1_reg_0;
   wire is_read_i_1_n_0;
   wire is_read_reg_n_0;
   wire is_write_i_1_n_0;
@@ -10093,15 +9130,18 @@ module memristor_PGA_SPI_0_slave_attachment
   wire p_1_in19_in;
   wire p_1_in22_in;
   wire p_1_in25_in;
+  wire p_1_in28_in;
   wire p_1_in31_in;
   wire p_1_in34_in;
   wire p_1_in_0;
   wire p_2_in;
+  wire p_3_in;
   wire p_5_in;
   wire [5:0]plusOp;
   wire prmry_in;
   wire rd_ce_or_reduce_core_cmb;
   wire receive_ip2bus_error;
+  wire reset2ip_reset_int;
   wire reset_trig0;
   wire rst_i_1_n_0;
   wire rx_fifo_empty_i;
@@ -10117,16 +9157,15 @@ module memristor_PGA_SPI_0_slave_attachment
   wire \s_axi_bresp_i[1]_i_1_n_0 ;
   wire s_axi_bvalid_i_i_1_n_0;
   wire s_axi_bvalid_i_reg_0;
-  wire [31:0]s_axi_rdata;
-  wire [31:0]\s_axi_rdata_i_reg[31]_0 ;
+  wire [16:0]s_axi_rdata;
+  wire [16:0]\s_axi_rdata_i_reg[31]_0 ;
   wire s_axi_rready;
   wire [0:0]s_axi_rresp;
   wire s_axi_rresp_i;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axi_rvalid_i_reg_0;
-  wire [4:0]s_axi_wdata;
+  wire [6:0]s_axi_wdata;
   wire \s_axi_wdata[31] ;
-  wire s_axi_wdata_0_sn_1;
   wire [1:0]s_axi_wstrb;
   wire s_axi_wvalid;
   wire scndry_out;
@@ -10140,9 +9179,7 @@ module memristor_PGA_SPI_0_slave_attachment
   wire sw_rst_cond;
   wire sw_rst_cond_d1;
   wire wr_ce_or_reduce_core_cmb;
-  wire wr_en;
 
-  assign s_axi_wdata_0_sp_1 = s_axi_wdata_0_sn_1;
   LUT6 #(
     .INIT(64'hFFFF150015001500)) 
     \FSM_onehot_state[0]_i_1 
@@ -10230,14 +9267,14 @@ module memristor_PGA_SPI_0_slave_attachment
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -10245,7 +9282,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [1]),
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [2]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_1 
@@ -10254,7 +9291,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [2]),
         .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [3]),
         .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[4]_i_1 
@@ -10320,30 +9357,31 @@ module memristor_PGA_SPI_0_slave_attachment
        (.Bus_RNW_reg_reg_0(Bus_RNW_reg_reg),
         .Bus_RNW_reg_reg_1(Bus_RNW_reg_reg_0),
         .Bus_RNW_reg_reg_2(Bus_RNW_reg_reg_1),
+        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
+        .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
         .D(D),
         .E(E),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
-        .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]_0 (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
-        .\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16]_0 (\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ),
-        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] ),
         .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]_0 (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ),
         .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]_0 (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] ),
+        .\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29]_0 (\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] ),
         .\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]_0 ({\bus2ip_addr_i_reg_n_0_[6] ,\bus2ip_addr_i_reg_n_0_[5] ,\bus2ip_addr_i_reg_n_0_[4] ,\bus2ip_addr_i_reg_n_0_[3] ,\bus2ip_addr_i_reg_n_0_[2] }),
         .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ),
-        .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ),
+        .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] (\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ),
-        .\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] (\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] ),
+        .\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] (\GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3] ),
         .IP2Bus_Error_1(IP2Bus_Error_1),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2_0 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_2 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_5 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_1 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_3_0 ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[22] ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] (Q),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23]_0 (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
-        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[27] ),
+        .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_2_n_0 ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ),
@@ -10354,11 +9392,8 @@ module memristor_PGA_SPI_0_slave_attachment
         .bus2ip_wrce_int(bus2ip_wrce_int),
         .dout(dout),
         .empty(empty),
-        .\gen_fwft.empty_fwft_i_reg (\gen_fwft.empty_fwft_i_reg ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ),
-        .interrupt_wrce_strb(interrupt_wrce_strb),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] ),
         .intr2bus_rdack0(intr2bus_rdack0),
-        .intr2bus_wrack_reg(intr2bus_wrack_i_2_n_0),
         .intr_controller_rd_ce_or_reduce(intr_controller_rd_ce_or_reduce),
         .ip2Bus_RdAck_core_reg(ip2Bus_RdAck_core_reg),
         .ip2Bus_RdAck_intr_reg_hole0(ip2Bus_RdAck_intr_reg_hole0),
@@ -10370,32 +9405,38 @@ module memristor_PGA_SPI_0_slave_attachment
         .ip2Bus_WrAck_intr_reg_hole_d1(ip2Bus_WrAck_intr_reg_hole_d1),
         .ip2bus_rdack_int(ip2bus_rdack_int),
         .ip2bus_wrack_int(ip2bus_wrack_int),
-        .\ip_irpt_enable_reg_reg[3] (\ip_irpt_enable_reg_reg[3] ),
+        .\ip_irpt_enable_reg_reg[0] (\ip_irpt_enable_reg_reg[0] ),
+        .\ip_irpt_enable_reg_reg[1] (\ip_irpt_enable_reg_reg[1] ),
         .ipif_glbl_irpt_enable_reg_reg(bus2ip_rnw_i_reg_n_0),
         .irpt_rdack(irpt_rdack),
         .irpt_rdack_d1(irpt_rdack_d1),
+        .irpt_wrack(irpt_wrack),
         .irpt_wrack_d1(irpt_wrack_d1),
+        .irpt_wrack_d1_reg(irpt_wrack_d1_reg),
+        .irpt_wrack_d1_reg_0(irpt_wrack_d1_reg_0),
         .p_0_in(p_0_in),
         .p_1_in13_in(p_1_in13_in),
         .p_1_in16_in(p_1_in16_in),
         .p_1_in19_in(p_1_in19_in),
         .p_1_in22_in(p_1_in22_in),
         .p_1_in25_in(p_1_in25_in),
+        .p_1_in28_in(p_1_in28_in),
         .p_1_in31_in(p_1_in31_in),
         .p_1_in34_in(p_1_in34_in),
         .p_1_in_0(p_1_in_0),
         .p_2_in(p_2_in),
+        .p_3_in(p_3_in),
         .prmry_in(prmry_in),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .receive_ip2bus_error(receive_ip2bus_error),
+        .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(reset_trig0),
         .rx_fifo_empty_i(rx_fifo_empty_i),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_arready(is_read_reg_n_0),
-        .s_axi_wdata({s_axi_wdata[4],s_axi_wdata[0]}),
+        .s_axi_wdata(s_axi_wdata[6:4]),
         .\s_axi_wdata[31] (\s_axi_wdata[31] ),
-        .s_axi_wdata_0_sp_1(s_axi_wdata_0_sn_1),
         .s_axi_wready(is_write_reg_n_0),
         .s_axi_wready_0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg ),
         .s_axi_wstrb(s_axi_wstrb[1]),
@@ -10405,18 +9446,29 @@ module memristor_PGA_SPI_0_slave_attachment
         .spicr_6_rxfifo_rst_frm_axi_clk(spicr_6_rxfifo_rst_frm_axi_clk),
         .sw_rst_cond(sw_rst_cond),
         .sw_rst_cond_d1(sw_rst_cond_d1),
-        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb),
-        .wr_en(wr_en));
-  LUT6 #(
-    .INIT(64'h00000E0000000000)) 
-    \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_2 
+        .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2 
        (.I0(bus2ip_rnw_i_reg_n_0),
-        .I1(s_axi_wstrb[0]),
-        .I2(s_axi_wdata[0]),
-        .I3(s_axi_wdata[3]),
-        .I4(s_axi_wdata[2]),
+        .I1(s_axi_wstrb[1]),
+        .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFF1FFFFFFFFFFFF)) 
+    \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_2 
+       (.I0(s_axi_wstrb[0]),
+        .I1(bus2ip_rnw_i_reg_n_0),
+        .I2(s_axi_wdata[2]),
+        .I3(s_axi_wdata[0]),
+        .I4(s_axi_wdata[3]),
         .I5(s_axi_wdata[1]),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    RESET_SYNC_AX2S_1_i_1
+       (.I0(SR),
+        .I1(\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
+        .O(reset2ip_reset_int));
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[2]_i_1 
@@ -10424,7 +9476,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I1(s_axi_arvalid),
         .I2(s_axi_awaddr[0]),
         .O(\bus2ip_addr_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[3]_i_1 
@@ -10432,7 +9484,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I1(s_axi_arvalid),
         .I2(s_axi_awaddr[1]),
         .O(\bus2ip_addr_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[4]_i_1 
@@ -10440,7 +9492,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I1(s_axi_arvalid),
         .I2(s_axi_awaddr[2]),
         .O(\bus2ip_addr_i[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[5]_i_1 
@@ -10457,7 +9509,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I3(state[1]),
         .I4(state[0]),
         .O(\bus2ip_addr_i[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[6]_i_2 
@@ -10501,12 +9553,6 @@ module memristor_PGA_SPI_0_slave_attachment
         .D(s_axi_arvalid),
         .Q(bus2ip_rnw_i_reg_n_0),
         .R(SR));
-  LUT2 #(
-    .INIT(4'h1)) 
-    intr2bus_wrack_i_2
-       (.I0(bus2ip_rnw_i_reg_n_0),
-        .I1(s_axi_wstrb[1]),
-        .O(intr2bus_wrack_i_2_n_0));
   LUT5 #(
     .INIT(32'h8BBB8888)) 
     is_read_i_1
@@ -10649,123 +9695,11 @@ module memristor_PGA_SPI_0_slave_attachment
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[16] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [16]),
-        .Q(s_axi_rdata[16]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[17] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [17]),
-        .Q(s_axi_rdata[17]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[18] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [18]),
-        .Q(s_axi_rdata[18]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[19] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [19]),
-        .Q(s_axi_rdata[19]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
     \s_axi_rdata_i_reg[1] 
        (.C(s_axi_aclk),
         .CE(s_axi_rresp_i),
         .D(\s_axi_rdata_i_reg[31]_0 [1]),
         .Q(s_axi_rdata[1]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[20] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [20]),
-        .Q(s_axi_rdata[20]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[21] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [21]),
-        .Q(s_axi_rdata[21]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[22] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [22]),
-        .Q(s_axi_rdata[22]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[23] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [23]),
-        .Q(s_axi_rdata[23]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[24] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [24]),
-        .Q(s_axi_rdata[24]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[25] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [25]),
-        .Q(s_axi_rdata[25]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[26] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [26]),
-        .Q(s_axi_rdata[26]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[27] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [27]),
-        .Q(s_axi_rdata[27]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[28] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [28]),
-        .Q(s_axi_rdata[28]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[29] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [29]),
-        .Q(s_axi_rdata[29]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -10777,19 +9711,11 @@ module memristor_PGA_SPI_0_slave_attachment
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
-    \s_axi_rdata_i_reg[30] 
-       (.C(s_axi_aclk),
-        .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [30]),
-        .Q(s_axi_rdata[30]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
     \s_axi_rdata_i_reg[31] 
        (.C(s_axi_aclk),
         .CE(s_axi_rresp_i),
-        .D(\s_axi_rdata_i_reg[31]_0 [31]),
-        .Q(s_axi_rdata[31]),
+        .D(\s_axi_rdata_i_reg[31]_0 [16]),
+        .Q(s_axi_rdata[16]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -10872,7 +9798,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .D(s_axi_rvalid_i_i_1_n_0),
         .Q(s_axi_rvalid_i_reg_0),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'h000000F8)) 
     start2_i_1
@@ -10907,7 +9833,7 @@ module memristor_PGA_SPI_0_slave_attachment
         .I4(state[0]),
         .I5(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_RdAck_reg ),
         .O(p_0_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \state[1]_i_2 
@@ -10933,35 +9859,37 @@ module memristor_PGA_SPI_0_soft_reset
    (sw_rst_cond_d1,
     wrack,
     \RESET_FLOPS[15].RST_FLOPS_0 ,
-    \RESET_FLOPS[15].RST_FLOPS_1 ,
-    reset2ip_reset_int,
+    rst_reg,
+    rst,
     bus2ip_reset_ipif_inverted,
     sw_rst_cond,
     s_axi_aclk,
     reset_trig0,
-    \icount_out_reg[0] ,
-    D);
+    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ,
+    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg_0 ,
+    Tx_FIFO_Full_int);
   output sw_rst_cond_d1;
   output wrack;
   output \RESET_FLOPS[15].RST_FLOPS_0 ;
-  output \RESET_FLOPS[15].RST_FLOPS_1 ;
-  output reset2ip_reset_int;
+  output rst_reg;
+  output rst;
   input bus2ip_reset_ipif_inverted;
   input sw_rst_cond;
   input s_axi_aclk;
   input reset_trig0;
-  input \icount_out_reg[0] ;
-  input [0:0]D;
+  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ;
+  input \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg_0 ;
+  input Tx_FIFO_Full_int;
 
-  wire [0:0]D;
   wire FF_WRACK_i_1_n_0;
+  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ;
+  wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg_0 ;
   wire \RESET_FLOPS[10].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[11].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[12].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[13].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[14].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[15].RST_FLOPS_0 ;
-  wire \RESET_FLOPS[15].RST_FLOPS_1 ;
   wire \RESET_FLOPS[15].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[1].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[2].RST_FLOPS_i_1_n_0 ;
@@ -10973,6 +9901,7 @@ module memristor_PGA_SPI_0_soft_reset
   wire \RESET_FLOPS[8].RST_FLOPS_i_1_n_0 ;
   wire \RESET_FLOPS[9].RST_FLOPS_i_1_n_0 ;
   wire S;
+  wire Tx_FIFO_Full_int;
   wire bus2ip_reset_ipif_inverted;
   wire flop_q_chain_1;
   wire flop_q_chain_10;
@@ -10989,9 +9918,9 @@ module memristor_PGA_SPI_0_soft_reset
   wire flop_q_chain_7;
   wire flop_q_chain_8;
   wire flop_q_chain_9;
-  wire \icount_out_reg[0] ;
-  wire reset2ip_reset_int;
   wire reset_trig0;
+  wire rst;
+  wire rst_reg;
   wire s_axi_aclk;
   wire sw_rst_cond;
   wire sw_rst_cond_d1;
@@ -11011,13 +9940,23 @@ module memristor_PGA_SPI_0_soft_reset
         .D(FF_WRACK_i_1_n_0),
         .Q(wrack),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT2 #(
     .INIT(4'h2)) 
     FF_WRACK_i_1
        (.I0(\RESET_FLOPS[15].RST_FLOPS_0 ),
         .I1(flop_q_chain_1),
         .O(FF_WRACK_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  LUT5 #(
+    .INIT(32'h00000100)) 
+    \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_1 
+       (.I0(bus2ip_reset_ipif_inverted),
+        .I1(\RESET_FLOPS[15].RST_FLOPS_0 ),
+        .I2(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ),
+        .I3(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg_0 ),
+        .I4(Tx_FIFO_Full_int),
+        .O(rst_reg));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -11046,7 +9985,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[10].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_5),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[10].RST_FLOPS_i_1 
@@ -11067,7 +10006,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[11].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_4),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[11].RST_FLOPS_i_1 
@@ -11088,7 +10027,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[12].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_3),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[12].RST_FLOPS_i_1 
@@ -11109,7 +10048,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[13].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_2),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[13].RST_FLOPS_i_1 
@@ -11130,7 +10069,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[14].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_1),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[14].RST_FLOPS_i_1 
@@ -11151,7 +10090,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[15].RST_FLOPS_i_1_n_0 ),
         .Q(\RESET_FLOPS[15].RST_FLOPS_0 ),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[15].RST_FLOPS_i_1 
@@ -11172,7 +10111,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[1].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_14),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[1].RST_FLOPS_i_1 
@@ -11193,7 +10132,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[2].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_13),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[2].RST_FLOPS_i_1 
@@ -11214,7 +10153,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[3].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_12),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[3].RST_FLOPS_i_1 
@@ -11235,7 +10174,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[4].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_11),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[4].RST_FLOPS_i_1 
@@ -11256,7 +10195,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[5].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_10),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[5].RST_FLOPS_i_1 
@@ -11277,7 +10216,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[6].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_9),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[6].RST_FLOPS_i_1 
@@ -11298,7 +10237,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[7].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_8),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[7].RST_FLOPS_i_1 
@@ -11319,7 +10258,7 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[8].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_7),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[8].RST_FLOPS_i_1 
@@ -11340,29 +10279,13 @@ module memristor_PGA_SPI_0_soft_reset
         .D(\RESET_FLOPS[9].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain_6),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[9].RST_FLOPS_i_1 
        (.I0(S),
         .I1(flop_q_chain_7),
         .O(\RESET_FLOPS[9].RST_FLOPS_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    RESET_SYNC_AX2S_1_i_1
-       (.I0(\RESET_FLOPS[15].RST_FLOPS_0 ),
-        .I1(bus2ip_reset_ipif_inverted),
-        .O(reset2ip_reset_int));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
-  LUT4 #(
-    .INIT(16'hFEFF)) 
-    \icount_out[0]_i_1 
-       (.I0(\RESET_FLOPS[15].RST_FLOPS_0 ),
-        .I1(bus2ip_reset_ipif_inverted),
-        .I2(\icount_out_reg[0] ),
-        .I3(D),
-        .O(\RESET_FLOPS[15].RST_FLOPS_1 ));
   FDRE reset_trig_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -11375,6 +10298,14 @@ module memristor_PGA_SPI_0_soft_reset
         .D(sw_rst_cond),
         .Q(sw_rst_cond_d1),
         .R(bus2ip_reset_ipif_inverted));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \xpm_fifo_instance.xpm_fifo_async_inst_i_1 
+       (.I0(bus2ip_reset_ipif_inverted),
+        .I1(\RESET_FLOPS[15].RST_FLOPS_0 ),
+        .I2(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ),
+        .O(rst));
 endmodule
 
 (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
@@ -11495,14 +10426,14 @@ module memristor_PGA_SPI_0_xpm_cdc_gray
        (.I0(\dest_graysync_ff[1] [2]),
         .I1(\dest_graysync_ff[1] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -11659,14 +10590,14 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__4
        (.I0(\dest_graysync_ff[1] [2]),
         .I1(\dest_graysync_ff[1] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -11823,14 +10754,14 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__5
        (.I0(\dest_graysync_ff[1] [2]),
         .I1(\dest_graysync_ff[1] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -11987,14 +10918,14 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__6
        (.I0(\dest_graysync_ff[1] [2]),
         .I1(\dest_graysync_ff[1] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -12270,28 +11201,28 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__parameterized0
        (.I0(\dest_graysync_ff[3] [3]),
         .I1(\dest_graysync_ff[3] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -12567,28 +11498,28 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__parameterized0__2
        (.I0(\dest_graysync_ff[3] [3]),
         .I1(\dest_graysync_ff[3] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -12772,28 +11703,28 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__parameterized1
        (.I0(\dest_graysync_ff[1] [3]),
         .I1(\dest_graysync_ff[1] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -12977,28 +11908,28 @@ module memristor_PGA_SPI_0_xpm_cdc_gray__parameterized1__2
        (.I0(\dest_graysync_ff[1] [3]),
         .I1(\dest_graysync_ff[1] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -13221,20 +12152,20 @@ module memristor_PGA_SPI_0_xpm_counter_updn
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1__2 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__2 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__2 
@@ -13242,7 +12173,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -13305,20 +12236,20 @@ module memristor_PGA_SPI_0_xpm_counter_updn_18
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1__2 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__2 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__2 
@@ -13326,7 +12257,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn_18
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -13400,7 +12331,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized0
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -13408,7 +12339,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized0
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -13482,7 +12413,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized0_29
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -13490,7 +12421,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized0_29
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -13831,7 +12762,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
   wire \src_gray_ff_reg[4] ;
   wire [3:0]src_in_bin;
 
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
     .INIT(16'h10EF)) 
     \count_value_i[0]_i_1__4 
@@ -13840,7 +12771,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
         .I2(\count_value_i_reg[0]_0 [1]),
         .I3(\count_value_i_reg[3]_0 [0]),
         .O(\count_value_i[0]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT5 #(
     .INIT(32'h02FFFD00)) 
     \count_value_i[1]_i_1__4 
@@ -13850,7 +12781,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
         .I3(\count_value_i_reg[3]_0 [0]),
         .I4(\count_value_i_reg[3]_0 [1]),
         .O(\count_value_i[1]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__4 
@@ -13858,7 +12789,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
         .I1(\count_value_i_reg[3]_0 [1]),
         .I2(\count_value_i_reg[3]_0 [2]),
         .O(\count_value_i[2]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__4 
@@ -13867,7 +12798,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
         .I2(\count_value_i_reg[3]_0 [2]),
         .I3(\count_value_i_reg[3]_0 [3]),
         .O(\count_value_i[3]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -13937,7 +12868,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
         .I4(\count_value_i_reg[3]_0 [0]),
         .I5(\count_value_i_reg[3]_0 [3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -13953,7 +12884,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
        (.I0(\count_value_i_reg[3]_0 [0]),
         .I1(\grdc.rd_data_count_i_reg[0] ),
         .O(src_in_bin[0]));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
@@ -14005,7 +12936,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2
         .I2(rd_en),
         .I3(ram_empty_i),
         .O(\FSM_sequential_gen_fwft.curr_fwft_state_reg[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \grdc.rd_data_count_i[0]_i_1 
@@ -14106,7 +13037,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
   wire \src_gray_ff_reg[4] ;
   wire [3:0]src_in_bin;
 
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
     .INIT(16'h10EF)) 
     \count_value_i[0]_i_1__4 
@@ -14115,7 +13046,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
         .I2(\count_value_i_reg[0]_0 [1]),
         .I3(\count_value_i_reg[3]_0 [0]),
         .O(\count_value_i[0]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'h02FFFD00)) 
     \count_value_i[1]_i_1__4 
@@ -14125,7 +13056,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
         .I3(\count_value_i_reg[3]_0 [0]),
         .I4(\count_value_i_reg[3]_0 [1]),
         .O(\count_value_i[1]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__4 
@@ -14133,7 +13064,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
         .I1(\count_value_i_reg[3]_0 [1]),
         .I2(\count_value_i_reg[3]_0 [2]),
         .O(\count_value_i[2]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__4 
@@ -14142,7 +13073,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
         .I2(\count_value_i_reg[3]_0 [2]),
         .I3(\count_value_i_reg[3]_0 [3]),
         .O(\count_value_i[3]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -14212,7 +13143,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
         .I4(\count_value_i_reg[3]_0 [0]),
         .I5(\count_value_i_reg[3]_0 [3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -14228,7 +13159,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
        (.I0(\count_value_i_reg[3]_0 [0]),
         .I1(\grdc.rd_data_count_i_reg[0] ),
         .O(src_in_bin[0]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
@@ -14280,7 +13211,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_24
         .I2(rd_en),
         .I3(ram_empty_i),
         .O(\FSM_sequential_gen_fwft.curr_fwft_state_reg[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \grdc.rd_data_count_i[0]_i_1 
@@ -14346,20 +13277,20 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_27
   wire wr_clk;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -14367,7 +13298,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_27
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -14376,7 +13307,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_27
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -14426,7 +13357,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_27
         .D(\count_value_i[4]_i_1_n_0 ),
         .Q(Q[4]),
         .R(wrst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gwdc.wr_data_count_i[0]_i_1 
@@ -14472,20 +13403,20 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_3
   wire wr_clk;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -14493,7 +13424,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_3
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -14502,7 +13433,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_3
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -14552,7 +13483,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized2_3
         .D(\count_value_i[4]_i_1_n_0 ),
         .Q(Q[4]),
         .R(wrst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gwdc.wr_data_count_i[0]_i_1 
@@ -14614,7 +13545,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -14622,7 +13553,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -14708,7 +13639,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3_25
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -14716,7 +13647,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3_25
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -14790,7 +13721,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3_28
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -14798,7 +13729,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3_28
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -14872,7 +13803,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3_4
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -14880,7 +13811,7 @@ module memristor_PGA_SPI_0_xpm_counter_updn__parameterized3_4
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -14929,9 +13860,9 @@ endmodule
 (* ORIG_REF_NAME = "xpm_fifo_async" *) (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) 
 (* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
 (* P_READ_MODE = "1" *) (* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "5" *) 
-(* READ_DATA_WIDTH = "32" *) (* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) 
+(* READ_DATA_WIDTH = "16" *) (* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1f1f" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH = "32" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
+(* WRITE_DATA_WIDTH = "16" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
 (* dont_touch = "true" *) 
 module memristor_PGA_SPI_0_xpm_fifo_async
    (sleep,
@@ -14964,7 +13895,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async
   input rst;
   input wr_clk;
   input wr_en;
-  input [31:0]din;
+  input [15:0]din;
   output full;
   output prog_full;
   output [4:0]wr_data_count;
@@ -14974,7 +13905,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [31:0]dout;
+  output [15:0]dout;
   output empty;
   output prog_empty;
   output [4:0]rd_data_count;
@@ -14991,8 +13922,8 @@ module memristor_PGA_SPI_0_xpm_fifo_async
   wire almost_empty;
   wire almost_full;
   wire data_valid;
-  wire [31:0]din;
-  wire [31:0]dout;
+  wire [15:0]din;
+  wire [15:0]dout;
   wire empty;
   wire full;
   wire overflow;
@@ -15040,7 +13971,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async
   (* FIFO_MEM_TYPE = "0" *) 
   (* FIFO_READ_DEPTH = "16" *) 
   (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_SIZE = "512" *) 
+  (* FIFO_SIZE = "256" *) 
   (* FIFO_WRITE_DEPTH = "16" *) 
   (* FULL_RESET_VALUE = "0" *) 
   (* FULL_RST_VAL = "1'b0" *) 
@@ -15058,7 +13989,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async
   (* RD_LATENCY = "2" *) 
   (* RD_MODE = "1" *) 
   (* RD_PNTR_WIDTH = "4" *) 
-  (* READ_DATA_WIDTH = "32" *) 
+  (* READ_DATA_WIDTH = "16" *) 
   (* READ_MODE = "1" *) 
   (* READ_MODE_LL = "1" *) 
   (* RELATED_CLOCKS = "0" *) 
@@ -15068,13 +13999,13 @@ module memristor_PGA_SPI_0_xpm_fifo_async
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
   (* WIDTH_RATIO = "1" *) 
-  (* WRITE_DATA_WIDTH = "32" *) 
+  (* WRITE_DATA_WIDTH = "16" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* WR_DC_WIDTH_EXT = "5" *) 
   (* WR_DEPTH_LOG = "4" *) 
   (* WR_PNTR_WIDTH = "4" *) 
   (* WR_RD_RATIO = "0" *) 
-  (* WR_WIDTH_LOG = "5" *) 
+  (* WR_WIDTH_LOG = "4" *) 
   (* XPM_MODULE = "TRUE" *) 
   (* both_stages_valid = "3" *) 
   (* invalid = "0" *) 
@@ -15116,9 +14047,9 @@ endmodule
 (* ORIG_REF_NAME = "xpm_fifo_async" *) (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) 
 (* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
 (* P_READ_MODE = "1" *) (* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "5" *) 
-(* READ_DATA_WIDTH = "32" *) (* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) 
+(* READ_DATA_WIDTH = "16" *) (* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH = "32" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
+(* WRITE_DATA_WIDTH = "16" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
 (* dont_touch = "true" *) 
 module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
    (sleep,
@@ -15151,7 +14082,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
   input rst;
   input wr_clk;
   input wr_en;
-  input [31:0]din;
+  input [15:0]din;
   output full;
   output prog_full;
   output [4:0]wr_data_count;
@@ -15161,7 +14092,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [31:0]dout;
+  output [15:0]dout;
   output empty;
   output prog_empty;
   output [4:0]rd_data_count;
@@ -15178,8 +14109,8 @@ module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
   wire almost_empty;
   wire almost_full;
   wire data_valid;
-  wire [31:0]din;
-  wire [31:0]dout;
+  wire [15:0]din;
+  wire [15:0]dout;
   wire empty;
   wire full;
   wire overflow;
@@ -15227,7 +14158,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
   (* FIFO_MEM_TYPE = "0" *) 
   (* FIFO_READ_DEPTH = "16" *) 
   (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_SIZE = "512" *) 
+  (* FIFO_SIZE = "256" *) 
   (* FIFO_WRITE_DEPTH = "16" *) 
   (* FULL_RESET_VALUE = "1" *) 
   (* FULL_RST_VAL = "1'b1" *) 
@@ -15245,7 +14176,7 @@ module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
   (* RD_LATENCY = "2" *) 
   (* RD_MODE = "1" *) 
   (* RD_PNTR_WIDTH = "4" *) 
-  (* READ_DATA_WIDTH = "32" *) 
+  (* READ_DATA_WIDTH = "16" *) 
   (* READ_MODE = "1" *) 
   (* READ_MODE_LL = "1" *) 
   (* RELATED_CLOCKS = "0" *) 
@@ -15255,13 +14186,13 @@ module memristor_PGA_SPI_0_xpm_fifo_async__parameterized1
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
   (* WIDTH_RATIO = "1" *) 
-  (* WRITE_DATA_WIDTH = "32" *) 
+  (* WRITE_DATA_WIDTH = "16" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* WR_DC_WIDTH_EXT = "5" *) 
   (* WR_DEPTH_LOG = "4" *) 
   (* WR_PNTR_WIDTH = "4" *) 
   (* WR_RD_RATIO = "0" *) 
-  (* WR_WIDTH_LOG = "5" *) 
+  (* WR_WIDTH_LOG = "4" *) 
   (* XPM_MODULE = "TRUE" *) 
   (* both_stages_valid = "3" *) 
   (* invalid = "0" *) 
@@ -15304,18 +14235,18 @@ endmodule
 (* EN_PF = "1'b1" *) (* EN_RDC = "1'b1" *) (* EN_UF = "1'b1" *) 
 (* EN_WACK = "1'b1" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "0" *) (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) 
-(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "512" *) (* FIFO_WRITE_DEPTH = "16" *) 
+(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "256" *) (* FIFO_WRITE_DEPTH = "16" *) 
 (* FULL_RESET_VALUE = "0" *) (* FULL_RST_VAL = "1'b0" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
 (* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) 
 (* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "7" *) 
 (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "5" *) 
 (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "32" *) (* READ_MODE = "1" *) 
+(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "16" *) (* READ_MODE = "1" *) 
 (* READ_MODE_LL = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1f1f" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "32" *) 
+(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "16" *) 
 (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
-(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "5" *) 
+(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "4" *) 
 (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
 (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module memristor_PGA_SPI_0_xpm_fifo_base
@@ -15350,7 +14281,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   input rst;
   input wr_clk;
   input wr_en;
-  input [31:0]din;
+  input [15:0]din;
   output full;
   output full_n;
   output prog_full;
@@ -15361,7 +14292,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [31:0]dout;
+  output [15:0]dout;
   output empty;
   output prog_empty;
   output [4:0]rd_data_count;
@@ -15384,8 +14315,8 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   wire data_valid_fwft1;
   wire [3:0]diff_pntr_pe;
   wire [4:4]diff_pntr_pf_q0;
-  wire [31:0]din;
-  wire [31:0]dout;
+  wire [15:0]din;
+  wire [15:0]dout;
   wire empty;
   wire full;
   wire \gen_cdc_pntr.rpw_gray_reg_dc_n_3 ;
@@ -15469,12 +14400,12 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ;
-  wire [31:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
+  wire [15:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
 
   assign dbiterr = \<const0> ;
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -15632,7 +14563,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base
         .D(data_valid_fwft1),
         .Q(empty),
         .S(rd_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT5 #(
     .INIT(32'hFDDD4000)) 
     \gen_fwft.gae_fwft.aempty_fwft_i_i_1 
@@ -15650,7 +14581,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base
         .D(aempty_fwft_i0),
         .Q(almost_empty),
         .S(rd_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'h3575)) 
     \gen_fwft.gdvld_fwft.data_valid_fwft_i_1 
@@ -15773,8 +14704,8 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   (* ADDR_WIDTH_A = "4" *) 
   (* ADDR_WIDTH_B = "4" *) 
   (* AUTO_SLEEP_TIME = "0" *) 
-  (* BYTE_WRITE_WIDTH_A = "32" *) 
-  (* BYTE_WRITE_WIDTH_B = "32" *) 
+  (* BYTE_WRITE_WIDTH_A = "16" *) 
+  (* BYTE_WRITE_WIDTH_B = "16" *) 
   (* CASCADE_HEIGHT = "0" *) 
   (* CLOCKING_MODE = "1" *) 
   (* ECC_MODE = "0" *) 
@@ -15784,7 +14715,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   (* MEMORY_INIT_PARAM = "" *) 
   (* MEMORY_OPTIMIZATION = "true" *) 
   (* MEMORY_PRIMITIVE = "0" *) 
-  (* MEMORY_SIZE = "512" *) 
+  (* MEMORY_SIZE = "256" *) 
   (* MEMORY_TYPE = "1" *) 
   (* MESSAGE_CONTROL = "0" *) 
   (* NUM_CHAR_LOC = "0" *) 
@@ -15794,12 +14725,12 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   (* P_MAX_DEPTH_DATA = "16" *) 
   (* P_MEMORY_OPT = "yes" *) 
   (* P_MEMORY_PRIMITIVE = "auto" *) 
-  (* P_MIN_WIDTH_DATA = "32" *) 
-  (* P_MIN_WIDTH_DATA_A = "32" *) 
-  (* P_MIN_WIDTH_DATA_B = "32" *) 
-  (* P_MIN_WIDTH_DATA_ECC = "32" *) 
+  (* P_MIN_WIDTH_DATA = "16" *) 
+  (* P_MIN_WIDTH_DATA_A = "16" *) 
+  (* P_MIN_WIDTH_DATA_B = "16" *) 
+  (* P_MIN_WIDTH_DATA_ECC = "16" *) 
   (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-  (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
+  (* P_MIN_WIDTH_DATA_SHFT = "16" *) 
   (* P_NUM_COLS_WRITE_A = "1" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
@@ -15815,10 +14746,10 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   (* P_WIDTH_ADDR_READ_B = "4" *) 
   (* P_WIDTH_ADDR_WRITE_A = "4" *) 
   (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-  (* P_WIDTH_COL_WRITE_A = "32" *) 
-  (* P_WIDTH_COL_WRITE_B = "32" *) 
-  (* READ_DATA_WIDTH_A = "32" *) 
-  (* READ_DATA_WIDTH_B = "32" *) 
+  (* P_WIDTH_COL_WRITE_A = "16" *) 
+  (* P_WIDTH_COL_WRITE_B = "16" *) 
+  (* READ_DATA_WIDTH_A = "16" *) 
+  (* READ_DATA_WIDTH_B = "16" *) 
   (* READ_LATENCY_A = "2" *) 
   (* READ_LATENCY_B = "2" *) 
   (* READ_RESET_VALUE_A = "0" *) 
@@ -15831,14 +14762,14 @@ module memristor_PGA_SPI_0_xpm_fifo_base
   (* USE_MEM_INIT_MMI = "0" *) 
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH_A = "32" *) 
-  (* WRITE_DATA_WIDTH_B = "32" *) 
+  (* WRITE_DATA_WIDTH_A = "16" *) 
+  (* WRITE_DATA_WIDTH_B = "16" *) 
   (* WRITE_MODE_A = "2" *) 
   (* WRITE_MODE_B = "2" *) 
   (* WRITE_PROTECT = "1" *) 
   (* XPM_MODULE = "TRUE" *) 
-  (* rsta_loop_iter = "32" *) 
-  (* rstb_loop_iter = "32" *) 
+  (* rsta_loop_iter = "16" *) 
+  (* rstb_loop_iter = "16" *) 
   memristor_PGA_SPI_0_xpm_memory_base__1 \gen_sdpram.xpm_memory_base_inst 
        (.addra(wr_pntr_ext[3:0]),
         .addrb(rd_pntr_ext),
@@ -15847,8 +14778,8 @@ module memristor_PGA_SPI_0_xpm_fifo_base
         .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
         .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
         .dina(din),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [31:0]),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [15:0]),
         .doutb(dout),
         .ena(wr_pntr_plus1_pf_carry),
         .enb(rdp_inst_n_6),
@@ -15865,7 +14796,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base
         .sleep(sleep),
         .wea(1'b0),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'h62)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -16035,18 +14966,18 @@ endmodule
 (* EN_PF = "1'b1" *) (* EN_RDC = "1'b1" *) (* EN_UF = "1'b1" *) 
 (* EN_WACK = "1'b1" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "0" *) (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) 
-(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "512" *) (* FIFO_WRITE_DEPTH = "16" *) 
+(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "256" *) (* FIFO_WRITE_DEPTH = "16" *) 
 (* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
 (* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) 
 (* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "7" *) 
 (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "5" *) 
 (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "32" *) (* READ_MODE = "1" *) 
+(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "16" *) (* READ_MODE = "1" *) 
 (* READ_MODE_LL = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "32" *) 
+(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "16" *) 
 (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
-(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "5" *) 
+(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "4" *) 
 (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
 (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
@@ -16081,7 +15012,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   input rst;
   input wr_clk;
   input wr_en;
-  input [31:0]din;
+  input [15:0]din;
   output full;
   output full_n;
   output prog_full;
@@ -16092,7 +15023,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [31:0]dout;
+  output [15:0]dout;
   output empty;
   output prog_empty;
   output [4:0]rd_data_count;
@@ -16116,8 +15047,8 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   wire data_valid_fwft1;
   wire [3:0]diff_pntr_pe;
   wire [4:4]diff_pntr_pf_q0;
-  wire [31:0]din;
-  wire [31:0]dout;
+  wire [15:0]din;
+  wire [15:0]dout;
   wire empty;
   wire full;
   wire \gen_cdc_pntr.rpw_gray_reg_dc_n_3 ;
@@ -16201,12 +15132,12 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ;
-  wire [31:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
+  wire [15:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
 
   assign dbiterr = \<const0> ;
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -16365,7 +15296,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
         .D(data_valid_fwft1),
         .Q(empty),
         .S(rd_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT5 #(
     .INIT(32'hFDDD4000)) 
     \gen_fwft.gae_fwft.aempty_fwft_i_i_1 
@@ -16383,7 +15314,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
         .D(aempty_fwft_i0),
         .Q(almost_empty),
         .S(rd_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'h3575)) 
     \gen_fwft.gdvld_fwft.data_valid_fwft_i_1 
@@ -16506,8 +15437,8 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   (* ADDR_WIDTH_A = "4" *) 
   (* ADDR_WIDTH_B = "4" *) 
   (* AUTO_SLEEP_TIME = "0" *) 
-  (* BYTE_WRITE_WIDTH_A = "32" *) 
-  (* BYTE_WRITE_WIDTH_B = "32" *) 
+  (* BYTE_WRITE_WIDTH_A = "16" *) 
+  (* BYTE_WRITE_WIDTH_B = "16" *) 
   (* CASCADE_HEIGHT = "0" *) 
   (* CLOCKING_MODE = "1" *) 
   (* ECC_MODE = "0" *) 
@@ -16517,7 +15448,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   (* MEMORY_INIT_PARAM = "" *) 
   (* MEMORY_OPTIMIZATION = "true" *) 
   (* MEMORY_PRIMITIVE = "0" *) 
-  (* MEMORY_SIZE = "512" *) 
+  (* MEMORY_SIZE = "256" *) 
   (* MEMORY_TYPE = "1" *) 
   (* MESSAGE_CONTROL = "0" *) 
   (* NUM_CHAR_LOC = "0" *) 
@@ -16527,12 +15458,12 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   (* P_MAX_DEPTH_DATA = "16" *) 
   (* P_MEMORY_OPT = "yes" *) 
   (* P_MEMORY_PRIMITIVE = "auto" *) 
-  (* P_MIN_WIDTH_DATA = "32" *) 
-  (* P_MIN_WIDTH_DATA_A = "32" *) 
-  (* P_MIN_WIDTH_DATA_B = "32" *) 
-  (* P_MIN_WIDTH_DATA_ECC = "32" *) 
+  (* P_MIN_WIDTH_DATA = "16" *) 
+  (* P_MIN_WIDTH_DATA_A = "16" *) 
+  (* P_MIN_WIDTH_DATA_B = "16" *) 
+  (* P_MIN_WIDTH_DATA_ECC = "16" *) 
   (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-  (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
+  (* P_MIN_WIDTH_DATA_SHFT = "16" *) 
   (* P_NUM_COLS_WRITE_A = "1" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
@@ -16548,10 +15479,10 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   (* P_WIDTH_ADDR_READ_B = "4" *) 
   (* P_WIDTH_ADDR_WRITE_A = "4" *) 
   (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-  (* P_WIDTH_COL_WRITE_A = "32" *) 
-  (* P_WIDTH_COL_WRITE_B = "32" *) 
-  (* READ_DATA_WIDTH_A = "32" *) 
-  (* READ_DATA_WIDTH_B = "32" *) 
+  (* P_WIDTH_COL_WRITE_A = "16" *) 
+  (* P_WIDTH_COL_WRITE_B = "16" *) 
+  (* READ_DATA_WIDTH_A = "16" *) 
+  (* READ_DATA_WIDTH_B = "16" *) 
   (* READ_LATENCY_A = "2" *) 
   (* READ_LATENCY_B = "2" *) 
   (* READ_RESET_VALUE_A = "0" *) 
@@ -16564,14 +15495,14 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
   (* USE_MEM_INIT_MMI = "0" *) 
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH_A = "32" *) 
-  (* WRITE_DATA_WIDTH_B = "32" *) 
+  (* WRITE_DATA_WIDTH_A = "16" *) 
+  (* WRITE_DATA_WIDTH_B = "16" *) 
   (* WRITE_MODE_A = "2" *) 
   (* WRITE_MODE_B = "2" *) 
   (* WRITE_PROTECT = "1" *) 
   (* XPM_MODULE = "TRUE" *) 
-  (* rsta_loop_iter = "32" *) 
-  (* rstb_loop_iter = "32" *) 
+  (* rsta_loop_iter = "16" *) 
+  (* rstb_loop_iter = "16" *) 
   memristor_PGA_SPI_0_xpm_memory_base \gen_sdpram.xpm_memory_base_inst 
        (.addra(wr_pntr_ext[3:0]),
         .addrb(rd_pntr_ext),
@@ -16580,8 +15511,8 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
         .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
         .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
         .dina(din),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [31:0]),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [15:0]),
         .doutb(dout),
         .ena(wr_pntr_plus1_pf_carry),
         .enb(rdp_inst_n_6),
@@ -16598,7 +15529,7 @@ module memristor_PGA_SPI_0_xpm_fifo_base__parameterized0
         .sleep(sleep),
         .wea(1'b0),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'h62)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -16807,7 +15738,7 @@ module memristor_PGA_SPI_0_xpm_fifo_reg_bit
         .D(wrst_busy),
         .Q(rst_d1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_4 
@@ -16824,7 +15755,7 @@ module memristor_PGA_SPI_0_xpm_fifo_reg_bit
         .I3(\gof.overflow_i_reg ),
         .I4(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[4] ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -17518,7 +16449,7 @@ module memristor_PGA_SPI_0_xpm_fifo_reg_vec__parameterized0
         .I2(Q[1]),
         .I3(\gwdc.wr_data_count_i_reg[4] [1]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \gwdc.wr_data_count_i[3]_i_1 
@@ -17526,7 +16457,7 @@ module memristor_PGA_SPI_0_xpm_fifo_reg_vec__parameterized0
         .I1(\reg_out_i_reg_n_0_[3] ),
         .I2(\gwdc.wr_data_count_i_reg[4] [3]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT5 #(
     .INIT(32'h718E8E71)) 
     \gwdc.wr_data_count_i[4]_i_1 
@@ -17710,7 +16641,7 @@ module memristor_PGA_SPI_0_xpm_fifo_reg_vec__parameterized0_20
         .I2(Q[1]),
         .I3(\gwdc.wr_data_count_i_reg[4] [1]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \gwdc.wr_data_count_i[3]_i_1 
@@ -17718,7 +16649,7 @@ module memristor_PGA_SPI_0_xpm_fifo_reg_vec__parameterized0_20
         .I1(\reg_out_i_reg_n_0_[3] ),
         .I2(\gwdc.wr_data_count_i_reg[4] [3]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'h718E8E71)) 
     \gwdc.wr_data_count_i[4]_i_1 
@@ -18127,7 +17058,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -18163,7 +17094,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -18235,7 +17166,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[4]_i_1 
@@ -18243,7 +17174,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst
         .I1(Q[0]),
         .I2(Q[1]),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'hE0)) 
     \guf.underflow_i_i_1 
@@ -18543,7 +17474,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst__xdcDup__1
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -18579,7 +17510,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst__xdcDup__1
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -18651,7 +17582,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst__xdcDup__1
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[4]_i_1 
@@ -18659,7 +17590,7 @@ module memristor_PGA_SPI_0_xpm_fifo_rst__xdcDup__1
         .I1(Q[0]),
         .I2(Q[1]),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hE0)) 
     \guf.underflow_i_i_1 
@@ -18702,29 +17633,29 @@ module memristor_PGA_SPI_0_xpm_fifo_rst__xdcDup__1
 endmodule
 
 (* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
-(* BYTE_WRITE_WIDTH_A = "32" *) (* BYTE_WRITE_WIDTH_B = "32" *) (* CASCADE_HEIGHT = "0" *) 
+(* BYTE_WRITE_WIDTH_A = "16" *) (* BYTE_WRITE_WIDTH_B = "16" *) (* CASCADE_HEIGHT = "0" *) 
 (* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
-(* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "512" *) (* MEMORY_TYPE = "1" *) 
+(* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "256" *) (* MEMORY_TYPE = "1" *) 
 (* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
 (* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
 (* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
-(* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
-(* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
+(* P_MIN_WIDTH_DATA = "16" *) (* P_MIN_WIDTH_DATA_A = "16" *) (* P_MIN_WIDTH_DATA_B = "16" *) 
+(* P_MIN_WIDTH_DATA_ECC = "16" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "16" *) 
 (* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
 (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
 (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
 (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
 (* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-(* P_WIDTH_COL_WRITE_A = "32" *) (* P_WIDTH_COL_WRITE_B = "32" *) (* READ_DATA_WIDTH_A = "32" *) 
-(* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* P_WIDTH_COL_WRITE_A = "16" *) (* P_WIDTH_COL_WRITE_B = "16" *) (* READ_DATA_WIDTH_A = "16" *) 
+(* READ_DATA_WIDTH_B = "16" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
 (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
 (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
 (* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "16" *) (* WRITE_DATA_WIDTH_B = "16" *) 
 (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) 
-(* rstb_loop_iter = "32" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "16" *) 
+(* rstb_loop_iter = "16" *) 
 module memristor_PGA_SPI_0_xpm_memory_base
    (sleep,
     clka,
@@ -18758,10 +17689,10 @@ module memristor_PGA_SPI_0_xpm_memory_base
   input regcea;
   input [0:0]wea;
   input [3:0]addra;
-  input [31:0]dina;
+  input [15:0]dina;
   input injectsbiterra;
   input injectdbiterra;
-  output [31:0]douta;
+  output [15:0]douta;
   output sbiterra;
   output dbiterra;
   input clkb;
@@ -18770,10 +17701,10 @@ module memristor_PGA_SPI_0_xpm_memory_base
   input regceb;
   input [0:0]web;
   input [3:0]addrb;
-  input [31:0]dinb;
+  input [15:0]dinb;
   input injectsbiterrb;
   input injectdbiterrb;
-  output [31:0]doutb;
+  output [15:0]doutb;
   output sbiterrb;
   output dbiterrb;
 
@@ -18782,11 +17713,11 @@ module memristor_PGA_SPI_0_xpm_memory_base
   wire [3:0]addrb;
   wire clka;
   wire clkb;
-  wire [31:0]dina;
-  wire [31:0]doutb;
+  wire [15:0]dina;
+  wire [15:0]doutb;
   wire ena;
   wire enb;
-  wire [31:0]\gen_rd_b.doutb_reg0 ;
+  wire [15:0]\gen_rd_b.doutb_reg0 ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[0] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[10] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[11] ;
@@ -18794,24 +17725,8 @@ module memristor_PGA_SPI_0_xpm_memory_base
   wire \gen_rd_b.doutb_reg_reg_n_0_[13] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[14] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[15] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[16] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[17] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[18] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[19] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[1] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[20] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[21] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[22] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[23] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[24] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[25] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[26] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[27] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[28] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[29] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[2] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[30] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[31] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[3] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[4] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[5] ;
@@ -18823,32 +17738,12 @@ module memristor_PGA_SPI_0_xpm_memory_base
   wire rstb;
   wire sleep;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_18_23_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_24_29_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOB_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOC_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOD_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED ;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11_DOD_UNCONNECTED ;
 
   assign dbiterra = \<const0> ;
   assign dbiterrb = \<const0> ;
-  assign douta[31] = \<const0> ;
-  assign douta[30] = \<const0> ;
-  assign douta[29] = \<const0> ;
-  assign douta[28] = \<const0> ;
-  assign douta[27] = \<const0> ;
-  assign douta[26] = \<const0> ;
-  assign douta[25] = \<const0> ;
-  assign douta[24] = \<const0> ;
-  assign douta[23] = \<const0> ;
-  assign douta[22] = \<const0> ;
-  assign douta[21] = \<const0> ;
-  assign douta[20] = \<const0> ;
-  assign douta[19] = \<const0> ;
-  assign douta[18] = \<const0> ;
-  assign douta[17] = \<const0> ;
-  assign douta[16] = \<const0> ;
   assign douta[15] = \<const0> ;
   assign douta[14] = \<const0> ;
   assign douta[13] = \<const0> ;
@@ -18935,42 +17830,6 @@ module memristor_PGA_SPI_0_xpm_memory_base
   (* dram_emb_xdc = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[16] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [16]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[16] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[17] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [17]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[17] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[18] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [18]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[18] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[19] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [19]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[19] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.doutb_reg_reg[1] 
        (.C(clkb),
         .CE(enb),
@@ -18980,119 +17839,11 @@ module memristor_PGA_SPI_0_xpm_memory_base
   (* dram_emb_xdc = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[20] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [20]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[20] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[21] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [21]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[21] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[22] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [22]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[22] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[23] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [23]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[23] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[24] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [24]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[24] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[25] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [25]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[25] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[26] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [26]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[26] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[27] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [27]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[27] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[28] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [28]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[28] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[29] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [29]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[29] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.doutb_reg_reg[2] 
        (.C(clkb),
         .CE(enb),
         .D(\gen_rd_b.doutb_reg0 [2]),
         .Q(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[30] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [30]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[30] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[31] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [31]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[31] ),
         .R(1'b0));
   (* dram_emb_xdc = "no" *) 
   FDRE #(
@@ -19215,38 +17966,6 @@ module memristor_PGA_SPI_0_xpm_memory_base
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][16] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[16] ),
-        .Q(doutb[16]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][17] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[17] ),
-        .Q(doutb[17]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][18] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[18] ),
-        .Q(doutb[18]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][19] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[19] ),
-        .Q(doutb[19]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] 
        (.C(clkb),
         .CE(regceb),
@@ -19255,107 +17974,11 @@ module memristor_PGA_SPI_0_xpm_memory_base
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][20] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[20] ),
-        .Q(doutb[20]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][21] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[21] ),
-        .Q(doutb[21]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][22] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[22] ),
-        .Q(doutb[22]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][23] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[23] ),
-        .Q(doutb[23]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][24] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[24] ),
-        .Q(doutb[24]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][25] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[25] ),
-        .Q(doutb[25]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][26] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[26] ),
-        .Q(doutb[26]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][27] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[27] ),
-        .Q(doutb[27]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][28] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[28] ),
-        .Q(doutb[28]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][29] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[29] ),
-        .Q(doutb[29]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] 
        (.C(clkb),
         .CE(regceb),
         .D(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
         .Q(doutb[2]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][30] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[30] ),
-        .Q(doutb[30]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][31] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[31] ),
-        .Q(doutb[31]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
@@ -19414,7 +18037,7 @@ module memristor_PGA_SPI_0_xpm_memory_base
         .Q(doutb[9]),
         .R(rstb));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
@@ -19443,123 +18066,36 @@ module memristor_PGA_SPI_0_xpm_memory_base
         .WCLK(clka),
         .WE(ena));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
-  (* ram_slice_end = "17" *) 
+  (* ram_slice_end = "15" *) 
   RAM32M #(
     .INIT_A(64'h0000000000000000),
     .INIT_B(64'h0000000000000000),
     .INIT_C(64'h0000000000000000),
     .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15 
        (.ADDRA({1'b0,addrb}),
         .ADDRB({1'b0,addrb}),
         .ADDRC({1'b0,addrb}),
         .ADDRD({1'b0,addra}),
         .DIA(dina[13:12]),
         .DIB(dina[15:14]),
-        .DIC(dina[17:16]),
+        .DIC({1'b0,1'b0}),
         .DID({1'b0,1'b0}),
         .DOA(\gen_rd_b.doutb_reg0 [13:12]),
         .DOB(\gen_rd_b.doutb_reg0 [15:14]),
-        .DOC(\gen_rd_b.doutb_reg0 [17:16]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED [1:0]),
+        .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED [1:0]),
+        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED [1:0]),
         .WCLK(clka),
         .WE(ena));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "18" *) 
-  (* ram_slice_end = "23" *) 
-  RAM32M #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_18_23 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addra}),
-        .DIA(dina[19:18]),
-        .DIB(dina[21:20]),
-        .DIC(dina[23:22]),
-        .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [19:18]),
-        .DOB(\gen_rd_b.doutb_reg0 [21:20]),
-        .DOC(\gen_rd_b.doutb_reg0 [23:22]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_18_23_DOD_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(ena));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "24" *) 
-  (* ram_slice_end = "29" *) 
-  RAM32M #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_24_29 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addra}),
-        .DIA(dina[25:24]),
-        .DIB(dina[27:26]),
-        .DIC(dina[29:28]),
-        .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [25:24]),
-        .DOB(\gen_rd_b.doutb_reg0 [27:26]),
-        .DOC(\gen_rd_b.doutb_reg0 [29:28]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_24_29_DOD_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(ena));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "30" *) 
-  (* ram_slice_end = "31" *) 
-  RAM32M #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addra}),
-        .DIA(dina[31:30]),
-        .DIB({1'b0,1'b0}),
-        .DIC({1'b0,1'b0}),
-        .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [31:30]),
-        .DOB(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOB_UNCONNECTED [1:0]),
-        .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOC_UNCONNECTED [1:0]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOD_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(ena));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
@@ -19590,29 +18126,29 @@ module memristor_PGA_SPI_0_xpm_memory_base
 endmodule
 
 (* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
-(* BYTE_WRITE_WIDTH_A = "32" *) (* BYTE_WRITE_WIDTH_B = "32" *) (* CASCADE_HEIGHT = "0" *) 
+(* BYTE_WRITE_WIDTH_A = "16" *) (* BYTE_WRITE_WIDTH_B = "16" *) (* CASCADE_HEIGHT = "0" *) 
 (* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
-(* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "512" *) (* MEMORY_TYPE = "1" *) 
+(* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "256" *) (* MEMORY_TYPE = "1" *) 
 (* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
 (* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
 (* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
-(* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
-(* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
+(* P_MIN_WIDTH_DATA = "16" *) (* P_MIN_WIDTH_DATA_A = "16" *) (* P_MIN_WIDTH_DATA_B = "16" *) 
+(* P_MIN_WIDTH_DATA_ECC = "16" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "16" *) 
 (* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
 (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
 (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
 (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
 (* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-(* P_WIDTH_COL_WRITE_A = "32" *) (* P_WIDTH_COL_WRITE_B = "32" *) (* READ_DATA_WIDTH_A = "32" *) 
-(* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* P_WIDTH_COL_WRITE_A = "16" *) (* P_WIDTH_COL_WRITE_B = "16" *) (* READ_DATA_WIDTH_A = "16" *) 
+(* READ_DATA_WIDTH_B = "16" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
 (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
 (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
 (* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "16" *) (* WRITE_DATA_WIDTH_B = "16" *) 
 (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) 
-(* rstb_loop_iter = "32" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "16" *) 
+(* rstb_loop_iter = "16" *) 
 module memristor_PGA_SPI_0_xpm_memory_base__1
    (sleep,
     clka,
@@ -19646,10 +18182,10 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   input regcea;
   input [0:0]wea;
   input [3:0]addra;
-  input [31:0]dina;
+  input [15:0]dina;
   input injectsbiterra;
   input injectdbiterra;
-  output [31:0]douta;
+  output [15:0]douta;
   output sbiterra;
   output dbiterra;
   input clkb;
@@ -19658,10 +18194,10 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   input regceb;
   input [0:0]web;
   input [3:0]addrb;
-  input [31:0]dinb;
+  input [15:0]dinb;
   input injectsbiterrb;
   input injectdbiterrb;
-  output [31:0]doutb;
+  output [15:0]doutb;
   output sbiterrb;
   output dbiterrb;
 
@@ -19670,11 +18206,11 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   wire [3:0]addrb;
   wire clka;
   wire clkb;
-  wire [31:0]dina;
-  wire [31:0]doutb;
+  wire [15:0]dina;
+  wire [15:0]doutb;
   wire ena;
   wire enb;
-  wire [31:0]\gen_rd_b.doutb_reg0 ;
+  wire [15:0]\gen_rd_b.doutb_reg0 ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[0] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[10] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[11] ;
@@ -19682,24 +18218,8 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   wire \gen_rd_b.doutb_reg_reg_n_0_[13] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[14] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[15] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[16] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[17] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[18] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[19] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[1] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[20] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[21] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[22] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[23] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[24] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[25] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[26] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[27] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[28] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[29] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[2] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[30] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[31] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[3] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[4] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[5] ;
@@ -19711,32 +18231,12 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   wire rstb;
   wire sleep;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_18_23_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_24_29_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOB_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOC_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOD_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED ;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11_DOD_UNCONNECTED ;
 
   assign dbiterra = \<const0> ;
   assign dbiterrb = \<const0> ;
-  assign douta[31] = \<const0> ;
-  assign douta[30] = \<const0> ;
-  assign douta[29] = \<const0> ;
-  assign douta[28] = \<const0> ;
-  assign douta[27] = \<const0> ;
-  assign douta[26] = \<const0> ;
-  assign douta[25] = \<const0> ;
-  assign douta[24] = \<const0> ;
-  assign douta[23] = \<const0> ;
-  assign douta[22] = \<const0> ;
-  assign douta[21] = \<const0> ;
-  assign douta[20] = \<const0> ;
-  assign douta[19] = \<const0> ;
-  assign douta[18] = \<const0> ;
-  assign douta[17] = \<const0> ;
-  assign douta[16] = \<const0> ;
   assign douta[15] = \<const0> ;
   assign douta[14] = \<const0> ;
   assign douta[13] = \<const0> ;
@@ -19823,42 +18323,6 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   (* dram_emb_xdc = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[16] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [16]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[16] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[17] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [17]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[17] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[18] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [18]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[18] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[19] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [19]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[19] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.doutb_reg_reg[1] 
        (.C(clkb),
         .CE(enb),
@@ -19868,119 +18332,11 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
   (* dram_emb_xdc = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[20] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [20]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[20] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[21] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [21]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[21] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[22] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [22]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[22] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[23] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [23]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[23] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[24] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [24]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[24] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[25] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [25]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[25] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[26] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [26]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[26] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[27] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [27]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[27] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[28] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [28]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[28] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[29] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [29]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[29] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.doutb_reg_reg[2] 
        (.C(clkb),
         .CE(enb),
         .D(\gen_rd_b.doutb_reg0 [2]),
         .Q(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[30] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [30]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[30] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[31] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [31]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[31] ),
         .R(1'b0));
   (* dram_emb_xdc = "no" *) 
   FDRE #(
@@ -20103,38 +18459,6 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][16] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[16] ),
-        .Q(doutb[16]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][17] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[17] ),
-        .Q(doutb[17]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][18] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[18] ),
-        .Q(doutb[18]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][19] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[19] ),
-        .Q(doutb[19]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] 
        (.C(clkb),
         .CE(regceb),
@@ -20143,107 +18467,11 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][20] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[20] ),
-        .Q(doutb[20]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][21] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[21] ),
-        .Q(doutb[21]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][22] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[22] ),
-        .Q(doutb[22]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][23] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[23] ),
-        .Q(doutb[23]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][24] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[24] ),
-        .Q(doutb[24]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][25] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[25] ),
-        .Q(doutb[25]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][26] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[26] ),
-        .Q(doutb[26]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][27] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[27] ),
-        .Q(doutb[27]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][28] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[28] ),
-        .Q(doutb[28]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][29] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[29] ),
-        .Q(doutb[29]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] 
        (.C(clkb),
         .CE(regceb),
         .D(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
         .Q(doutb[2]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][30] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[30] ),
-        .Q(doutb[30]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][31] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[31] ),
-        .Q(doutb[31]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
@@ -20302,7 +18530,7 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
         .Q(doutb[9]),
         .R(rstb));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
@@ -20331,123 +18559,36 @@ module memristor_PGA_SPI_0_xpm_memory_base__1
         .WCLK(clka),
         .WE(ena));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
-  (* ram_slice_end = "17" *) 
+  (* ram_slice_end = "15" *) 
   RAM32M #(
     .INIT_A(64'h0000000000000000),
     .INIT_B(64'h0000000000000000),
     .INIT_C(64'h0000000000000000),
     .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15 
        (.ADDRA({1'b0,addrb}),
         .ADDRB({1'b0,addrb}),
         .ADDRC({1'b0,addrb}),
         .ADDRD({1'b0,addra}),
         .DIA(dina[13:12]),
         .DIB(dina[15:14]),
-        .DIC(dina[17:16]),
+        .DIC({1'b0,1'b0}),
         .DID({1'b0,1'b0}),
         .DOA(\gen_rd_b.doutb_reg0 [13:12]),
         .DOB(\gen_rd_b.doutb_reg0 [15:14]),
-        .DOC(\gen_rd_b.doutb_reg0 [17:16]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED [1:0]),
+        .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED [1:0]),
+        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED [1:0]),
         .WCLK(clka),
         .WE(ena));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "18" *) 
-  (* ram_slice_end = "23" *) 
-  RAM32M #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_18_23 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addra}),
-        .DIA(dina[19:18]),
-        .DIB(dina[21:20]),
-        .DIC(dina[23:22]),
-        .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [19:18]),
-        .DOB(\gen_rd_b.doutb_reg0 [21:20]),
-        .DOC(\gen_rd_b.doutb_reg0 [23:22]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_18_23_DOD_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(ena));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "24" *) 
-  (* ram_slice_end = "29" *) 
-  RAM32M #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_24_29 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addra}),
-        .DIA(dina[25:24]),
-        .DIB(dina[27:26]),
-        .DIC(dina[29:28]),
-        .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [25:24]),
-        .DOB(\gen_rd_b.doutb_reg0 [27:26]),
-        .DOC(\gen_rd_b.doutb_reg0 [29:28]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_24_29_DOD_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(ena));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "30" *) 
-  (* ram_slice_end = "31" *) 
-  RAM32M #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addra}),
-        .DIA(dina[31:30]),
-        .DIB({1'b0,1'b0}),
-        .DIC({1'b0,1'b0}),
-        .DID({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [31:30]),
-        .DOB(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOB_UNCONNECTED [1:0]),
-        .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOC_UNCONNECTED [1:0]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_30_31_DOD_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(ena));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 

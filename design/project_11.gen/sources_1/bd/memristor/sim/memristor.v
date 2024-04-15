@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Mon Apr  8 15:42:23 2024
-//Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+//Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+//Date        : Mon Apr 15 12:44:56 2024
+//Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 //Command     : generate_target memristor.bd
 //Design      : memristor
 //Purpose     : IP block netlist
@@ -1220,18 +1220,18 @@ module memristor
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    da4_sync,
     ex_ADC_1,
     ex_ADC_2,
     ex_ADC_3,
     ex_ADC_4,
     ex_ADC_clk,
     ex_CTRL_WEST,
+    ex_DA4_io,
+    ex_DA4_sclk,
+    ex_DA4_sync,
     ex_PGA_io,
     ex_PGA_sclk,
-    mosi,
-    pga_sync,
-    sclk);
+    ex_PGA_sync);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -1253,18 +1253,18 @@ module memristor
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  output [0:0]da4_sync;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_ADC_1 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_ADC_1, LAYERED_METADATA undef" *) input [11:0]ex_ADC_1;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_ADC_2 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_ADC_2, LAYERED_METADATA undef" *) input [11:0]ex_ADC_2;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_ADC_3 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_ADC_3, LAYERED_METADATA undef" *) input [11:0]ex_ADC_3;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_ADC_4 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_ADC_4, LAYERED_METADATA undef" *) input [11:0]ex_ADC_4;
   output ex_ADC_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_CTRL_WEST DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_CTRL_WEST, LAYERED_METADATA undef" *) output [3:0]ex_CTRL_WEST;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_DA4_IO DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_DA4_IO, LAYERED_METADATA undef" *) output ex_DA4_io;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.EX_DA4_SCLK DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.EX_DA4_SCLK, LAYERED_METADATA undef" *) output ex_DA4_sclk;
+  output [0:0]ex_DA4_sync;
   output ex_PGA_io;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.EX_PGA_SCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.EX_PGA_SCLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) output ex_PGA_sclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.MOSI DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.MOSI, LAYERED_METADATA undef" *) output mosi;
-  output [0:0]pga_sync;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SCLK DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SCLK, LAYERED_METADATA undef" *) output sclk;
+  output [0:0]ex_PGA_sync;
 
   wire [3:0]CTRL_WEST_gpio_io_o;
   wire [0:0]PGA_GPIO_gpio_io_o;
@@ -1497,18 +1497,18 @@ module memristor
   wire [0:0]ps7_0_axi_periph_M08_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
 
-  assign da4_sync[0] = axi_gpio_0_gpio_io_o;
   assign ex_ADC_1_1 = ex_ADC_1[11:0];
   assign ex_ADC_2_1 = ex_ADC_2[11:0];
   assign ex_ADC_3_1 = ex_ADC_3[11:0];
   assign ex_ADC_4_1 = ex_ADC_4[11:0];
   assign ex_ADC_clk = oddr_0_clk_out;
   assign ex_CTRL_WEST[3:0] = CTRL_WEST_gpio_io_o;
+  assign ex_DA4_io = axi_quad_spi_0_io0_o;
+  assign ex_DA4_sclk = axi_quad_spi_0_sck_o;
+  assign ex_DA4_sync[0] = axi_gpio_0_gpio_io_o;
   assign ex_PGA_io = axi_quad_spi_1_io0_o;
   assign ex_PGA_sclk = axi_quad_spi_1_sck_o;
-  assign mosi = axi_quad_spi_0_io0_o;
-  assign pga_sync[0] = PGA_GPIO_gpio_io_o;
-  assign sclk = axi_quad_spi_0_sck_o;
+  assign ex_PGA_sync[0] = PGA_GPIO_gpio_io_o;
   memristor_ADC_1_0 ADC_1
        (.gpio_io_i(ex_ADC_1_1),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),

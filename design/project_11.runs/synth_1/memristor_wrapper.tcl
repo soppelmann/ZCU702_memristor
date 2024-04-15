@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/getz/project_11/project_11.runs/synth_1/memristor_wrapper.tcl"
+  variable script "C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/synth_1/memristor_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -78,55 +78,55 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/getz/project_11/project_11.cache/wt [current_project]
-set_property parent.project_path /home/getz/project_11/project_11.xpr [current_project]
+set_property webtalk.parent_dir C:/ZCU702_Projects/ZCU702_memristor/design/project_11.cache/wt [current_project]
+set_property parent.project_path C:/ZCU702_Projects/ZCU702_memristor/design/project_11.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
 set_property board_connections {fmc1_lpc_connector xilinx:xm105:hpc_connector:1.0} [current_project]
-set_property ip_output_repo /home/getz/project_11/project_11.cache/ip [current_project]
+set_property ip_output_repo c:/ZCU702_Projects/ZCU702_memristor/design/project_11.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/getz/project_11/project_11.gen/sources_1/bd/memristor/hdl/memristor_wrapper.v
-add_files /home/getz/project_11/project_11.srcs/sources_1/bd/memristor/memristor.bd
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_1_0/memristor_ADC_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_1_0/memristor_ADC_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_1_0/memristor_ADC_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_3_0/memristor_ADC_3_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_3_0/memristor_ADC_3_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_3_0/memristor_ADC_3_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_xbar_0/memristor_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_auto_pc_0/memristor_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/getz/project_11/project_11.gen/sources_1/bd/memristor/memristor_ooc.xdc]
+read_verilog -library xil_defaultlib C:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/hdl/memristor_wrapper.v
+add_files C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/sources_1/bd/memristor/memristor.bd
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_1_0/memristor_ADC_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_1_0/memristor_ADC_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_1_0/memristor_ADC_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_3_0/memristor_ADC_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_3_0/memristor_ADC_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_3_0/memristor_ADC_3_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_GPIO_0/memristor_DA4_GPIO_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_DA4_SPI_0/memristor_DA4_SPI_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_GPIO_0/memristor_PGA_GPIO_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_xbar_0/memristor_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_auto_pc_0/memristor_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/memristor_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -137,8 +137,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc
-set_property used_in_implementation false [get_files /home/getz/project_11/project_11.srcs/constrs_1/new/zc702.xdc]
+read_xdc C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc
+set_property used_in_implementation false [get_files C:/ZCU702_Projects/ZCU702_memristor/design/project_11.srcs/constrs_1/new/zc702.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

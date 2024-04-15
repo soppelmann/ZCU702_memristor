@@ -3,8 +3,21 @@
     with args -log memristor_PGA_SPI_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_PGA_SPI_0.tcl
 
 
+
 ****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source memristor_PGA_SPI_0.tcl -notrace
+
+*** Running vivado
+    with args -log memristor_PGA_SPI_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_PGA_SPI_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
   **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
@@ -14,13 +27,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36441
+INFO: [Synth 8-7075] Helper process launched with PID 22260
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:48 . Memory (MB): peak = 2510.137 ; gain = 0.000 ; free physical = 3801 ; free virtual = 16729
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1218.570 ; gain = 55.605
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'memristor_PGA_SPI_0' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/synth/memristor_PGA_SPI_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'memristor_PGA_SPI_0' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/synth/memristor_PGA_SPI_0.vhd:97]
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -35,7 +48,7 @@ INFO: [Synth 8-638] synthesizing module 'memristor_PGA_SPI_0' [/home/getz/projec
 	Parameter C_SCK_RATIO bound to: 16 - type: integer 
 	Parameter C_DUAL_QUAD_MODE bound to: 0 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
 	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
 	Parameter C_SPI_MODE bound to: 0 - type: integer 
 	Parameter C_USE_STARTUP bound to: 0 - type: integer 
@@ -50,8 +63,8 @@ INFO: [Synth 8-638] synthesizing module 'memristor_PGA_SPI_0' [/home/getz/projec
 	Parameter C_S_AXI4_BASEADDR bound to: 32'b11111111111111111111111111111111 
 	Parameter C_S_AXI4_HIGHADDR bound to: 32'b00000000000000000000000000000000 
 	Parameter C_LSB_STUP bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'axi_quad_spi' declared at '/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:36483' bound to instance 'U0' of component 'axi_quad_spi' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/synth/memristor_PGA_SPI_0.vhd:289]
-INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:36722]
+INFO: [Synth 8-3491] module 'axi_quad_spi' declared at 'c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:36483' bound to instance 'U0' of component 'axi_quad_spi' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/synth/memristor_PGA_SPI_0.vhd:289]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:36722]
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -66,7 +79,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/getz/project_11/pr
 	Parameter C_SCK_RATIO bound to: 16 - type: integer 
 	Parameter C_DUAL_QUAD_MODE bound to: 0 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
 	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
 	Parameter C_SPI_MODE bound to: 0 - type: integer 
 	Parameter C_USE_STARTUP bound to: 0 - type: integer 
@@ -81,7 +94,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/getz/project_11/pr
 	Parameter C_S_AXI4_BASEADDR bound to: -1 - type: integer 
 	Parameter C_S_AXI4_HIGHADDR bound to: 0 - type: integer 
 	Parameter C_LSB_STUP bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:34981]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:34981]
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -95,7 +108,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/getz/project_1
 	Parameter C_FIFO_DEPTH bound to: 16 - type: integer 
 	Parameter C_SCK_RATIO bound to: 16 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
 	Parameter C_SPI_MODE bound to: 0 - type: integer 
 	Parameter C_USE_STARTUP bound to: 0 - type: integer 
 	Parameter C_SPI_MEMORY bound to: 1 - type: integer 
@@ -112,14 +125,14 @@ INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/getz/project_1
 	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
 	Parameter C_STARTUP_EXT bound to: 0 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35450]
+INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35450]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35461]
+INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35461]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35472]
+INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35472]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35484]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:35484]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000001111100 
@@ -128,7 +141,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/getz/project_11/p
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000101110000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001111000 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000001000 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000101110000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001111000 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000001000 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 7 - type: integer 
@@ -137,179 +150,179 @@ INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/getz/project_1
 	Parameter C_USE_WSTRB bound to: 1 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 20 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 	Parameter C_BUS_AWIDTH bound to: 7 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 124 - type: integer 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000101110000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001111000 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000001000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 1 - type: integer 
 	Parameter C_AW bound to: 7 - type: integer 
 	Parameter C_BAR bound to: 7'b0000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 7 - type: integer 
 	Parameter C_BAR bound to: 7'b1000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 7 - type: integer 
 	Parameter C_BAR bound to: 7'b1100000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (1#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:19205]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (1#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:19205]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SUB_FAMILY bound to: zynq - type: string 
 	Parameter C_SELECT_XPM bound to: 1 - type: integer 
@@ -320,7 +333,7 @@ INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/getz/projec
 	Parameter C_FIFO_DEPTH bound to: 16 - type: integer 
 	Parameter C_SCK_RATIO bound to: 16 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
 	Parameter C_SPI_MODE bound to: 0 - type: integer 
 	Parameter C_USE_STARTUP bound to: 0 - type: integer 
 	Parameter C_SPI_MEMORY bound to: 1 - type: integer 
@@ -336,21 +349,21 @@ INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/getz/projec
 	Parameter C_DUAL_MODE bound to: 0 - type: integer 
 	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
 	Parameter C_STARTUP_EXT bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2455]
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2455]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2463]
-INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (5#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
-INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2463]
+INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (5#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2426]
+INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter Async_Clk bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH bound to: 16 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -358,27 +371,27 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/getz/project_11/projec
 	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (6#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (6#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:15988]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:15988]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:15996]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:15996]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16004]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16004]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_4' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16012]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_4' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16012]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -386,19 +399,19 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/getz/p
 	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 3 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (6#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (6#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -406,23 +419,23 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/getz/p
 	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 1 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (6#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (6#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC_1' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16677]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC_1' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16677]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16685]
-INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (7#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:16685]
+INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (7#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14941]
 	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
@@ -433,29 +446,29 @@ INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (7#1) [/hom
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
-	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:21041]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at 'C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:21041]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
-	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
@@ -467,7 +480,7 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/getz/Xilinx/Viv
 	Parameter P_ECC_MODE bound to: 0 - type: integer 
 	Parameter P_READ_MODE bound to: 1 - type: integer 
 	Parameter P_WAKEUP_TIME bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter FIFO_MEMORY_TYPE bound to: 0 - type: integer 
@@ -475,13 +488,13 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/getz/Xilinx/Viva
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
 	Parameter READ_MODE bound to: 1 - type: integer 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
-	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
@@ -498,8 +511,8 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/getz/Xilinx/Viva
 	Parameter RD_MODE bound to: 1 - type: integer 
 	Parameter ENABLE_ECC bound to: 0 - type: integer 
 	Parameter FIFO_READ_DEPTH bound to: 16 - type: integer 
-	Parameter FIFO_SIZE bound to: 512 - type: integer 
-	Parameter WR_WIDTH_LOG bound to: 5 - type: integer 
+	Parameter FIFO_SIZE bound to: 256 - type: integer 
+	Parameter WR_WIDTH_LOG bound to: 4 - type: integer 
 	Parameter WR_DEPTH_LOG bound to: 4 - type: integer 
 	Parameter WR_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter RD_PNTR_WIDTH bound to: 4 - type: integer 
@@ -528,17 +541,17 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/getz/Xilinx/Viva
 	Parameter EN_RDC bound to: 1'b1 
 	Parameter EN_AE bound to: 1'b1 
 	Parameter EN_DVLD bound to: 1'b1 
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
 	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
 	Parameter RESET_VALUE bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (8#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (8#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
 	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
 	Parameter RESET_VALUE bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (8#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
-INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (8#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
-	Parameter MEMORY_SIZE bound to: 512 - type: integer 
+	Parameter MEMORY_SIZE bound to: 256 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
 	Parameter CLOCKING_MODE bound to: 1 - type: integer 
 	Parameter ECC_MODE bound to: 0 - type: integer 
@@ -555,32 +568,32 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/getz/Xilinx/Vi
 	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter WRITE_PROTECT bound to: 1 - type: integer 
-	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
-	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
-	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 16 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 16 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 16 - type: integer 
 	Parameter ADDR_WIDTH_A bound to: 4 - type: integer 
 	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
 	Parameter READ_LATENCY_A bound to: 2 - type: integer 
 	Parameter WRITE_MODE_A bound to: 2 - type: integer 
 	Parameter RST_MODE_A bound to: SYNC - type: string 
-	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
-	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
-	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH_B bound to: 16 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 16 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 16 - type: integer 
 	Parameter ADDR_WIDTH_B bound to: 4 - type: integer 
 	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
 	Parameter READ_LATENCY_B bound to: 2 - type: integer 
 	Parameter WRITE_MODE_B bound to: 2 - type: integer 
 	Parameter RST_MODE_B bound to: SYNC - type: string 
 	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
-	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
-	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
-	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
-	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 16 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 16 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 16 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 16 - type: integer 
 	Parameter P_MAX_DEPTH_DATA bound to: 16 - type: integer 
 	Parameter P_ECC_MODE bound to: no_ecc - type: string 
 	Parameter P_MEMORY_OPT bound to: yes - type: string 
-	Parameter P_WIDTH_COL_WRITE_A bound to: 32 - type: integer 
-	Parameter P_WIDTH_COL_WRITE_B bound to: 32 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 16 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 16 - type: integer 
 	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
 	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
 	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
@@ -598,15 +611,15 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/getz/Xilinx/Vi
 	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
 	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
 	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
-	Parameter rsta_loop_iter bound to: 32 - type: integer 
-	Parameter rstb_loop_iter bound to: 32 - type: integer 
+	Parameter rsta_loop_iter bound to: 16 - type: integer 
+	Parameter rstb_loop_iter bound to: 16 - type: integer 
 	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
 	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
-	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 16 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
-INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:488]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (9#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:488]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (9#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter REG_OUTPUT bound to: 0 - type: integer 
@@ -614,11 +627,11 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/getz/Xilinx/Vivad
 	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (10#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (10#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
 	Parameter REG_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (11#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (11#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter REG_OUTPUT bound to: 0 - type: integer 
@@ -626,11 +639,11 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/g
 	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (11#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (11#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
 	Parameter REG_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (11#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (11#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter REG_OUTPUT bound to: 0 - type: integer 
@@ -638,41 +651,41 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/home/g
 	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (11#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-226] default block is never used [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1204]
-INFO: [Synth 8-226] default block is never used [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1271]
-INFO: [Synth 8-226] default block is never used [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1293]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1902]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (11#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1204]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1271]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1293]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1902]
 	Parameter RST_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (12#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1902]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (12#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1902]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
 	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (12#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (12#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter CDC_DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
 	Parameter INIT bound to: 32'sb00000000000000000000000000000000 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter DEF_VAL bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (13#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (14#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (13#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (14#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
 	Parameter COUNTER_WIDTH bound to: 5 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (14#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (14#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
 	Parameter COUNTER_WIDTH bound to: 4 - type: integer 
 	Parameter RESET_VALUE bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (14#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (15#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (16#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (14#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (15#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (16#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -680,26 +693,26 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [/home/getz/p
 	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 2 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (16#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (16#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
 	Parameter C_NUM_BITS bound to: 4 - type: integer 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'counter_f' (17#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
-INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (17#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:669]
+INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:255]
 	Parameter C_ALLOW_2N_DEPTH bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
 	Parameter C_FIFO_DEPTH bound to: 16 - type: integer 
 	Parameter C_HAS_ALMOST_EMPTY bound to: 1 - type: integer 
@@ -727,12 +740,12 @@ INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/getz/project_11/p
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
 	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
-	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
@@ -742,22 +755,22 @@ INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/getz/project_11/p
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:1932]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at 'C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:1932]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
-	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
@@ -769,7 +782,7 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [/home
 	Parameter P_ECC_MODE bound to: 0 - type: integer 
 	Parameter P_READ_MODE bound to: 1 - type: integer 
 	Parameter P_WAKEUP_TIME bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter FIFO_MEMORY_TYPE bound to: 0 - type: integer 
@@ -777,13 +790,13 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
 	Parameter READ_MODE bound to: 1 - type: integer 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
-	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
@@ -800,8 +813,8 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/
 	Parameter RD_MODE bound to: 1 - type: integer 
 	Parameter ENABLE_ECC bound to: 0 - type: integer 
 	Parameter FIFO_READ_DEPTH bound to: 16 - type: integer 
-	Parameter FIFO_SIZE bound to: 512 - type: integer 
-	Parameter WR_WIDTH_LOG bound to: 5 - type: integer 
+	Parameter FIFO_SIZE bound to: 256 - type: integer 
+	Parameter WR_WIDTH_LOG bound to: 4 - type: integer 
 	Parameter WR_DEPTH_LOG bound to: 4 - type: integer 
 	Parameter WR_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter RD_PNTR_WIDTH bound to: 4 - type: integer 
@@ -830,22 +843,22 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/
 	Parameter EN_RDC bound to: 1'b1 
 	Parameter EN_AE bound to: 1'b1 
 	Parameter EN_DVLD bound to: 1'b1 
-INFO: [Synth 8-226] default block is never used [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1204]
-INFO: [Synth 8-226] default block is never used [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1271]
-INFO: [Synth 8-226] default block is never used [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1293]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (17#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (17#1) [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
-INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (18#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:255]
-INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (19#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
-INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1204]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1271]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1293]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (17#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (17#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (18#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (19#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13465]
+INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
 	Parameter C_OCCUPANCY_NUM_BITS bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (20#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
-INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (20#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:3647]
+INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
 	Parameter C_SCK_RATIO bound to: 16 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
-	Parameter C_NUM_TRANSFER_BITS bound to: 32 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 16 - type: integer 
 	Parameter C_USE_STARTUP bound to: 0 - type: integer 
 	Parameter C_SPICR_REG_WIDTH bound to: 10 - type: integer 
 	Parameter C_SUB_FAMILY bound to: zynq - type: string 
@@ -853,26 +866,26 @@ INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/getz/project
 	Parameter C_DUAL_MODE bound to: 0 - type: integer 
 	Parameter C_STARTUP_EXT bound to: 0 - type: integer 
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9350]
+INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9350]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9378]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9378]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9390]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9390]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9402]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9402]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9426]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9426]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9505]
+INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9505]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SCK_I_REG' to cell 'FD' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9588]
+INFO: [Synth 8-113] binding component instance 'SCK_I_REG' to cell 'FD' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:9588]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SCK_O_NE_4_FDRE_INST' to cell 'FDRE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:10685]
-INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (21#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
-INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
+INFO: [Synth 8-113] binding component instance 'SCK_O_NE_4_FDRE_INST' to cell 'FDRE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:10685]
+INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (21#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:8775]
+INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_SPI_NUM_BITS_REG bound to: 8 - type: integer 
 	Parameter C_SPICR_REG_WIDTH bound to: 10 - type: integer 
@@ -881,20 +894,20 @@ INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [/home/getz/project_11/
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
-INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (22#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
-INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:14027]
+INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (22#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:13820]
+INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
 	Parameter C_SPI_NUM_BITS_REG bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
 	Parameter C_SPISR_REG_WIDTH bound to: 11 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (23#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
-INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (23#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:2658]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
 	Parameter C_SIPIF_DWIDTH bound to: 32 - type: integer 
 	Parameter C_RESET_WIDTH bound to: 16 - type: integer 
 	Parameter INIT bound to: 1'b0 
@@ -903,190 +916,190 @@ INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/getz/project_11/proj
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1005]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1028]
-INFO: [Synth 8-256] done synthesizing module 'soft_reset' (24#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
-INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:1028]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (24#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:874]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
 	Parameter C_NUM_CE bound to: 16 - type: integer 
 	Parameter C_NUM_IPIF_IRPT_SRC bound to: 1 - type: integer 
 	Parameter C_IP_INTR_MODE_ARRAY bound to: 448'b0000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011 
 	Parameter C_INCLUDE_DEV_PENCODER bound to: 0 - type: bool 
 	Parameter C_INCLUDE_DEV_ISC bound to: 0 - type: bool 
 	Parameter C_IPIF_DWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (25#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (26#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:19205]
-INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (27#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:34981]
-INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (28#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:36722]
-INFO: [Synth 8-256] done synthesizing module 'memristor_PGA_SPI_0' (29#1) [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/synth/memristor_PGA_SPI_0.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (25#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (26#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:19205]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (27#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:34981]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (28#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd:36722]
+INFO: [Synth 8-256] done synthesizing module 'memristor_PGA_SPI_0' (29#1) [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/synth/memristor_PGA_SPI_0.vhd:97]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:37 ; elapsed = 00:01:28 . Memory (MB): peak = 2510.137 ; gain = 0.000 ; free physical = 3828 ; free virtual = 16579
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1412.398 ; gain = 249.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:01:30 . Memory (MB): peak = 2510.137 ; gain = 0.000 ; free physical = 3836 ; free virtual = 16579
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1412.398 ; gain = 249.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:38 ; elapsed = 00:01:30 . Memory (MB): peak = 2510.137 ; gain = 0.000 ; free physical = 3836 ; free virtual = 16579
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1412.398 ; gain = 249.434
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2510.137 ; gain = 0.000 ; free physical = 3836 ; free virtual = 16580
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1412.398 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 222 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_board.xdc] for cell 'U0'
-Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xdc] for cell 'U0'
-Parsing XDC File [/home/getz/project_11/project_11.runs/memristor_PGA_SPI_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/getz/project_11/project_11.runs/memristor_PGA_SPI_0_synth_1/dont_touch.xdc]
-Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/memristor_PGA_SPI_0_propImpl.xdc].
+Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_board.xdc] for cell 'U0'
+Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0.xdc] for cell 'U0'
+Parsing XDC File [C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_PGA_SPI_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_PGA_SPI_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_PGA_SPI_0/memristor_PGA_SPI_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/memristor_PGA_SPI_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/memristor_PGA_SPI_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/getz/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/memristor_PGA_SPI_0_propImpl.xdc].
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/memristor_PGA_SPI_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/memristor_PGA_SPI_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-1715] 3 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2574.875 ; gain = 0.000 ; free physical = 4674 ; free virtual = 17429
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1419.047 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 222 instances were transformed.
   FD => FDRE: 11 instances
   FDR => FDRE: 194 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2574.875 ; gain = 0.000 ; free physical = 4674 ; free virtual = 17429
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1423.230 ; gain = 4.184
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:01:44 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4812 ; free virtual = 17559
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:01:44 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4812 ; free virtual = 17559
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/getz/project_11/project_11.runs/memristor_PGA_SPI_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_PGA_SPI_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
@@ -1102,7 +1115,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:44 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4812 ; free virtual = 17559
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
@@ -1192,15 +1205,14 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:53 ; elapsed = 00:01:47 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4843 ; free virtual = 17592
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    7 Bit       Adders := 1     
-	   2 Input    6 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
 	   4 Input    5 Bit       Adders := 6     
 	   2 Input    5 Bit       Adders := 4     
 	   3 Input    5 Bit       Adders := 4     
@@ -1214,20 +1226,23 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit         XORs := 4     
 	   2 Input      1 Bit         XORs := 58    
 +---Registers : 
-	               32 Bit    Registers := 11    
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 9     
 	               14 Bit    Registers := 1     
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 32    
 	                4 Bit    Registers := 30    
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 11    
 	                1 Bit    Registers := 193   
 +---RAMs : 
-	              512 Bit	(16 X 32 bit)          RAMs := 2     
+	              256 Bit	(16 X 16 bit)          RAMs := 2     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 12    
-	   2 Input    7 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 9     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
 	   6 Input    5 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 18    
 	   3 Input    5 Bit        Muxes := 2     
@@ -1258,7 +1273,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:54 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4761 ; free virtual = 17515
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1268,8 +1283,8 @@ Distributed RAM: Preliminary Mapping	Report (see note below)
 +-----------------+----------------------------------+-----------+----------------------+-------------+
 |Module Name      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
 +-----------------+----------------------------------+-----------+----------------------+-------------+
-|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 32              | RAM32M x 6	 | 
-|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 32              | RAM32M x 6	 | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 16              | RAM32M x 3	 | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 16              | RAM32M x 3	 | 
 +-----------------+----------------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
@@ -1280,13 +1295,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:02:04 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4619 ; free virtual = 17381
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:02:06 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4595 ; free virtual = 17348
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.230 ; gain = 260.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1296,8 +1311,8 @@ Distributed RAM: Final Mapping	Report
 +-----------------+----------------------------------+-----------+----------------------+-------------+
 |Module Name      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
 +-----------------+----------------------------------+-----------+----------------------+-------------+
-|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 32              | RAM32M x 6	 | 
-|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 32              | RAM32M x 6	 | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 16              | RAM32M x 3	 | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 16              | RAM32M x 3	 | 
 +-----------------+----------------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
@@ -1307,7 +1322,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:02:08 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4564 ; free virtual = 17318
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:43 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1325,37 +1340,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:02:13 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4513 ; free virtual = 17275
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:02:13 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4513 ; free virtual = 17275
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4493 ; free virtual = 17251
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4493 ; free virtual = 17242
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4493 ; free virtual = 17242
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4493 ; free virtual = 17242
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1371,46 +1386,46 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |LUT1   |    17|
-|2     |LUT2   |   102|
-|3     |LUT3   |    78|
-|4     |LUT4   |    94|
-|5     |LUT5   |   153|
-|6     |LUT6   |   150|
-|7     |RAM32M |    12|
+|1     |LUT1   |    16|
+|2     |LUT2   |   100|
+|3     |LUT3   |    81|
+|4     |LUT4   |    77|
+|5     |LUT5   |   138|
+|6     |LUT6   |   133|
+|7     |RAM32M |     6|
 |8     |FD     |     6|
 |9     |FDR    |    62|
-|10    |FDRE   |   795|
+|10    |FDRE   |   636|
 |11    |FDSE   |    28|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2574.875 ; gain = 64.738 ; free physical = 4493 ; free virtual = 17242
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1423.898 ; gain = 260.934
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:02:08 . Memory (MB): peak = 2574.875 ; gain = 0.000 ; free physical = 4532 ; free virtual = 17281
-Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2574.883 ; gain = 64.738 ; free physical = 4531 ; free virtual = 17281
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:45 . Memory (MB): peak = 1423.898 ; gain = 250.102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1423.898 ; gain = 260.934
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2574.883 ; gain = 0.000 ; free physical = 4590 ; free virtual = 17339
-INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1423.898 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 74 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2574.883 ; gain = 0.000 ; free physical = 4537 ; free virtual = 17285
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1435.754 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 80 instances were transformed.
+  A total of 74 instances were transformed.
   FD => FDRE: 6 instances
   FDR => FDRE: 62 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
 247 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:02:29 . Memory (MB): peak = 2574.883 ; gain = 64.836 ; free physical = 4745 ; free virtual = 17496
-INFO: [Common 17-1381] The checkpoint '/home/getz/project_11/project_11.runs/memristor_PGA_SPI_0_synth_1/memristor_PGA_SPI_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:58 . Memory (MB): peak = 1435.754 ; gain = 272.789
+INFO: [Common 17-1381] The checkpoint 'C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_PGA_SPI_0_synth_1/memristor_PGA_SPI_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP memristor_PGA_SPI_0, cache-ID = 3e1f1ce877923e75
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP memristor_PGA_SPI_0, cache-ID = f2ec90e876aeb994
 INFO: [Coretcl 2-1174] Renamed 97 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/getz/project_11/project_11.runs/memristor_PGA_SPI_0_synth_1/memristor_PGA_SPI_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_PGA_SPI_0_synth_1/memristor_PGA_SPI_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file memristor_PGA_SPI_0_utilization_synth.rpt -pb memristor_PGA_SPI_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  8 14:46:19 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 15 12:46:17 2024...
