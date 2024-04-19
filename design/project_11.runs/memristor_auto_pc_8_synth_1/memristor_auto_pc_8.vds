@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 19 14:50:20 2024
+# Process ID: 65058
+# Current directory: /home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_auto_pc_8_synth_1
+# Command line: vivado -log memristor_auto_pc_8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_auto_pc_8.tcl
+# Log file: /home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_auto_pc_8_synth_1/memristor_auto_pc_8.vds
+# Journal file: /home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_auto_pc_8_synth_1/vivado.jou
+#-----------------------------------------------------------
+source memristor_auto_pc_8.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/getz/Desktop/PYNQ-2.7.0/boards/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/getz/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP memristor_auto_pc_8, cache-ID = 6d5efbeb855a7f99.
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 14:50:42 2024...

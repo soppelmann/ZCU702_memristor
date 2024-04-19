@@ -1,11 +1,11 @@
-set_property SRC_FILE_INFO {cfile:/home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xdc rfile:../../../project_11.gen/sources_1/bd/memristor/ip/memristor_processing_system7_0_0/memristor_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/getz/dev/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_processing_system7_0_0_2/memristor_processing_system7_0_0.xdc rfile:../../../project_11.gen/sources_1/bd/memristor/ip/memristor_processing_system7_0_0_2/memristor_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
 current_instance inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3
 set_property src_info {type:SCOPED_XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_1 0.6
-set_property src_info {type:SCOPED_XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_2 1.5
+set_property src_info {type:SCOPED_XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter clk_fpga_1 0.6
 set_property src_info {type:SCOPED_XDC file:1 line:30 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_3 3
 set_property src_info {type:SCOPED_XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]

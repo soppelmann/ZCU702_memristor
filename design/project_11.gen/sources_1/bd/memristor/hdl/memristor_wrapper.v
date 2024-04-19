@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Mon Apr 15 12:44:56 2024
-//Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+//Date        : Fri Apr 19 14:38:43 2024
+//Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
 //Command     : generate_target memristor_wrapper.bd
 //Design      : memristor_wrapper
 //Purpose     : IP block netlist
@@ -42,7 +42,8 @@ module memristor_wrapper
     ex_DA4_sync,
     ex_PGA_io,
     ex_PGA_sclk,
-    ex_PGA_sync);
+    ex_PGA_sync,
+    pmodb_gpio_tri_io);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -76,6 +77,7 @@ module memristor_wrapper
   output ex_PGA_io;
   output ex_PGA_sclk;
   output [0:0]ex_PGA_sync;
+  inout [7:0]pmodb_gpio_tri_io;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -110,6 +112,38 @@ module memristor_wrapper
   wire ex_PGA_io;
   wire ex_PGA_sclk;
   wire [0:0]ex_PGA_sync;
+  wire [0:0]pmodb_gpio_tri_i_0;
+  wire [1:1]pmodb_gpio_tri_i_1;
+  wire [2:2]pmodb_gpio_tri_i_2;
+  wire [3:3]pmodb_gpio_tri_i_3;
+  wire [4:4]pmodb_gpio_tri_i_4;
+  wire [5:5]pmodb_gpio_tri_i_5;
+  wire [6:6]pmodb_gpio_tri_i_6;
+  wire [7:7]pmodb_gpio_tri_i_7;
+  wire [0:0]pmodb_gpio_tri_io_0;
+  wire [1:1]pmodb_gpio_tri_io_1;
+  wire [2:2]pmodb_gpio_tri_io_2;
+  wire [3:3]pmodb_gpio_tri_io_3;
+  wire [4:4]pmodb_gpio_tri_io_4;
+  wire [5:5]pmodb_gpio_tri_io_5;
+  wire [6:6]pmodb_gpio_tri_io_6;
+  wire [7:7]pmodb_gpio_tri_io_7;
+  wire [0:0]pmodb_gpio_tri_o_0;
+  wire [1:1]pmodb_gpio_tri_o_1;
+  wire [2:2]pmodb_gpio_tri_o_2;
+  wire [3:3]pmodb_gpio_tri_o_3;
+  wire [4:4]pmodb_gpio_tri_o_4;
+  wire [5:5]pmodb_gpio_tri_o_5;
+  wire [6:6]pmodb_gpio_tri_o_6;
+  wire [7:7]pmodb_gpio_tri_o_7;
+  wire [0:0]pmodb_gpio_tri_t_0;
+  wire [1:1]pmodb_gpio_tri_t_1;
+  wire [2:2]pmodb_gpio_tri_t_2;
+  wire [3:3]pmodb_gpio_tri_t_3;
+  wire [4:4]pmodb_gpio_tri_t_4;
+  wire [5:5]pmodb_gpio_tri_t_5;
+  wire [6:6]pmodb_gpio_tri_t_6;
+  wire [7:7]pmodb_gpio_tri_t_7;
 
   memristor memristor_i
        (.DDR_addr(DDR_addr),
@@ -144,5 +178,48 @@ module memristor_wrapper
         .ex_DA4_sync(ex_DA4_sync),
         .ex_PGA_io(ex_PGA_io),
         .ex_PGA_sclk(ex_PGA_sclk),
-        .ex_PGA_sync(ex_PGA_sync));
+        .ex_PGA_sync(ex_PGA_sync),
+        .pmodb_gpio_tri_i({pmodb_gpio_tri_i_7,pmodb_gpio_tri_i_6,pmodb_gpio_tri_i_5,pmodb_gpio_tri_i_4,pmodb_gpio_tri_i_3,pmodb_gpio_tri_i_2,pmodb_gpio_tri_i_1,pmodb_gpio_tri_i_0}),
+        .pmodb_gpio_tri_o({pmodb_gpio_tri_o_7,pmodb_gpio_tri_o_6,pmodb_gpio_tri_o_5,pmodb_gpio_tri_o_4,pmodb_gpio_tri_o_3,pmodb_gpio_tri_o_2,pmodb_gpio_tri_o_1,pmodb_gpio_tri_o_0}),
+        .pmodb_gpio_tri_t({pmodb_gpio_tri_t_7,pmodb_gpio_tri_t_6,pmodb_gpio_tri_t_5,pmodb_gpio_tri_t_4,pmodb_gpio_tri_t_3,pmodb_gpio_tri_t_2,pmodb_gpio_tri_t_1,pmodb_gpio_tri_t_0}));
+  IOBUF pmodb_gpio_tri_iobuf_0
+       (.I(pmodb_gpio_tri_o_0),
+        .IO(pmodb_gpio_tri_io[0]),
+        .O(pmodb_gpio_tri_i_0),
+        .T(pmodb_gpio_tri_t_0));
+  IOBUF pmodb_gpio_tri_iobuf_1
+       (.I(pmodb_gpio_tri_o_1),
+        .IO(pmodb_gpio_tri_io[1]),
+        .O(pmodb_gpio_tri_i_1),
+        .T(pmodb_gpio_tri_t_1));
+  IOBUF pmodb_gpio_tri_iobuf_2
+       (.I(pmodb_gpio_tri_o_2),
+        .IO(pmodb_gpio_tri_io[2]),
+        .O(pmodb_gpio_tri_i_2),
+        .T(pmodb_gpio_tri_t_2));
+  IOBUF pmodb_gpio_tri_iobuf_3
+       (.I(pmodb_gpio_tri_o_3),
+        .IO(pmodb_gpio_tri_io[3]),
+        .O(pmodb_gpio_tri_i_3),
+        .T(pmodb_gpio_tri_t_3));
+  IOBUF pmodb_gpio_tri_iobuf_4
+       (.I(pmodb_gpio_tri_o_4),
+        .IO(pmodb_gpio_tri_io[4]),
+        .O(pmodb_gpio_tri_i_4),
+        .T(pmodb_gpio_tri_t_4));
+  IOBUF pmodb_gpio_tri_iobuf_5
+       (.I(pmodb_gpio_tri_o_5),
+        .IO(pmodb_gpio_tri_io[5]),
+        .O(pmodb_gpio_tri_i_5),
+        .T(pmodb_gpio_tri_t_5));
+  IOBUF pmodb_gpio_tri_iobuf_6
+       (.I(pmodb_gpio_tri_o_6),
+        .IO(pmodb_gpio_tri_io[6]),
+        .O(pmodb_gpio_tri_i_6),
+        .T(pmodb_gpio_tri_t_6));
+  IOBUF pmodb_gpio_tri_iobuf_7
+       (.I(pmodb_gpio_tri_o_7),
+        .IO(pmodb_gpio_tri_io[7]),
+        .O(pmodb_gpio_tri_i_7),
+        .T(pmodb_gpio_tri_t_7));
 endmodule

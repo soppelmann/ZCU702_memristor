@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/getz/project_11/project_11.runs/memristor_processing_system7_0_0_synth_1'
+HD_PWD='/home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="memristor_CTRL_WEST_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712583746">
-  <File Type="PA-TCL" Name="memristor_CTRL_WEST_0.tcl"/>
+<GenRun Id="memristor_CTRL_WEST_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1713530355">
+  <File Type="VDS-TIMING-PB" Name="memristor_CTRL_WEST_0_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memristor_CTRL_WEST_0_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="memristor_CTRL_WEST_0.dcp"/>
   <File Type="REPORTS-TCL" Name="memristor_CTRL_WEST_0_reports.tcl"/>
+  <File Type="PA-TCL" Name="memristor_CTRL_WEST_0.tcl"/>
   <File Type="RDS-RDS" Name="memristor_CTRL_WEST_0.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="memristor_CTRL_WEST_0_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="memristor_CTRL_WEST_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="memristor_CTRL_WEST_0_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="memristor_CTRL_WEST_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memristor_CTRL_WEST_0">
-    <File Path="$PSRCDIR/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xci">
+    <File Path="$PSRCDIR/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0_2/memristor_CTRL_WEST_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +23,7 @@
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memristor_CTRL_WEST_0">
-    <File Path="$PSRCDIR/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0/memristor_CTRL_WEST_0.xci">
+    <File Path="$PSRCDIR/sources_1/bd/memristor/ip/memristor_CTRL_WEST_0_2/memristor_CTRL_WEST_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -39,7 +42,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
