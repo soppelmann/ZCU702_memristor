@@ -1,0 +1,28 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                                    memristor_i/ADC_3/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_grant_hot_i_reg[0]_inv/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m01_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[8]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                    memristor_i/ADC_4/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/is_write_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                memristor_i/CTRL_WEST/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/DA4_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m01_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[9]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                    memristor_i/ADC_2/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m03_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axaddr_wrap_reg[7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m03_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axaddr_wrap_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m03_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axaddr_wrap_reg[10]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m05_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[9]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m03_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[10]/D|
+|               clk_fpga_0 |               clk_fpga_0 |               memristor_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_valid_i_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                    memristor_i/ADC_4/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m01_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axaddr_wrap_reg[8]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m04_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/DA4_SPI/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m03_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/s_bresp_acc_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m06_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/s_axburst_eq1_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/m03_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/s_bresp_acc_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |memristor_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/gen_decerr.decerr_slave_inst/FSM_onehot_gen_axi.write_cs_reg[0]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

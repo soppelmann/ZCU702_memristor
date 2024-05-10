@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Mon Apr  8 15:43:20 2024
-| Host         : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon May  6 13:56:36 2024
+| Host         : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 | Command      : report_utilization -file memristor_CTRL_WEST_0_utilization_synth.rpt -pb memristor_CTRL_WEST_0_utilization_synth.pb
 | Design       : memristor_CTRL_WEST_0
 | Device       : 7z020clg484-1

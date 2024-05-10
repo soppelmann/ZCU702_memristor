@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Apr  8 14:40:26 2024
--- Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
--- Command     : write_vhdl -force -mode funcsim
---               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_2_0/memristor_ADC_2_0_sim_netlist.vhdl
--- Design      : memristor_ADC_2_0
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Mon May  6 13:56:36 2024
+-- Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top memristor_ADC_2_0 -prefix
+--               memristor_ADC_2_0_ memristor_ADC_4_0_sim_netlist.vhdl
+-- Design      : memristor_ADC_4_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg484-1
@@ -20,8 +20,6 @@ entity memristor_ADC_2_0_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_cdc_sync : entity is "cdc_sync";
 end memristor_ADC_2_0_cdc_sync;
 
 architecture STRUCTURE of memristor_ADC_2_0_cdc_sync is
@@ -747,8 +745,6 @@ entity memristor_ADC_2_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_pselect_f : entity is "pselect_f";
 end memristor_ADC_2_0_pselect_f;
 
 architecture STRUCTURE of memristor_ADC_2_0_pselect_f is
@@ -814,8 +810,6 @@ entity memristor_ADC_2_0_GPIO_Core is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_GPIO_Core : entity is "GPIO_Core";
 end memristor_ADC_2_0_GPIO_Core;
 
 architecture STRUCTURE of memristor_ADC_2_0_GPIO_Core is
@@ -1573,8 +1567,6 @@ entity memristor_ADC_2_0_address_decoder is
     s_axi_wready : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_address_decoder : entity is "address_decoder";
 end memristor_ADC_2_0_address_decoder;
 
 architecture STRUCTURE of memristor_ADC_2_0_address_decoder is
@@ -1928,8 +1920,6 @@ entity memristor_ADC_2_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_slave_attachment : entity is "slave_attachment";
 end memristor_ADC_2_0_slave_attachment;
 
 architecture STRUCTURE of memristor_ADC_2_0_slave_attachment is
@@ -2643,8 +2633,6 @@ entity memristor_ADC_2_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end memristor_ADC_2_0_axi_lite_ipif;
 
 architecture STRUCTURE of memristor_ADC_2_0_axi_lite_ipif is
@@ -2748,8 +2736,6 @@ entity memristor_ADC_2_0_axi_gpio is
   attribute C_TRI_DEFAULT of memristor_ADC_2_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of memristor_ADC_2_0_axi_gpio : entity is -1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_ADC_2_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of memristor_ADC_2_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
@@ -3167,7 +3153,7 @@ entity memristor_ADC_2_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of memristor_ADC_2_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of memristor_ADC_2_0 : entity is "memristor_ADC_2_0,axi_gpio,{}";
+  attribute CHECK_LICENSE_TYPE of memristor_ADC_2_0 : entity is "memristor_ADC_4_0,axi_gpio,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of memristor_ADC_2_0 : entity is "yes";
   attribute x_core_info : string;

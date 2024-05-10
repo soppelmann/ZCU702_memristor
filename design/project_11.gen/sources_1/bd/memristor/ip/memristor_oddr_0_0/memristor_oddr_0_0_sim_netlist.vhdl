@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Apr  8 14:43:08 2024
+-- Date        : Mon Apr  8 14:43:07 2024
 -- Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
--- Command     : write_vhdl -force -mode funcsim
---               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_oddr_0_0/memristor_oddr_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top memristor_oddr_0_0 -prefix
+--               memristor_oddr_0_0_ memristor_oddr_0_0_sim_netlist.vhdl
 -- Design      : memristor_oddr_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity memristor_oddr_0_0_oddr_v1_0_2_oddr is
     clk_out : out STD_LOGIC;
     clk_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_oddr_0_0_oddr_v1_0_2_oddr : entity is "oddr_v1_0_2_oddr";
 end memristor_oddr_0_0_oddr_v1_0_2_oddr;
 
 architecture STRUCTURE of memristor_oddr_0_0_oddr_v1_0_2_oddr is

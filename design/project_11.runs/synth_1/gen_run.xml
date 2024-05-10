@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1713178649">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1714997164">
   <File Type="PA-TCL" Name="memristor_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="memristor_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="memristor_wrapper_reports.tcl"/>
@@ -53,17 +53,17 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_CTRL_WEST_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_SPI_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_GPIO_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_GPIO_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_oddr_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_SPI_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_clk_wiz_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_CTRL_WEST_0"/>
 </GenRun>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="memristor_PGA_SPI_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1713177898">
+<GenRun Id="memristor_PGA_SPI_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1714997163">
   <File Type="PA-TCL" Name="memristor_PGA_SPI_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="memristor_PGA_SPI_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="memristor_PGA_SPI_0_reports.tcl"/>

@@ -112,10 +112,10 @@ memristor_processing_system7_0_0_sc::memristor_processing_system7_0_0_sc(const s
     model_param_props.addLong("C_GP1_EN_MODIFIABLE_TXN", "1");
     model_param_props.addString("C_IRQ_F2P_MODE", "DIRECT");
     model_param_props.addString("C_PS7_SI_REV", "PRODUCTION");
-    model_param_props.addString("C_FCLK_CLK0_BUF", "TRUE");
-    model_param_props.addString("C_FCLK_CLK1_BUF", "TRUE");
-    model_param_props.addString("C_FCLK_CLK2_BUF", "TRUE");
-    model_param_props.addString("C_FCLK_CLK3_BUF", "TRUE");
+    model_param_props.addString("C_FCLK_CLK0_BUF", "FALSE");
+    model_param_props.addString("C_FCLK_CLK1_BUF", "FALSE");
+    model_param_props.addString("C_FCLK_CLK2_BUF", "FALSE");
+    model_param_props.addString("C_FCLK_CLK3_BUF", "FALSE");
     model_param_props.addString("C_PACKAGE_NAME", "clg484");
 
   mp_impl = new processing_system7_v5_5_tlm("inst", model_param_props);

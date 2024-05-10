@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Mon Apr  8 14:43:08 2024
+// Date        : Mon Apr  8 14:43:07 2024
 // Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
-// Command     : write_verilog -force -mode funcsim
-//               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_oddr_0_0/memristor_oddr_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top memristor_oddr_0_0 -prefix
+//               memristor_oddr_0_0_ memristor_oddr_0_0_sim_netlist.v
 // Design      : memristor_oddr_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,7 +28,6 @@ module memristor_oddr_0_0
         .clk_out(clk_out));
 endmodule
 
-(* ORIG_REF_NAME = "oddr_v1_0_2_oddr" *) 
 module memristor_oddr_0_0_oddr_v1_0_2_oddr
    (clk_out,
     clk_in);

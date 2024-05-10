@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 -- Date        : Mon Apr  8 14:43:07 2024
 -- Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
--- Command     : write_vhdl -force -mode synth_stub
---               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_oddr_0_0/memristor_oddr_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top memristor_oddr_0_0 -prefix
+--               memristor_oddr_0_0_ memristor_oddr_0_0_stub.vhdl
 -- Design      : memristor_oddr_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

@@ -136,9 +136,6 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
     // Non-AXI ports are declared here
     sc_core::sc_in<bool> M_AXI_GP0_ACLK;
     sc_core::sc_out<bool> FCLK_CLK0;
-    sc_core::sc_out<bool> FCLK_CLK1;
-    sc_core::sc_out<bool> FCLK_CLK2;
-    sc_core::sc_out<bool> FCLK_CLK3;
     sc_core::sc_out<bool> FCLK_RESET0_N;
     sc_core::sc_inout<sc_dt::sc_bv<54> >  MIO;
     sc_core::sc_inout<bool> DDR_CAS_n;
@@ -200,23 +197,11 @@ processing_system7_v5_5_tlm(sc_core::sc_module_name name,
     // sc_clocks for generating pl clocks
     // output pins FCLK_CLK0..3 are drived by these clocks
     sc_core::sc_clock FCLK_CLK0_clk;
-    sc_core::sc_clock FCLK_CLK1_clk;
-    sc_core::sc_clock FCLK_CLK2_clk;
-    sc_core::sc_clock FCLK_CLK3_clk;
 
     
     //Method which is sentive to FCLK_CLK0_clk sc_clock object
     //FCLK_CLK0 pin written based on FCLK_CLK0_clk clock value 
     void trigger_FCLK_CLK0_pin();
-    //Method which is sentive to FCLK_CLK1_clk sc_clock object
-    //FCLK_CLK1 pin written based on FCLK_CLK1_clk clock value 
-    void trigger_FCLK_CLK1_pin();
-    //Method which is sentive to FCLK_CLK2_clk sc_clock object
-    //FCLK_CLK2 pin written based on FCLK_CLK2_clk clock value 
-    void trigger_FCLK_CLK2_pin();
-    //Method which is sentive to FCLK_CLK3_clk sc_clock object
-    //FCLK_CLK3 pin written based on FCLK_CLK3_clk clock value 
-    void trigger_FCLK_CLK3_pin();
     
     //FCLK_RESET0 output reset pin get toggle when emio bank 2's 31th signal gets toggled
     //EMIO[2] bank 31th(GPIO[95] signal)acts as reset signal to the PL(refer Zynq UltraScale+ TRM, page no:761)

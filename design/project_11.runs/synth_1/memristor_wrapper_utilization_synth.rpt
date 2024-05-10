@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Apr 15 12:58:21 2024
+| Date         : Mon May  6 14:08:28 2024
 | Host         : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 | Command      : report_utilization -file memristor_wrapper_utilization_synth.rpt -pb memristor_wrapper_utilization_synth.pb
 | Design       : memristor_wrapper
@@ -161,11 +161,19 @@ Table of Contents
 | memristor_rst_ps7_0_100M_0       |    1 |
 | memristor_processing_system7_0_0 |    1 |
 | memristor_oddr_0_0               |    1 |
+| memristor_clk_wiz_1_0            |    1 |
+| memristor_clk_wiz_0_1            |    1 |
+| memristor_clk_wiz_0_0            |    1 |
+| memristor_auto_pc_7              |    1 |
+| memristor_auto_pc_6              |    1 |
+| memristor_auto_pc_5              |    1 |
+| memristor_auto_pc_4              |    1 |
+| memristor_auto_pc_3              |    1 |
+| memristor_auto_pc_2              |    1 |
+| memristor_auto_pc_1              |    1 |
 | memristor_auto_pc_0              |    1 |
 | memristor_PGA_SPI_0              |    1 |
-| memristor_PGA_GPIO_0             |    1 |
 | memristor_DA4_SPI_0              |    1 |
-| memristor_DA4_GPIO_0             |    1 |
 | memristor_CTRL_WEST_0            |    1 |
 | memristor_ADC_4_0                |    1 |
 | memristor_ADC_3_0                |    1 |

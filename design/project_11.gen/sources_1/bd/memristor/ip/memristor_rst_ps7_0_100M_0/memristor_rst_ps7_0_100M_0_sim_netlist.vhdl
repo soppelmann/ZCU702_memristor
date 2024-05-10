@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Apr  8 14:40:23 2024
--- Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
--- Command     : write_vhdl -force -mode funcsim
---               /home/getz/project_11/project_11.gen/sources_1/bd/memristor/ip/memristor_rst_ps7_0_100M_0/memristor_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Thu May  2 14:00:25 2024
+-- Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top memristor_rst_ps7_0_100M_0 -prefix
+--               memristor_rst_ps7_0_100M_0_ memristor_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : memristor_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity memristor_rst_ps7_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_rst_ps7_0_100M_0_cdc_sync : entity is "cdc_sync";
 end memristor_rst_ps7_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of memristor_rst_ps7_0_100M_0_cdc_sync is
@@ -237,8 +235,6 @@ entity memristor_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end memristor_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of memristor_rst_ps7_0_100M_0_upcnt_n is
@@ -403,8 +399,6 @@ entity memristor_rst_ps7_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end memristor_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of memristor_rst_ps7_0_100M_0_lpf is
@@ -591,8 +585,6 @@ entity memristor_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end memristor_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of memristor_rst_ps7_0_100M_0_sequence_psr is
@@ -931,8 +923,6 @@ entity memristor_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of memristor_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of memristor_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memristor_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end memristor_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of memristor_rst_ps7_0_100M_0_proc_sys_reset is
@@ -1096,7 +1086,7 @@ architecture STRUCTURE of memristor_rst_ps7_0_100M_0 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN memristor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN memristor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";

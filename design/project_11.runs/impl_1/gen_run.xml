@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1713178650">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1714997165">
   <File Type="BITSTR-BMM" Name="memristor_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="memristor_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="memristor_wrapper_timing_summary_init.rpt"/>
@@ -127,17 +127,17 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_CTRL_WEST_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_SPI_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_DA4_GPIO_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_GPIO_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memristor_oddr_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_PGA_SPI_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="memristor_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_clk_wiz_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_ADC_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="memristor_CTRL_WEST_0"/>
 </GenRun>

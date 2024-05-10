@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Apr  8 14:40:26 2024
--- Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Mon May  6 13:56:36 2024
+-- Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top memristor_ADC_3_0 -prefix
---               memristor_ADC_3_0_ memristor_ADC_2_0_sim_netlist.vhdl
--- Design      : memristor_ADC_2_0
+--               memristor_ADC_3_0_ memristor_ADC_4_0_sim_netlist.vhdl
+-- Design      : memristor_ADC_4_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg484-1
@@ -3153,7 +3153,7 @@ entity memristor_ADC_3_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of memristor_ADC_3_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of memristor_ADC_3_0 : entity is "memristor_ADC_2_0,axi_gpio,{}";
+  attribute CHECK_LICENSE_TYPE of memristor_ADC_3_0 : entity is "memristor_ADC_4_0,axi_gpio,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of memristor_ADC_3_0 : entity is "yes";
   attribute x_core_info : string;

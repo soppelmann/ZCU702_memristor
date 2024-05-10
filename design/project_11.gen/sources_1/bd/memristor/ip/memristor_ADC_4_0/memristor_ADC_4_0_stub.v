@@ -1,11 +1,11 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Mon Apr  8 14:40:25 2024
-// Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
-// Command     : write_verilog -force -mode synth_stub -rename_top memristor_ADC_4_0 -prefix
-//               memristor_ADC_4_0_ memristor_ADC_2_0_stub.v
-// Design      : memristor_ADC_2_0
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Mon May  6 13:56:36 2024
+// Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               c:/ZCU702_Projects/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_ADC_4_0/memristor_ADC_4_0_stub.v
+// Design      : memristor_ADC_4_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1
 // --------------------------------------------------------------------------------
