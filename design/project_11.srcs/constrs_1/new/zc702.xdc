@@ -110,21 +110,32 @@ set_property PACKAGE_PIN M22 [get_ports {ex_ADC_4[6]}];  # "FMC-LA04_N"
 set_property PACKAGE_PIN M21 [get_ports {ex_ADC_4[7]}];  # "FMC-LA04_P"
 set_property PACKAGE_PIN K21 [get_ports {ex_ADC_4[8]}];  # "FMC-LA04_P"
 set_property PACKAGE_PIN J20 [get_ports {ex_ADC_4[9]}];  # "FMC-LA03_P"
+<<<<<<< HEAD
 set_property PACKAGE_PIN L22 [get_ports {ex_ADC_4[10]}];  # "FMC-LA02_N"
 #set_property IOSTANDARD LVCMOS25 [get_ports {ex_ADC_4[10]}];
 set_property PACKAGE_PIN L21 [get_ports {ex_ADC_4[11]}];  # "FMC-LA02_P"
 #set_property IOSTANDARD LVCMOS25 [get_ports {ex_ADC_4[11]}];
+=======
+set_property PACKAGE_PIN L22 [get_ports {ex_ADC_1[10]}];  # "FMC-LA02_N"
+set_property PACKAGE_PIN L21 [get_ports {ex_ADC_1[11]}];  # "FMC-LA02_P"
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
 
 
 # DAC PMOD SPI
 # These were not connected to a connector as we had asked for
 # so we need to hack together our own connector.
+<<<<<<< HEAD
 set_property PACKAGE_PIN P16  [get_ports {ex_DA4_sync}];  # "JA1"
 set_property IOSTANDARD LVCMOS25 [get_ports {ex_DA4_sync}];
 set_property PACKAGE_PIN N18 [get_ports {ex_DA4_io}];  # "JA2"
 set_property IOSTANDARD LVCMOS25 [get_ports {ex_DA4_io}];
 set_property PACKAGE_PIN N17  [get_ports {ex_DA4_sclk}];  # "JA4"
 set_property IOSTANDARD LVCMOS25 [get_ports {ex_DA4_sclk}];
+=======
+set_property PACKAGE_PIN N17  [get_ports {ex_DA4_sync}];  # "JA1"
+set_property PACKAGE_PIN N18 [get_ports {ex_DA4_io}];  # "JA2"
+set_property PACKAGE_PIN P16  [get_ports {ex_DA4_sclk}];  # "JA4"
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
 
 
 # PGA SPI

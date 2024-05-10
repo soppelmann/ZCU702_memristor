@@ -2,11 +2,20 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+<<<<<<< HEAD
 # Start of session at: Mon May  6 13:54:44 2024
 # Process ID: 4240
 # Current directory: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1
 # Command line: vivado.exe -log memristor_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_processing_system7_0_0.tcl
 # Log file: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1/memristor_processing_system7_0_0.vds
 # Journal file: C:/ZCU702_Projects/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1\vivado.jou
+=======
+# Start of session at: Fri Apr 19 14:51:49 2024
+# Process ID: 66029
+# Current directory: /home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1
+# Command line: vivado -log memristor_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memristor_processing_system7_0_0.tcl
+# Log file: /home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1/memristor_processing_system7_0_0.vds
+# Journal file: /home/getz/dev/ZCU702_memristor/design/project_11.runs/memristor_processing_system7_0_0_synth_1/vivado.jou
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
 #-----------------------------------------------------------
 source memristor_processing_system7_0_0.tcl -notrace

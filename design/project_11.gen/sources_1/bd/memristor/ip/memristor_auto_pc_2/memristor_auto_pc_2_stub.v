@@ -1,11 +1,20 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
+<<<<<<< HEAD
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 // Date        : Mon May  6 13:43:48 2024
 // Host        : LAPTOP-J0FVCJLM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top memristor_auto_pc_2 -prefix
 //               memristor_auto_pc_2_ memristor_auto_pc_5_stub.v
 // Design      : memristor_auto_pc_5
+=======
+// Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+// Date        : Fri Apr 19 14:48:14 2024
+// Host        : fedora running 64-bit Red Hat Enterprise Linux Server release 7.5 (Maipo)
+// Command     : write_verilog -force -mode synth_stub
+//               /home/getz/dev/ZCU702_memristor/design/project_11.gen/sources_1/bd/memristor/ip/memristor_auto_pc_2/memristor_auto_pc_2_stub.v
+// Design      : memristor_auto_pc_2
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1
 // --------------------------------------------------------------------------------
@@ -14,6 +23,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "axi_protocol_converter_v2_1_22_axi_protocol_converter,Vivado 2020.2" *)
+<<<<<<< HEAD
 module memristor_auto_pc_2(aclk, aresetn, s_axi_awaddr, s_axi_awlen, 
   s_axi_awsize, s_axi_awburst, s_axi_awlock, s_axi_awcache, s_axi_awprot, s_axi_awregion, 
   s_axi_awqos, s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wlast, 
@@ -27,6 +37,22 @@ module memristor_auto_pc_2(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
 /* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axi_awaddr[31:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awregion[3:0],s_axi_awqos[3:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wlast,s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[31:0],s_axi_arlen[7:0],s_axi_arsize[2:0],s_axi_arburst[1:0],s_axi_arlock[0:0],s_axi_arcache[3:0],s_axi_arprot[2:0],s_axi_arregion[3:0],s_axi_arqos[3:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rlast,s_axi_rvalid,s_axi_rready,m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid,m_axi_wready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid,m_axi_rready" */;
   input aclk;
   input aresetn;
+=======
+module memristor_auto_pc_2(aclk, aresetn, s_axi_awid, s_axi_awaddr, 
+  s_axi_awlen, s_axi_awsize, s_axi_awburst, s_axi_awlock, s_axi_awcache, s_axi_awprot, 
+  s_axi_awregion, s_axi_awqos, s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, 
+  s_axi_wlast, s_axi_wvalid, s_axi_wready, s_axi_bid, s_axi_bresp, s_axi_bvalid, s_axi_bready, 
+  s_axi_arid, s_axi_araddr, s_axi_arlen, s_axi_arsize, s_axi_arburst, s_axi_arlock, 
+  s_axi_arcache, s_axi_arprot, s_axi_arregion, s_axi_arqos, s_axi_arvalid, s_axi_arready, 
+  s_axi_rid, s_axi_rdata, s_axi_rresp, s_axi_rlast, s_axi_rvalid, s_axi_rready, m_axi_awaddr, 
+  m_axi_awprot, m_axi_awvalid, m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wvalid, 
+  m_axi_wready, m_axi_bresp, m_axi_bvalid, m_axi_bready, m_axi_araddr, m_axi_arprot, 
+  m_axi_arvalid, m_axi_arready, m_axi_rdata, m_axi_rresp, m_axi_rvalid, m_axi_rready)
+/* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axi_awid[12:0],s_axi_awaddr[31:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awregion[3:0],s_axi_awqos[3:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wlast,s_axi_wvalid,s_axi_wready,s_axi_bid[12:0],s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_arid[12:0],s_axi_araddr[31:0],s_axi_arlen[7:0],s_axi_arsize[2:0],s_axi_arburst[1:0],s_axi_arlock[0:0],s_axi_arcache[3:0],s_axi_arprot[2:0],s_axi_arregion[3:0],s_axi_arqos[3:0],s_axi_arvalid,s_axi_arready,s_axi_rid[12:0],s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rlast,s_axi_rvalid,s_axi_rready,m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid,m_axi_wready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid,m_axi_rready" */;
+  input aclk;
+  input aresetn;
+  input [12:0]s_axi_awid;
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
   input [31:0]s_axi_awaddr;
   input [7:0]s_axi_awlen;
   input [2:0]s_axi_awsize;
@@ -43,9 +69,17 @@ module memristor_auto_pc_2(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
   input s_axi_wlast;
   input s_axi_wvalid;
   output s_axi_wready;
+<<<<<<< HEAD
   output [1:0]s_axi_bresp;
   output s_axi_bvalid;
   input s_axi_bready;
+=======
+  output [12:0]s_axi_bid;
+  output [1:0]s_axi_bresp;
+  output s_axi_bvalid;
+  input s_axi_bready;
+  input [12:0]s_axi_arid;
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
   input [31:0]s_axi_araddr;
   input [7:0]s_axi_arlen;
   input [2:0]s_axi_arsize;
@@ -57,6 +91,10 @@ module memristor_auto_pc_2(aclk, aresetn, s_axi_awaddr, s_axi_awlen,
   input [3:0]s_axi_arqos;
   input s_axi_arvalid;
   output s_axi_arready;
+<<<<<<< HEAD
+=======
+  output [12:0]s_axi_rid;
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
   output [31:0]s_axi_rdata;
   output [1:0]s_axi_rresp;
   output s_axi_rlast;

@@ -52,6 +52,10 @@
 # #########################################################
 
 
+<<<<<<< HEAD
 create_clock -period 5 -name aclk [get_ports aclk]
+=======
+create_clock -period 10 -name aclk [get_ports aclk]
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
 
 

@@ -61,10 +61,17 @@ memristor_auto_pc_7_sc::memristor_auto_pc_7_sc(const sc_core::sc_module_name& nm
 
   // initialize module
     xsc::common_cpp::properties model_param_props;
+<<<<<<< HEAD
     model_param_props.addLong("C_M_AXI_PROTOCOL", "0");
     model_param_props.addLong("C_S_AXI_PROTOCOL", "1");
     model_param_props.addLong("C_IGNORE_ID", "0");
     model_param_props.addLong("C_AXI_ID_WIDTH", "12");
+=======
+    model_param_props.addLong("C_M_AXI_PROTOCOL", "2");
+    model_param_props.addLong("C_S_AXI_PROTOCOL", "0");
+    model_param_props.addLong("C_IGNORE_ID", "0");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "13");
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_AXI_SUPPORTS_WRITE", "1");

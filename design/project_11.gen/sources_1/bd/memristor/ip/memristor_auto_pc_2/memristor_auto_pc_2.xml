@@ -394,7 +394,11 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
+<<<<<<< HEAD
           <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">200000000</spirit:value>
+=======
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">100000000</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -403,7 +407,11 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ID_WIDTH</spirit:name>
+<<<<<<< HEAD
           <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">0</spirit:value>
+=======
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">13</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -1044,7 +1052,11 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
+<<<<<<< HEAD
           <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.FREQ_HZ">200000000</spirit:value>
+=======
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXI.FREQ_HZ">100000000</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.tlm</xilinx:parameterUsage>
@@ -1326,7 +1338,11 @@
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>aclk frequency</spirit:displayName>
           <spirit:description>aclk frequency</spirit:description>
+<<<<<<< HEAD
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ" spirit:minimum="1" spirit:maximum="1000000000" spirit:rangeType="long">200000000</spirit:value>
+=======
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ" spirit:minimum="1" spirit:maximum="1000000000" spirit:rangeType="long">100000000</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
@@ -1511,11 +1527,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:0ce600e4</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:39:06 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:0ee502dd</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1529,11 +1553,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:0ce600e4</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:39:06 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:0ee502dd</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1549,11 +1581,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:0ce600e4</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:39:06 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:0ee502dd</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1584,11 +1624,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:b2619feb</spirit:value>
+=======
+            <spirit:value>Mon Apr 08 13:42:24 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:f4fffacd</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1604,11 +1652,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:23149c73</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:39:06 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:29470cc6</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -1632,11 +1688,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:b2619feb</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:39:06 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:f4fffacd</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1652,11 +1716,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:05:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:23149c73</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:39:06 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:29470cc6</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -1674,11 +1746,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD
             <spirit:value>Mon May 06 12:06:01 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:0ce600e4</spirit:value>
+=======
+            <spirit:value>Fri Apr 19 12:48:14 UTC 2024</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:0ee502dd</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1715,7 +1795,11 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1726,13 +1810,21 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
+<<<<<<< HEAD
             <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+=======
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0000</spirit:defaultValue>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
+<<<<<<< HEAD
               <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_awid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_WRITE&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">false</xilinx:isEnabled>
+=======
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_awid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_WRITE&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">true</xilinx:isEnabled>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2055,7 +2147,11 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2066,7 +2162,11 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
+<<<<<<< HEAD
             <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+=======
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0000</spirit:defaultValue>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -2229,7 +2329,11 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2243,7 +2347,11 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
+<<<<<<< HEAD
               <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_bid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_WRITE&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">false</xilinx:isEnabled>
+=======
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_bid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_WRITE&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">true</xilinx:isEnabled>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2344,7 +2452,11 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2355,13 +2467,21 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
+<<<<<<< HEAD
             <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+=======
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0000</spirit:defaultValue>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
+<<<<<<< HEAD
               <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_arid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_READ&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">false</xilinx:isEnabled>
+=======
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_arid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_READ&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">true</xilinx:isEnabled>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2684,7 +2804,11 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2698,7 +2822,11 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
+<<<<<<< HEAD
               <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_rid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_READ&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">false</xilinx:isEnabled>
+=======
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi_rid" xilinx:dependency="( ( (spirit:decode(id(&apos;PARAM_VALUE.SI_PROTOCOL&apos;)) != &quot;AXI4LITE&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_SUPPORTS_READ&apos;)) = 1) ) and (spirit:decode(id(&apos;PARAM_VALUE.ID_WIDTH&apos;)) != 0) )">true</xilinx:isEnabled>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2843,7 +2971,11 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3150,7 +3282,11 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3309,7 +3445,11 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3320,7 +3460,11 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
+<<<<<<< HEAD
             <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+=======
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0000</spirit:defaultValue>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -3433,7 +3577,11 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3740,7 +3888,11 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
+<<<<<<< HEAD
             <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
+=======
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;)) - 1)">12</spirit:left>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3751,7 +3903,11 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
+<<<<<<< HEAD
             <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+=======
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_AXI_ID_WIDTH&apos;))){0}}" spirit:bitStringLength="4">0x0000</spirit:defaultValue>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -4053,11 +4209,19 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_IGNORE_ID</spirit:name>
+<<<<<<< HEAD
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IGNORE_ID">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_AXI_ID_WIDTH</spirit:name>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AXI_ID_WIDTH">1</spirit:value>
+=======
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IGNORE_ID">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_AXI_ID_WIDTH</spirit:name>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AXI_ID_WIDTH">13</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_AXI_ADDR_WIDTH</spirit:name>
@@ -4430,6 +4594,7 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+<<<<<<< HEAD
         <spirit:name>memristor_auto_pc_2_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -4453,6 +4618,31 @@
         <spirit:name>memristor_auto_pc_2_stub.vhdl</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+=======
+        <spirit:name>memristor_auto_pc_2_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>memristor_auto_pc_2_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>memristor_auto_pc_2_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>memristor_auto_pc_2_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -4492,7 +4682,11 @@
     <spirit:parameter>
       <spirit:name>ID_WIDTH</spirit:name>
       <spirit:displayName>ID Width</spirit:displayName>
+<<<<<<< HEAD
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ID_WIDTH" spirit:order="8" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">0</spirit:value>
+=======
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ID_WIDTH" spirit:order="8" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">13</spirit:value>
+>>>>>>> ecc26b050c5f879286fbf40215dbf6737c58d8e1
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>AWUSER_WIDTH</spirit:name>
