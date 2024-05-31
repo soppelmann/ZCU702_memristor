@@ -49,7 +49,6 @@
 # NEW #
 #######
 
-
 # ADC CLOCK
 set_property PACKAGE_PIN B20 [get_ports {ex_ADC_clk}];  # "FMC-LA17_CC_N"
 
